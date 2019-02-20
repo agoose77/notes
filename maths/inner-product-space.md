@@ -4,7 +4,7 @@ An inner product space is a [vector space](vector-space.md) with an additional s
 ## The Inner Product
 The inner product is a map:
 $$
-\left<\cdot,\cdot\right>:V\times V\rightarrow F\,
+\left<\cdot,\cdot\right>:V\times V\rightarrow F\,,
 $$
 which satisfies the following three axioms $\forall x,y,z\in V$ and $\forall a\in F$:
 

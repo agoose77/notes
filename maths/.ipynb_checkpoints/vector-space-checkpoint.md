@@ -34,5 +34,5 @@ $$
 $$
 then $\vec{v}$ may be expressed in terms of its coordinates
 $$
-\vec{v} = \begin{pmatrix}a_1\\a_2\\\vdots \\ a_n\end{pmatrix}
+\vec{v} = \begin{pmatrix}a_1\\a_2\\\vdots \\ a_n\end{pmatrix}\,.
 $$ 
