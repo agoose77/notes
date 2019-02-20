@@ -1,5 +1,5 @@
 # Tensor Product
-The tensor product $V\otimes W$ of two [vector spaces](vector-spaces.md) $V$ and $W$ over the same field is also a vector space. 
+The tensor product $V\otimes W$ of two [vector spaces](vector-space.md) $V$ and $W$ over the same field is also a vector space. 
 
 ## The Operator
 The tensor product operation $\otimes$ is a bilinear map, a function combining elements of two vector spaces to yield an element of a third vector space. Let $V,W,X$ be vector spaces over the same field $F$. Then $\otimes$ is defined as:
@@ -21,4 +21,13 @@ $$
 Hence $\operatorname{dim}\left(V\otimes W\right) = \operatorname{dim}V \times \operatorname{dim}W$
 
 ## The Basis of $V\otimes W$
-Given that $\otimes$ is linear in both arguments, 
+Given that $\otimes$ is linear in both arguments, if $V$ has basis $\{\vec{p}_i\}$, and $W$ has basis $\{\vec{q}_i\}$, then for $v\in V,w\in W$:
+
+$$
+\begin{aligned}
+v\otimes w &= \sum_iv_i\vec{p}_i\otimes\sum_i w_i\vec{q}_i \\
+           &= \sum_iv_i\left(\vec{p}_i\otimes\sum_i w_i\vec{q}_i\right) \\
+           &= \sum_i \sum_j v_i w_j \left(\vec{p}_i\otimes \vec{q}_j\right)\,,
+\end{aligned}
+$$
+which shows that $\{p_i\otimes q_j\}$ is a basis of $V\otimes W$.
