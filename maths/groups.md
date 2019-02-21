@@ -1,5 +1,5 @@
 # Group
-A group is a set $G$ combined with a binary operation $(\cdot)$ which combines two elements of the set to produce a third element, whilst satisfying the four [group axioms](#Group-Axioms).
+A group is a [set](set.md) $G$ combined with a binary operation $(\cdot)$ which combines two elements of the set to produce a third element, whilst satisfying the four [group axioms](#Group-Axioms).
 
 ## Group Axioms
 |       Name       	|                          Definition                         	|

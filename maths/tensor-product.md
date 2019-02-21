@@ -31,3 +31,17 @@ v\otimes w &= \sum_iv_i\vec{p}_i\otimes\sum_i w_i\vec{q}_i \\
 \end{aligned}
 $$
 which shows that $\{p_i\otimes q_j\}$ is a basis of $V\otimes W$.
+
+## Tensor Product of Linear Maps
+Given two linear maps $S:V\rightarrow A$ and $T:W\rightarrow B$, the tensor product of $S,T$ is also a linear map, defined by 
+$$
+(S\otimes T)(v\otimes w)=S(v)\otimes T(w)\,.
+$$
+
+Elements of $V\otimes W$ can be operated upon by $S,T$ individually, though the identity element:
+$$
+\begin{aligned}
+(S\otimes 1_T)(v\otimes w) &= (Sv)\otimes w\\
+(1_S\otimes T)(v\otimes w) &= v\otimes (Tw)\\
+\end{aligned}
+$$
