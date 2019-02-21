@@ -6,10 +6,10 @@ Sets may be built using set-builder notation:
 
 |          Method         	|                                                 Definition $(S= \dots)$                                                	|
 |:-----------------------:	|:----------------------------------------------------------------------------------------------------------------------:	|
-|    Direct enumeration   	|                                                   $\{\, 1, 2, 5, 9, 3\, \}$                                                  	|
-| From a regular sequence 	|                                                  $\{\, 1, 2, \dots, 10\, \}$                                                 	|
+|    Direct enumeration   	|                                                   $\{\, 1, 2, 5, 9, 3 \,\}$                                                  	|
+| From a regular sequence 	|                                                  $\{\, 1, 2, \dots, 10 \,\}$                                                 	|
 |        From prose       	|                                             the square of rational numbers                                             	|
-|    Using a predicate    	| $$\begin{aligned}\{\, x: x^2\in T\, \} \\ \{\, x\in\mathbb{N}:x^2\in T\, \}\\\{\, x\in\mathbb{N}:x^2\in T \land P(x)\, \}\end{aligned}$$ 	|
+|    Using a predicate    	| $$\begin{aligned}\{\, x: x^2\in T \,\} \\ \{\, x\in\mathbb{N}:x^2\in T \,\}\\\{\, x\in\mathbb{N}:x^2\in T \land P(x) \,\}\end{aligned}$$ 	|
 
 Where $\land$ is logical AND.
 
@@ -26,10 +26,23 @@ Where $\land$ is logical AND.
 
 ## Operations
 
-|        Name       	|     Expression    	|            Explicit Result            	|
-|:-----------------:	|:-----------------:	|:-------------------------------------:	|
-|       Union       	|     $A\cup B$     	|    $\{\, x:x\in A \lor x\in B\, \}$   	|
-|    Intersection   	|     $A\cap B$     	|   $\{\, x:x\in A \land x\in B\, \}$   	|
-|     Complement    	|   $A\setminus B$  	|  $\{\, x:x\in A \mid x\notin B\, \}$  	|
-| Cartesian product 	|    $A\times B$    	| $\{\, (x,y):x\in A \land y\in B\, \}$ 	|
-|    Cardinality    	| $\lvert A\rvert $ 	|        Number of elements in A        	|
+|         Name         	|      Expression     	|            Explicit Result            	|
+|:--------------------:	|:-------------------:	|:-------------------------------------:	|
+|         Union        	|      $A\cup B$      	|    $\{\, x:x\in A \lor x\in B \,\}$   	|
+|     Intersection     	|      $A\cap B$      	|   $\{\, x:x\in A \land x\in B \,\}$   	|
+|      Complement      	|    $A\setminus B$   	|  $\{\, x:x\in A \mid x\notin B \,\}$  	|
+|   Cartesian product  	|     $A\times B$     	| $\{\, (x,y):x\in A \land y\in B \,\}$ 	|
+| Symmetric Difference 	| $A\bigtriangleup B$ 	|  $(A\setminus B)\cup (B\setminus A)$  	|
+|      Cardinality     	|  $\lvert A\rvert $  	|        Number of elements in A        	|
+
+## Reserved Symbols
+
+|    Symbol    	|                 Name                 	|
+|:------------:	|:------------------------------------:	|
+|  $\emptyset$ 	|               Empty set              	|
+| $\mathbb{N}$ 	|               Naturals               	|
+| $\mathbb{Z}$ 	|               Integers               	|
+| $\mathbb{Q}$ 	|               Rationals              	|
+| $\mathbb{R}$ 	|                 Reals                	|
+| $\mathbb{C}$ 	|            Complex numbers           	|
+| $\mathbb{U}$ 	| Universal set (superset of all sets) 	|
