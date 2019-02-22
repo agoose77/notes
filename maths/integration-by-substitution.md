@@ -9,7 +9,7 @@ Let us define a small rectangle $L$ in a region of $S$, with vertices $\vec{o},\
 |:---------:	|:----------------:	|:-----------------------------------------------------------------------------------------------------------------------------------------------:	|
 | $\vec{o}$ 	|      $(u,v)$     	|                                                            $\big(g(u,v),h(u,v)\big)$                                                            	|
 | $\vec{p}$ 	|  $(u+\Delta u)$  	|          $\left(g(u,v)+\frac{\partial g}{\partial u}\Big|_{u,v}\Delta u,h(u,v)+\frac{\partial h}{\partial u}\Big|_{u,v}\Delta u\right)$         	|
-| $\vec{q}$ 	| $(u,v+\Delta v)$ 	| $\left(g(u,v)+\frac{\partial g}{\partial v}\Big|_{u,v}\Delta v,h(u,v)+\frac{\partial h}{\partial v}\Big|_{u,v}\Delta v\right)$ 	|
+| $\vec{q}$ 	| $(u,v+\Delta v)$ 	| $\left(g(u,v)+\frac{\partial g}{\partial v}\Big|_{u,v}\Delta v,h(u,v)+\frac{\partial h}{\partial v}\Big|_{u,v}\Delta v\right)$ 	                |
 
 If we assume that $T$ is linear, then the image of $L$ under $T$ is a parallelogram with sides $\vec{p}-\vec{o}$, and $\vec{q}-\vec{o}$. We can find its area by calculating the cross product:
 $$
@@ -21,23 +21,23 @@ $$
 \left(\frac{\partial g}{\partial u}(u,v)\frac{\partial h}{\partial v}(u,v)- \frac{\partial h}{\partial u}(u,v)\frac{\partial g}{\partial v}(u,v)\right)\Delta u \Delta v \vec{k}\,,
 $$
 
-whose $\vec{k}$ component is defined as _the Jacobian_ $J_T(u,v)$ of $T$. The Jacobian is defined as
+whose $\vec{k}$ component is the determinant of the _Jacobian matrix_ $J_T(u,v)$ of $T$, which is defined as
 $$
 J_T(u_1, \dots, u_n)=
-\begin{vmatrix}
+\begin{bmatrix}
     \frac{\partial x_1}{\partial u_1} & \frac{\partial x_2}{\partial u_1} & \dots & \frac{\partial x_n}{\partial u_1}\\
     \frac{\partial x_1}{\partial u_2} & \frac{\partial x_2}{\partial u_2} & \dots & \frac{\partial x_n}{\partial u_2}\\
     \vdots & \vdots & \ddots & \vdots\\
 \frac{\partial x_1}{\partial u_n} & \frac{\partial x_2}{\partial u_n} & \dots & \frac{\partial x_n}{\partial u_n}
-\end{vmatrix}\,.
+\end{bmatrix}\,.
 $$
 
-Evidently, the region $L$ has area $\Delta u \Delta v$ in $S$, and an area $\lvert J_T(u,v)\rvert \Delta u\Delta v$ in $T(S)$.
+Evidently, the region $L$ has area $\Delta u \Delta v$ in $S$, and an area $\lvert \operatorname{det}J_T(u,v)\rvert \Delta u\Delta v$ in $T(S)$.
 Hence, a double integral over $R$
 $$
 \iint\limits_Rf(x,y)\,\mathrm{d}A=\iint\limits_Rf(x,y)\,\mathrm{d}x\,\mathrm{d}y\,,
 $$
 can be transformed to an integral over $S$
 $$
-\iint\limits_Sf(g(u,v),h(u,v))\,\mathrm{d}A=\iint\limits_Sf(g(u,v),h(u,v))\lvert J_T(u,v)\rvert\,\mathrm{d}u\,\mathrm{d}v\,.
+\iint\limits_Sf(g(u,v),h(u,v))\,\mathrm{d}A=\iint\limits_Sf(g(u,v),h(u,v))\lvert \operatorname{det}J_T(u,v)\rvert\,\mathrm{d}u\,\mathrm{d}v\,.
 $$
