@@ -30,7 +30,7 @@ $$
 We can then show that the Euler-Lagrange relations hold for the new coordinate system.
 From the chain rule,
 $$
-\tag{DIFF}
+\tag{a}
   \frac{\partial \mathcal{L}}{\partial\dot{q}_m}=\sum^N_{i=1}\frac{\partial \mathcal{L}}{\partial\dot{x}_i}\frac{\partial \dot{x}_i}{\partial \dot{q}_m}\,.
 $$
 To find $\frac{\partial \dot{x}_i}{\partial \dot{q}_m}$, we can find the total derivative of $\dot{x_i }$
@@ -43,13 +43,13 @@ $$
 $$
 We cam tjem 
 $$
-\tag{CRD}
+\tag{b}
   \begin{aligned}
 \frac{\mathrm{d}}{\mathrm{d}t}\left(\frac{\partial x_i}{\partial q_m}\right)=\sum^N_{i=1}\frac{\mathrm{d}}{\mathrm{d}t}\left(\frac{\partial \mathcal{L}}{\partial\dot{x}_i}\right)\frac{\partial x_i}{\partial q_m}+\sum^N_{i=1}\frac{\partial \mathcal{L}}{\partial\dot{x}_i}\frac{\mathrm{d}}{\mathrm{d}t}\left(\frac{\partial x_i}{\partial q_m}\right)\,.
 \end{aligned}
 $$
 
-From the [Principle of Stationary Action](principle-of-stationary-action.md#Proof), it follows that **(CRD)** simplifies to
+From the [Principle of Stationary Action](principle-of-stationary-action.md#Proof), it follows that **(b)** simplifies to
 $$
   \begin{aligned}
 \frac{\mathrm{d}}{\mathrm{d}t}\left(\frac{\partial x_i}{\partial q_m}\right)&=\sum^N_{i=1}\frac{\partial \mathcal{L}}{\partial x_i}\frac{\partial x_i}{\partial q_m}+\sum^N_{i=1}\frac{\partial \mathcal{L}}{\partial\dot{x}_i}\frac{\partial \dot{x}_i}{\partial q_m}\\
@@ -113,7 +113,47 @@ $$
 $$
 and hence angular momentum is conserved around the $z$ axis, and linear momentum along the $z$ axis.
 
+
+## Holonomic constraints and degrees of freedom
+Consider a system of N particles in three dimensional space, each with position vector $\vec{r}_i(t)$ for $i=1,\dots,N$. Note that each $\vec{r}_i(t)\in\mathcal{R}^3$ is a 3-vector, hence there are $3N$ coordinates which define the system.
+From Newton's second law, the equation of motion for the $i^\text{th}$ particle is
+$$
+\tag{c}
+\dot{\vec{p}}_i = F_i^\text{ext} + F_i^\text{con}\,,
+$$
+for $i=1,\dots,N$, where $\vec{p}=m_i\vec{v}_i$ is the linear momentum of the $i^\text{th}$ particle and $\vec{v}_i$ its velocity. Here, the net force on the $i^\text{th}$ particle is decomposed into external and constraint components, the former to describe conventional physical forces, the latter to describe some motion constraint (e.g constrained to a surface or wire). In a system of N particles which constitute a rigid body, the distances between particles are rigidly fixed, described by the constraint
+$$
+\lvert{\vec{r}_i(t)-\vec{r}_j(t)=c_{ij}}\rvert\,,
+$$
+where $c_{ij}$ is some constant for all $i,j=1,\dots,N$. Such a constraint is said to be _holonomic_.
+
+
+<div style="color: #004085;background-color: #cce5ff;border-color: #b8daff;position: relative;padding: .75rem 1.25rem;margin-bottom: 1rem;border: 1px solid transparent;border-radius: .25rem;">
+  
+### Holonomic Constraints
+A constraint whose function depends only upon the positional coordinates of the system, and time (i.e of the form $g(\vec{r}_1,\vec{r}_2,\dots,\vec{r}_N,t)=0$).
+Gas molecules in a container would be constrained by non-holonomic constraints.
+</div>
+
+For the $N$ particles there will be $m$ holonomic constraints
+$$
+g_k(\vec{r}_1,\dots,\vec{r}_N,t)=0
+$$
+for $k=1,\dots,m$. Though there are $3N$ coordinates which describe the full set of position vectors $\vec{r}_i$, due to the constraints, these are not all independent. There will instead by $3N-m$ _independent_ coordinates. The dimension of this configuration space is called the _number of degrees of freedom_.
+### D'Alembert's principle
+Consider a system in which the net work of the constraint forces is zero:
+$$
+\sum_{i=1}^N\vec{F}_i^\text{con}\cdot\,\mathrm{d}{\vec{r}_i}=0\,.
+$$
+In such a system, it follows from **(c)** that
+$$
+\sum_{i=1}^N\left(\dot{\vec{p}_i}-\vec{F}_i^{\text{ext}}\right)\cdot{\,\mathrm{d}{\vec{r}_i}}=0\,,
+$$
+which represents D'Alembert's principle.
+
+
 <!-- TODO ### Energy conservation in cylindrical coordinates -->
 
 ## Useful Links
 * http://www.people.fas.harvard.edu/~djmorin/chap6.pdf
+* http://www.macs.hw.ac.uk/~simonm/mechanics.pdf
