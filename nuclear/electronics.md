@@ -1,8 +1,9 @@
-# Nuclear Electronics
+Nuclear Electronics
+===================
 
 
 Analogue and digital pulses
-===========================
+---------------------------
 
 Analogue pulses are described by an instantaneous voltage amplitude
 $V(t)$, and the corresponding profile drawn by $V(t)$ over a given time
@@ -16,7 +17,7 @@ quantisation of charge.
 Digital pulses may carry the same amount of information, but encode the
 amplitude of a signal as an nbit number, conventionally in base 2.
 
-#### Example
+### Example
 
 Let us encode an analogue signal in the range
 $0\operatorname{V}\rightarrow 10\operatorname{V}$ into an integer of 16 bits.
@@ -28,7 +29,7 @@ above algorithm into the $32768^{th}$ bin. This can be encoded into 16
 bits as *0b1000000000000000*.
 
 Logic
-=====
+-----
 
 There are three major conventions used to represent logic values over
 analogue interfaces:
@@ -51,14 +52,13 @@ signal, each of an amplitude between -1.75 V and -0.75 V (true, false
 for A, & false, true for B)
 
 Charge Collection
-=================
+-----------------
 
 For a silicon detector, the work function for a valence electron is
 $\sim 3.3\operatorname{eV}$, so for an incident $\alpha$ particle of 5 MeV, $\sim3\times10^4$ electrons are produced,
 corresponding to a charge of $\sim3\times 10^{-13}\operatorname{C}$.
 
-Gas Ionisation Counters
------------------------
+### Gas Ionisation Counters
 
 Gas ionisation counters leverage the ionisation of gas atom/molecules as
 charged particles enter the ionisation chamber, which generates
@@ -107,17 +107,15 @@ Finally, a resistor can be added in parallel with the capacitor to
 prevent saturation of the output (by discharging the capacitor)
 
 Filters
-=======
+-------
 
-Basic highpass and lowpass filtering can be performed with CR and RC
-circuits, removing high and low frequencies respectively.
+Basic highpass and lowpass filtering can be performed with [CR and RC
+circuits](rc-circuits.md), removing high and low frequencies respectively.
 
-An RC circuit is in effect an integrator of the input current. In the
-event that a voltage source is used, then the output voltage is
+An [RC circuit](rc-circuits.md#RC-Mode) is, in effect, an integrator of the input current. In the event that a voltage source is used, then the output voltage is
 proportional to the time integral of the voltage.
 
-A CR circuit, on the other hand, is a differentiator. Note that the
-theory behind these behaviours is particular for AC circuitry.
+A [CR circuit](rc-circuits.md#CR-Mode), on the other hand, is a differentiator. Note that the theory behind these behaviours is particular for AC circuitry.
 
 The use of both a high and low pass filter compresses the signal within
 a particular frequency range, which consequently maximises the signal to
@@ -206,10 +204,9 @@ below the baseline. Another solution is to use a baseline restoration
 circuit, which resets the dc level to zero after each pulse
 
 Discriminators
-==============
+--------------
 
-First Level Discriminators
---------------------------
+### First Level Discriminators
 
 Discriminators are used to detect pulses within a signal. A naive
 amplitudedependant trigger such as a "window discriminant" will
@@ -217,8 +214,7 @@ trigger at different points along the pulse profile, depending upon the
 pulse shape and amplitude, in a phenomenon known as *time walk*. See for
 more.
 
-Second Level Discriminators
----------------------------
+### Second Level Discriminators
 
 Second level discriminators use comparisons *between logic pulses*,
 rather than a single pulse and some constant criterion.

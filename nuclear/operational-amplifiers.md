@@ -1,6 +1,5 @@
-
-Amplifiers
-==========
+Operational Amplifiers
+======================
 Most amplifiers utilise Operational Amplifiers (Op-Amps) which amplify
 input signals using transistors. Such devices typically have open loop
 (no feedback) gains of up to $1\times 10^5$. The gain $A$ is defines as
