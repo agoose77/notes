@@ -4,21 +4,20 @@ Basic Electronic Circuits
 Phasors
 -------
 
-A phasor is represented by a constant complex number, expressed in
-exponential form, which describes the complex amplitude (in magnitude
-and phase) of a sinusoidal function of time. They are used to simplify
-computations involving sinusoids from differential problems to algebraic
-ones.
+A phasor is a complex number, expressed in exponential form, which represents a sinusoidal function whose magnitude, angular frequency, and phase are constant in time. They are used to simplify computations involving sinusoids from differential problems to algebraic ones.
 
+The voltage and current of a circuit may be expressed as phasors with angular frequencies $\phi_V$ and $\phi_I$, respectively:
 $$\begin{aligned}
     \vec{V}(t) &= \lvert\vec{V}\rvert e^{i(\omega t+\phi_V)}\\
-    \vec{I}(t) &= \lvert\vec{I}\rvert e^{i(\omega t+\phi_I)}\\
-    \end{aligned}$$
+    \vec{I}(t) &= \lvert\vec{I}\rvert e^{i(\omega t+\phi_I)}\,.
+    \end{aligned}
+$$
 
-Ohms law also holds with phasors: 
+Ohms law also holds with phasors, 
 $$
-    \vec{V}(t) = \vec{I}(t) \vec{Z}\,.
+    \vec{V}(t) = \vec{I}(t) \vec{Z}\,,
 $$
+where $Z$ is the _complex impedence_.
 
 Resistors
 ---------
@@ -52,9 +51,7 @@ Inductor
 
 The inductor voltage charge relation $$V_l(t) = L\frac{\mathrm{d}L}{\mathrm{d}t}$$
 
-can also be rewritten using complex values.
-
-If we represent these values as complex numbers as above, then
+can also be rewritten using complex values. If we represent these values as complex numbers as above, then
 
 $$\begin{aligned}
         \vec{V}(t) &= L\frac{\mathrm{d}\vec{I}(t)}{\mathrm{d}t}\\
