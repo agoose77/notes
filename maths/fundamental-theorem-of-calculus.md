@@ -1,5 +1,13 @@
 # Fundamental Theorem of Calculus
-The fundamental theorem of calculus links the concept of differentiating a function with the concept of integrating a function. It has two parts:
+The fundamental theorem of calculus links the concept of differentiating a function with the concept of integrating a function.
+ 
+<div style="color: #004085;background-color: #cce5ff;border-color: #b8daff;   position: relative;padding: .75rem 1.25rem;margin-bottom: 1rem;border: 1px solid transparent;border-radius: .25rem;">
+    
+### The Antiderivative
+The _antiderivative_ of some function $f$ is the function $F$ whose derivative is equal to the original function $f$, i.e. $$F^\prime = f\,.$$
+</div>
+
+The theorem has two parts:
 
 ## First Fundamental Theorem of Calculus
 ### Theorem
@@ -23,7 +31,7 @@ $$
 \end{aligned}
 $$
 
-<div style="padding:15px;margin-bottom:20px;border:1px solid transparent;border-radius:4px;color:#31708f;background-color:#d9edf7;border-color:#bce8f1;">
+<div style="color: #004085;background-color: #cce5ff;border-color: #b8daff;   position: relative;padding: .75rem 1.25rem;margin-bottom: 1rem;border: 1px solid transparent;border-radius: .25rem;">
 
 #### Extreme Value Theorem
 If $g(x)$ is continuous on $[a, b]$ then there exists $c,d\in[a,b]$ such that
@@ -52,19 +60,29 @@ and hence $F^\prime(x)=f(x)$.
 
 ## Second Fundamental Theorem of Calculus
 ### Theorem
-If $F^\prime$ is a continuous function defined on the _closed_ interval $I=[a,b]$, then
+If $F$ is an _antiderivative_ of $f$, with $f$ a continuous function defined on the _closed_ interval $I=[a,b]$, then
 $$
-\int_a^b F^\prime(x)\,\mathrm{d}x=F(b)-F(a)\,.
+\int_a^b f(x)\,\mathrm{d}x=F(b)-F(a)\,.
 $$
+
+It also holds from [the first fundamental theorem of calculus](#First-Fundamental-Theorem-of-Calculus) that if $f$ is continuous, then there exists an antiderivative.
+
+<div style="color: #856404;background-color: #fff3cd;border-color: #ffeeba;position: relative;padding: .75rem 1.25rem;margin-bottom: 1rem;border: 1px solid transparent;border-radius: .25rem;">
+Note, this is a weaker form of the proof (requiring continuity of $f$). A stronger proof makes use of Riemann sums.
+</div>
 
 ### Proof
 Let $$G(x) = \int_a^xF^\prime(t)\,\mathrm{d}t\,.$$
 
-By the _First Fundamental Theorem of Calculus_, $G^\prime(x)=F^\prime(x)$, hence $G(x)=F(x)+C$. But, 
+By the _first fundamental theorem of calculus_, $G^\prime(x)=F^\prime(x)$, hence $G(x)=F(x)+C$. 
+
+But, 
 $$
 G(a)=\int_a^a F^\prime(t)\,\mathrm{d}t=0\,,
 $$
-and $G(a)=F(a)+C$, so $C=-F(a)$. This gives
+and $G(a)=F(a)+C$, so $C=-F(a)$. 
+
+This gives
 $$
-\int_a^bF^\prime(t)\,\mathrm{d}t = F(b) - F(a)
+\int_a^bF^\prime(t)\,\mathrm{d}t = F(b) - F(a)\,.
 $$

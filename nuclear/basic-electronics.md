@@ -30,7 +30,7 @@ Capacitor
 
 The capacitor voltage charge relation $$Q_c(t)=CV_c(t)$$ can be
 differentiated to give the current as a function of the voltage
-$$I_c(t) = C\frac{\mathrm{d}c}{\mathrm{d}t}\,.$$
+$$I_c(t) = C\frac{\mathrm{d}V_c}{\mathrm{d}t}\,.$$
 
 If we represent these values as complex numbers, where $$\begin{aligned}
         \vec{V}(t) &= \lvert\vec{V}\rvert e^{i(\omega t+\phi_V)}\\
@@ -98,8 +98,8 @@ Any combination of batteries and resistances with two terminals can be
 replaced by a single voltage source $e$, and a single series resistor
 $R$.
 To calculate $e$, one must identify the "open circuit" terminals between which the equivalent voltage and resistance must be calculated. In the event that one is deriving the equivalent circuit for use with a load resistor, the load resistor is removed for the subsequent calculations. Using **(KVL)** and **(KCL)**, we can find the open circuit potential $e$. 
-![Finding the Thevenin Voltage.](theve2.png)
+![Finding the Thevenin Voltage.](images/theve2.png)
 
 To find the equivalent resistance, one must first remove any voltage sources (and consider them as simple wires), and replace any current sources with a break or disconnect. Subsequently, simple circuit laws can be used to find $R$.
-![Finding the Norton/Thevenin resistance.](theve3.png)
+![Finding the Norton/Thevenin resistance.](images/theve3.png)
 </div>

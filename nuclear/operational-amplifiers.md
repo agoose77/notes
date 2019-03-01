@@ -10,7 +10,7 @@ $$
 Op-Amps have an inverse gain-frequency response, which yields a decrease
 in gain as frequency increases. This can be shown with a number of
 linear regions using a *Bode plot*.
-![Bode Plot](bode.gif)
+![Bode Plot](images/bode.gif)
 
 There are a number of requirements for an "ideal Op-Amp":
 
@@ -33,7 +33,7 @@ negative feedback loop should be introduced.
 There are two configurations of negative feedback that are typically
 used: inverting, and non-inverting.
 
-![Inverting and Non-Inverting Op Amp](invert_and_non_invert.webp)
+![Inverting and Non-Inverting Op Amp](images/invert_and_non_invert.webp)
 
 Non Inverting
 -------------

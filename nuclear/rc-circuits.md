@@ -1,7 +1,7 @@
 RC Circuits
 ===========
 A resistor-capacitor (RC) circuit  (of first order) is a simple electronic circuit comprised of a resistor and capacitor.
-![RC circuit](rc-circuit.png)
+![RC circuit](images/rc-circuit.png)
 There are typically two configurations of RC circuits: **RC** and **CR**.
 
 RC Mode
@@ -36,4 +36,4 @@ $$
 Frequency Response
 ------------------
 Both of these modes exhibit an output voltage dependent upon frequency. A plot of $\lvert\frac{V_\text{out}}{V_\text{in}}\rvert$ shows that the RC circuit behaves as a _low pass filter_, whilst the CR circuit behaves as a _high pass filter_.
-![Frequency response of RC and CR circuits](frequency-response.png)
+![Frequency response of RC and CR circuits](images/frequency-response.png)
