@@ -4,13 +4,14 @@ The fundamental theorem of calculus links the concept of differentiating a funct
 <div style="color: #004085;background-color: #cce5ff;border-color: #b8daff;   position: relative;padding: .75rem 1.25rem;margin-bottom: 1rem;border: 1px solid transparent;border-radius: .25rem;">
     
 ### The Antiderivative
-The _antiderivative_ of some function $f$ is the function $F$ whose derivative is equal to the original function $f$, i.e. $$F^\prime = f\,.$$
+An _antiderivative_ of some function $f$ is the function $F$ whose derivative is equal to the original function $f$, i.e. $$F^\prime = f\,.$$
     
 If $F(x)$ is _any_ antiderivative of $f(x)$, the _most general_ antiderivative is the _indefinite integral_ of $f(x)$, 
 $$
+    \tag{a}
     \int f(x)\,\mathrm{d}x = F(x) + c\,,
 $$
-where $c$ is any constant.
+where $c$ is any constant. In effect, **(a)** represents the _set of antiderivatives_ of $f(x)$.
 </div>
 
 The theorem has two parts:
@@ -19,13 +20,13 @@ The theorem has two parts:
 ### Theorem
 If $f$ is a continuous function defined on the _closed_ interval $I=[a,b]$, and $F$ is its _accumulation_ function defined by
 $$
-\tag{a}
+\tag{b}
 F(x)=\int_a^xf(t)\,\mathrm{d}{t}\,,
 $$
 then $F$ is uniformly continuous on $I$, differentiable on the open interval $(a, b)$, and
 $$F^\prime(x)=f(x)\,,$$
 
-that is, _there exists an antiderivative $F(x)$ of $f(x)$ given by **(a)**_.
+that is, _there exists an antiderivative $F(x)$ of $f(x)$ given by **(b)**_.
 ### Proof
 Let 
 $$
