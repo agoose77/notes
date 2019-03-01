@@ -80,7 +80,11 @@ Note, this is a weaker form of the proof (requiring continuity of $f$). A strong
 </div>
 
 ### Proof
-Let $$G(x) = \int_a^x f(t)\,\mathrm{d}t\,.$$
+Let 
+$$
+    \tag{c}
+    G(x) = \int_a^x f(t)\,\mathrm{d}t\,.
+$$
 
 By the _first fundamental theorem of calculus_, $G$ is an antiderivative of $f$, or 
 $$
@@ -88,19 +92,17 @@ $$
 $$
 As $F$ is *also* an antiderivative of $f$, it follows that 
 $$
-    \tag{c}
-    G(x)=F(x)+C
+    \tag{d}
+    G(x)=F(x)+C\,,
 $$ 
-such that $G$ and $F$ differ only by a constant. But, 
+such that $G$ and $F$ differ only by a constant. But using **(c)**,
 $$
-G(a)=\int_a^a f(t)\,\mathrm{d}t=0\,,
+\begin{aligned}
+G(a) &= F(a) + C\\
+     &= \int_a^a f(t)\,\mathrm{d}t = 0\,,
+\end{aligned}
 $$
-and from **(c)**, $G(a)=F(a)+C=0$, so 
-$$
-    C=-F(a)\,.
-$$
-
-This gives
+hence $C=-F(a)$. This gives
 $$
 \int_a^b f(t)\,\mathrm{d}t = F(b) - F(a)\,.
 $$
