@@ -14,7 +14,7 @@ $$
 I_s = C\frac{\mathrm{d}V_C}{\mathrm{d}t} + \frac{V_C}{R}\,.
 $$
 
-To solve this, let's introduce $M(t)=e^{\int{C\,\mathrm{d}t}}$
+To solve this, let's introduce an integrating factor $M(t)=e^{\int{C\,\mathrm{d}t}}$. 
 
 
 ### Small $\tau$

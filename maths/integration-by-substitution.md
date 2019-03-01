@@ -4,6 +4,57 @@ Integration By Substitution
 Single Variable
 ---------------
 
+### Theorem
+* Let $\phi$ be a real function with a derivative, on the closed interval $[a, b]$.
+* Let $I$ be an _open interval_ which contains the image of $[a, b]$ under $\phi$.
+* Let $f$ be a real function which is continuous on $I$.
+
+Then
+$$
+\int_{\phi(a)}^{\phi(b)}f(t)\,\mathrm{d}t = \int_a^b f\big(\phi(u)\big)\phi^\prime(u)\,\mathrm{d}u\,,
+$$
+and
+$$
+\int f(x)\,\mathrm{d}x = \int f\big(\phi(u)\big)\phi^\prime(u) \,\mathrm{d}u\,,
+$$
+where $x = \phi(u)$.
+
+### Proof
+#### Indefinite Integrals
+Let $F(u) = \int f(u)\,\mathrm{d}u$. By definition, $F(u)$ is an [antiderivative](fundamental-theorem-of-calculus.md#The-Antiderivative) of $f(u)$.
+
+Hence, by the chain rule,
+$$
+\tag{a}
+\begin{aligned}
+    \frac{\mathrm{d}}{\mathrm{d}u}F\big(\phi(u)\big) &= F^\prime\big(\phi(u)\big)\phi^\prime(u)\\
+                                             &= f\big(\phi(u)\big)\phi^\prime(u)\,.
+\end{aligned}
+$$
+
+Evidently, $F(u)$ is an antiderivative of $f\big(\phi(u)\big)\phi^\prime(u)$, therefore
+$$
+    \int f\big(\phi(u)\big)\phi^\prime(u) \,\mathrm{d}u = F\big(\phi(u)\big) = \int f(x)\,\mathrm{d}x\,,
+$$
+
+where $x = \phi(u)$.
+
+We can also show this for definite integrals.
+
+#### Definite Integrals
+
+As before, $F(u)$ is an antiderivative of $f$. From the chain rule, we obtain **(a)**. Hence, from [the fundamental theorem of calculus](fundamental-theorem-of-calculus.md#Second-Fundamental-Theorem-of-Calculus):
+$$
+    \int_a^b f\big(\phi(u)\big)\phi^\prime(u)\,\mathrm{d}u = \left[F\big(\phi(u)\big)\right]_a^b\,.
+$$
+However, by the same rule, 
+$$
+\begin{aligned}
+    \int_{\phi(a)}^{\phi(b)}f(t)\,\mathrm{d}t &= \left[F(t)\right]_{\phi(a)}^{\phi(b)}\\
+                                              &= \int_a^b f\big(\phi(u)\big)\phi^\prime(u)\,\mathrm{d}u\,.
+\end{aligned}
+$$
+Q.E.D
 
 Multiple Variables
 ------------------
