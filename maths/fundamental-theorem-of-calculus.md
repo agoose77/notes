@@ -80,19 +80,29 @@ Note, this is a weaker form of the proof (requiring continuity of $f$). A strong
 </div>
 
 ### Proof
-Let $$G(x) = \int_a^xF^\prime(t)\,\mathrm{d}t\,.$$
+Let $$G(x) = \int_a^x f(t)\,\mathrm{d}t\,.$$
 
-By the _first fundamental theorem of calculus_, $G^\prime(x)=F^\prime(x)$, hence $G(x)=F(x)+C$. 
-
-But, 
+By the _first fundamental theorem of calculus_, $G$ is an antiderivative of $f$, or 
 $$
-G(a)=\int_a^a F^\prime(t)\,\mathrm{d}t=0\,,
+    G^\prime(x)=f(x)\,.
 $$
-and $G(a)=F(a)+C$, so $C=-F(a)$. 
+As $F$ is *also* an antiderivative of $f$, it follows that 
+$$
+    \tag{c}
+    G(x)=F(x)+C
+$$ 
+such that $G$ and $F$ differ only by a constant. But, 
+$$
+G(a)=\int_a^a f(t)\,\mathrm{d}t=0\,,
+$$
+and from **(c)**, $G(a)=F(a)+C=0$, so 
+$$
+    C=-F(a)\,.
+$$
 
 This gives
 $$
-\int_a^bF^\prime(t)\,\mathrm{d}t = F(b) - F(a)\,.
+\int_a^b f(t)\,\mathrm{d}t = F(b) - F(a)\,.
 $$
 
-<!-- For subsequent "proper" derivation of rule 2, we can't define rule 1 in terms of rule 2, as rule 2 makes presupposition that _any_ antiderivative exists. This is only proven by rule 1.
+<!-- For subsequent "proper" derivation of rule 2, we can't define rule 1 in terms of rule 2, as rule 2 makes presupposition that _any_ antiderivative exists. This is only proven by rule 1. -->

@@ -1,4 +1,12 @@
-# Integration By Substitution
+Integration By Substitution
+===========================
+
+Single Variable
+---------------
+
+
+Multiple Variables
+------------------
 Consider a transformation $T:\mathbb{R}^2\rightarrow\mathbb{R}$ which maps from $(u,v)$ to $(x,y)$, where $x=g(u,v),y=h(u,v)$. 
 
 If $S\subseteq \mathbb{R}^2$ is a region in the $uv$ plane, on which $T$ is a one-to-one function, and $R=T(S)$, we might look to find an expression which relates an integral using $xy$ coordinates on $R$ to one using $uv$ coordinates on $S$.
