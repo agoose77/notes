@@ -1,11 +1,18 @@
 RC Circuits
 ===========
 A resistor-capacitor (RC) circuit  (of first order) is a simple electronic circuit comprised of a resistor and capacitor.
-![RC circuit](images/rc-circuit.png)
-There are typically two configurations of RC circuits: **RC** and **CR**.
+There are typically two configurations of RC circuits, **RC** and **CR**.
 
 RC Mode
 -------
+![RC Integrator](images/integrator.gif)
+
+<div style="color: #004085;background-color: #cce5ff;border-color: #b8daff;   position: relative;padding: .75rem 1.25rem;margin-bottom: 1rem;border: 1px solid transparent;border-radius: .25rem;">
+
+### Transfer Function
+The _transfer function_ shows the dependence of the gain upon the signal frequency (for sinusoidal signals).
+</div>
+
 In RC mode, the output voltage is taken over the capacitor. Given that the impedance of a capactitor is 
 $$
     Z_C=\frac{1}{i\omega C}\,,
@@ -20,18 +27,25 @@ $$
 
 Letting $\tau = RC$, we find that
 $$
-V_C = V_\text{in}\frac{1}{1+i\omega\tau}\,.
+V_C = V_\text{in}\frac{1}{1+i\omega\tau}\,,
 $$
+
+where $\frac{1}{1+i\omega\tau}$ is the _transfer function_.
+
 
 CR Mode
 -------
+![RC Differentiator](images/differentiator.gif)
+
 In CR mode, the output voltage is taken over the resistor. The voltage over the resistor is given by
 $$
 \begin{aligned}
 V_R &= V_\text{in}\frac{R}{R+Z_C}\\
-    &= V_\text{in}\frac{i\omega\tau}{1+i\omega \tau}\,.
+    &= V_\text{in}\frac{i\omega\tau}{1+i\omega \tau}\,,
 \end{aligned}
 $$
+
+where $\frac{i\omega\tau}{1+i\omega \tau}$ is the _transfer function_.
 
 Frequency Response
 ------------------

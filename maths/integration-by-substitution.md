@@ -39,8 +39,6 @@ $$
 
 where $x = \phi(u)$.
 
-We can also show this for definite integrals.
-
 #### Definite Integrals
 
 As before, $F(u)$ is an antiderivative of $f$. From the chain rule, we obtain **(a)**. Hence, from [the fundamental theorem of calculus](fundamental-theorem-of-calculus.md#Second-Fundamental-Theorem-of-Calculus):
@@ -54,7 +52,6 @@ $$
                                               &= \int_a^b f\big(\phi(u)\big)\phi^\prime(u)\,\mathrm{d}u\,.
 \end{aligned}
 $$
-Q.E.D
 
 Multiple Variables
 ------------------
