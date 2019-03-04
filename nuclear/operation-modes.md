@@ -11,12 +11,13 @@ The voltage across the load resistor $R$ is the fundamental signal voltage, and 
 
 For an RC circuit with source current $I_s=I_C+I_R$, it follows that
 $$
+\tag{a}
 I_s = C\frac{\mathrm{d}V_C}{\mathrm{d}t} + \frac{V_C}{R}\,.
 $$
 
 To solve this, let's introduce an function $M(t)$, and multiply through 
 $$
-    \tag{a}
+    \tag{b}
     M(t)C\frac{\mathrm{d}V_C}{\mathrm{d}t} + M(t)\frac{V_C}{R} = M(t)\frac{I_s}{C}\,.
 $$
 By choosing $M(t)=e^{\int{\frac{1}{RC}\,\mathrm{d}t}}=e^{\int{\frac{1}{\tau}\,\mathrm{d}t}}$, it follows that
@@ -24,7 +25,7 @@ $$
 \frac{\mathrm{d}M(t)}{\mathrm{d}t} = \frac{1}{\tau}M(t)\,,
 $$
 
-hence we can rewrite **(a)** as
+hence we can rewrite **(b)** as
 $$
     \frac{\mathrm{d}}{\mathrm{d}t}\Big(M(t)V_C\Big) = M(t)\frac{I_s}{C}\,,
 $$
@@ -36,7 +37,6 @@ $$
 
 As $M(t)$ can be any function which satisfies $M^\prime = \frac{1}{\tau}M$, let $M(t) = \exp\left(\int_0^t \frac{1}{\tau}\,\mathrm{d}t\right)=\exp(\frac{t}{\tau})$,
 $$
-    \tag{b}
     V_C(t) = \exp\left(\frac{-t}{\tau}\right)\left(V_C(0) + \frac{1}{C}\int_0^t \exp\left(\frac{t^\prime}{\tau}\right)I_s\,\mathrm{d}t^\prime\right)\,.
 $$
 
@@ -48,10 +48,18 @@ $$
 
 
 ### Small $\tau$
-Where $\tau \ll t_c$, given $t_c$ is the charge collection time, the 
+Let us rewrite **(a)** in terms of $\tau$
+$$
+\tag{d}
+R I_s = \tau\frac{\mathrm{d}V_C}{\mathrm{d}t} + V_C\,.
+$$
+
+Taking the limit as $\tau \rightarrow 0$, it follows that $I_s \approx \frac{V_C}{R}$
 
 ### Large $\tau$
-Where $\tau \gg t_c$, **(c)** approaches
+Where $\tau \rightarrow \infty$, **(c)** approaches
 $$
     V_C(t) = \frac{1}{C}\int_0^t I_s(t^\prime) \,\mathrm{d}t^\prime\,.
 $$
+
+This can also be shown from **(d)**, with $I_s \approx C \frac{\mathrm{d}V_C}{\mathrm{d}t}$.
