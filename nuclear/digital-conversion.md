@@ -1,6 +1,53 @@
 Digital Conversion
 ==================
 
+
+Analogue and digital pulses
+---------------------------
+Analogue pulses are described by an instantaneous voltage amplitude
+$V(t)$, and the corresponding profile drawn by $V(t)$ over a given time
+interval $t_0\rightarrow t_1$.
+
+Although analogue signals apprear continuous, there are a number of
+physical constraints which determine the upper bound of the resolution
+of a signal, such as the presence of interference and the physical
+quantisation of charge.
+
+Digital pulses may carry the same amount of information, but encode the
+amplitude of a signal as an nbit number, conventionally in base 2.
+
+### Example
+Let us encode an analogue signal in the range
+$0\operatorname{V}\rightarrow 10\operatorname{V}$ into an integer of 16 bits.
+First, we divide the amplitude range into ($2^{16}$) bins of equal
+magnitude, and find the correspond bin for the input amplitude.
+
+Let us assume an input amplitude of 5 V. This would be quantised by the
+above algorithm into the $32768^{th}$ bin. This can be encoded into 16
+bits as *0b1000000000000000*.
+
+Logic
+-----
+There are three major conventions used to represent logic values over
+analogue interfaces:
+
+1.  Transistor-TransistorLogic (TTL)
+
+2.  Nuclear Instrument Module (NIM)
+
+3.  Emitter Coupled Logic (ECL/CLM)
+
+The TTL convention defines a logical true value as a potential
+difference of +5 V with respect to ground, and a false value as 0 V p.d.
+with respect to ground.
+
+The NIM convention, on the other hand, defines a true value as -0.5 V
+w.r.t ground, and a false value as 0 V p.d. w.r.t ground.
+
+Finally, the ECL convention requires that two lines are used to carry a
+signal, each of an amplitude between -1.75 V and -0.75 V (true, false
+for A, & false, true for B)
+
 An ADC converts an analogue pulse into a digital amplitude as follows:
 
 1.  The peak amplitude is located using peak detection (differentiating
@@ -15,7 +62,6 @@ Approximation.
 
 Linearity
 ---------
-
 There are two aspects to the linearity of an ADC, which describe its
 linear behaviour:
 
@@ -29,7 +75,6 @@ linear behaviour:
 
 The Wilkinson Method
 --------------------
-
 The Wilkinson method involves charging a capacitor to the held voltage
 $V$, and then counting the number of clock pulses which elapse as it
 discharges through a constant current source, before a discriminator
@@ -52,7 +97,6 @@ whilst the $\operatorname{DNL}$ depends upon, in particular, the clock character
 
 The Successive Approximation Method
 -----------------------------------
-
 The successive approximation method uses an iterative algorithm which
 utilises a fixed number of bits to encode the voltage as a digital
 value. The algorithm decomposes the voltage as a sum of fractional
@@ -69,7 +113,6 @@ digital representation at the end
 
 Flash ADC
 ---------
-
 This method "brute forces" the AD problem by using N window
 discriminators, which correspond to N equally spaced channels.
 
