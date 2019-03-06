@@ -44,7 +44,7 @@ m_1{\mu_1}^2\left(1+\frac{m_1}{m_2}\right) &= m_1{\hat{\mu}_1}^2\left(1+\frac{m_
 \end{aligned}
 $$
 
-i.e. the energies in the CoM frame are invariant. As a CoM frame, it holds that $\sum_i m_i\vec{\hat{\mu}_i} = \vec{0}$, and so the velocities $\vec{\hat{\mu}_i}$ remain _anti-aligned_. If we assume _isotropic scattering_ in the CoM frame, then $\vec{\hat{\mu}_i}$ are rotated by some angle $\theta$ with respect to their original directions $\vec{{\mu}_i}$. This rotation may be represented as an orthogonal matrix $R(\theta)$, which _preserves the vector norm_, with
+i.e. the energies in the CoM frame are invariant. As a CoM frame, it holds that $\sum_i m_i\vec{\hat{\mu}_i} = \vec{0}$, and so the velocities $\vec{\hat{\mu}_i}$ remain _anti-aligned_. If we assume _isotropic scattering_ in the CoM frame, then $\vec{\hat{\mu}_i}$ are rotated about _some_ axis by angle $\theta$, with respect to their original directions $\vec{{\mu}_i}$. This rotation may be represented as an orthogonal matrix $R(\theta)$, which _preserves the vector norm_, with
 <!-- TODO: link to Orthogonal matrix properties -->
 $$
 \vec{\hat{\mu}_i} = R(\theta)\vec{\hat{\mu}}\,.
@@ -73,6 +73,8 @@ $$
 \end{aligned}
 $$
 
+Energy Transfer
+---------------
 The ratio of the kinetic energy before and after the collision is then given by 
 $$
 \begin{aligned}
@@ -102,3 +104,16 @@ $$
 &\approx E\frac{4m_2}{{m_1}}\,.
 \end{aligned}
 $$
+
+Deflection Angle
+----------------
+The deflection angle $\phi$ in the lab frame can be determined from the dot product of the initial and final velocities:
+$$
+\begin{aligned}
+\lvert\vec{v_1}\rvert^2\cos(\phi) &= \vec{\hat{v}_1}\cdot\vec{v_1}\\
+&= \frac{m_2 \left(R(\theta)\vec{v_1}\right)+m_1\vec{v_1}}{m_1+m_2}\cdot\vec{v_1}\\
+&= \lvert \vec{v_1}\rvert^2\left(\frac{m_1+m_2\cos(\theta)}{m_1+m_2}\right)\\
+\cos(\phi) &= \frac{m_1+m_2\cos(\theta)}{m_1+m_2}\,.
+\end{aligned}
+$$
+As considered above, in the limit $m_1\gg m_2$, $\cos(\phi)\rightarrow 1$. Thus, when the incident mass is much greater than the target, the deflection angle $\phi$ approaches zero.
