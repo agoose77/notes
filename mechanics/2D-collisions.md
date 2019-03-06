@@ -1,7 +1,7 @@
 2D Collisions
 =============
 Consider two masses $m_1$ and $m_2$ with velocities $\vec{v_1}$ and $\vec{v_2}$ respectively.
-![Lab frame.](lab_frame.png)
+![Lab frame.](images/lab_frame.png)
 
 We can create an inertial frame in which the _net_ momentum is zero, the center of momentum (CoM) frame. The velocity of this frame is given by 
 $$
@@ -13,7 +13,7 @@ $$
 \tag{a}
 \vec{\mu_i}=\vec{v_i}-\vec{V_\text{cm}}\,.
 $$
-![CoM frame.](com_frame.png)
+![CoM frame.](images/com_frame.png)
 
 Given that the sum of momenta must be zero, 
 $$
