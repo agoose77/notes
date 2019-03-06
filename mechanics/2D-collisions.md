@@ -95,7 +95,7 @@ $$
 \end{aligned}
 $$
 
-If $m_1\gg m_2$ then
+If $m_1\gg m_2$, then
 $$
 \begin{aligned}
 \Delta E 
