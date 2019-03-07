@@ -1,4 +1,4 @@
-2D Collisions
+2D Non-Relativistic Collisions
 =============
 Consider two masses $m_1$ and $m_2$ with velocities $\vec{v_1}$ and $\vec{v_2}$ respectively.
 ![Lab frame.](images/lab_frame.png)
