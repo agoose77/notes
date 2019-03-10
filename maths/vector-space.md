@@ -23,7 +23,7 @@ For both operations, the result is also a member of $V$.
 | Distributivity of scalar multiplication w.r.t vector addition    	| $a(u + v) = au + av$                            	|
 | Distributivity of scalar multiplication w.r.t field addition     	| $(a + b)v = av + bv$                            	|
 
-This first four of these axioms are equivalent to defining vectors as _an [abelian group](groups.md/#Abelian-Groups) under addition_.
+This first four of these axioms are equivalent to defining vectors as _an [abelian group](group.md/#Abelian-Groups) under addition_.
 
 ## Basis and Dimension
 A basis is a set of vectors $\{\vec{v}\}$ which spans the whole space, and is linearly independent. To span the whole space means that any vector $\vec{V}$ can be expressed as a finite sum of the basis elements. 
