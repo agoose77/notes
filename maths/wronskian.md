@@ -44,8 +44,7 @@ or
 $$
 G(t)\vec{x}=\vec{0}\,\forall\, t\in I\,.
 $$
-<!-- TODO: link to determinant -->
-From linear algebra, if the columns $\vec{g}_i$ of $G(t)$ are linearly dependent on $I$, then it follows from the properties of the determinant that $\lvert G(t)\rvert=0\,\forall\,t\in I$. 
+From linear algebra, if the columns $\vec{g}_i$ of $G(t)$ are linearly dependent on $I$, then it follows from the [properties of the determinant that](linear-algebra/matrix-determinant-properties.md#Linear-Dependence) $\lvert G(t)\rvert=0\,\forall\,t\in I$. 
 
 ---
 Now consider a set of real valued functions $\{\,f_1,\,f_2,\,\dots,\,f_n\,\}$. They are linearly _dependent_ on $I$ if
