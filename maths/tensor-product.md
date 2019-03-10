@@ -1,4 +1,5 @@
-# Tensor Product
+Tensor Product
+==============
 The tensor product $V\otimes W$ of two [vector spaces](vector-space.md) $V$ and $W$ over the same field is also a vector space. 
 
 ## The Operator

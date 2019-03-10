@@ -1,4 +1,5 @@
-# Cramer's Rule
+Cramer's Rule
+=============
 Consider a system of linear equations 
 $$
 \begin{aligned}

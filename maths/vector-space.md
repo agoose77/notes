@@ -1,4 +1,5 @@
-# Vector Spaces
+Vector Spaces
+=============
 A vector space over a field $F$ is a [set](set.md) $V$, together with two operations which satisfy a series of [axioms](#Axioms). Elements of $V$ are called _vectors_, whilst elements of $F$ are called _scalars_.
 
 ## Operations

@@ -1,4 +1,5 @@
-# Existence and Uniqueness Theorem for a Linear ODE of Order $n$
+Existence and Uniqueness Theorem for a Linear ODE of Order $n$
+==============================================================
 ## Theorem
 Consider a non-homogeneous linear ODE of the form
 $$

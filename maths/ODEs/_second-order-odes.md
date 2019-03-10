@@ -1,4 +1,5 @@
-# Second Order Differential Equations
+Second Order Differential Equations
+===================================
 
 Consider an equation of the form
 $$

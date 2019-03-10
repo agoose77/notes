@@ -1,4 +1,5 @@
-# Constrained Optimisation
+Constrained Optimisation
+========================
 
 ## Lagrange multipliers
 In general, the method of Lagrange multipliers is convert a constrained optimisation problem into an unconstrained one. Consider the case where one wishes to find the stationary points of some function $f(\vec{x})$ where $\vec{x}=(x_1,x_2,\dots,x_N)^\mathsf{T}$, subject to the constraints $g_k(\vec{x})=0$ for $k=1,\dots,m<N$.

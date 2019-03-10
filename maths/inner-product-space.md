@@ -1,4 +1,5 @@
-# Inner Product Space
+Inner Product Space
+===================
 An inner product space is a [vector space](vector-space.md) with an additional structure called an _inner product_, which associates pairs of vectors in the space $V$ with a scalar value in the field $F$.
 
 ## The Inner Product

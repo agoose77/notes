@@ -1,4 +1,5 @@
-# Set
+Set
+===
 A set is a well defined, unordered collection of _distinct_ objects, called elements.
 
 ## Definition

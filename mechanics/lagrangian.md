@@ -1,4 +1,5 @@
-# The Lagrangian
+The Lagrangian
+==============
 
 <div style="color: #004085;background-color: #cce5ff;border-color: #b8daff;position: relative;padding: .75rem 1.25rem;margin-bottom: 1rem;border: 1px solid transparent;border-radius: .25rem;">
   

@@ -1,4 +1,5 @@
-# The Principle of Stationary Action
+The Principle of Stationary Action
+==================================
 
 <!-- TODO generalise to many coordinates. -->
 

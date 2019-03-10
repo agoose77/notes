@@ -1,4 +1,5 @@
-# Differentiating Under the Integral
+Differentiating Under the Integral
+==================================
 Leibniz's rule for differentiation under the integral sign states that for an integral of the form 
 $$
     \int _{a(x)}^{b(x)}f(x,t)\,\mathrm{d}t\,,

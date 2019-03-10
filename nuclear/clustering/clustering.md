@@ -8,6 +8,14 @@ There are several concepts of a cluster which are consistent with this definitio
 * Clusters as structureless component particles.
 * Clusters as emitted nuclei.
 
+Microscopic Clusters
+--------------------
+Introduced by Wheeler, microscopic clusters involve a molecular picture where
+> the constituent neutrons and protons are divided into various
+groups (such as alpha-particles)
+
+These groups are the nuclear clusters. Wheeler also introduced an antismmetrized wave function, based upon α clusters, known as the [_resonating-group wave function_][1]).
+
 ---
 
 * $\alpha$ particles are more tightly bound than the average nucleus (per nucleon), so $\alpha$s can move throughout the nucleus relatively unpeturbed.

@@ -1,4 +1,5 @@
-# Curvilinear Coordinates
+Curvilinear Coordinates
+=======================
 Curvilinear coordinates are a coordinate system for Euclidean space in which the coordinate lines may be curved. We can define a coordinate in Cartesian space a series of functions of its curvilinear coordinates $(u,v,w)$,
 $$
 \begin{aligned}
