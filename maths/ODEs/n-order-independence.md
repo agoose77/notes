@@ -111,4 +111,6 @@ y_1^{(n-1)}(x_0) & y_2^{(n-1)}(x_0) & \dots &  y_n^{(n-1)}(x_0) \\
 \end{vmatrix}\neq 0\,.
 $$
 If the determinant of the [Wronskian](wronskian.md) **(d)** of solutions $y_1,\,y_2,\,\dots,\,y_n$ for some $x=x_0\in I$ is nonzero, then according to the definition of the Wronskian, $y_1,\,y_2,\,\dots,\,y_n$ are linearly independent on $I$.
+
 <!-- p 787 -->
+[1]: http://store.doverpublications.com/0486649407.html
