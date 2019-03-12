@@ -99,7 +99,6 @@ If $m_1\gg m_2$, then
 $$
 \begin{aligned}
 \Delta E 
-&=  E_0\frac{4m_1m_2}{\left(m_1+m_2\right)^2}\\
 &= E_0\frac{4m_1m_2}{{m_1}^2\left(1+\frac{m_2}{m_1}\right)^2}\\
 &\approx E_0\frac{4m_2}{{m_1}}\,.
 \end{aligned}
