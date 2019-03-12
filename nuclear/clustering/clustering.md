@@ -20,15 +20,16 @@ These groups are the nuclear clusters. Wheeler also introduced an antismmetrized
 
 * $\alpha$ particles are more tightly bound than the average nucleus (per nucleon), so $\alpha$s can move throughout the nucleus relatively unpeturbed.
 * As the nuclear density falls to $\frac{1}{3}$ nominal, $\alpha$ clusters form from condensing nucleons. Associated with this condensation is a _preformation probability_.
-  <div style="color: #004085;background-color: #cce5ff;border-color: #b8daff;position: relative;padding: .75rem 1.25rem;margin-bottom: 1rem;border: 1px solid transparent;border-radius: .25rem;">
-  
-  #### Preformation Probability
-  Preformation of $\alpha$ particles inside the nucleus is the first step to $\alpha$ decay. It indicates the degree of $\alpha$ clustering within the nucleus.
-    
+    <div style="color: #004085;background-color: #cce5ff;border-color: #b8daff;position: relative;padding: .75rem 1.25rem;margin-bottom: 1rem;border: 1px solid transparent;border-radius: .25rem;">
+
+    #### Preformation Probability
+      Preformation of $\alpha$ particles inside the nucleus is the first step to $\alpha$ decay. It indicates the degree of $\alpha$ clustering within the nucleus.
+
     $S_\alpha$ is the probability that an $\alpha$ particle will form from four nucleons on the surface of the nucleus.
-  </div>
-* Full shells maximise binding energy, so they have <span style="color:red">large associated jumps</span> in energy levels, e.g., $^{16}\text{O}$, $^{12}\text{C}$, which are _alpha conjugate_ nuclei.
-  <div style="color: #004085;background-color: #cce5ff;border-color: #b8daff;position: relative;padding: .75rem 1.25rem;margin-bottom: 1rem;border: 1px solid transparent;border-radius: .25rem;">
+    </div>
+
+    * Full shells maximise binding energy, so they have <span style="color:red">large associated jumps</span> in energy levels, e.g., $^{16}\text{O}$, $^{12}\text{C}$, which are _alpha conjugate_ nuclei.
+      <div style="color: #004085;background-color: #cce5ff;border-color: #b8daff;position: relative;padding: .75rem 1.25rem;margin-bottom: 1rem;border: 1px solid transparent;border-radius: .25rem;">
   
   #### $\alpha$ Conjugate Nuclei
   $\alpha$ conjugate nuclei have an equal and even number of protons and neutrons, such that they are effectively composed of $n\in Z$ $\alpha$ particles (in concept only). 
@@ -52,3 +53,4 @@ These groups are the nuclear clusters. Wheeler also introduced an antismmetrized
 * As well as energy driving clustering, there is also symmetries, which act to guide the formation of the clusteres themselves.
 
 [1]: https://iopscience.iop.org/article/10.1088/1742-6596/569/1/012092/pdf
+[2]: https://arxiv.org/abs/1705.06192 <!-- All images credit to original author unless otherwise stated -->
