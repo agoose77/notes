@@ -30,7 +30,7 @@ Here, $v$ and $ze$ are the velocity and charge of the primary particle, $N$ and 
 $$
 B\approx Z\ln\left(\frac{2m_0v^2}{I}\right)\,.
 $$
-**(a)** remains valid for many types of charged particles _proivded that $v$ remains large with respect to the velocities of the orbital electrons_ of the absorber atoms.
+**(a)** remains valid for many types of charged particles _provided that $v$ remains large with respect to the velocities of the orbital electrons_ of the absorber atoms.
 
 Given that $B$ varies slowly with $v$ (besides the last term), it can be seen that **(a)** varies roughly as $\frac{1}{v^2}$, i.e. $\frac{1}{E}$. This may be heuristically explained by noting that for large $v$, the particle spends a small amount of time in the vicinity of any electron, and so the impulse (and hence energy transfer) is small. In addition, **(a)** depends upon $z^2$, and so _particles with greater charges have greater specific energy loss_.
 
