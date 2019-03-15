@@ -12,7 +12,7 @@ The term *inverse kinematics* refers to a beam with heavier nuclei than those of
 
 Time of Flight Discrimination
 -----------------------------
-To discriminate between elastic and inelastic scatters, one can observe the difference in the time-of-flight (ToF) of the scattered particles, which results from the energy lost by inelastic scattering processes. The reduced energy of the beam leads to a shorter path (of beam nuclei) within the target, and consequently a shorter ToF, as the higher mobility target nuclei travel are detected more quickly. Consequently, inelastic scattering events can be isolated from elastic events for a given energy $E$, by separating the two distinct distributions in ToF space.
+To discriminate between elastic and inelastic scatters, one can observe the difference in the time-of-flight (ToF) of the scattered particles, which results from the energy loss during inelastic scattering. The reduced kinetic energy of the system requires that reactions occur closer to the window for the same measured $\alpha$ energy. This leads to a shorter path of beam nuclei within the target, and consequently a shorter ToF, as the target nuclei (with higher mobility) are detected more quickly. Consequently, inelastic scattering events can be isolated from elastic events for a given energy $E$, by separating the two distinct distributions in ToF space.
 
 ![Time of Flight discrimination.](images/tof.png)
 
