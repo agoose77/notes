@@ -1,7 +1,19 @@
 2D Non-Relativistic Collisions
 =============
 Consider two masses $m_1$ and $m_2$ with velocities $\vec{u_1}$ and $\vec{u_2}$ respectively.
-![Lab frame.](images/lab_frame.png)
+<!-- ![Lab frame.](images/lab_frame.png) -->
+```bob
+                   .---.      
+                   |Lab|      
+                   '---'      
+     _____                       _____      
+   ,'     `.                   ,'     `.    
+  /         \     u1      u2  /         \   
+ (    m1     ) --------> <-- (    m2     )  
+  \         /                 \         /   
+   `._____,'                   `._____,'        
+   
+```
 
 We can create an inertial frame in which the _net_ momentum is zero, the center of momentum (CoM) frame. The velocity of this frame is given by 
 $$
@@ -13,7 +25,22 @@ $$
 \tag{a}
 \vec{\hat{u}_i}=\vec{u_i}-\vec{V_\text{cm}}\,.
 $$
-![CoM frame.](images/com_frame.png)
+
+<!-- ![CoM frame.](images/com_frame.png) -->
+```bob
+                   .----.  
+                   |CoM |  
+                   '----'  
+     _____                       _____      
+   ,'     `.      ^     ^      ,'     `.    
+  /         \     u1    u2    /         \   
+ (    m1     ) -----> <----- (    m2     )  
+  \         /                 \         /   
+   `._____,'                   `._____,'    
+                  
+                     ---> Vcm
+                                                  
+```                                         
 
 Given that the sum of momenta must be zero, 
 $$
