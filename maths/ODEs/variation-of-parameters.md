@@ -5,25 +5,55 @@ Recall that the complementary function for some _non homogeneous_ linear ODE of 
 For the nonhomogeneous linear ODE 
 $$
     \tag{a}
-    s(t)y^{\prime\prime}(t) + y^\prime p(t) + q(t)y(t) = g(t)\,,
+    s(t)y^{\prime\prime}(t) + y^\prime(t) p(t) + q(t)y(t) = g(t)\,,
 $$
 let us define 
 $$
     \tag{b}
-    y_p(t) = u_1(t)y_1(t) + u_2(t)y_2(t)\,.
+    y_p = u_1y_1 + u_2y_2\,.
 $$
 Taking the derivative of **(b)**, 
 $$
-    {y_p}^\prime(t) = u_1(t){y_1}^\prime(t) + {u_1}^\prime(t)y_1(t) + u_2(t){y_2}^\prime(t) + {u_2}^\prime(t)y_2(t)\,,
+    {y_p}^\prime = u_1{y_1}^\prime + {u_1}^\prime y_1 + u_2{y_2}^\prime + {u_2}^\prime y_2\,,
 $$
-we assume that ${u_1}^\prime(t)y_1(t) + {u_2}^\prime(t)y_2(t) = 0$, such that
+we assume that 
+$$
+    \tag{c}
+    {u_1}^\prime y_1 + {u_2}^\prime y_2 = 0\,,
+$$ such that
 $$
 \begin{aligned}
-    {y_p}^\prime(t) &= u_1(t){y_1}^\prime(t) + u_2(t){y_2}^\prime(t)\\
-    y_p^{\prime\prime}(t) &= u_1(t)y^{\prime\prime}(t) + {u_1}^\prime(t){y_1}^\prime(t) + u_2(t)y_2^{\prime\prime}(t) + {u_2}^\prime(t){y_2}^\prime(t)\,.
+    {y_p}^\prime &= u_1{y_1}^\prime + u_2{y_2}^\prime\\
+    y_p^{\prime\prime} &= u_1y^{\prime\prime} + {u_1}^\prime{y_1}^\prime + u_2y_2^{\prime\prime} + {u_2}^\prime{y_2}^\prime\,.
 \end{aligned}
 $$
 **(a)** may then be rewritten as 
 $$
-    s(t)\left(u_1(t)y^{\prime\prime}(t) + {u_1}^\prime(t){y_1}^\prime(t) + u_2(t)y_2^{\prime\prime}(t) + {u_2}^\prime(t){y_2}^\prime(t)\right) + p(t)\left(u_1(t){y_1}^\prime(t) + u_2(t){y_2}^\prime(t)\right) + q(t)\left(u_1(t)y_1(t) + u_2(t)y_2(t)\right)
+    s\Big(u_1y^{\prime\prime} + {u_1}^\prime{y_1}^\prime + u_2y_2^{\prime\prime} + {u_2}^\prime{y_2}^\prime\Big) + 
+    p\Big(u_1{y_1}^\prime + u_2{y_2}^\prime\Big) + 
+    q\Big(u_1y_1 + u_2y_2\Big) = g\,.
+$$
+
+Grouping terms in $u_1$, $u_2$,
+$$
+    \tag{d}
+    s\Big({u_1}^\prime{y_1}^\prime + {u_2}^\prime{y_2}^\prime\Big) + 
+    u_1\Big(s{y_1}^{\prime\prime} + p{y_1}^\prime + qy_1\Big) + 
+    u_1\Big(s{y_1}^{\prime\prime} + p{y_1}^\prime + qy_1\Big) = g\,.
+$$
+
+As $y_1,\,y_2$ are solutions to the _homogeneous_ equation, it follows that **(d)** reduces to
+$$
+    {u_1}^\prime{y_1}^\prime + {u_2}^\prime{y_2}^\prime  = \frac{g}{s}\,.
+$$
+
+Let us now _redefine_ $p, q, g$ such that $s$ is divided out,
+$$
+    \tag{d}
+    {u_1}^\prime{y_1}^\prime + {u_2}^\prime{y_2}^\prime  = g\,.
+$$
+
+From **(c\)**, ${u_1}^\prime=\frac{-{u_2}^\prime}{y_1}y_2$, hence **(d)** becomes
+$$
+    \frac{{u_2}^\prime}{y_1}
 $$
