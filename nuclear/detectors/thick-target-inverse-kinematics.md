@@ -18,6 +18,8 @@ To discriminate between elastic and inelastic scatters, one can observe the diff
 
 In the above figure, the elastic scattering events correspond to the locus of points bounded by the dashed black contour line. The inelastic scattering events lie below this region (corresponding to a smaller ToF), denoted by the red dashed line.
 
+Following the identification of the elastic and inelastic scattering events, the centre of mass (CoM) energy $E_\text{com}$ may be determined, using the stopping powers of the beam and target nuclei.
+
 [1]: https://iopscience.iop.org/article/10.1088/1742-6596/569/1/012052/meta
  <!-- TODO write this up: -->
 [2]: http://farside.ph.utexas.edu/teaching/336k/Newtonhtml/node51.html
