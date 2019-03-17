@@ -13,7 +13,7 @@ $$
 \tag{b}
 y_c = c_1 y_1 + c_2 y_2 + \dots + c_n y_n\,,
 $$
-is a general solution of **(a)**, i.e every solution of **(a)** can be obtained from **(b)** by proper choice of the constants $c_1,\,c_2,\,\dots,\,c_n$.
+is a _general solution_ of **(a)** and $\{\,y_1,\,y_2,\,\dots,\,y_n\,\}$ form a _fundamental set_ of solutions, i.e. every solution of **(a)** can be obtained from **(b)** by proper choice of the constants $c_1,\,c_2,\,\dots,\,c_n$.
 
 Proof
 -----
@@ -48,6 +48,7 @@ $$
 Evidently this is just **(a)** with $y=y_c$, hence $y_c$ is also a solution to **(a)**.
 
 <!-- TODO: Abel's theorem required
+
 ---
 First we shall prove the theorem for $n = 2$. Let $y_1,\,y_2$ be two linearly independent solutions of 
 $$

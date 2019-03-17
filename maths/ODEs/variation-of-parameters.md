@@ -55,5 +55,17 @@ $$
 
 From **(c\)**, ${u_1}^\prime=\frac{-{u_2}^\prime}{y_1}y_2$, hence **(d)** becomes
 $$
-    \frac{{u_2}^\prime}{y_1}
+\begin{aligned}
+    -\frac{{u_2}^\prime}{y_1}y_2{y_1}^\prime + {u_2}^\prime{y_2}^\prime &= g(t)\\
+    {u_2}^\prime \left({y_2}^\prime-\frac{y_2}{y_1}{y_1}^\prime\right) &= g(t)\\
+    {u_2}^\prime \left(\frac{{y_2}^\prime y_1-y_2{y_1}^\prime}{y_1}\right) &= g(t)\,,
+\end{aligned}
 $$
+hence
+$$
+    {u_2}^\prime = \frac{g(t)y_1}{\operatorname{W}\mathopen{}\big[y_1,y_2\big]\mathclose{}}\,.
+$$
+
+Given that $y_1,\,y_2$ form a _fundamental set of solutions_, it follows from [Abel's theorem](abels-theorem.md) that $\operatorname{W}\mathopen{}\big[y_1,y_2\big]\mathclose{}$ is exclusively either zero or non-zero for _all_ $t \in I$.
+
+Can the Wronskian be nonzero for linearly _depedendent_ fns?
