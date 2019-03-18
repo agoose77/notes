@@ -68,4 +68,4 @@ $$
 
 Given that $y_1,\,y_2$ form a _fundamental set of solutions_, it follows from [Abel's theorem](abels-theorem.md) that $\operatorname{W}\mathopen{}\big[y_1,y_2\big]\mathclose{}$ is exclusively either zero or non-zero for _all_ $t \in I$.
 
-Can the Wronskian be nonzero for linearly _depedendent_ fns?
+<!-- Can the Wronskian be nonzero for linearly _depedendent_ fns? -->
