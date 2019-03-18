@@ -20,16 +20,17 @@ These groups are the nuclear clusters. Wheeler also introduced an antismmetrized
 
 * $\alpha$ particles are more tightly bound than the average nucleus (per nucleon), so $\alpha$s can move throughout the nucleus relatively unpeturbed.
 * As the nuclear density falls to $\frac{1}{3}$ nominal, $\alpha$ clusters form from condensing nucleons. Associated with this condensation is a _preformation probability_.
-    <div style="color: #004085;background-color: #cce5ff;border-color: #b8daff;position: relative;padding: .75rem 1.25rem;margin-bottom: 1rem;border: 1px solid transparent;border-radius: .25rem;">
+  <div style="color: #004085;background-color: #cce5ff;border-color: #b8daff;position: relative;padding: .75rem 1.25rem;margin-bottom: 1rem;border: 1px solid transparent;border-radius: .25rem;">
 
     #### Preformation Probability
-      Preformation of $\alpha$ particles inside the nucleus is the first step to $\alpha$ decay. It indicates the degree of $\alpha$ clustering within the nucleus.
+    Preformation of $\alpha$ particles inside the nucleus is the first step to $\alpha$ decay. It indicates the degree of $\alpha$ clustering within the nucleus.
 
     $S_\alpha$ is the probability that an $\alpha$ particle will form from four nucleons on the surface of the nucleus.
     </div>
 
-    * Full shells maximise binding energy, so they have <span style="color:red">large associated jumps</span> in energy levels, e.g., $^{16}\text{O}$, $^{12}\text{C}$, which are _alpha conjugate_ nuclei.
-      <div style="color: #004085;background-color: #cce5ff;border-color: #b8daff;position: relative;padding: .75rem 1.25rem;margin-bottom: 1rem;border: 1px solid transparent;border-radius: .25rem;">
+* Full shells maximise binding energy, so they have <span style="color:red">large associated jumps</span> in energy levels, e.g., $^{16}\text{O}$, $^{12}\text{C}$, which are _alpha conjugate_ nuclei.
+
+  <div style="color: #004085;background-color: #cce5ff;border-color: #b8daff;position: relative;padding: .75rem 1.25rem;margin-bottom: 1rem;border: 1px solid transparent;border-radius: .25rem;">
   
   #### $\alpha$ Conjugate Nuclei
   $\alpha$ conjugate nuclei have an equal and even number of protons and neutrons, such that they are effectively composed of $n\in Z$ $\alpha$ particles (in concept only). 
@@ -44,7 +45,7 @@ These groups are the nuclear clusters. Wheeler also introduced an antismmetrized
   
   <img alt="8Be ground state GFMC calculations." src="be.png" width="500px" style="display: block;  margin-left: auto;  margin-right: auto;">
   Both AMC and GFMC are approaches to solving ab-initio calculations of the structure of light nuclei.
-* $\alpha$ conjugate nuclei show a linear trend of binding energy per nucleon vs the number of $\alpha$-$\alpha$ bonds, which might imply that $\alpha$ particle exists in the ground state, and that there exists a _constant_ $\alpha$-$\alpha$ interaction (such that a linear trend is observed). In the current understanding, it is actually beleived that the cluster structure is eroded in most ground states. From this work, however, a geometrical approach to clustering was postulated.
+* $\alpha$ conjugate nuclei show a linear trend of binding energy per nucleon vs the number of $\alpha$-$\alpha$ bonds, which might imply that $\alpha$ particle exists in the ground state, and that there exists a _constant_ $\alpha$-$\alpha$ interaction (such that a linear trend is observed). In the current understanding, it is actually believed that the cluster structure is eroded in most ground states. From this work, however, a geometrical approach to clustering was postulated.
 * Later (1960s) it was realised that the cluster structure is not manifest in the ground state, but emerges as internal energy of the nucleus increases (there is an energy _barrier_ to clustering). 
   <img alt="Energy barrier due to mass difference of cluster." src="mass-difference.jpg" width="300px" style="display: block;  margin-left: auto;  margin-right: auto;"> 
   Hence, when the components are brought together, a similar energy $\Delta m = m_c-m_0 - E_i$ (where $E_i$ is the _interaction energy_) is required to cluster. Similarly, as $\Delta m$ is the energy barrier to _separation_, the cluster will become unstable when the energy exceeds $\Delta m$. This establishes a small window $E_d \lt E \lt E_f$ between the decay and formation energies in which a cluster is stable. This result is summarised in the Ikeda diagram, which illustrates that each new cluster degree of freedom arises as a cluster decay threshold is approached or crossed:
@@ -53,4 +54,5 @@ These groups are the nuclear clusters. Wheeler also introduced an antismmetrized
 * As well as energy driving clustering, there is also symmetries, which act to guide the formation of the clusteres themselves.
 
 [1]: https://iopscience.iop.org/article/10.1088/1742-6596/569/1/012092/pdf
-[2]: https://arxiv.org/abs/1705.06192 <!-- All images credit to original author unless otherwise stated -->
+[2]: https://arxiv.org/abs/1705.06192 
+<!-- All images credit to original author unless otherwise stated -->

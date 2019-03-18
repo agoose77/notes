@@ -11,7 +11,7 @@ $$
 
 </div>
 
-## Change of coordinates
+## Change of Coordinates
 Consider the set of coordinates
 $$
   x_i:(x_1,x_2,\dots,x_N)\,,
@@ -20,11 +20,11 @@ where $N$ bounds the number of coordinates to fully describe the system (e.g $N=
 $$
   \frac{\mathrm{d}}{\mathrm{d}t}\frac{\partial \mathcal{L}}{\partial\dot{x}_i}=\frac{\partial \mathcal{L}}{\partial x_i}\,.
 $$
-Let us introduce a new set of variables which are a function of the $x_i$ and $t$
+Let us introduce a new set of variables which are functions of $x_i$ and $t$
 $$
     q_i = q_i(x_1,x_2,\dots,x_N;t)\,,
 $$
-and consider only the case where the $q_i$ do not depend upon the $\dot{x}_i$ (i.e $\frac{\partial q_j}{\partial  \dot{x}_k}=0\,\forall j,k$). One can invert these definitions such that
+and consider only the case where the $q_i$ do not depend upon the $\dot{x}_i$ (i.e $\frac{\partial q_j}{\partial  \dot{x}_k}=0\,\forall \,j,k$). One can invert these definitions such that
 $$
     x_i = x_i(q_1,q_2,\dots,q_N;t)\,.
 $$
@@ -42,7 +42,7 @@ which then gives
 $$
   \frac{\partial \dot{x}_i}{\partial \dot{q}_m}=\frac{\partial x_i}{\partial q_m}\,.
 $$
-We cam tjem 
+It follows that 
 $$
 \tag{b}
   \begin{aligned}
@@ -58,7 +58,7 @@ $$
 \end{aligned}
 $$
 
-## Forces of constraint
+## Forces of Constraint
 Euler-Lagrange equations can be used to solve motion without the need to consider force balances, which in some cases can be complex.
 With the use of the Lagrangian, one can introduce constraints from the beginning of the problem in order to reduce the number of variables.
 Consider the motion of a particle sliding down the surface of a frictionless hemisphere of radius $R$. By constraining the particle to the surface of the hemisphere, the Lagrangian is as follows:
@@ -70,7 +70,7 @@ From the [Euler-Lagrange equation](principle-of-stationary-action.md#Euler-Lagra
 $$
   \ddot{\theta} = \frac{g}{R}\sin{\theta}\,.
 $$
-However, by imposing these constraints at the outset, one cannot then proceed to say anything about the constraining forces. In order to do so, one can define the Lagrangian in terms of a constraining potential $V(r)$,
+However, by imposing these constraints at the outset, one cannot then proceed to say anything about the constraining forces. In order to do so, one can instead define the Lagrangian in terms of a constraining potential $V(r)$,
 $$
   \mathcal{L} = \frac{m(\dot{r}^2+r^2\dot{\theta}^2)}{2}-mgr\cos{\theta}-V(r)\,.
 $$
@@ -100,7 +100,7 @@ $$
 $$
 where $C$ is some time independent constant. In this case, $q_k$ is referred to as a _cyclic coordinate_, and $\frac{\partial \mathcal{L}}{\partial\dot{q}_k}$ is a _conserved quantity_.
 
-### Example: momentum conservation in cylindrical coordinates
+### Example: Momentum Conservation in Cylindrical Coordinates
 For example, for some potential which only depends upon distance to the $z$ axis, the Lagrangian is
 $$
   \mathcal{L} = \frac{m}{2}(\dot{r}^2+r^2\dot{\theta}^2+\dot{z}^2)-V(r)\,.
@@ -115,7 +115,7 @@ $$
 and hence angular momentum is conserved around the $z$ axis, and linear momentum along the $z$ axis.
 
 
-## Holonomic constraints and degrees of freedom
+## Holonomic Constraints and Degrees of Freedom
 Consider a system of N particles in three dimensional space, each with position vector $\vec{r}_i(t)$ for $i=1,\dots,N$. Note that each $\vec{r}_i(t)\in\mathcal{R}^3$ is a 3-vector, hence there are $3N$ coordinates which define the system.
 From Newton's second law, the equation of motion for the $i^\text{th}$ particle is
 $$
@@ -132,8 +132,14 @@ where $c_{ij}$ is some constant for all $i,j=1,\dots,N$. Such a constraint is sa
 <div style="color: #004085;background-color: #cce5ff;border-color: #b8daff;position: relative;padding: .75rem 1.25rem;margin-bottom: 1rem;border: 1px solid transparent;border-radius: .25rem;">
   
 ### Holonomic Constraints
-A constraint whose function depends only upon the positional coordinates of the system, and time (i.e of the form $g(\vec{r}_1,\vec{r}_2,\dots,\vec{r}_N,t)=0$).
-Gas molecules in a container would be constrained by non-holonomic constraints.
+A constraint whose function depends only upon the positional coordinates of the system, and time (i.e. of the form $g(\vec{r}_1,\vec{r}_2,\dots,\vec{r}_N,t)=0$), e.g. a pendulum of length $l$
+$$
+    x^2 + y^2 - l^2 = 0\,.
+$$
+_Non holonomic constraints_ are those constraints which cannot be written as an equation between coordinates (instead, often an inequality), e.g. a particle trapped inside a spherical shell satisfies
+$$
+    x^2 + y^2 + z^2 < R^2\,.
+$$
 </div>
 
 For the $N$ particles there will be $m$ holonomic constraints
@@ -141,12 +147,14 @@ $$
 g_k(\vec{r}_1,\dots,\vec{r}_N,t)=0
 $$
 for $k=1,\dots,m$. Though there are $3N$ coordinates which describe the full set of position vectors $\vec{r}_i$, due to the constraints, these are not all independent. There will instead by $3N-m$ _independent_ coordinates. The dimension of this configuration space is called the _number of degrees of freedom_.
-### D'Alembert's principle
+
+For example, consider the above pendulum. Though there are two degrees of freedom ($x$ and $y$) which define a point in 2D space, the length of the pendulum is constant, and hence the number of degrees of freedom is $1$.
+### D'Alembert's Principle
 Consider a system in which the net work of the constraint forces is zero:
 $$
 \sum_{i=1}^N\vec{F}_i^\text{con}\cdot\,\mathrm{d}{\vec{r}_i}=0\,.
 $$
-In such a system, it follows from **(c)** that
+In such a system, it follows from **(c\ )** that
 $$
 \sum_{i=1}^N\left(\dot{\vec{p}_i}-\vec{F}_i^{\text{ext}}\right)\cdot{\,\mathrm{d}{\vec{r}_i}}=0\,,
 $$
