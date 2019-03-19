@@ -12,7 +12,7 @@ The product of charged particle interactions will be excited atoms, or _ion pair
 
 Stopping Power
 --------------
-The _linear stopping power_ $S$ for charged particles in a given absorber is defined as the _specific energy loss_; the differential energy loss with respect to path length within the material
+The _linear stopping power_ $S$ for charged particles in a given absorber is defined as the average _specific energy loss_; the differential energy loss with respect to path length within the material
 $$
 S = -\frac{\mathrm{d}E}{\mathrm{d}x}\,.
 $$
