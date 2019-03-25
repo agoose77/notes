@@ -9,6 +9,7 @@ license = "MIT"
 python = "^3.7"
 jupyter = "^1.0"
 jupyterlab = "^0.35.4"
+bqplot = "^0.11.5"
 
 [tool.poetry.dev-dependencies]
 
