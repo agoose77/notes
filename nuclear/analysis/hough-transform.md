@@ -2,10 +2,9 @@ The (Classical) Hough Transform
 ===================
 
 The _classical_ Hough transform is a feature extraction technique used to find a subset of geometrical shapes within an image subject to imperfections. 
-In order to extract 
-* parameter space (So needs parameterisation
-* under- constrained problem
 
+Lines
+------
 ![Parametric description of a straight line.](line-hough.png)
 
 In polar space, a line may be parametrised in *Hesse normal form* by the length $r$ of the normal to the origin $\vec{r}$, and the angle $\theta$ of $\vec{r}$ with respect to the origin:
