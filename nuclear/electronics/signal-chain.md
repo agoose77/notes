@@ -209,7 +209,7 @@ Discriminators
 ### First Level Discriminators
 
 Discriminators are used to detect pulses within a signal. A naive
-amplitudedependant trigger such as a "window discriminant" will
+amplitude dependant trigger such as a "window discriminant" will
 trigger at different points along the pulse profile, depending upon the
 pulse shape and amplitude, in a phenomenon known as *time walk*. See for
 more.

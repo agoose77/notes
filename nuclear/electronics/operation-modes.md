@@ -55,7 +55,7 @@ Evidently, events with larger charge more strongly bias the output, and so MSV m
 
 Pulse Mode
 ----------
-Detectors are operated in pulse mode by measuring the time dependent voltage $V_R(t)$ across the load resstance in an RC circuit. This mode *preserves the nature of the amplitude and timing* of the pulse.
+Detectors are operated in pulse mode by measuring the time dependent voltage $V_R(t)$ across the load resistance in an RC circuit. This mode *preserves the nature of the amplitude and timing* of the pulse.
 
 ![Pulse mode schematic](images/pulse-mode.png)
 
@@ -97,13 +97,13 @@ $$
 
 Evidently, at $t=0$, the voltage on the capacitor $V_C$ must be zero, hence
 $$
-    \tag{d}
+    \tag{e}
     V_C(t) = \exp\left(\frac{-t}{\tau}\right)\frac{1}{C}\int_0^t \exp\left(\frac{t^\prime}{\tau}\right)I_s\,\mathrm{d}t^\prime\,.
 $$
 
 
 ### Small $\tau$
-Let us rewrite **(c)** in terms of $\tau$
+Let us rewrite **(c\)** in terms of $\tau$
 $$
 \tag{f}
 R I_s = \tau\frac{\mathrm{d}V_C}{\mathrm{d}t} + V_C\,.
