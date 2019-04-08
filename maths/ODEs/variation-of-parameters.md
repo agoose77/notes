@@ -1,6 +1,6 @@
-Variation of Parameters
+'xrandr --output DP-1-2-1 --rotate left --pos 1920x0 --output DP-1-2-3 --pos 0x427'Variation of Parameters
 =======================
-Recall that the complementary function for some _non homogeneous_ linear ODE of second order is  $y_c = c_1y_1 + c_2y_2$ , where $y_1,\,y_2$ are linearly independent solutions of the associated _homogeneous_ equation. For a linear ODE, the [general solution](n-order-general-solution.md) is given by $y=y_c+y_p$, which reduces to $y_c$ for the homogeneous linear ODE where $y_p=0$.
+Recall that the complementary function for some _non homogeneous_ linear ODE of second order is  $y_c = c_1y_1 + c_2y_2$ , where $y_1,\,y_2$ are linearly independent solutions of the associated _homogeneous_ equation. For a linear ODE, the [general solution](n-order-inhomogeneous-general-solution.md) is given by $y=y_c+y_p$, which reduces to $y_c$ for the homogeneous linear ODE where $y_p=0$.
 
 For the nonhomogeneous linear ODE 
 $$
@@ -67,5 +67,18 @@ $$
 $$
 
 Given that $y_1,\,y_2$ form a _fundamental set of solutions_, it follows from [Abel's theorem](abels-theorem.md) that $\operatorname{W}\mathopen{}\big[y_1,y_2\big]\mathclose{}$ is exclusively either zero or non-zero for _all_ $t \in I$.
+un
+<div style="padding:15px;margin-bottom:20px;border:1px solid transparent;border-radius:4px;color:#31708f;background-color:#d9edf7
+;border-color:#bce8f1;">
+
+#### Non Vanishing Wronskian for solutions to Non-Singular Second Order ODEs
+Suppose that the Wronskian $\operatorname W[f,g](x)$ vanished at some point $x_1$. Then the vectors $\begin{bmatrix}f(x_1)\\f^\prime(x_1)\\\end{bmatrix}$ and $\begin{bmatrix}g(x_1)\\g^\prime(x_1)\\\end{bmatrix}$ would be linearly dependent, and therefore proportional: $g(x_1)=kf(x_1)$ and $g^\prime(x_1)=kf^\prime(x_1)$ for some constant $k$. Now consider the function $h(x)=g(x)-kf(x)$. This function is a solution to the DE 
+$$
+    \tag{e}
+    u^{\prime\prime} + p(x)u^\prime + q(x)u = 0\,,
+$$
+since it is a linear combination of solutions $f,\,g$. It also satisfies the initial conditions $h(x_1)=h^\prime(x_1)=0$. From [the uniqueness theorem](n-order-existence-theorem.md), there can only be _one_ solution to **(e)** with initial conditions $u(x_1)=u_1$,$u^\prime(x_1)=u^\prime_1$. It follows that $f(x)=kg(x)\,\forall\,x\in I$
+    TODO
+</div>
 
 <!-- Can the Wronskian be nonzero for linearly _depedendent_ fns? -->
