@@ -14,7 +14,7 @@ $$
 
 Properties
 ----------
-1. If $\operatorname{W}[f,g](x)\neq 0$ for $x\in I$, then $f,g$ are linearly independent on I.
+1. If $\operatorname{W}[f,g](x)\neq 0$ for some $x\in I$, then $f,g$ are linearly independent on I.
 1. If $f,g$ are linearly _dependent_ on I, then $\operatorname{W}[f,g](x)= 0\,\forall\, x\in I$.
 
 Relation to Vectors of Functions

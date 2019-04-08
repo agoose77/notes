@@ -1,5 +1,5 @@
-The General Solution to a Linear ODE of Order $n$
-=================================================
+The General Solution to an Homogeneous Linear ODE of Order $n$
+===============================================================
 
 Theorem
 -------
