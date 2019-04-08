@@ -54,7 +54,7 @@ $$
 $$
 for $\{\,c_i\in \mathbb{R}\,\}$ not all zero.
 
-If we repeatedly differentiate **(c)**, we find
+If we repeatedly differentiate **(c\)**, we find
 $$
 \begin{aligned}
     c_1f_1^{(1)}(t) + c_2f_2^{(1)}(t) + \dots + c_nf_n^{(1)}(t) &= 0 \\

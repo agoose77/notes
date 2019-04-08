@@ -1,17 +1,17 @@
-<!-- 65.4 p786 -->
+<!-- 62.3 p768 -->
 # Existence and Uniqueness Theorem for $n$ Linear First-Order ODEs
 ## Theorem
-Given a system of $n$ linear first order ODEs
+Let us consider a system of $n$ linear first order ODEs
 $$
 \begin{aligned}
 \tag{a}
 \frac{\mathrm{d}y_1}{\mathrm{d}t}&=f_{11}(t)y_1+f_{12}(t)y_2+\dots+f_{1n}(t)y_n+Q_1(t)\\
-\frac{\mathrm{d}y_1}{\mathrm{d}t}&=f_{21}(t)y_1+f_{22}(t)y_2+\dots+f_{2n}(t)y_n+Q_2(t)\\
+\frac{\mathrm{d}y_2}{\mathrm{d}t}&=f_{21}(t)y_1+f_{22}(t)y_2+\dots+f_{2n}(t)y_n+Q_2(t)\\
 &\;\;\vdots\\
-\frac{\mathrm{d}y_1}{\mathrm{d}t}&=f_{n1}(t)y_1+f_{n2}(t)y_2+\dots+f_{nn}(t)y_n+Q_n(t)\,,
+\frac{\mathrm{d}y_n}{\mathrm{d}t}&=f_{n1}(t)y_1+f_{n2}(t)y_2+\dots+f_{nn}(t)y_n+Q_n(t)\,,
 \end{aligned}
 $$
-where all functions $f_{ij}$ and $Q_i$, $i=1,2,\dots,n$, $j=1,2,\dots,n$ are continuous on a common interval $I$. Then, there is on $I_0\subset I$ ($I$ without its end points) _one and only one_ set of continuous functions $y_1(t),\,y_2(t),\,\dots,\,y_n(t)$ with continuous derivatives, which satisfies the system **(a)** and the initial conditions.
+where all functions $f_{ij}$ and $Q_i$, ($i=1,2,\dots,n$, $j=1,2,\dots,n$) are continuous on a common interval $I$. There is on $I_0\subset I$ ($I$ without its end points) _one and only one_ set of continuous functions $y_1(t),\,y_2(t),\,\dots,\,y_n(t)$ with continuous derivatives, which satisfies the system **(a)** and the initial conditions.
     
 ## Proof
 Let us define 
