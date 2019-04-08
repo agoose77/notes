@@ -90,7 +90,7 @@ $$
 
 <div style="padding:15px;margin-bottom:20px;border:1px solid transparent;border-radius:4px;color:#31708f;background-color:#d9edf7
 ;border-color:#bce8f1;">
-
+<!-- Theorem 6, p.44, Birkhoff & Rota-->
 #### Non Vanishing Wronskian For Solutions to Non-Singular Second Order ODEs
 Suppose that $f$ and $g$ are linearly dependent differentiable functions on some interval $I$. Then there exist two non-zero constants $c$ and $d$ which satisfy the _two_ linear equations
 $$

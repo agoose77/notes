@@ -2,7 +2,7 @@
 Linear Independence of Solutions to a Linear ODE of Order $n$
 =============================================================
 ## Theorem
-If $f_0(x),\,f_1(x),\,\dots,\,f_n(x)$ are each contiinuous functions of $x$ on a common interval $I$, then the homogeneous linear ODE
+If $f_0(x),\,f_1(x),\,\dots,\,f_n(x)$ are each continuous functions of $x$ on a common interval $I$, then the homogeneous linear ODE
 $$
 \tag{a}
      y^{(n)} + f_{n-1}(x)y^{(n-1)} + \dots + f_0(x)y=0

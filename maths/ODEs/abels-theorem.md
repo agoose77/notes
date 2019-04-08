@@ -44,4 +44,4 @@ $$
 \operatorname{W}(x) = \operatorname{W}(x_0)\exp\mathopen{}\left(-\int_{x_0}^xp(x)\,\mathrm{d}x\right)\mathclose{}\,.
 $$
 
-For $\operatorname{W}(x)$ to vanish _anywhere_ then $\operatorname{W}(x_0)=0$, as there is no $u$ such that $\exp(u)=0$. If $\operatorname{W}(x_0)=0$ then $\operatorname{W}(x)=0\,\forall\,x\in I$. <!-- TODO this won't work? From the definition of the Wronskian, if $\operatorname{W}[y_1,y_2](x)=0\,\forall\,x\in I$, then.-->
+For $\operatorname{W}(x)$ to vanish _anywhere_ then $\operatorname{W}(x_0)=0$, as there is no $u$ such that $\exp(u)=0$. If $\operatorname{W}(x_0)=0$ then $\operatorname{W}(x)=0\,\forall\,x\in I$. 
