@@ -24,3 +24,24 @@ Linear Functional
 A linear functional is a linear map from a vector space to its _associated field_, e.g. if $$\operatorname{I}\mathopen{}\big[f\big]\mathclose{}=\int_a^bf(x)\,\mathrm{d}x\,,$$
 
 then $\operatorname{I}: F\rightarrow \mathbb {R}$, where $F$ is a (vector) space of continuous functions.
+
+Properties
+----------
+### Null Space (Kernel)
+The null space $\mathcal{N}(L)$ of a linear map $L:V\rightarrow W$ between two vector spaces $V$ and $W$ is the [set](../set.md) of vectors which lose their identity under $L$, i.e. the vectors which satisfy $L(\vec{v})=\vec{0}$ for $\vec{v}\in V$:
+$$
+\mathcal{N}(L) = \{\,\vec{v}\in V : L(\vec{v})=\vec{0}\,\}\,.
+$$
+
+The null space has several properties:
+* It is a subspace of $V$ (a subset of $V$, and a vector space):  
+  * If $\vec{v_1},\vec{v_2}\in V$, then $L(\vec{v_1}+\vec{v_2})=L(\vec{v_1})+L(\vec{v_2})=\vec{0}_W\in W$.
+  * If $c\in \mathbb{R}$, then $L(c\vec{v_1})=cL(\vec{v_1})=\vec{0}_W$.
+  
+
+### Image 
+The image of a linear mapping is the subset of the mapping's codomain to which maps its domain:
+$$
+L[V] = \{\,w\in W : w=L(v) \,\forall\, v \in V\,\}\,.
+$$
+$L[V]$ is a subspace of $W$.
