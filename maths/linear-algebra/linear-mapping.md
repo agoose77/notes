@@ -45,3 +45,4 @@ $$
 L[V] = \{\,w\in W : w=L(v) \,\forall\, v \in V\,\}\,.
 $$
 $L[V]$ is a subspace of $W$.
+

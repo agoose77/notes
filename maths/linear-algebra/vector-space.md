@@ -7,8 +7,8 @@ Operations
 ----------
 |          Name         	|         Definition         	|
 |:---------------------:	|:--------------------------:	|
-|    Vector Addition    	| $+:V\times V\rightarrow V$ 	|
-| Scalar Multiplication 	| $+:F\times V\rightarrow V$ 	|
+|    Vector Addition    	| $+\colon V\times V\rightarrow V$ 	|
+| Scalar Multiplication 	| $+\colon F\times V\rightarrow V$ 	|
 
 The set $V$ is _closed_ over both operations, i.e. the result of each operation is _also_ a member of $V$.  
 N.B. $F\times V$ denotes the [cartesian product](../set.md#Operations) of $F$ and $V$.
@@ -34,6 +34,11 @@ Note that a field is a vector space _over itself_.
 Basis and Dimension
 -------------------
 A basis is a set of vectors $\{\vec{v}\}$ which spans the whole space, and is linearly independent. To span the whole space means that any vector $\vec{V}$ can be expressed as a finite sum of the basis elements. 
+The span is given by
+$$
+\operatorname{span}(V) = \left\{\,\sum_{i=1}^k\lambda_i\vec{v_i}:\vec{v_i}\in V,\lambda_i\in F\,\right\}\,.
+$$
+
 Given this property, vectors can be represented by a sequence of scalars (called coordinates) which are associated with elements of the basis $B$. 
 
 For example, if 

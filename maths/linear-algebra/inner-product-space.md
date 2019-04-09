@@ -5,9 +5,9 @@ An inner product space is a [vector space](vector-space.md) with an additional s
 ## The Inner Product
 The inner product is a map:
 $$
-\lang \cdot,\cdot\rang:V\times V\rightarrow F\,,
+\lang \cdot,\cdot\rang\colon V\times V\rightarrow F\,,
 $$
-which satisfies the following three axioms $\forall x,y,z\in V$ and $\forall a\in F$:
+which satisfies the following three axioms $\forall\, x,y,z\in V$ and $\forall\, a\in F$:
 
 |               Name              	|                                                   Definition                                                  	|
 |:-------------------------------:	|:-------------------------------------------------------------------------------------------------------------:	|
