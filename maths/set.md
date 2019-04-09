@@ -2,7 +2,8 @@ Set
 ===
 A set is a well defined, unordered collection of _distinct_ objects, called elements.
 
-## Definition
+Definition
+----------
 Sets may be built using set-builder notation:
 
 |          Method         	|                                                 Definition $(S= \dots)$                                                	|
@@ -14,7 +15,8 @@ Sets may be built using set-builder notation:
 
 Where $\land$ is logical AND.
 
-## Membership
+Membership
+----------
 
 |   Expression   	|           Description           	|
 |:--------------:	|:-------------------------------:	|
@@ -25,7 +27,8 @@ Where $\land$ is logical AND.
 | $A\supseteq B$ 	|     $A$ is a superset of $B$    	|
 |  $A\supset B$  	| $A$ is a proper superset of $B$ 	|
 
-## Operations
+Operations
+----------
 
 |         Name         	|      Expression     	|            Explicit Result            	|
 |:--------------------:	|:-------------------:	|:-------------------------------------:	|
@@ -36,7 +39,8 @@ Where $\land$ is logical AND.
 | Symmetric Difference 	| $A\bigtriangleup B$ 	|  $(A\setminus B)\cup (B\setminus A)$  	|
 |      Cardinality     	|  $\lvert A\rvert $  	|        Number of elements in A        	|
 
-## Reserved Symbols
+Reserved Symbols
+----------------
 
 |    Symbol    	|                 Name                 	|
 |:------------:	|:------------------------------------:	|
