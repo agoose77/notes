@@ -19,12 +19,6 @@ $$
     f(\vec{0}_V) = f(0\vec{v}) = 0f(\vec{v}) =\vec{0}_W\,.
 $$
 
-Linear Functional
------------------
-A linear functional is a linear map from a vector space to its _associated field_, e.g. if $$\operatorname{I}\mathopen{}\big[f\big]\mathclose{}=\int_a^bf(x)\,\mathrm{d}x\,,$$
-
-then $\operatorname{I}: F\rightarrow \mathbb {R}$, where $F$ is a (vector) space of continuous functions.
-
 Properties
 ----------
 ### Null Space (Kernel)
@@ -46,3 +40,9 @@ L[V] = \{\,w\in W : w=L(v) \,\forall\, v \in V\,\}\,.
 $$
 $L[V]$ is a subspace of $W$.
 
+
+Linear Functional
+-----------------
+A linear functional is a linear map from a vector space to its _associated field_, e.g. if $$\operatorname{I}\mathopen{}\big[f\big]\mathclose{}=\int_a^bf(x)\,\mathrm{d}x\,,$$
+
+then $\operatorname{I}: F\rightarrow \mathbb {R}$, where $F$ is a (vector) space of continuous functions.
