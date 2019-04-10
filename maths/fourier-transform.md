@@ -51,6 +51,13 @@ $$
 \end{aligned}
 $$
 
-Similarly, an asymmetrical convention can be used to define a variant of **(b)**
+Similarly, an asymmetrical convention can be used to define a variant of **(b)**,
+$$
+\begin{aligned}
+    \mathcal{F}_x\mathopen{}\big[f\big]\mathclose{} = \hat{f}(k) &= \int_{-\infty}^\infty f(t)e^{-ikt}\,\mathrm{d}t\\
+    \mathcal{F}^{-1}_k\mathopen{}\big[\hat{f}\big]\mathclose{} = f(x) &= \frac{1}{2\pi}\int_{-\infty}^\infty \hat{f}(k)e^{ikx}\,\mathrm{d}k\,.
+\end{aligned}
+$$
+
 
 It is important to note that the two transforms are defined _with respect to one another_; as evidenced by our redefinition of $\hat{f}$. 
