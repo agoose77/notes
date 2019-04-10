@@ -83,7 +83,7 @@ $$
 $$
 and our coefficients are determined as in **(b)**
 $$
-a'_n = \frac{L}{c_nL'}\int_{I'}f(x')\phi_n\mathopen{}\left(\frac{x'L}{L'}\right)\mathclose{}\,\mathrm{d}x'\,.
+a'_n = \frac{L}{c_nL'}\int_{I'}f(x')\phi_n\mathopen{}\left(\frac{x'L}{L'}\right)\mathclose{}w\mathopen{}\left(\frac{x'L}{L'}\right)\,\mathrm{d}x'\,.
 $$
 
 For the complex exponential basis, this gives
