@@ -2,6 +2,14 @@
 <!-- TODO absolutely re-read all of this -->
 Resonant Scattering
 ===================
+<!-- TODO see krane about the compound nucleus and resonance reactions p. 424-->
+> Between these two extremes is the resonance region—discrete levels in the
+compound-nucleus region. These levels have a high probability of formation
+(large cross sections), and their widths are very small because at low incident
+energy, where these resonances are most likely to occur, the quasibound state that
+is formed usually has only two modes of decay available to it—re-ejecting the
+incident particle, as in elastic or inelastic scattering, or y emission.
+
 Resonant scattering is an experimental technique to investigate resonances in the compound nucleus formed from the beam and target nuclei. These resonances correspond to excited states which subsequently decay, forming decay products which can be measured to determine the reaction cross section as a function of excitation energy. The technique may be used to investigate $\alpha$-clustering by measuring reactions that occur via the $\alpha$ entrance channel. These reactions may be performed in normal kinematics, $\text{A}(\alpha,\text{y})\text{R}$; or in [inverse kinematics](../detectors/thick-target-inverse-kinematics.md), ${}^4\text{He}(\text{A},\text{y})\text{R}$. Where the decay product is also an $\alpha$ particle, the reaction corresponds to elastic $\alpha$-particle scattering. Such reactions explore states with an $\alpha\operatorname{-}\text{A}$ structure, as it would be anticipitated that these clustered states have a broader $\alpha$-decay width $\Gamma_\alpha$, and thus should be preferentially populated (in particular in this interaction where both the entrance and exit channels are $\alpha$).
 <!-- Broader decay width as clustered alpha structure is energetically more stable, so longer lived (than what, i.d.k)). -->
 
