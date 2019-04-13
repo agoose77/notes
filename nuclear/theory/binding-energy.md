@@ -110,10 +110,11 @@ $$
 M(Z,A) = Zm\mathopen{}\left({}^1\text{H}\right)\mathclose{} + Nm_n - \frac{B(Z,A)}{c^2}\,.
 $$
 
+### Mass Chains
 The figure below shows $M(Z,A)$ for fixed $A$ shows the decay chain for $A=73$ and $A=64$.
+
 ![Mass chains for even and odd $A$](images/mass-chain.jpg)
 
 In the case that $A$ is odd, then we see a single mass energy (stability) curve. Isobars on either side of the minimum (stable) isobar decay via $\beta$ decay towards the minimum to become more stable.
-
-When $A$ is even, there are two stability curves, for (a) odd-$N$, odd-$Z$, (b) even-$N$, even-$Z$. This splitting results from the contribution to $M(Z,A)$ from the parity term $\delta$, giving a separation of $2\delta_0$ between the two parabolas.
+When $A$ is even, there are two stability curves, for (a) odd-$N$, odd-$Z$, (b) even-$N$, even-$Z$. This splitting results from the contribution to $M(Z,A)$ from the parity term $\delta$, giving a separation of $2\delta_0$ between the two parabolas. Consider the nuclide ${}^{64}\text{Cu}$. As it lies on the upper stability curve, it can decay towards the lower stability curve in either direction to become even-$N$, even-$Z$. This is distinct from the odd-$A$ curve, in which decays occur in one direction _only_ (towards stability).
 
