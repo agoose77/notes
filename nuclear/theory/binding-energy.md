@@ -107,3 +107,5 @@ Using this expression for $B$, we have the _semi-empirical mass formula_
 $$
 M(Z,A) = Zm\mathopen{}\left({}^1\text{H}\right)\mathclose{} + Nm_n - \frac{B(Z,A)}{c^2}\,.
 $$
+
+A plot of $M(Z,A)$ for fixed $A$ shows the decay chain for a given isobar.
