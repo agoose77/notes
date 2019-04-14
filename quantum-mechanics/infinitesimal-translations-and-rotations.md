@@ -47,49 +47,76 @@ Infinitesimal Rotations in Quantum Mechanics
 --------------------------------------------
 For Quantum Mechanics, the state key of a rotated system is _different_ to that of the unrotated system. Hence, for some rotation $R$, there is an associated rotation operator $\mathscr{D}(R)$, such that
 $$
-\left\vert{\alpha}\right\rangle_R = \mathscr{D}(R)\left\vert{\alpha}\right\rangle\,.
+\ket{\alpha}_R = \mathscr{D}(R)\ket{\alpha}\,.
 $$
-<!--
-\left\langle {x} \right\vert .
-\left\vert {x } \right\rangle
--->
 
 The dimensionality of $\mathscr{D}(R)$ depends upon the dimensionality of the ket space upon which it operates. Classically, angular momentum generates rotations, just as linear momentum generates translations.
 To find $\mathscr{D}(R)$, let us first consider _translations_.
 
-Let $\mathscr{T}(\mathrm{d}\boldsymbol{x'})$ be the operator such that
+Infinitesimal Translations in Quantum Mechanics
+-----------------------------------------------
+<!-- Define custom macros -->
+$\gdef\xp{\em{x'}}$ 
+$\gdef\T#1{\mathscr{T}(#1)}$
+$\gdef\X{\hat{\em{X}}}$
+
+Let $\T{\dd\xp}$ be the operator such that
 $$
-\mathscr{T}(\mathrm{d}\boldsymbol{x'})\left\vert{\boldsymbol{x'}}\right\rangle = \left\vert{\boldsymbol{x'}+\mathrm{d}\boldsymbol{x'}}\right\rangle
+\T{\dd\xp}\ket{\xp} = \ket{\xp+\dd\xp}\,.
 $$
+N.B. that $\ket{\em{x}} = \ket{x}\otimes\ket{y}\otimes\ket{y}$, i.e. there is a unique position space for each coordinate.
 
-<!--
-/\\ket\[([^\]]*)\]/ -> \\left\\vert\{$1\}\\right\\rangle
-/\\bra\[([^\]]*)\]/ -> \\left\\langle\{$1\}\\right\\vert
-
-# Bra
-/\\left\\vert\{(.*?)\}\\right\\rangle/
-# Ket
-/\\left\\langle\{(.*?)\}\\right\\vert/
--->
-
-Consider some state $\left\vert{\alpha}\right\rangle$. Under $\mathscr{T}(\mathrm{d}\boldsymbol{x'})$, it behaves as follows
+Consider some state $\ket{\alpha}$. Under $\T{\dd\xp}$, it behaves as follows
 $$
 \begin{aligned}
-\mathscr{T}(\mathrm{d}\boldsymbol{x'})\left\vert{\alpha}\right\rangle &= \mathscr{T}(\mathrm{d}\boldsymbol{x'})\boldsymbol{1}\left\vert{\alpha}\right\rangle \\
-&= \mathscr{T}(\mathrm{d}\boldsymbol{x'})\int\left\vert{\boldsymbol{x}'}\right\rangle\left\langle{\boldsymbol{x}'}\right\vert\,\mathrm{d}^3\boldsymbol{x'}\left\vert{\alpha}\right\rangle \\
-&= \int\left\vert{\boldsymbol{x}'+\mathrm{d}\boldsymbol{x'}}\right\rangle\left\langle{\boldsymbol{x}'}\right\vert\,\mathrm{d}^3\boldsymbol{x'}\left\vert{\alpha}\right\rangle \,,
+\T{\dd\xp}\ket{\alpha} &= \T{\dd\xp}\em{1}\ket{\alpha} \\
+&= \T{\dd\xp}\int\ket{\xp}\bra{\xp}\,\mathrm{d}^3\xp\ket{\alpha} \\
+&= \int\ket{\xp+\dd\xp}\bra{\xp}\,\mathrm{d}^3\xp\ket{\alpha} \,,
 \end{aligned}
 $$
 which is equivalent to 
 $$
-\mathscr{T}(\mathrm{d}\boldsymbol{x'})\left\vert{\alpha}\right\rangle = \int\left\vert{\boldsymbol{x}'}\right\rangle\left\langle{\boldsymbol{x}'-\mathrm{d}\boldsymbol{x'}}\right\vert\,\mathrm{d}^3\boldsymbol{x'}\left\vert{\alpha}\right\rangle \,,
+\T{\dd\xp}\ket{\alpha} = \int\ket{\xp}\bra{\xp-\dd\xp}\dd^3\xp\ket{\alpha} \,,
 $$
 as the integral is over _all space_.
 
 What are the properties of $\mathscr{T}$?
-If $\left\vert{\alpha}\right\rangle$ is normalised then $\mathscr{T}(\mathrm{d}\boldsymbol{x'})\left\vert{\alpha}\right\rangle$ ought to remain so, 
+1. If $\ket{\alpha}$ is normalised then $\T{\dd\xp}\ket{\alpha}$ ought to remain so, 
 $$
-\left\langle{\alpha}\right\vert\mathscr{T}(\mathrm{d}\boldsymbol{x'})^\dagger\mathscr{T}(\mathrm{d}\boldsymbol{x'})\left\vert{\alpha}\right\rangle = 1\,,
+\bra{\alpha}\T{\dd\xp}^\dagger\T{\dd\xp}\ket{\alpha} = 1\,,
+$$
+hence $\mathscr{T}^\dagger\mathscr{T} = 1$, i.e. $\mathscr{T}$ must be [unitary](../maths/linear-algebra/square-matrices.md#Unitary%20%5BNormal%5D).
+1. $\T{\dd\xp}\T{\em{x''}}=\T{\dd\xp+\dd\em{x''}}$
+1. $\T{-\dd\xp}\T{\dd\xp}=\em{1}$.
+1. $\lim\limits_{\dd\xp\rightarrow 0}\T{\dd\xp}=\em{1}$
+
+Let us consider an operator of the form $\T{\dd\xp}=1-i\em{k}\cdot\dd\xp$. Ignoring all $\mathcal{O}(\dd\xp^2)$ terms, it can be shown through Taylor expansion that all of the above conditions are satisfied.
+
+With the $\X$ operator, we derive the following behaviour
+$$
+\begin{aligned}
+\X\T{\dd\xp}\ket{\xp} &= \X\ket{\xp+\dd\xp}\\
+                      &= (\xp + \dd\xp)\ket{\xp+\dd\xp}\\
+\T{\dd\xp}\X\ket{\xp} &= \xp\T{\dd\xp}\ket{\xp}\\
+                      &= \xp\ket{\xp+\dd\xp}\,,
+\end{aligned}
 $$
 
-hence $\mathscr{T}^\dagger\mathscr{T} = 1$, i.e. $\mathscr{T}$ must be [unitary](../maths/linear-algebra/square-matrices.md#Unitary%20%5BNormal%5D).
+hence
+$$
+\begin{aligned}
+\comm{\X}{\T{\dd\xp}}\ket{\xp} &= \dd\xp\ket{\xp+\dd\xp}\\
+                               &= \dd{\xp}\T{\dd\xp}\ket{\xp}\,.
+\end{aligned}
+$$
+
+<!-- TODO check this derivation in Sakurai -->
+Using the above definition of $\mathscr{T}$:
+$$
+\begin{aligned}
+\X&(1-\em{k}i\cdot\dd\xp) - (1-i\em{k}\cdot\dd\xp)\X\\
+&= -i(\X\em{k}\cdot\dd\xp-\em{k}\cdot\dd\xp\X)\\
+&= (1-i\em{k}\cdot\dd\xp)\dd\xp\\
+&\approx \dd\xp
+\end{aligned}
+$$
