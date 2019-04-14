@@ -93,3 +93,6 @@ $$
 \gdef\matrixel#1#2#3{{\left\langle{ #1 }\right\vert{ #2 }\left\vert{#3}\right\rangle}}
 \gdef\mel#1#2#3{{\left\langle{ #1 }\right\vert{ #2 }\left\vert{#3}\right\rangle}}
 $$
+$$
+\gdef\mleftright#1#2#3{\mathopen{}\mathclose{\left#1#2\right#3}}
+$$
