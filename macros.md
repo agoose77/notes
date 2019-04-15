@@ -35,7 +35,7 @@ $$
 \gdef\poissonbracket#1#2{{\left\{ #1 , #2 \right\}}}
 \gdef\pb#1#2{{\left\{ #1 , #2 \right\}}}
 \gdef\derivative#1#2{{\frac{\text{d}{ #1 }}{\text{d}{ #2 }}}}
-\gdef\dv#1#2{{\frac{\text{d}{ #1 }}{\text{d}{ #2 }}}}
+\gdef\dv#1{{\frac{\dd}{\dd{ #1 }}}}
 \gdef\partialderivative#1#2{{\frac{\partial{ #1 }}{\partial{ #2 }}}}
 \gdef\pdv#1#2{{\frac{\partial{ #1 }}{\partial{ #2 }}}}
 \gdef\functionalderivative#1#2{{\frac{\delta{ #1 }}{\delta{ #2 }}}}
