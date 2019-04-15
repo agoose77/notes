@@ -49,7 +49,7 @@ Rotation matrices in 3D belong to the SO(3) group, which stands for *special* (u
 Infinitesimal Rotations in Quantum Mechanics
 --------------------------------------------
 $\gdef\D#1{\mathscr{D}(#1)}$
-$\gdef\J#1{\hat{J}_{#1}})$
+$\gdef\J#1{\hat{J}_{#1}}$
 For Quantum Mechanics, the state key of a rotated system is _different_ to that of the unrotated system. Hence, for some rotation $R$, there is an associated rotation operator $\mathscr{D}(R)$, such that
 $$
 \ket{\alpha}_R = \D{R}\ket{\alpha}\,.
