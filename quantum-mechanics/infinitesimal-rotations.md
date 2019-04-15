@@ -88,4 +88,6 @@ $$
 $$
 Given that rotation operators *do not commute*, the group is therefore *non-Abelian*.
 
+<!-- TODO p.218 simple examples of angular momentum addition -->
+
 [^1]: https://pdfs.semanticscholar.org/60ef/f0e4956a3e4789bdd0395a87eb5ffc6d9b87.pdf
