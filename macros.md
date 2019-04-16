@@ -93,6 +93,8 @@ $$
 \gdef\matrixel#1#2#3{{\left\langle{ #1 }\right\vert{ #2 }\left\vert{#3}\right\rangle}}
 \gdef\mel#1#2#3{{\left\langle{ #1 }\right\vert{ #2 }\left\vert{#3}\right\rangle}}
 $$
+<!-- Custom Macros-->
 $$
 \gdef\mleftright#1#2#3{\mathopen{}\mathclose{\left#1#2\right#3}}
+\gdef\set#1{\{\,#1\,\}}
 $$
