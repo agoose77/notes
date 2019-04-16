@@ -121,5 +121,5 @@ j_\text{min} = \abs{j_1 - j_2}\,.
 $$
 One can more explicitly determine these states by acting upon $\ket{jm}$ with the lowering operator $\J_{-}=\J^{(1)}_{{-}}+\J^{(2)}_{-}$, and in each case identify an additional orthogonal state to satisfy the available degrees of freedom.
 
-Thus, we may conclude the following results:
-1. In the $\ket{jm}$ basis, $j$ and $m$ satisfy $$\abs{j_1-j_2}\leq j\leq j_1+j_2$$ and $$m=m_1 + m_2$$ respectively.
+---
+We may conclude that, in the $\ket{jm}$ basis, $j$ and $m$ satisfy $$\abs{j_1-j_2}\leq j\leq j_1+j_2$$ and $$m=m_1 + m_2$$ respectively. The total angular momentum of the *system* $\vb{\J}$ behaves like an angular momentum, and thus previous work to derive the properties of $\vb{\J}$ still hold.
