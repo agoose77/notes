@@ -14,7 +14,7 @@ $$
 \tag{b}
 \comm{\J^{(1)}_{k}}{\J^{(2)}_{l}} = 0\,.
 $$
-The infinitesimal rotation operator that acts on both subspace 1 and subspace 2 is defined as
+The [infinitesimal rotation operator](infinitesimal-rotations.md#Infinitesimal-Rotations-in-Quantum-Mechanics) that acts on both subspace 1 and subspace 2 is defined as
 $$
 \begin{aligned}
 \tag{c}
@@ -123,3 +123,5 @@ One can more explicitly determine these states by acting upon $\ket{jm}$ with th
 
 ---
 We may conclude that, in the $\ket{jm}$ basis, $j$ and $m$ satisfy $$\abs{j_1-j_2}\leq j\leq j_1+j_2$$ and $$m=m_1 + m_2$$ respectively. The total angular momentum of the *system* $\vb{\J}$ behaves like an angular momentum, and thus previous work to derive the properties of $\vb{\J}$ still hold.
+
+<!-- TODO recursion relations from Sakurai -->
