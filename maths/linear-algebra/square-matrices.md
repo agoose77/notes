@@ -12,21 +12,27 @@ is defined as the sum of its diagonal elements. The trace has the following prop
 
 Classes
 -------
-There are several classes of square matrix.
+There are several classes of square matrix:
 
 ### Normal
 * Satisfies $U^\dagger U=UU^\dagger$.
 
 ### Unitary [Normal]
-* Satisfies $UU^\dagger=I$.  
-  This implies that $\lvert \det(U)\rvert=1$, as $\lvert UU^\dagger\rvert=\lvert U\rvert\lvert U^\dagger\rvert=\lvert U\rvert^2=1$.
+* Satisfies $UU^\dagger=I$, which implies that $\lvert \det(U)\rvert=1$ (as $\lvert UU^\dagger\rvert=\lvert U\rvert\lvert U^\dagger\rvert=\lvert \det(U)\rvert^2=1$).
 * $U^\dagger=U^{-1}$.
 * Only real eigenvalues:
   $$
   \begin{aligned}
-  (U\vec{v})^\dagger
-  (H^T\vec{v})^\dagger = v^\dagger H &= \bar{\lambda}\vec{v}^\dagger \\
-  \vec{v}^\dagger H\vec{v} &= \bar{\lambda}\vec{v}^\dagger\vec{v}
+  (U\vb{v})^\dagger
+  (H^T\vb{v})^\dagger = v^\dagger H &= \bar{\lambda}\vb{v}^\dagger \\
+  \vb{v}^\dagger H\vb{v} &= \bar{\lambda}\vb{v}^\dagger\vb{v}
+  \end{aligned}
+  $$
+* Preserves inner product
+<!-- TODO -->
+  $$
+  \begin{aligned}
+      \ip{U\vb{v}}{U\vb{w}} = 
   \end{aligned}
   $$
 
