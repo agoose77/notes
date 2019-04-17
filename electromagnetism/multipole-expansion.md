@@ -30,7 +30,7 @@ hence we may write $\frac{1}{\abs{\vb{r}-\vb{r'}}}$ as
 $$
     \frac{1}{\abs{\vb{r}-\vb{r'}}} = \frac{1}{r}\frac{1}{\sqrt{1 + \frac{r'}{r}^2 -\frac{2r'}{r}\cos(\theta)}}\,.
 $$
-
+&\hspace{4 em}
 This may then be expanded using the [binomial expansion](https://en.wikipedia.org/wiki/Binomial_theorem)
 $$
 \frac {1}{(1-x)^{s}}=\sum _{k=0}^{\infty }{s+k-1 \choose k}x^{k}\,,
@@ -59,7 +59,7 @@ $$
     \begin{aligned}
         V(\vb{r}) &= \frac{1}{4\pi\epsilon_0}\int_{V'}\rho(\vb{r'})\frac{1}{r}\sum_{n=0}^\infty\left(\frac{r'}{r}\right)^nP_n\cos(\theta)\dd V'\\
         &= \frac{1}{4\pi\epsilon_0}\Bigg[\frac{1}{r}\int_{V'}\rho(\vb{r'})\dd V' + \\
-        &\hspace{4 em}\frac{1}{r^2}\int_{V'}\rho(\vb{r'})r'\left(-\frac{1}{2}+\frac{3}{2}\cos^2(\theta)\right)\dd V' + \\
+        &\hspace{4 em}\frac{1}{r^2}\int_{V'}\rho(\vb{r'})r'\cos(\theta)\dd V' + \\
         &\hspace{4 em}\frac{1}{r^3}\int_{V'}\rho(\vb{r'})r'^2\left(-\frac{1}{2}+\frac{3}{2}\cos^2(\theta)\right)\dd V' +\\
         &\hspace{4 em}\frac{1}{r^4}\int_{V'}\rho(\vb{r'})r'^3\left(-\frac{3}{2}\cos(\theta)+\frac{5}{2}\cos^3(\theta)\right)\dd V' + \dots
 \Bigg]\\
