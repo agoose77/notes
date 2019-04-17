@@ -1,6 +1,16 @@
 Multipole Expansion
 ===================
+A multipole expansion is a series representation of a function that depends on angle, typically the two angles on a sphere. Representing a function in this form is useful in cases where higher order terms can be neglected whilst remaining a good approximation to the original function.
 
+<!-- TODO write up spherical harmonics -->
+The series is most commonly written as a sum of [spherical harmonics](../../maths/spherical-harmonics.md), e.g.
+$$
+f(\theta ,\phi )=\sum _{l=0}^\infty\,\sum _{m=-l}^l\,C_l^m\,Y_l^m(\theta ,\phi )\,,
+$$
+where $Y_l^m$ are the spherical harmonics, and $C_l^m$ the coefficents which depend upon $f$. To describe functions of three dimensions, often $C_l^m$ is instead written $C_l^m(r)$.
+
+Electric Potential
+------------------
 Suppose that we have a known charge distribution, for which we want to know the potential *outside* the region of charge. If the distribution were symmetrical, one could find answers using
 * Gauss' Law (direct calculation).
 * Coulomb's Law (direct calculation).

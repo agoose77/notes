@@ -40,7 +40,8 @@ $$
 \gdef\pdv#1#2{{\frac{\partial{ #1 }}{\partial{ #2 }}}}
 \gdef\functionalderivative#1#2{{\frac{\delta{ #1 }}{\delta{ #2 }}}}
 \gdef\fdv#1#2{{\frac{\delta{ #1 }}{\delta{ #2 }}}}
-\gdef\innerproduct#1#2{{\left\langle {#1} \mid { #2} \right\rangle}}
+\gdef\innerproduct#1#2{{\left\langle {#1},{ #2} \right\rangle}}
+\gdef\ip#1#2{\innerproduct{#1}{#2}}
 \gdef\braket#1#2{{\left\langle {#1} \mid { #2} \right\rangle}}
 \gdef\outerproduct#1#2{{\left\vert { #1 } \right\rangle\left\langle { #2} \right\vert}}
 \gdef\dyad#1#2{{\left\vert { #1 } \right\rangle\left\langle { #2} \right\vert}}
@@ -98,3 +99,8 @@ $$
 \gdef\mleftright#1#2#3{\mathopen{}\mathclose{\left#1#2\right#3}}
 \gdef\set#1{\{\,#1\,\}}
 $$
+
+<!-- Style notes
+\colon should be used for linear maps
+: should be used for "where", e.g. $x : x \in V$
+-->
