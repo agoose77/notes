@@ -40,7 +40,7 @@ Without the basis subscript, in matrix form, Eq. **(a)** is written
 $$
 \vb{x}^TT^T A\overline{\vb{y}} = \vb{x}^T A\overline{T^*}\overline{\vb{y}}\,,
 $$
-which yields the equality
+which yields the definition of the adjoint $T^*$:
 $$
 \begin{aligned}
 T^TA &= A\overline{T^*}\\
