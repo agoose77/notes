@@ -5,25 +5,34 @@ An inner product space is a [vector space](vector-space.md) with an additional s
 ## The Inner Product
 <div style="padding:15px;margin-bottom:20px;border:1px solid transparent;border-radius:4px;color:#31708f;background-color:#d9edf7
 ;border-color:#bce8f1;">
-        
-#### Sesquilinear Forms etc.
-A *sesquilinear form* $\alpha$ on a vector space $V$ over a field $K$ is a bilinear form on $V$, one of whose arguments behaves semilinearly, i.e. there exists some automorphism $\phi\colon K\rightarrow K$ such that 
+    
+### Definitions
+Hermitian form
+  ~ A conjugate-symmetric sesquilinear form.
+    
+Sesquilinear form
+  ~ A bilinear form $S$ on a vector space $V$ over a field $K$, one of whose arguments behaves semilinearly, i.e. there exists some automorphism $\phi\colon K\rightarrow K$ such that for $\vb{x},\vb{y}\in V$ and $a,b\in K$
     $$
     \begin{aligned}
-    \alpha(ax, y) = a\alpha(x, y)\\
-    \alpha(x, by) = \phi(b)\alpha(x, y)\,.
+    S(ax, y) = aS(x, y)\\
+    S(x, by) = \phi(b)S(x, y)\,.
     \end{aligned}
     $$
-An *automorphism* of $K$ is a bijection from $K$ to itself, which *preserves the operations of addition and multiplication*.
-
-A *bijection* is a function between the elements of two sets, where each element of one set is paired with *exactly one* element of the other set, and vice-versa.
     
+Automorphism
+  ~ A bijection from some algebraic structure $K$ to itself, which *preserves the operations of addition and multiplication*.
     
-A *bilinear form* on a vector space $V$ is a bilinear map $V\times V\rightarrow K$ where $K$ is the field of scalars.
+Bijection
+  ~ A function between the elements of two sets, where each element of one set is paired with *exactly one* element of the other set, and vice-versa.
 
-A *bilinear map* on vector spaces $V$ and $W$ is a function $B\colon V\times W \rightarrow X$ combining elements of $V$ and $W$ to yield an element of a third vector space $X$, and is linear in each of its arguments, e.g. matrix multiplication.
+Bilinear form
+  ~ A bilinear map $V\times V\rightarrow K$ where $K$ is the field of scalars.
+    
+Bilinear map
+  ~ A function $V\times W \rightarrow X$ combining elements of $V$ and $W$ to yield an element of a third vector space $X$, linear in each of its arguments, e.g. matrix multiplication.
 </div>
-The inner product is a *sesquilinear form*, with the automorphism $\phi\colon x\mapsto \overl$:
+
+The inner product is a *sesquilinear form*, with the automorphism $\phi\colon x\mapsto \overline{x}$:
 $$
 \ip{\cdot}{\cdot}\colon V\times V\rightarrow F\,,
 $$
@@ -34,6 +43,8 @@ which satisfies the following three axioms $\forall\, x,y,z\in V$ and $\forall\,
 |        Conjugate Symmetry       	|                                 $\lang u,v\rang=\overline{\lang v,u\rang}$                                                   	|
 | Linearity in the first argument 	| $$\begin{aligned}\lang au,v\rang&=a\lang u,v\rang\\\lang u_1+u_2,v\rang &=\lang u_1,v\rang+\lang u_2,v\rang\end{aligned}$$ 	|
 | Positive-definiteness           	| $$\begin{aligned}\lang u,u\rang &\ge 0\\ &= 0 \iff u=0\end{aligned}$$       	|
+
+More concisely, it is a *positive-definite Hermitian form*.
 
 Basis Representation Over Complex Field
 ---------------------------------------
@@ -60,6 +71,7 @@ $$
 $$
 we have 
 $$
+\tag{a}
 \ip{\vb{u}}{\vb{v}} = \vb{u}_\mathcal{B}^TA\overline{\vb{v}_\mathcal{B}}\,,
 $$
 where 
@@ -70,6 +82,18 @@ A = \begin{bmatrix}
     \el{2}{1} & \el{2}{2} & \dots  & \el{2}{n} \\
     \vdots    & \vdots    & \ddots & \vdots    \\
     \el{n}{1} & \el{n}{2} & \dots  & \el{n}{n}
-\end{bmatrix}\,.
+\end{bmatrix}
+$$ 
+must be positive definite to satisfy *positive-definiteness* of the general inner product. As $A$ is formed of inner products, which posses conjugate symmetry, it follows that $A^\dagger = A$, and hence $A$ is Hermitian[^1].
+
+Note that, as a scalar, $\left(\vb{u}_\mathcal{B}^TA\overline{\vb{v}_\mathcal{B}}\right)^T=\vb{u}_\mathcal{B}^TA\overline{\vb{v}_\mathcal{B}}$, and thus we may rewrite **(a)** as 
+$$
+\begin{aligned}
+\ip{\vb{u}}{\vb{v}} &= \left(\vb{u}_\mathcal{B}^TA\overline{\vb{v}_\mathcal{B}}\right)^T\\
+                    &= \vb{v}_\mathcal{B}^\dagger \left(\vb{u}_\mathcal{B}^TA\right)^T\\
+                    &= \vb{v}_\mathcal{B}^\dagger A^T\vb{u}_\mathcal{B}\\
+\end{aligned}
 $$
 <!-- N.B. basis vectors do not need to be orthonormal, only linearly independent, and span the space -->
+
+[^1]: [Square Matrices](square-matrices.md#Hermitian-%5BNormal%5D)

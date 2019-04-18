@@ -98,6 +98,7 @@ $$
 $$
 \gdef\mleftright#1#2#3{\mathopen{}\mathclose{\left#1#2\right#3}}
 \gdef\set#1{\{\,#1\,\}}
+\gdef\qed{\blacksquare}
 $$
 
 <!-- Style notes

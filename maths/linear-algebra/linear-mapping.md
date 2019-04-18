@@ -6,40 +6,42 @@ Axioms
 ------
 | Name                               	| Definition                                     	|
 |------------------------------------	|------------------------------------------------	|
-| Operation of addition              	| $f(\vec{u}+\vec{v}) = f(\vec{u}) + f(\vec{v})$ 	|
-| Operation of scalar multiplication 	| $f(c\vec{u}) = cf(\vec{u})$                    	|
+| Operation of addition              	| $f(\vb{u}+\vb{v}) = f(\vb{u}) + f(\vb{v})$ 	|
+| Operation of scalar multiplication 	| $f(c\vb{u}) = cf(\vb{u})$                    	|
 
 This may equivalently be written as 
 $$
-    f(c_1\vec{u_1} + c_2\vec{u_2} + \dots + c_n\vec{u_n}) = c_1f(\vec{u_1})+c_2f(\vec{u_2}) + \dots + c_nf(\vec{u_n})\,.
+    f(c_1\vb{u_1} + c_2\vb{u_2} + \dots + c_n\vb{u_n}) = c_1f(\vb{u_1})+c_2f(\vb{u_2}) + \dots + c_nf(\vb{u_n})\,.
 $$
 
-It follows that if $\vec{0}_V$ and $\vec{0}_W$ are the zero elements of $V$ and $W$ respectively, and $\vec{v}\in V$, then 
+It follows that if $\vb{0}_V$ and $\vb{0}_W$ are the zero elements of $V$ and $W$ respectively, and $\vb{v}\in V$, then 
 $$
-    f(\vec{0}_V) = f(0\vec{v}) = 0f(\vec{v}) =\vec{0}_W\,.
+    f(\vb{0}_V) = f(0\vb{v}) = 0f(\vb{v}) =\vb{0}_W\,.
 $$
 
 Properties
 ----------
 ### Null Space (Kernel)
-The null space $\mathcal{N}(L)$ of a linear map $L:V\rightarrow W$ between two vector spaces $V$ and $W$ is the [set](../set.md) of vectors which lose their identity under $L$, i.e. the vectors which satisfy $L(\vec{v})=\vec{0}$ for $\vec{v}\in V$:
+The null space $\mathcal{N}(L)$ of a linear map $L:V\rightarrow W$ between two vector spaces $V$ and $W$ is the [set](../set.md) of vectors which lose their identity under $L$, i.e. the vectors which satisfy $L(\vb{v})=\vb{0}$ for $\vb{v}\in V$:
 $$
-\mathcal{N}(L) = \{\,\vec{v}\in V : L(\vec{v})=\vec{0}\,\}\,.
+\mathcal{N}(L) = \set{\vb{v}\in V : L(\vb{v})=\vb{0}}\,.
 $$
 
 The null space has several properties:
 * It is a subspace of $V$ (a subset of $V$, and a vector space):  
-  * If $\vec{v_1},\vec{v_2}\in V$, then $L(\vec{v_1}+\vec{v_2})=L(\vec{v_1})+L(\vec{v_2})=\vec{0}_W\in W$.
-  * If $c\in \mathbb{R}$, then $L(c\vec{v_1})=cL(\vec{v_1})=\vec{0}_W$.
+  * If $\vb{v_1},\vb{v_2}\in V$, then $L(\vb{v_1}+\vb{v_2})=L(\vb{v_1})+L(\vb{v_2})=\vb{0}_W\in W$.
+  * If $c\in \mathbb{R}$, then $L(c\vb{v_1})=cL(\vb{v_1})=\vb{0}_W$.
   
 
 ### Image 
 The image of a linear mapping is the subset of the mapping's codomain to which maps its domain:
 $$
-L[V] = \{\,w\in W : w=L(v) \,\forall\, v \in V\,\}\,.
+L[V] = \set{w\in W : w=L(v) \,\forall\, v \in V}\,.
 $$
 $L[V]$ is a subspace of $W$.
 
+
+---
 
 Linear Functional
 -----------------
