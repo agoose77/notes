@@ -72,26 +72,26 @@ $$
 we have 
 $$
 \tag{a}
-\ip{\vb{u}}{\vb{v}} = \vb{u}_\mathcal{B}^TA\overline{\vb{v}_\mathcal{B}}\,,
+\ip{\vb{u}}{\vb{v}} = \vb{u}_\mathcal{B}^TA_\mathcal{B}\overline{\vb{v}_\mathcal{B}}\,,
 $$
 where 
 $$
 \def\el#1#2{\ip{\vb{b}_#1}{\vb{b}_#2}}
-A = \begin{bmatrix} 
+A_\mathcal{B} = \begin{bmatrix} 
     \el{1}{1} & \el{1}{2} & \dots  & \el{1}{n} \\
     \el{2}{1} & \el{2}{2} & \dots  & \el{2}{n} \\
     \vdots    & \vdots    & \ddots & \vdots    \\
     \el{n}{1} & \el{n}{2} & \dots  & \el{n}{n}
 \end{bmatrix}
 $$ 
-must be positive definite to satisfy *positive-definiteness* of the general inner product. As $A$ is formed of inner products, which posses conjugate symmetry, it follows that $A^\dagger = A$, and hence $A$ is Hermitian[^1].
+must be positive definite to satisfy *positive-definiteness* of the general inner product. As $A_\mathcal{B}$ is formed of inner products, which posses conjugate symmetry, it follows that $A_\mathcal{B}^\dagger = A_\mathcal{B}$, and hence $A$ is Hermitian[^1].
 
-Note that, as a scalar, $\left(\vb{u}_\mathcal{B}^TA\overline{\vb{v}_\mathcal{B}}\right)^T=\vb{u}_\mathcal{B}^TA\overline{\vb{v}_\mathcal{B}}$, and thus we may rewrite **(a)** as 
+Note that, as a scalar, the inner product is invariant under transposition, thus we may rewrite **(a)** as 
 $$
 \begin{aligned}
-\ip{\vb{u}}{\vb{v}} &= \left(\vb{u}_\mathcal{B}^TA\overline{\vb{v}_\mathcal{B}}\right)^T\\
-                    &= \vb{v}_\mathcal{B}^\dagger \left(\vb{u}_\mathcal{B}^TA\right)^T\\
-                    &= \vb{v}_\mathcal{B}^\dagger A^T\vb{u}_\mathcal{B}\\
+\ip{\vb{u}}{\vb{v}} &= \left(\vb{u}_\mathcal{B}^TA_\mathcal{B}\overline{\vb{v}_\mathcal{B}}\right)^T\\
+                    &= \vb{v}_\mathcal{B}^\dagger \left(\vb{u}_\mathcal{B}^TA_\mathcal{B}\right)^T\\
+                    &= \vb{v}_\mathcal{B}^\dagger A_\mathcal{B}^T\vb{u}_\mathcal{B}\\
 \end{aligned}
 $$
 <!-- N.B. basis vectors do not need to be orthonormal, only linearly independent, and span the space -->

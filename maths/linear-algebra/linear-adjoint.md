@@ -13,6 +13,7 @@ $$
 $$
 Hence, let us define $T^*(\vb{y})=\vb{z}$ such that
 $$
+\tag{a}
 \ip{T(\vb{x})}{\vb{y}} = \ip{\vb{x}}{T^*(\vb{y})}\,.
 $$
 
@@ -28,5 +29,23 @@ $$
 \end{aligned}
 $$
 Thus it is shown that $T^*$ is a *linear map* from $W$ to $V$, i.e. $T^* \in \mathcal{L}(W,V)$. 
+
+Inner Product
+-------------
+The adjoint is defined in terms of the inner product. Consequently, in matrix form, the adjoint can only be defined in terms of a particular basis, as the inner product itself depends upon the basis
+$$
+\ip{\vb{u}}{\vb{v}} = \vb{u}_\mathcal{B}^T A_\mathcal{B}\overline{\vb{v}_\mathcal{B}}\,.
+$$
+Without the basis subscript, in matrix form, Eq. **(a)** is written
+$$
+\vb{x}^TT^T A\overline{\vb{y}} = \vb{x}^T A\overline{T^*}\overline{\vb{y}}\,,
+$$
+which yields the equality
+$$
+\begin{aligned}
+A\overline{T^*} &= T^TA\\
+\overline{T^*} &= A^{-1}T^TA\,.
+\end{aligned}
+$$
 
 [^1]: https://people.math.osu.edu/costin.10/5101/Orthog%20p6-12.pdf
