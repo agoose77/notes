@@ -43,8 +43,9 @@ $$
 which yields the equality
 $$
 \begin{aligned}
-A\overline{T^*} &= T^TA\\
-\overline{T^*} &= A^{-1}T^TA\,.
+T^TA &= A\overline{T^*}\\
+\overline{A^{-1}}T^\dagger\overline{A} &= T^*\\
+\overline{A}^{-1}T^\dagger\overline{A} &= T^*\,.
 \end{aligned}
 $$
 

@@ -2,13 +2,16 @@ Square Matrices
 ===============
 A square matrix is a matrix with the same number of rows and columns. An $n$-by-$n$ matrix is known as a square matrix of order $n$.
 
-The trace of a square matrix 
+Operations
+-----------
+### Trace
+The trace of a square matrix is defined as the sum of its diagonal elements,
 $$
-\operatorname{tr}(S) = \sum_{i=1}^nS_{ii}
+\operatorname{tr}(S) = \sum_{i=1}^nS_{ii}\,.
 $$
-is defined as the sum of its diagonal elements. The trace has the following properties:
-* $\operatorname{tr}(AB) = \operatorname{tr}(BA)$
-* $\operatorname{tr}(A) = \operatorname{tr}(A^T)$
+It has the following properties:
+  * $\operatorname{tr}(AB) = \operatorname{tr}(BA)$
+  * $\operatorname{tr}(A) = \operatorname{tr}(A^T)$
 
 Classes
 -------
