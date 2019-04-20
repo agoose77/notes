@@ -40,7 +40,6 @@ hence we may write $\frac{1}{\abs{\vb{r}-\vb{r'}}}$ as
 $$
     \frac{1}{\abs{\vb{r}-\vb{r'}}} = \frac{1}{r}\frac{1}{\sqrt{1 + \frac{r'}{r}^2 -\frac{2r'}{r}\cos(\theta)}}\,.
 $$
-&\hspace{4 em}
 This may then be expanded using the [binomial expansion](https://en.wikipedia.org/wiki/Binomial_theorem)
 $$
 \frac {1}{(1-x)^{s}}=\sum _{k=0}^{\infty }{s+k-1 \choose k}x^{k}\,,
@@ -63,16 +62,66 @@ $$
         \right]\,.
     \end{aligned}
 $$
+From the recursion relation $${\displaystyle (n+1)P_{n+1}(x)=(2n+1)xP_{n}(x)-nP_{n-1}(x)}\,, $$ it can be seen that these $P_l$ are the [Legendre Polynomials](../maths/legendre-equation.md)
+<!-- TODO legendre polynomials -->
 
-Thus, 
+Thus $V(\vb{r})$ becomes
 $$
+\tag{b}
     \begin{aligned}
         V(\vb{r}) &= \frac{1}{4\pi\epsilon_0}\int_{V'}\rho(\vb{r'})\frac{1}{r}\sum_{n=0}^\infty\left(\frac{r'}{r}\right)^nP_n\cos(\theta)\dd V'\\
         &= \frac{1}{4\pi\epsilon_0}\Bigg[\frac{1}{r}\int_{V'}\rho(\vb{r'})\dd V' + \\
-        &\hspace{4 em}\frac{1}{r^2}\int_{V'}\rho(\vb{r'})r'\cos(\theta)\dd V' + \\
-        &\hspace{4 em}\frac{1}{r^3}\int_{V'}\rho(\vb{r'})r'^2\left(-\frac{1}{2}+\frac{3}{2}\cos^2(\theta)\right)\dd V' +\\
-        &\hspace{4 em}\frac{1}{r^4}\int_{V'}\rho(\vb{r'})r'^3\left(-\frac{3}{2}\cos(\theta)+\frac{5}{2}\cos^3(\theta)\right)\dd V' + \dots
+        &\hspace{4 em}\frac{1}{r^2}\int_{V'}\rho(\vb{r'})r'P_1(\cos(\theta))\dd V' + \\
+        &\hspace{4 em}\frac{1}{r^3}\int_{V'}\rho(\vb{r'})r'^2P_2(\cos(\theta))\dd V' +\\
+        &\hspace{4 em}\frac{1}{r^4}\int_{V'}\rho(\vb{r'})r'^3P_3(\cos(\theta))\dd V' + \dots
 \Bigg]\\
-    &= V_\text{monopole} + V_\text{dipole} + V_\text{quadrupole} + V_\text{octupole} + \dots\,.
+    &= V_\text{monopole} + V_\text{dipole} + V_\text{quadrupole} + V_\text{octupole} + \dots\,,
     \end{aligned}
 $$
+
+a simple sum of a series of multipole potentials. 
+
+![Dipole, Quadrupole, and Octupole grpahic.](poles.png)
+
+The _monopole moment_ of the charge distribution $\rho(\vb{r})$ is given by the integral 
+$$
+Q_\text{monopole} = \int_{V'}\rho(\vb{r'})\dd V'\,.
+$$
+Similarly, the _dipole moment_ is given by
+$$
+Q_\text{dipole} = \int_{V'}\vb{r'}\rho(\vb{r'})\dd V'\,,
+$$
+whose component in a direction $\vu{R}$ is given by 
+$$
+    M_1(\vu{R})=\vu{R}\cdot \vb{Q_\text{dipole}}\,.
+$$
+The _quadrupole moment_ is a 2 index symmetric tensor, given by
+$$
+Q_\text{quadrupole} = \int_{V'} \left(\frac{3}{2}r'_ir'_j-\frac{1}{2}\delta_{ij}r'^{\,2}\right)\rho(\vb{r'})P_3\dd V'\,,
+$$
+whose $\vu{R}$ component is given by[^1]
+$$
+M_2(\vu{R})=\sum_{i,j=x,y,z}Q_{ij}\hat{R_i}\hat{R_j}\,.
+$$
+This follows from 
+$$
+\begin{aligned}
+r^2P_2(\cos(\theta))&=r^2P_2(\vu{R}\cdot\vu{r'})\\
+&= \frac{3}{2}r'^{\,2}\left(\vu{R}\cdot\vu{r'}\right) - \frac{1}{2}r'^{\,2}\\
+&= \frac{3}{2}\left(\vu{R}\cdot\vb{r'}\right)^2 - \frac{1}{2}r^2\left(\vu{R}\cdot\vu{R}\right)\\
+&= \frac{3}{2}\sum_i\sum_j\hat{R_i}\hat{R_j}r'^{\,2}_ir'^{\,2}_j - \frac{r'^{\,2}}{2}\sum_i\sum_j\hat{R_i}\hat{R_j}\delta_{ij}\\
+&= \sum_i\sum_j\hat{R_i}\hat{R_j}\left(\frac{3}{2}r'_ir'_j-\frac{1}{2}r'^{\,2}\delta_{ij}\right)\,,
+\end{aligned}
+$$
+which integrates to
+$$
+\begin{aligned}
+M_3(\vb{R'}) &= \int_{V'}r'^{\,2}P_2(\vu{R}\cdot\vu{r'})\rho(\vb{r'})\dd V'\\
+&= \sum_{ij}\hat{R_i}\hat{R_j}\int_{V'}\left(\frac{3}{2}r'_ir'_j-\frac{1}{2}r'^{\,2}\delta_{ij}\right)\rho(\vb{r})\dd V'\\
+&= \sum_{ij}\hat{R_i}\hat{R_j}Q_{ij}\,.
+\end{aligned}
+$$
+
+
+<!-- The Legendre expansion assumes a coordinate system in which the -->
+[^1]: http://bolvan.ph.utexas.edu/~vadim/Classes/2018f/mme.pdf
