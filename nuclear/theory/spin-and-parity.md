@@ -17,3 +17,13 @@ In addition to nuclear spin, the [parity](../../quantum-mechanics/parity.md) is 
 <!-- TODO 
 If the wavefunction corresponds to an eigenstate of parity, then it has _definite parity_. Hence, if all nucleons satisfy this property, and it can be shown that the wavefunctions can be multiplied to give the w.f. of the nucleus, then it follows that under parity, there will be definite even/odd parity of nucleus?
 -->
+
+<!-- 
+* Electric and magnetic multipole theory applies to nuclear reigime using QM
+* Each EM moment has an associated parity, given by behaviour of multipole operator under parity.
+  * Parity of electric moment is $(-1)^l$
+  * Parity of magnetic moment is $(-1)^{l+1}$
+* When computing the expectation value of a moment, odd parity moments will hence vanish.
+* In QM we _operationally define_ the observable magnetic moment greatest component of $\mu$ to the direction of the greatest component of $l$. <!-- p73 -->
+
+-->

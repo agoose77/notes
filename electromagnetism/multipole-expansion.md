@@ -129,5 +129,6 @@ $$
 P_l(\vb{a}\cdot\vb{b}) = \frac{4\pi}{2l+1}\sum_{m=-l}^{+l}Y_{lm}(\vb{a})Y^*_{lm}(\vb{b})\,.
 $$
 
+
 <!-- The Legendre expansion assumes a coordinate system in which the -->
 [^1]: http://bolvan.ph.utexas.edu/~vadim/Classes/2018f/mme.pdf
