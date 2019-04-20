@@ -95,13 +95,14 @@ whose component in a direction $\vu{R}$ is given by
 $$
     M_1(\vu{R})=\vu{R}\cdot \vb{Q_\text{dipole}}\,.
 $$
+<!-- TODO define tensor -->evince
 The _quadrupole moment_ is a 2 index symmetric tensor, given by
 $$
-Q_\text{quadrupole} = \int_{V'} \left(\frac{3}{2}r'_ir'_j-\frac{1}{2}\delta_{ij}r'^{\,2}\right)\rho(\vb{r'})P_3\dd V'\,,
+Q_\text{quadrupole} = \int_{V'} \left(\frac{3}{2}r'_ir'_j-\frac{1}{2}\delta_{ij}r'^{\,2}\right)\rho(\vb{r'})\dd V'\,,
 $$
 whose $\vu{R}$ component is given by[^1]
 $$
-M_2(\vu{R})=\sum_{i,j=x,y,z}Q_{ij}\hat{R_i}\hat{R_j}\,.
+M_2(\vu{R})=\sum_{i,j=x,y,z}{\hat{R_i}\hat{R_j}Q_{ij}}\,.
 $$
 This follows from 
 $$
@@ -122,6 +123,11 @@ M_3(\vb{R'}) &= \int_{V'}r'^{\,2}P_2(\vu{R}\cdot\vu{r'})\rho(\vb{r'})\dd V'\\
 \end{aligned}
 $$
 
+---
+Instead of describing the angular dependence of the multipoles’ components in the direction $\hat{R}$ in terms of symmetric multipole tensors, we may expand it in terms of spherical harmonics. It can be shown that[^1], for any integer $l=0,1,2,\dots$ and any two unit vectors $\vu{a}$ and $\vu{b}$, the Legendre polynomial of their dot product (i.e. the cosine of the angle between them) expands into products of spherical harmonics, given by
+$$
+P_l(\vb{a}\cdot\vb{b}) = \frac{4\pi}{2l+1}\sum_{m=-l}^{+l}Y_{lm}(\vb{a})Y^*_{lm}(\vb{b})\,.
+$$
 
 <!-- The Legendre expansion assumes a coordinate system in which the -->
 [^1]: http://bolvan.ph.utexas.edu/~vadim/Classes/2018f/mme.pdf
