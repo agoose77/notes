@@ -99,6 +99,8 @@ $$
 \gdef\mleftright#1#2#3{\mathopen{}\mathclose{\left#1#2\right#3}}
 \gdef\set#1{\{\,#1\,\}}
 \gdef\qed{\blacksquare}
+\gdef\atom#1#2{{}^{#1}\text{#2}}
+\gdef\nucleus#1#2#3{{}_{#1}^{#2}\text{#3}}
 $$
 
 <!-- Style notes

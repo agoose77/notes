@@ -8,4 +8,5 @@ Ab initio, the strong (nucleon-nucleon) force *must* have the following properti
 Additionally, it has been experimentally observed that the strong force
 * Appears to be independent of whether interacting nucleons are proton-proton, neutron-neutron, or proton-neutron. Hence, the strong force must be *charge independent*.
 * Depends upon the alignment of the spins (parallel, or anti-parallel).
-* The 
+* Possesses a short-range repulsive component, to keep nucleons at a certain average separation.
+* Exhibits a noncentral (tensor) component (which thus does not conserve orbital angular momentum).  <!-- TODO link lagrangian & eul-lagrange eqns here -->
