@@ -103,6 +103,8 @@ $$
 \gdef\nucleus#1#2#3{{}_{#1}^{#2}\text{#3}}
 \gdef\amu{\operatorname{u}}
 \gdef\MeV{\operatorname{MeV}}
+\gdef\keV{\operatorname{MeV}}
+\gdef\eV{\operatorname{eV}}
 $$
 
 <!-- Style notes
