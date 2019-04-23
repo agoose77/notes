@@ -101,6 +101,8 @@ $$
 \gdef\qed{\blacksquare}
 \gdef\atom#1#2{{}^{#1}\text{#2}}
 \gdef\nucleus#1#2#3{{}_{#1}^{#2}\text{#3}}
+\gdef\amu{\operatorname{u}}
+\gdef\MeV{\operatorname{MeV}}
 $$
 
 <!-- Style notes

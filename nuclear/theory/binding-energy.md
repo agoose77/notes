@@ -43,8 +43,8 @@ $$
 m = \frac{qrB^2}{E}\,.
 $$
 
-Given that the precision of the mass measurement depends upon $B$ and $E$, these values must be known precisely, which in practice proves difficult. One could calibrate to a particular mass, and subsequently determine other masses by relative measurement. To measure a large range of masses however, $E$ and $B$ would need to be varied considerably, and the calibration may not remain valid to one part in $10^{-6}$ over such a range. Rather than use an absolute calibration, one can instead measure the smaller difference between two nearly equal masses, such as those given by selected molecules. Once accelerated, these molecules lose their electrons, and the molecular binding energy is of the order $10^{-9}\,\text{u}$, thus we effectively measure only the mass of the nucleus.  
-For example, one might configure the apparatus for mass $128$, and measure the difference between $C_9H_{20}$ and $C_{10}H_8$, which gives 
+Given that the precision of the mass measurement depends upon $B$ and $E$, these values must be known precisely, which in practice proves difficult. One could calibrate to a particular mass, and subsequently determine other masses by relative measurement. To measure a large range of masses however, $E$ and $B$ would need to be varied considerably, and the calibration may not remain valid to one part in $10^{-6}$ over such a range. Rather than use an absolute calibration, one can instead measure the smaller difference between two nearly equal masses, such as those given by selected molecules. Once accelerated, these molecules lose their electrons, and the molecular binding energy is of the order $10^{-9}\amu$, thus we effectively measure only the mass of the nucleus.  
+For example, one might configure the apparatus for mass $128$, and measure the difference between $\text{C}_9\text{H}_{20}$ and $\text{C}_{10}\text{H}_8$, which gives 
 $$
 \Delta = m\mleftright{(}{\text{C}_9\text{H}_{20}}{)} - m\mleftright{(}{\text{C}_{10}\text{H}_8}{)}=12m\mleftright{(}{\atom{1}{H}}{)}-m\mleftright{(}{\atom{12}{C}}{)}\,.
 $$
