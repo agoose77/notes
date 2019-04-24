@@ -48,7 +48,13 @@ H_W T H_V^{-1} &= {T^*}^\dagger\\
 H_W^{-1} T^\dagger H_V &= T^*\,.
 \end{aligned}
 $$
-Hence, for *orthonormal* bases $V$ and $W$, it holds that $T^* = T^\dagger$.
+Hence, for *orthonormal* bases $V$ and $W$, it holds that $T^* = T^\dagger$[^3][^4].
+
+<!-- For future reference
+Spent quite some time on this small nuance. For *coordinate vectors* and a linear operator in two bases, the adjoint and hermitian conjugate only coincide where the bases are orthonormal. Hence, for QM, 
+-->
 
 [^1]: https://people.math.osu.edu/costin.10/5101/Orthog%20p6-12.pdf
 [^2]: https://math.stackexchange.com/a/1320924
+[^3]: http://math.stanford.edu/~akshay/math113/11.12.pdf
+[^4]: Linear Algebra, Werner Greub (auth.), p.217
