@@ -32,6 +32,8 @@ $$
 $$
 which also satisfies the angular-momentum commutation relations due to **(a)** and **(b)**, and hence $\vb{\J}$ is an angular momentum. Consequently, the previous understanding of the eigenvalue spectrum of $\vb{\J}^2$ and $\J_z$ also applies to the total $\vb{\J}$.
 
+Clebsch Gordan Coefficients
+---------------------------
 For the total system, we must choose a set of base kets. There are two possible options:
 * Simultaneous eigenkets of $\vb{\J}_1^2$, $\vb{\J}_2^2$, $\J^{(1)}_{z}$, and $\J^{(2)}_{z}$. We may denote these _direct product_ states as $\ket{j_1j_2;m_1m_2}$
   $$
@@ -52,13 +54,13 @@ For the total system, we must choose a set of base kets. There are two possible 
   \end{aligned}
   $$
   
+We will now drop the explicit labelling of $\J_1$ and $\J_2$ in the state ket: $\ket{j_1j_2;jm}=\ket{jm}$. 
+
 Although 
 $$
       \comm{\vb{\J}^2}{\J^{(1)}_{z}} = 0\,,
 $$
-it is not the case that the $z$ components of $\vb{\J}_1$ and $\vb{\J}_2$ commute with $\vb{\J}^2$, and thus the two choices for basis kets are not mutually compatible. We will now drop the explicit labelling of $\J_1$ and $\J_2$ in the state ket: $\ket{j_1j_2;jm}=\ket{jm}$
-
-On the ket space of a given $j_1$ and $j_2$, the identity to reconstruct any state (for a given $j_1,j_2$) is
+it is *not the case* that the $z$ components of $\vb{\J}_1$ and $\vb{\J}_2$ commute with $\vb{\J}^2$; the two choices for basis kets are not mutually compatible. On the ket space of a given $j_1$ and $j_2$, the identity to reconstruct any state (for a given $j_1,j_2$) is
 $$
 1 = \sum_{m_1m_2}\ket{m_1m_2}\bra{m_1m_2}\,.
 $$

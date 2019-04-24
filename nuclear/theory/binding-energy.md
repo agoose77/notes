@@ -6,7 +6,7 @@ $$
 \tag{a}
 m_Nc^2 = m_Ac^2+\sum_{i=1}^ZB_i-Zm_ec^2\,.
 $$
-Conventionally, we neglect the contribution from the electronic binding energies, as they are on the order of $\sim10\operatorname{-}100\,\text{keV}$ vs $ A\times1000\,\text{MeV}$
+Conventionally, we neglect the contribution from the electronic binding energies, as they are on the order of $\sim10\operatorname{-}100\keV$ vs $ A\times1000\MeV$
 
 The _binding energy_ $B$ of the nucleus is the difference in mass energy between the nucleus and its constituent protons and neutrons,
 $$
@@ -25,7 +25,7 @@ $$
 $$
 This value is _not_ directly a measure of binding energy, as the mass given by the atomic number is _relative_ to the mass of ${}^{12}\text{C}$.
 
-The binding energy of a nucleus tends to increase linearly with the number of nucleons $A$. The average binding energy per nucleon is approximately $8\,\text{MeV}$. In the figure below, there are two visible regions $A<60$ and $A>60$, in which the specific binding energy increases and decreases respectively. 
+The binding energy of a nucleus tends to increase linearly with the number of nucleons $A$. The average binding energy per nucleon is approximately $8\MeV$. In the figure below, there are two visible regions $A<60$ and $A>60$, in which the specific binding energy increases and decreases respectively. 
 ![Binding energy per nucleon.](https://upload.wikimedia.org/wikipedia/commons/5/53/Binding_energy_curve_-_common_isotopes.svg)
 
 Mass Doublet Method
@@ -67,7 +67,7 @@ If the binding energy increases with removal of a nucleon, it is an energeticall
 Semi Empirical Mass Formula
 ---------------------------
 ### Volume Term
-The variation of the binding energy with $A$ of a nucleus can be predicted from the _semi-empirical mass formula_. To the lowest order, $B\propto A$ (given that $\frac{B}{A}\approx 8\,\text{MeV}$), hence we can establish a _volume_ term (as $V\propto A$),
+The variation of the binding energy with $A$ of a nucleus can be predicted from the _semi-empirical mass formula_. To the lowest order, $B\propto A$ (given that $\frac{B}{A}\approx 8\MeV$), hence we can establish a _volume_ term (as $V\propto A$),
 $$
     \tag{a}a_vA\,.
 $$
@@ -119,13 +119,13 @@ B = a_vA - a_sA^\frac{2}{3} - a_cZ(Z-1)A^{-\frac{1}{3}} - a_\text{sym}\frac{(A-2
 $$
 
 where experimentally the constants have been found as follows
-| Constant       	| Experimental Value 	|
+| Constant       	| Experimental Value / MeV 	|
 |----------------	|--------------------	|
-| $a_v$          	| $15.5\,\text{MeV}$ 	|
-| $a_s$          	| $16.8\,\text{MeV}$ 	|
-| $a_c$          	| $0.72\,\text{MeV}$ 	|
-| $a_\text{sym}$ 	| $23\,\text{MeV}$   	|
-| $\delta_0$     	| $34\,\text{MeV}$   	|
+| $a_v$          	| $15.5$ 	|
+| $a_s$          	| $16.8$ 	|
+| $a_c$          	| $0.72$ 	|
+| $a_\text{sym}$ 	| $23$   	|
+| $\delta_0$     	| $34$   	|
 
 Using this expression for $B$, we have the _semi-empirical mass formula_
 $$
@@ -137,6 +137,6 @@ The figure below shows $M(Z,A)$ for fixed $A$ shows the decay chain for $A=73$ a
 
 ![Mass chains for even and odd $A$](images/mass-chain.jpg)
 
-In the case that $A$ is odd, then we see a single mass energy (stability) curve. Isobars on either side of the minimum (stable) isobar decay via $\beta$ decay towards the minimum to become more stable.
-When $A$ is even, there are two stability curves, for (a) odd-$N$, odd-$Z$, (b) even-$N$, even-$Z$. This splitting results from the contribution to $M(Z,A)$ from the parity term $\delta$, giving a separation of $2\delta_0$ between the two parabolas. Consider the nuclide ${}^{64}\text{Cu}$. As it lies on the upper stability curve, it can decay towards the lower stability curve in either direction to become even-$N$, even-$Z$. This is distinct from the odd-$A$ curve, in which decays occur in one direction _only_ (towards stability).
+* In the case that $A$ is odd, then we see a single mass energy (stability) curve. Isobars on either side of the minimum (stable) isobar decay via $\beta$ decay towards the minimum to become more stable.
+* When $A$ is even, there are two stability curves, for (a) odd-$N$, odd-$Z$, (b) even-$N$, even-$Z$. This splitting results from the contribution to $M(Z,A)$ from the parity term $\delta$, giving a separation of $2\delta_0$ between the two parabolas. Consider the nuclide $\atom{64}{Cu}$; as it lies on the upper stability curve, it can decay towards the lower stability curve in either direction to become even-$N$, even-$Z$. This is distinct from the odd-$A$ curve, in which decays occur in one direction _only_ (towards stability).
 

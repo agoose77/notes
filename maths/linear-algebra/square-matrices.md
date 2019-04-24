@@ -24,17 +24,14 @@ There are several classes of square matrix:
 * Satisfies $UU^\dagger=I$, which implies that $\lvert \det(U)\rvert=1$ (as $\lvert UU^\dagger\rvert=\lvert U\rvert\lvert U^\dagger\rvert=\lvert \det(U)\rvert^2=1$).
 * $U^\dagger=U^{-1}$.
 * Preserves *standard* inner product
-  <!-- TODO -->
-  $$
-  \begin{aligned}
-      \ip{U\vb{v}}{U\vb{w}} &= \vb{u}^TU^TH\overline{U}\overline{\vb{v}}\\
-      \ip{\vb{v}}{\vb{w}} &= \vb{u}^TH\overline{\vb{v}}\\
-      \ip{U\vb{v}}{U\vb{w}}=\ip{\vb{v}}{\vb{w}} &\iff (U^TH\overline{U})^T = H^T \\
-                                                &\iff U^\dagger H U = H\\
-                                                &\iff \comm{H}{U} = 0\,,
-  \end{aligned}
-  $$
-  where $\comm{H}{U} = 0$ holds, given that $H=I$ on the standard basis.
+
+  $$ \begin{aligned} 
+\ip{U\vb{u}}{U\vb{v}} &= \vb{u}^TU^TH\overline{U}\overline{\vb{v}}\\
+\ip{\vb{u}}{\vb{v}} &= \vb{u}^TH\overline{\vb{v}}\\ 
+\ip{U\vb{u}}{U\vb{v}}=\ip{\vb{u}}{\vb{v}} 
+&\iff (U^TH\overline{U})^T = H^T \\
+&\iff U^\dagger H^T U = H^T\\ 
+&\iff \comm{H^T}{U} = 0\,, \end{aligned} $$ where $\comm{H^T}{U} = 0$ holds. Note that $H=I$ on the standard basis.
 
 ### Orthogonal [Unitary]
 * Satisfies $O^TO=OO^T=I$.
@@ -51,6 +48,9 @@ There are several classes of square matrix:
   \vb{v}^\dagger H\vb{v} &= \bar{\lambda}\vb{v}^\dagger\vb{v}
   \end{aligned}
   $$
-
+* Orthonormal eigenvectors:
+  $$
+  
+  $$
 ### Symmetric [Normal]
 * Satisfies $S^T=S$.

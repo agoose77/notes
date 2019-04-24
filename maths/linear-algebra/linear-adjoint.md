@@ -32,21 +32,23 @@ Thus it is shown that $T^*$ is a *linear map* from $W$ to $V$, i.e. $T^* \in \ma
 
 Inner Product
 -------------
-The adjoint is defined in terms of the inner product. Consequently, in matrix form, the adjoint can only be defined in terms of a particular basis, as the inner product itself depends upon the basis
+The adjoint is defined in terms of the inner product. In matrix form, it must be defined in terms of a particular basis, as the inner product itself depends upon the basis
 $$
-\ip{\vb{u}}{\vb{v}} = \vb{u}_\mathcal{B}^T A_\mathcal{B}\overline{\vb{v}_\mathcal{B}}\,.
+\ip{\vb{u}}{\vb{v}} = \vb{v}_\mathcal{B}^\dagger H_\mathcal{B}\vb{u}_\mathcal{B}\,.
 $$
-Without the basis subscript, in matrix form, Eq. **(a)** is written
+Without the basis subscript, **(a)** is written
 $$
-\vb{x}^TT^T A\overline{\vb{y}} = \vb{x}^T A\overline{T^*}\overline{\vb{y}}\,,
+\vb{y}^\dagger H_WT\vb{x} = \vb{y}^\dagger {T^*}^\dagger H_V\vb{x}\,,
 $$
-which yields the definition of the adjoint $T^*$:
+which yields the definition of the adjoint $T^*$[^2]:
 $$
 \begin{aligned}
-T^TA &= A\overline{T^*}\\
-\overline{A^{-1}}T^\dagger\overline{A} &= T^*\\
-\overline{A}^{-1}T^\dagger\overline{A} &= T^*\,.
+H_WT &= {T^*}^\dagger H_V\\
+H_W T H_V^{-1} &= {T^*}^\dagger\\
+H_W^{-1} T^\dagger H_V &= T^*\,.
 \end{aligned}
 $$
+Hence, for *orthonormal* bases $V$ and $W$, it holds that $T^* = T^\dagger$.
 
 [^1]: https://people.math.osu.edu/costin.10/5101/Orthog%20p6-12.pdf
+[^2]: https://math.stackexchange.com/a/1320924
