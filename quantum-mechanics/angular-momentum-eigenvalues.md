@@ -1,70 +1,10 @@
-Angular Momentum Eigenvalues
+Angular-Momentum Eigenvalues
 ============================
+<!--  of $\J^2$ and $\J_z$ -->
 $\gdef\J{\hat{J}}$
-Ladder Operators
-----------------
-Let us define the operator $\J^2 \equiv  \vb{\J}\cdot \vb{\J}$, that is $\J^2 \equiv \J_x\J_x + \J_y\J_y + \J_z\J_z$.
-<!-- TODO link proofs on common eigenbases -->
-Using the [fundamental commutation relations](infinitesimal-rotations.md#Infinitesimal-Rotations-in-Quantum-Mechanics) and cyclical permutation, it can be shown that $\hat{J}^2$ commutes, and thus shares a common eigenbasis with, every one of $\J_i$, i.e.
-$$
-    \tag{a}
-    \comm{\J^2}{\J_i} = 0
-$$
-Consider $\J_z$:
-$$
-\begin{aligned}
-\comm{\J_x\J_x + \J_y\J_y + \J_z\J_z}{\J_z} 
-&= \J_x\comm{\J_x}{\J_z} + \comm{\J_x}{\J_z}\J_x + \J_y\comm{\J_y}{\J_z} + \comm{\J_y}{\J_z}\J_y\\
-&= -i\hbar \J_x\J_y  - i\hbar\J_y\J_x + i\hbar \J_y\J_x + i\hbar \J_x\J_y\\
-&= 0\,.
-\end{aligned}
-$$
-<!-- TODO link notes on simultaneous diagonalisation -->
-Given that the angular momentum operators do not *mutually* commute, we can choose only one of them to be diagonalised simultaneously (share a set of eigenstates) with $\J^2$. By convention, let us choose $\J_z$. We may denote the eigenvalues of $\J^2$ and $\J_z$ by $a$ and $b$, respectively:
-$$
-\begin{aligned}
-\J^2\ket{a,b} &= a\ket{a,b}\\
-\J_z\ket{a,b} &= b\ket{a,b}\,.
-\end{aligned}
-$$
-
-In order to determine the permitted values for $a$ and $b$, one may introduce the non-Hermitian operators
-$$
-\J_\pm \equiv \J_x \pm i\J_y\,.
-$$
-These operators satisfy the commutation relations
-$$
-\tag{b}
-\begin{aligned}
-    \comm{\J_+}{\J_-} &= 2\hbar \J_z\\
-    \comm{\J_z}{\J_\pm} &= \pm\hbar \J_\pm\\
-    \comm{\J^2}{\J_\pm} &= 0
-    \,,
-\end{aligned}
-$$
-which follows from the fundamental commutation relations and **(a)**. 
-
-It is interesting to observe how $\J_z$ acts upon $\J_\pm\ket{a,b}$
-$$
-\tag{c}
-\begin{aligned}
-\J_z\left(\J_\pm\ket{a,b}\right) 
-&= \left(\comm{\J_z}{\J_\pm} + \J_\pm\J_z\right)\ket{a,b}\\
-&= \left(b\pm\hbar\right)\J_\pm\ket{a,b}\,.
-\end{aligned}
-$$
-Evidently, given an eigenket $\ket{a,b}$ of $\J_z$, the state $\J_\pm\ket{a,b}$ is *also* an eigenket, with eigenvalue $b\pm\hbar$. It is for this reason that $\J_\pm$ are called the *ladder operators*. Similarly, given **(b)** $\ket{a,b}$ is also an eigenket of $\J^2$ and thus we may write
-$$
-\J_\pm\ket{a,b} = c_\pm\ket{a,b\pm\hbar}\,,
-$$
-where $c_\pm$ is an arbitrary proportionality constant to be chosen later. 
-<!-- TODO link to proof that the set of eigenkets {J+/-|a,b>} is the same as that of {|a,b>}. -->
-
-Eigenvalues of $\J^2$ and $\J_z$
---------------------------------
 It can be shown for Hermitian operators that the eigenvalues are *real*, and the eigenvectors *orthogonal*. By convention, we take the *normalised* eigenkets such that they form an *orthonormal set* $\set{\ket{a'}}$. It is assumed that the eigenkets span the entire ket space.
 <!-- TODO show that they span the space -->
-Above it was shown that one can generate eigenkets of $\J^2$ and $\J_z$ using the ladder operators to raise or lower $b$. It can be shown that there exists an upper bound to $b$ for a given $a$. First, we note that
+It was shown that one can generate eigenkets of $\J^2$ and $\J_z$ using the [ladder operators](angular-momentum-ladder-operators.md) to raise or lower $b$. It can be shown that there exists an upper bound to $b$ for a given $a$. First, we note that
 $$
 \begin{aligned}
 \J^2 - \J_z 
@@ -109,7 +49,81 @@ $$
 $$
 These two results agree only if $\gamma=0$, and thus 
 $$
+\tag{e}
 \J_+\ket{a,b_\text{max}} = 0\,.
+$$
+
+Given **(e)** it follows that
+$$
+\tag{f}
+\begin{aligned}
+\J_-\J_+\ket{a,b_\text{max}} 
+&= 0\\
+&= \J^2 -\J_z^2 - \hbar \J_z\,,
+\end{aligned}
+$$
+so 
+$$
+\left(\J^2 -\J_z^2 - \hbar \J_z\right)\ket{a,b_\text{max}} = 0\,.
+$$
+As $\ket{a,b_\text{max}}$ is not a null ket, it follows that 
+$$
+\tag{g}
+\def\bm{b_\text{max}}
+a - \bm^2-\bm\hbar = 0 \implies a = \bm(\bm+\hbar)\,.
+$$
+From **(d)** there must also be some $b_\text{min}$ for which 
+$$
+\J_-\ket{a,b_\text{min}}=0\,.
+$$
+Using the same approach as **(f)**, we may write $\J_+\J_-$ as 
+$$
+\J_+\J_- = \J^2 -\J_z^2 + \hbar \J_z
+$$
+to find
+$$
+\tag{h}
+\def\bm{b_\text{min}}
+a = \bm(\bm-\hbar).
+$$
+The expressions in **(g)** and **(h)** imply that $b_\text{min}=-b_\text{max}$. Given that an application of the ladder operators varies $b$ by $\pm\hbar$, it follows that 
+$$
+b = b_\text{min} + n\hbar \implies b_\text{max}=\frac{n\hbar}{2}\,.
+$$
+Letting $j=\frac{b_\text{max}}{\hbar}$, we may write **(g)** as
+$$
+a = \hbar^2j(j+1)\,.
+$$
+As $b$ is symmetric about $0$, we may also define $m$ such that 
+$$
+b \equiv m\hbar\,.
+$$
+Evidently, for a given $j$ we have $2j+1$ permitted values of $m$, from $m=-j$ to $m=+j$. It is often more convenient to use this notation to denote a simultaneous eigenket of $\J^2$ and $\J$ as $\ket{j,m}$ such that
+$$
+\begin{aligned}
+\J^2\ket{j,m} &= j(j+1)\hbar^2\ket{j,m}\\
+\J_z\ket{j,m} &= m\hbar\ket{j,m}\,.
+\end{aligned}
+$$
+
+Finding $c_\pm$ for $\J_\pm$
+-----------------------------
+In defining the ladder operators $\J_\pm$, it was noted that 
+$$
+\J_\pm\ket{j,m} = c_\pm\ket{j,m\pm1}\,.
+$$
+In order to find $c_\pm$, let us take the inner product of some state $\J_\pm\ket{j,m}$ with itself, where $\ket{j,m}$ is normalised:
+$$
+\begin{aligned}
+\bra{j,m}\J_\pm^\dagger\J_\pm\ket{j,m} =\abs{\J_\pm\ket{j,m}}^2
+&= \bra{j,m}\J^2-\J_z^2\mp\hbar\J_z\ket{j,m}\\
+&= \left(j(j+1) - m^2 \mp m\right)\hbar^2\,.
+\end{aligned}
+$$
+<!-- TODO link to phase factor is arbitrary -->
+Taking $c_\pm$ as real positive (as the phase factor is arbitrary), $\J_\pm$ is defined as
+$$
+\J_\pm\ket{j,m} = \hbar\sqrt{j(j+1) - m^2 \mp m}\ket{j,m\pm1}\,.
 $$
 
 [^1]: https://physics.stackexchange.com/questions/179532/why-does-the-raising-operator-when-acting-on-a-ket-with-a-maximum-second-quantu

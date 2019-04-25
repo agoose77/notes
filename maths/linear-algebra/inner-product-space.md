@@ -46,6 +46,13 @@ which satisfies the following three axioms $\forall\, x,y,z\in V$ and $\forall\,
 
 More concisely, it is a *positive-definite Hermitian form*.
 
+Vector Norm
+-----------
+Any inner product space has a *naturally* defined norm given by 
+$$
+\abs{\vb{v}} = \sqrt{\ip{\vb{v}}{\vb{v}}}\,.
+$$
+
 Basis Representation Over Complex Field
 ---------------------------------------
 Let $\mathcal{B} = \set{\vb{b}_1,\,\vb{b}_2,\,\dots,\,\vb{u}_n}$ be a basis of an $n$-dimensional inner product space $V$. Given two vectors $\vb{u},\vb{v}\in V$, we can express them in terms of $\mathcal{B}$
