@@ -68,4 +68,11 @@ From the addition rules, in the basis given by the eigenkets of the total operat
 
 For $m_s^{(1)}=m_s^{(2)}=\frac{1}{2}$, $m_s$ is maximised and thus equal to $s$, therefore $\ket{+}\ket{+}$ corresponds to $\ket{s=1,m_s=1}$ in this new basis. Given that $m_s=-s,\dots,\,+s$ it follows that this is a *triplet* state with $m_s=-1,\,\dots 0,\,1$. As we must have the same number of states in either basis, it follows that the remaining state is a *singlet* state $\ket{s=0,m_s=0}$
 
+<!-- We can get the triplet states by applying the lowering operator three times 
+The singlet state comes from finding a state orthogonal to our first state, and ensuring that S^2-0. We initially know that we need an up * down state as m = m1 + m2. That we need entanglement is because we could equally have down * up with m=0. Need to motivate this better.
+TODO why are the sim eigenstates of S^2 and Sz orthogonal (obviously its hermitian and we know they are orthogonal, but conceptually that is)...
+TODO look at entangled states
+-->
+
+
 [^1]: Krane, p. 81.
