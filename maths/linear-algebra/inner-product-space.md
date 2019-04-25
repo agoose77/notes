@@ -27,7 +27,7 @@ Bijection
 
 Bilinear form
   ~ A bilinear map $V\times V\rightarrow K$ where $K$ is the field of scalars.
-    
+  <!-- The *canonical basis* B of a bilinear form is that for which T:V×V→K(ui, uj) = 0 for ui, uj ∈ B -->
 Bilinear map
   ~ A function $V\times W \rightarrow X$ combining elements of $V$ and $W$ to yield an element of a third vector space $X$, linear in each of its arguments, e.g. matrix multiplication.
 </div>

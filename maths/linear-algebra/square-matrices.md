@@ -49,24 +49,22 @@ There are several classes of square matrix:
   \overline{\lambda} &= \lambda \implies \lambda \in \mathbb{R}
   \end{aligned}
   $$
-* Orthonormal eigenvectors:  
-  Given that $H^*=H^\dagger$[^1], it follows that $\ip{H\vb{u}}{\vb{v}} = \ip{\vb{u}}{H\vb{v}}$. Let $\vb{u}$ and $\vb{v}$ be two eigenvectors (with *real* nondegenerate eigenvalues). 
+* Orthogonal eigenvectors:  
+  Given that $H^*=H^\dagger$[^2], it follows that $\ip{H\vb{u}}{\vb{v}} = \ip{\vb{u}}{H\vb{v}}$. Let $\vb{u}$ and $\vb{v}$ be two eigenvectors (with *real* nondegenerate eigenvalues). Then,
   $$
   \begin{aligned}
       \ip{H\vb{u}}{\vb{v}} &= \ip{\vb{u}}{H\vb{v}}\\
       \lambda_1\ip{\vb{u}}{\vb{v}} &= \overline{\lambda_2}\ip{\vb{u}}{\vb{v}}\\
-      \ip{\vb{u}}{\vb{v}} \left(\lambda_1-\lambda_2\right)&= 0
+      \ip{\vb{u}}{\vb{v}} \left(\lambda_1-\lambda_2\right)&= 0\,,
   \end{aligned}
   $$
-  Which implies that
+  which implies that for *distinct* eigenvalues,
   $$
-    \ip{\vb{u}}{\vb{v}} = \begin{cases}
-    1, & \vb{u}=\vb{v}\\
-    0, & \vb{u}\neq\vb{v}\\
-    \end{cases}\,.
+    \ip{\vb{u}}{\vb{v}} = 0\,.
   $$
   
 ### Symmetric [Normal]
 * Satisfies $S^T=S$.
 
-[^1]: When the matrix is defined on an _orthonormal_ basis.
+[^1]: When $U$ is defined on an *orthonormal* basis.
+[^2]: $H$ is *only* self adjoint on an orthonormal basis.
