@@ -26,6 +26,8 @@ $$
 \end{aligned}
 $$
 
+Ladder Operators
+----------------
 In order to determine the permitted values for $a$ and $b$, one may introduce the non-Hermitian operators
 $$
 \J_\pm \equiv \J_x \pm i\J_y\,.

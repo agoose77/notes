@@ -41,38 +41,38 @@ Also vaguely relevant - https://ocw.mit.edu/courses/nuclear-engineering/22-02-in
 
 Spin and Parity
 ---------------
+$\gdef\S{\hat{S}}$
 The total angular momentum $I$ of the deuteron is given by the sum of the angular momenta of the nucleons, which add according to a set of [addition rules](../../quantum-mechanics/angular-momentum-addition.md). We can consider the total angular momentum $\hat{I}$ as 
 $$
-\vb{\hat{I}} = \vb{\hat{L}}_1 + \vb{\hat{S}}_1 + \vb{\hat{L}}_2 + \vb{\hat{S}}_2\,.
+\vb{\hat{I}} = \vb{\hat{L}}_1 + \vb{\S}_1 + \vb{\hat{L}}_2 + \vb{\S}_2\,.
 $$
 It is conventional to consider the addition of the orbital angular momentum of the entire system and the individual spins:
 $$
 \tag{b}
-\vb{\hat{I}} = \vb{\hat{L}} + \vb{\hat{S}}_1 + \vb{\hat{S}}_2\,,
+\vb{\hat{I}} = \vb{\hat{L}} + \vb{\S}_1 + \vb{\S}_2\,,
 $$
 though one could also express $I$ in terms of the total orbital and spin operators
 $$
-\vb{\hat{I}} = \vb{\hat{L}} + \vb{\hat{S}}\,.
+\vb{\hat{I}} = \vb{\hat{L}} + \vb{\S}\,.
 $$
-<!-- TODO, can't we determine this from I = J2 + J2 = L1 + S1 + L2 + S2? -->
-As $s=\frac{1}{2}$ particles, both the proton and neutron can have either $m_s=-\frac{1}{2}$ or $m_s=+\frac{1}{2}$, denoted as $\ket{-}$ and $\ket{+}$ respectively. Hence, in terms of *direct product states*, the total spin state must be one of
-$$
-\begin{matrix}
-\ket{+}\ket{+}\\
-\ket{-}\ket{+}\\
-\ket{+}\ket{-}\\
-\ket{-}\ket{-}\\
-\end{matrix}
-$$
-From the addition rules, in the basis given by the eigenkets of the total operators $\vb{\hat{S}}_z$ and $\hat{S}$, the $z$ spin projection $m_s$ is given by $m_s=m_s^{(1)} + m_s^{(2)}$. Furthermore, the total spin $s$ is given by the equality $\abs{j_1-j_2}\leq j\leq j_1+j_2$, which for $s_i=\frac{1}{2}$ yields the following integer values $s=0,\,1$. It follows that the spin states of our system in the *total basis* are as follows:
 
-For $m_s^{(1)}=m_s^{(2)}=\frac{1}{2}$, $m_s$ is maximised and thus equal to $s$, therefore $\ket{+}\ket{+}$ corresponds to $\ket{s=1,m_s=1}$ in this new basis. Given that $m_s=-s,\dots,\,+s$ it follows that this is a *triplet* state with $m_s=-1,\,\dots 0,\,1$. As we must have the same number of states in either basis, it follows that the remaining state is a *singlet* state $\ket{s=0,m_s=0}$
+From [addition of the two spins](../../quantum-mechanics/two-particle-spin-half-states.md), the total spin $S$ has a singlet state $\ket{s=0;m_s=0}$ and a triplet state $\ket{s=1;m_s=\pm 1,0}$
+In nature, the deuteron is observed to have $I=1$. We may determine which states couple to produce $I=1$, given that $S\in\set{0,\,1}$ and $L\geq 0$:
+| $L$ 	| $S$ 	| $\set{I}$         	|
+|:---:	|:---:	|-------------------	|
+|  0  	|  0  	| $\set{0}$         	|
+|  0  	|  1  	| $\set{1}$         	|
+|  1  	|  0  	| $\set{1}$         	|
+| 1   	| 1   	| $\set{0,\,1,\,2}$ 	|
+| 2   	| 0   	| $\set{2}$         	|
+| 2   	| 1   	| $\set{1,\,2}$     	|
+Evidently, there are four ways to couple $L$ and $S$ to produce $I=1$. 
 
-<!-- We can get the triplet states by applying the lowering operator three times 
-The singlet state comes from finding a state orthogonal to our first state, and ensuring that S^2-0. We initially know that we need an up * down state as m = m1 + m2. That we need entanglement is because we could equally have down * up with m=0. Need to motivate this better.
-TODO why are the sim eigenstates of S^2 and Sz orthogonal (obviously its hermitian and we know they are orthogonal, but conceptually that is)...
-TODO look at entangled states
+<!-- 
+TODO
+deuteron has +ve parity (assume of w.f., define this). Parity of orbital wf comes from (-1)^l. Need to understand parity vs exchange: https://www.physicsforums.com/threads/particle-exchange-and-parity.493128/post-3265145, https://physics.stackexchange.com/a/149015
+Maybe http://www.damtp.cam.ac.uk/user/tong/aqm/aqmfive.pdf
+
 -->
-
 
 [^1]: Krane, p. 81.
