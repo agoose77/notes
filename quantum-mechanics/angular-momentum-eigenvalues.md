@@ -46,6 +46,7 @@ which follows from the fundamental commutation relations and **(a)**.
 
 It is interesting to observe how $\J_z$ acts upon $\J_\pm\ket{a,b}$
 $$
+\tag{c}
 \begin{aligned}
 \J_z\left(\J_\pm\ket{a,b}\right) 
 &= \left(\comm{\J_z}{\J_\pm} + \J_\pm\J_z\right)\ket{a,b}\\
@@ -56,7 +57,59 @@ Evidently, given an eigenket $\ket{a,b}$ of $\J_z$, the state $\J_\pm\ket{a,b}$ 
 $$
 \J_\pm\ket{a,b} = c_\pm\ket{a,b\pm\hbar}\,,
 $$
-where $c_\pm$ is an arbitrary proportionality constant to be chosen later. Given that nondegenerate eigenbas
+where $c_\pm$ is an arbitrary proportionality constant to be chosen later. 
+<!-- TODO link to proof that the set of eigenkets {J+/-|a,b>} is the same as that of {|a,b>}. -->
 
 Eigenvalues of $\J^2$ and $\J_z$
 --------------------------------
+It can be shown for Hermitian operators that the eigenvalues are *real*, and the eigenvectors *orthogonal*. By convention, we take the *normalised* eigenkets such that they form an *orthonormal set* $\set{\ket{a'}}$. It is assumed that the eigenkets span the entire ket space.
+<!-- TODO show that they span the space -->
+Above it was shown that one can generate eigenkets of $\J^2$ and $\J_z$ using the ladder operators to raise or lower $b$. It can be shown that there exists an upper bound to $b$ for a given $a$. First, we note that
+$$
+\begin{aligned}
+\J^2 - \J_z 
+&= \J_x^2 + \J_y^2 = \J_+\J_- - i\comm{\J_y}{\J_x}\\
+&= \J_+\J_- - \hbar\J_z\\
+&= \J_+\J_- - \frac{1}{2}\comm{\J_+}{\J_-}\\
+&= \frac{1}{2}\left(\J_+\J_- + \J_-\J_+\right)\,.
+\end{aligned}
+$$
+Given that $\J_i$ are hermitian, it follows that $\J_\pm=\J_\mp^\dagger$, hence
+$$
+\J^2 - \J_z = \frac{1}{2}\left(\J_+\J_+^\dagger + \J_-\J_-^\dagger\right)\,.
+$$
+Taking the expectation value of $\J^2 - \J_z$, we see that
+$$
+\begin{aligned}
+\expval{\J^2 - \J_z} 
+&= \frac{1}{2}\bra{a,b}\left(\J_+\J_+^\dagger + \J_-\J_-^\dagger\right)\ket{a,b}\\
+&=\frac{1}{2}\left(\bra{a,b}\J_+\J_+^\dagger\ket{a,b} + \bra{a,b}\J_-\J_-^\dagger\ket{a,b}\right)\,.
+\end{aligned}
+$$
+From the positive definiteness $\braket{v}{v}\geq 0$ of the [inner product](../maths/linear-algebra/inner-product-space.md#The-Inner-Product) it follows that both inner products are non-negative, and thus $\expval{\J^2 - \J_z}\geq 0$. This expression implies 
+$$
+\tag{d}
+a \geq b\,.
+$$
+A question therefore arises; what should happen at the top rung?[^1] One might suppose that $\J_+\ket{a,b_\text{max}}=\gamma\ket{a,b_\text{max}}$. If so, let us revisit **(c\)**
+$$
+\def\bm{b_\text{max}}
+\begin{aligned}
+\J_z\left(\J_+\ket{a,\bm}\right) 
+&= \left(\comm{\J_z}{\J_+} + \J_+\J_z\right)\ket{a,\bm}\\
+&= \left(\hbar \J_+ + \J_+\J_z\right)\ket{a,\bm}\\
+&= \left(\gamma\hbar + \gamma\hbar\bm\right)\ket{a,\bm}\\
+&= \gamma\hbar\left(1 + \bm\right)\ket{a,\bm}\,.
+\end{aligned}
+$$
+However, by direct calculation,
+$$
+\def\bm{b_\text{max}}
+\J_z\left(\J_+\ket{a,\bm}\right) = \gamma\hbar\bm\ket{a,\bm}\,.
+$$
+These two results agree only if $\gamma=0$, and thus 
+$$
+\J_+\ket{a,b_\text{max}} = 0\,.
+$$
+
+[^1]: https://physics.stackexchange.com/questions/179532/why-does-the-raising-operator-when-acting-on-a-ket-with-a-maximum-second-quantu
