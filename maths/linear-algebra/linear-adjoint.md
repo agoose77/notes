@@ -54,6 +54,8 @@ From Shilov[^6]
 symmetric matrix (i.e., a matrix equal to its own Hermitian conjugate) in
 some orthonormal basis is self-adjoint.
 
+<!-- Note that BY DEFINITION the matrix form of an operator assumes some fixed basis B. Unlike the linear operator it represents, this information is fundamental to its definition 
+
 [^1]: https://people.math.osu.edu/costin.10/5101/Orthog%20p6-12.pdf
 [^2]: https://math.stackexchange.com/a/1320924
 [^3]: http://math.stanford.edu/~akshay/math113/11.12.pdf
