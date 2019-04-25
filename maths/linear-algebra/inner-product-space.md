@@ -84,8 +84,7 @@ A_\mathcal{B} = \begin{bmatrix}
     \el{n}{1} & \el{n}{2} & \dots  & \el{n}{n}
 \end{bmatrix}
 $$ 
-must be positive definite to satisfy *positive-definiteness* of the general inner product. As $A_\mathcal{B}$ is formed of inner products, which posses conjugate symmetry, it follows that $A_\mathcal{B}^\dagger = A_\mathcal{B}$, and hence $A$ is Hermitian[^1].
-
+must be positive definite to satisfy *positive-definiteness* of the general inner product. As $A_\mathcal{B}$ is formed of inner products, which posses conjugate symmetry, it follows that $A_\mathcal{B}^\dagger = A_\mathcal{B}$, and hence $A$ is Hermitian[^1]. The matrix $A_{ij}=\ip{\vb{b}_i}{\vb{b}_j}$ is the [Gram matrix](https://en.wikipedia.org/wiki/Gramian_matrix) of the basis vectors $\set{\vb{b}_i}$.
 Note that, as a scalar, the inner product is invariant under transposition, thus we may rewrite **(a)** as 
 $$
 \begin{aligned}
