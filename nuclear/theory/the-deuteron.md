@@ -72,6 +72,7 @@ Evidently, there are four ways to couple $L$ and $S$ to produce $I=1$.
 TODO
 deuteron has +ve parity (assume of w.f., define this). Parity of orbital wf comes from (-1)^l. Need to understand parity vs exchange: https://www.physicsforums.com/threads/particle-exchange-and-parity.493128/post-3265145, https://physics.stackexchange.com/a/149015
 Maybe http://www.damtp.cam.ac.uk/user/tong/aqm/aqmfive.pdf
+If state is eigenket of parity then Ψ(-x)=±Ψ(x))
 Look at isospin - what governs composite system of fermionss?
 -->
 

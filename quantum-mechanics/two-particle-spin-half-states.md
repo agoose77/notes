@@ -1,5 +1,6 @@
 Two Particle Spin-$\frac{1}{2}$ States
 ====================================
+$\gdef\S{\hat{S}}$
 <!-- TODO, can't we determine this from I = J2 + J2 = L1 + S1 + L2 + S2? -->
 Each spin $\frac{1}{2}$ particle can have either $m_s=-\frac{1}{2}$ or $m_s=+\frac{1}{2}$, denoted as $\ket{-}$ and $\ket{+}$ respectively. Hence, in terms of *[direct product](../maths/linear-algebra/tensor-product.md) states*, the total spin state must be one of
 $$
@@ -27,11 +28,13 @@ The triplet states can be found in the direct product basis by repeatedly applyi
 |  $\ket{1,\ 0}$ 	| $\frac{1}{\sqrt{2}}\left(\ket{+}_1\otimes\ket{-}_2+\ket{-}_1\otimes\ket{+}_2\right)$ 	|
 | $\ket{1,-1}$   	|                            $\ket{-}_1\otimes\ket{-}_2$                           	|
 
-As we must have the same number of states in either basis, the remaining state is the *singlet* state $\ket{0,0}$. Like $\ket{1,0}$, it will be a superposition of states in order for $\S_z=0$ and $\S^2\ket{0,0}=0$. One can find this state directly by requiring that a general state in the direct product basis satisfy these conditions[^1], e.g.
+As we must have the same number of states in either basis, the remaining state is the *singlet* state $\ket{0,0}$. Like $\ket{1,0}$, it will be a superposition of states (Bell states[^4]) in order for $\S_z=0$ and $\S^2\ket{0,0}=0$. 
+### Finding the Singlet State in the Direct Product Basis
+One can find the singlet state by requiring that the state in the direct product basis 
 $$
-\ket{0,0} = a\ket{+}_1\otimes\ket{+}_2 + b\ket{+}_1\otimes\ket{-}_2 + c\ket{-}_1\otimes\ket{+}_2 + d\ket{-}_1\otimes\ket{-}_2\,.
+\ket{0,0} = a\ket{+}_1\otimes\ket{+}_2 + b\ket{+}_1\otimes\ket{-}_2 + c\ket{-}_1\otimes\ket{+}_2 + d\ket{-}_1\otimes\ket{-}_2
 $$
-The operator $\S^2$ is given by 
+satisfy $\S^2\ket{0,0}=0$[^1], e.g. The operator $\S^2$ is given by 
 $$
 \begin{aligned}
 \left(\vb{\S^{(1)}} + \vb{\S^{(2)}}\right)\cdot\left(\vb{\S^{(1)}} + \vb{\S^{(2)}}\right)
@@ -45,7 +48,7 @@ $$
 \frac{3\hbar^2}{2}\left(a\ket{+}_1\otimes\ket{+}_2 + b\ket{+}_1\otimes\ket{-}_2 + c\ket{-}_1\otimes\ket{+}_2 + d\ket{-}_1\otimes\ket{-}_2\right)+\\ 
 \hbar^2\left(c\ket{+}_1\otimes\ket{-}_2\right)+\\
 \hbar^2\left(b\ket{-}_1\otimes\ket{+}_2\right)+\\
-\frac{\hbar^2}{2}(a\ket{+}_1\otimes\ket{+}_2-b\ket{+}_1\otimes\ket{-}_2-c\ket{-}_1\otimes\ket{+}_2+d\ket{-}_1\otimes\ket{-}_2) = 0\\
+\frac{\hbar^2}{2}(a\ket{+}_1\otimes\ket{+}_2-b\ket{+}_1\otimes\ket{-}_2-c\ket{-}_1\otimes\ket{+}_2+d\ket{-}_1\otimes\ket{-}_2) = 0
 \end{matrix}
 $$
 which simplifies to
@@ -54,7 +57,7 @@ $$
 2a\ket{+}_1\otimes\ket{+}_2 + 
 (b+c)\ket{+}_1\otimes\ket{-}_2 + 
 (c+b)\ket{-}_1\otimes\ket{+}_2 + 
-2d\ket{-}_1\otimes\ket{-}_2\right)
+2d\ket{-}_1\otimes\ket{-}_2\right)\,.
 $$
 This requires $a=d=0$, and $b+c=0$, i.e.
 $$
@@ -62,8 +65,7 @@ $$
 $$
 where $k$ is typically taken to be $\frac{1}{\sqrt{2}}$ in order to normalise the state. This result can also be found from the symmetry requirement of the state.[^2][^3]
 
-<!-- We can get the triplet states by applying the lowering operator three times 
-The singlet state comes from finding a state orthogonal to our first state, and ensuring that S^2-0. We initially know that we need an up * down state as m = m1 + m2. That we need entanglement is because we could equally have down * up with m=0. Need to motivate this better. 
+<!-- W
 
 TODO why are the sim eigenstates of S^2 and Sz orthogonal (obviously its hermitian and we know they are orthogonal, but conceptually that is)...
 TODO look at entangled states (though not relevant)
@@ -71,3 +73,4 @@ TODO look at entangled states (though not relevant)
 [^1]: https://ocw.mit.edu/courses/physics/8-05-quantum-physics-ii-fall-2013/lecture-notes/MIT8_05F13_Chap_08.pdf
 [^2]: https://physics.stackexchange.com/a/389957
 [^3]: https://physics.stackexchange.com/a/290474
+[^4]: https://en.wikipedia.org/wiki/Bell_state
