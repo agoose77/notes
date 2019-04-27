@@ -1,9 +1,6 @@
-Nuclear Electronics
-===================
+# Nuclear Electronics
 
-
-Analogue and digital pulses
----------------------------
+## Analogue and digital pulses
 
 Analogue pulses are described by an instantaneous voltage amplitude
 $V(t)$, and the corresponding profile drawn by $V(t)$ over a given time
@@ -26,10 +23,9 @@ magnitude, and find the correspond bin for the input amplitude.
 
 Let us assume an input amplitude of 5 V. This would be quantised by the
 above algorithm into the $32768^{th}$ bin. This can be encoded into 16
-bits as *0b1000000000000000*.
+bits as _0b1000000000000000_.
 
-Logic
------
+## Logic
 
 There are three major conventions used to represent logic values over
 analogue interfaces:
@@ -51,8 +47,7 @@ Finally, the ECL convention requires that two lines are used to carry a
 signal, each of an amplitude between -1.75 V and -0.75 V (true, false
 for A, & false, true for B)
 
-Charge Collection
------------------
+## Charge Collection
 
 For a silicon detector, the work function for a valence electron is
 $\sim 3.3\operatorname{eV}$, so for an incident $\alpha$ particle of 5 MeV, $\sim3\times10^4$ electrons are produced,
@@ -73,9 +68,7 @@ counter differ, the current at the anode and cathode will differ
 accordingly. Therefore, one must take the integral of the current over a
 counter from each branch.
 
-
-Charge Sensitive Amplifier
---------------------------
+## Charge Sensitive Amplifier
 
 Typical amplifiers quantify the deposited energy of incident radiation
 as liberated charge. Consequently, it is desirable to measure the
@@ -86,20 +79,21 @@ To develop a CSP (charge sensitive preamplifier), one can replace the
 second resistor $R_2$ in the previous configuration for a capacitor.
 
 The current through a capacitor is given by the relationship
-$$\begin{aligned}
+
+$$
 Q_c(t) &= CV_c(t) \\
 \frac{\mathrm{d}c}{\mathrm{d}t} = I_c(t) &= C\frac{\mathrm{d}c}{\mathrm{d}t}\,.\end{aligned}$$
 
 Given that the virtual earth condition gives $V_-=0$, $V_c=-V_\text{out}$.
 The current across the capacitor is equal to the current through $R$, as the opamp has infinite resistance, and therefore we deduce the following relation
-
 $$
+
 \begin{aligned}
-    I_c(t) &= -C\frac{\mathrm{d}V_\text{out}}{\mathrm{d}t}\\
-    \int_0^t{I_\text{in} \,\mathrm{d} t} = Q_\text{tot}^{0\rightarrow t} &= -C\int_0^V{\,\mathrm{d} V_\text{out}} = CV_\text{out}(t) \\
-    V_\text{out}(t) = -\frac{Q_\text{tot}^{0\rightarrow t}}{C}\,.\end{aligned}
-$$
+I*c(t) &= -C\frac{\mathrm{d}V*\text{out}}{\mathrm{d}t}\\
+\int*0^t{I*\text{in} \,\mathrm{d} t} = Q*\text{tot}^{0\rightarrow t} &= -C\int_0^V{\,\mathrm{d} V*\text{out}} = CV*\text{out}(t) \\
+V*\text{out}(t) = -\frac{Q\_\text{tot}^{0\rightarrow t}}{C}\,.\end{aligned}
 
+$$
 Hence, in this configuration, the output voltage is the integral of the
 current from the detector.
 
@@ -153,21 +147,20 @@ resolution.
 This can be solved with the addition of an extra resistor in parallel
 with the capacitor in the differentiation network, which modifiers the
 response to regain the exponential decay as follows
-$$\tau^\prime = \tau \frac{R}{R+R_\text{pz}}\,.$$
+$$
 
 With too much compensation, $\tau_d$ is modified such that it is greater
 than $\tau_p$, which leads to a deformed exponential tail, rather than a
 symmetrical unipolar pulse.
 
-Pile Up
--------
+## Pile Up
 
 At high count rates, subsequent pulses can form on the tail of an
 initial pulse, which leads to increasing pulse amplitudes. This
-phenomenon, known as *pile up*, depends upon the event rate and pulse
+phenomenon, known as _pile up_, depends upon the event rate and pulse
 length, and gives rise to high energy tails on peaks in energy spectra.
 
-Pile up can be rejected, if a *pile up rejection* pulse is generated
+Pile up can be rejected, if a _pile up rejection_ pulse is generated
 when the incident pulse crosses a threshold in the positive direction.
 Where two rejection pulses appear in coincidence, the event is rejected
 
@@ -175,10 +168,9 @@ A CR and RC circuit can be combined to form an RC shaping amplifier,
 with the use of an x1 Buffer amplifier to decouple the two circuits (it
 has a very high input impedance)
 
-Baseline shift
---------------
+## Baseline shift
 
-Because capacitors cannot conduct direct current, the *average* dc
+Because capacitors cannot conduct direct current, the _average_ dc
 voltage at any point behind the capacitor in an RC/CR circuit must be
 zero.
 
@@ -203,31 +195,30 @@ baseline shift by using bipolar pulses, whch have equal areas above and
 below the baseline. Another solution is to use a baseline restoration
 circuit, which resets the dc level to zero after each pulse
 
-Discriminators
---------------
+## Discriminators
 
 ### First Level Discriminators
 
 Discriminators are used to detect pulses within a signal. A naive
 amplitude dependant trigger such as a "window discriminant" will
 trigger at different points along the pulse profile, depending upon the
-pulse shape and amplitude, in a phenomenon known as *time walk*. See for
+pulse shape and amplitude, in a phenomenon known as _time walk_. See for
 more.
 
 ### Second Level Discriminators
 
-Second level discriminators use comparisons *between logic pulses*,
+Second level discriminators use comparisons _between logic pulses_,
 rather than a single pulse and some constant criterion.
 
 Coincidence units produce a logic pulse from each amplified signal
 branch, and then feed them into a coincidence unit. These units can
 perform AND/OR tests to reject or accept the event.
 
-Some coincidence units have *veto* inputs, which overrides the
+Some coincidence units have _veto_ inputs, which overrides the
 coincidence logic to reject an event, provided that the pulse spans the
 pulses from both A and B.
 
 This feature is typically used by the data acquisition system (DAS),
 which is unable to process further events whilst active (corresponding
-to the DAS *dead time*, often in the range of depending upon DAS
+to the DAS _dead time_, often in the range of depending upon DAS
 complexity).

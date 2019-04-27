@@ -1,4 +1,5 @@
 Load this document in the Markdown viewer to enable macros.
+
 $$
 \gdef\dd{\mathop{}\!\mathrm{d}}
 \gdef\em#1{\boldsymbol{#1}}
@@ -94,7 +95,9 @@ $$
 \gdef\matrixel#1#2#3{{\left\langle{ #1 }\right\vert{ #2 }\left\vert{#3}\right\rangle}}
 \gdef\mel#1#2#3{{\left\langle{ #1 }\right\vert{ #2 }\left\vert{#3}\right\rangle}}
 $$
+
 <!-- Custom Macros-->
+
 $$
 \gdef\mleftright#1#2#3{\mathopen{}\mathclose{\left#1#2\right#3}}
 \gdef\set#1{\{\,#1\,\}}
@@ -106,7 +109,9 @@ $$
 \gdef\keV{\operatorname{MeV}}
 \gdef\eV{\operatorname{eV}}
 $$
+
 <!-- QM -->
+
 $$
 \def\y{\hat{y}}
 \def\x{\hat{x}}
