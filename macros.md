@@ -1,4 +1,4 @@
-Load this document in the Markdown viewer to enable macros
+Load this document in the Markdown viewer to enable macros.
 $$
 \gdef\dd{\mathop{}\!\mathrm{d}}
 \gdef\em#1{\boldsymbol{#1}}
@@ -105,6 +105,16 @@ $$
 \gdef\MeV{\operatorname{MeV}}
 \gdef\keV{\operatorname{MeV}}
 \gdef\eV{\operatorname{eV}}
+$$
+<!-- QM -->
+$$
+\def\y{\hat{y}}
+\def\x{\hat{x}}
+\def\z{\hat{z}}
+\def\p{\hat{p}}
+\gdef\L{\hat{L}}
+\gdef\J{\hat{J}}
+\gdef\S{\hat{S}}
 $$
 
 <!-- Style notes

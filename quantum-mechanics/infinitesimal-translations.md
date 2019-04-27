@@ -5,7 +5,6 @@ $\gdef\xp{\vb{x'}}$
 $\gdef\pp{\vb{p'}}$ 
 $\gdef\T#1{\mathscr{T}(#1)}$
 $\gdef\X{\hat{\vb{X}}}$
-$\gdef\p#1{\hat{p}_#1}$
 
 Let $\T{\dd\xp}$ be the operator such that
 $$
@@ -82,23 +81,23 @@ $$
 
 These results indicate that $K$ is a _generator_ of translation, in a manner analagous to _momentum_ in classical mechanics. However, as a coefficient of a quantum state, $\vb{K}\cdot\dd\xp$ must be dimensionless, and thus there must be a _constant of action_ to render $\vb{K}$ dimensionless. It transpires that this constant is simple $\hbar$, and thus
 $$
-\T{\dd\xp} = 1-\frac{i\vb{\hat{p}}\cdot\dd\xp}{\hbar}\,.
+\T{\dd\xp} = 1-\frac{i\vb{\p}\cdot\dd\xp}{\hbar}\,.
 $$
 The commutation relation **(a)** now becomes 
 $$
-\comm{\hat{x}_i}{\p{j}} = i\hbar\delta_{ij}\,.
+\comm{\hat{x}_i}{\p_j} = i\hbar\delta_{ij}\,.
 $$
 
 <!-- TODO should we introduce Heisenberg uncertainty relation here? -->
 Let us then consider a translation operator of finite translation $\T{\Delta x'\vu{x}}$, where $\vu{x}$ is the unit $x$ vector, which can be produced by compounding a series of inifinitesimal translations
 $$
 \begin{aligned}
-\T{\Delta\xp} &= \lim_{N\rightarrow\infty}\left(1-\frac{i\p{x}\Delta x'}{N\hbar}\right)^N\\
-              &= \exp\left(\frac{-i\p{x}\Delta x'}{\hbar}\right)\,.
+\T{\Delta\xp} &= \lim_{N\rightarrow\infty}\left(1-\frac{i\p_x\Delta x'}{N\hbar}\right)^N\\
+              &= \exp\left(\frac{-i\p_x\Delta x'}{\hbar}\right)\,.
 \end{aligned}
 $$
 <!-- TODO matrix exponential -->
-Here, $ \exp\left(\frac{-i\p{x}\Delta x'}{\hbar}\right)$ is a [matrix exponential](../maths/matrix-exponential.md), which derives from the [limit definition](../maths/exponential-characterisation.md) of the exponential function. A fundamental property of translations is that translations in different directions commute, and thus form an [Abelian group](../maths/group.md#Abelian-Groups).
+Here, $ \exp\left(\frac{-i\p_x\Delta x'}{\hbar}\right)$ is a [matrix exponential](../maths/matrix-exponential.md), which derives from the [limit definition](../maths/exponential-characterisation.md) of the exponential function. A fundamental property of translations is that translations in different directions commute, and thus form an [Abelian group](../maths/group.md#Abelian-Groups).
 <!-- TODO check all URLS dont 404 -->Therefore, we must have 
 $$
 \begin{aligned}
@@ -110,18 +109,18 @@ To second order, this commutation relation expands as follows
 $$
 \begin{aligned}
 \comm{\T{\Delta x'\vu{x}}}{\T{\Delta y'\vu{y}}} &= \comm{
-    1-\frac{i\p{x}\Delta x'}{\hbar}-\frac{\p{x}^2(\Delta x')^2}{2\hbar^2}+\mathcal{O}\mleftright{[}{(\Delta x')^3}{]}
+    1-\frac{i\p_x\Delta x'}{\hbar}-\frac{\p_x^2(\Delta x')^2}{2\hbar^2}+\mathcal{O}\mleftright{[}{(\Delta x')^3}{]}
 }{
-    1-\frac{i\p{y}\Delta y'}{\hbar}-\frac{\p{y}^2(\Delta y')^2}{2\hbar^2}+\mathcal{O}\mleftright{[}{(\Delta y')^3}{]}
+    1-\frac{i\p_y\Delta y'}{\hbar}-\frac{\p_y^2(\Delta y')^2}{2\hbar^2}+\mathcal{O}\mleftright{[}{(\Delta y')^3}{]}
 }\\
-&= -\frac{\p{x}\Delta x'}{\hbar}\frac{\p{y}\Delta y'}{\hbar} + \frac{\p{y}\Delta y'}{\hbar}\frac{\p{x}\Delta x'}{\hbar}\\
-&= -\frac{\Delta x'\Delta y'}{\hbar^2}\comm{\p{x}}{\p{y}}\,.
+&= -\frac{\p_x\Delta x'}{\hbar}\frac{\p_y\Delta y'}{\hbar} + \frac{\p_y\Delta y'}{\hbar}\frac{\p_x\Delta x'}{\hbar}\\
+&= -\frac{\Delta x'\Delta y'}{\hbar^2}\comm{\p_x}{\p_y}\,.
 \end{aligned}
 $$
 In order for translation operators to commute, a new commutation relation is thus introduced
 $$
 \tag{b}
-\comm{\p{x}}{\p{y}} = 0\,.
+\comm{\p_x}{\p_y} = 0\,.
 $$
 
 ### Canonical Commutation Laws
@@ -129,19 +128,19 @@ We have now established the _canonical commutation laws_:
 <!-- N.B. [xi,xj] follows from the fact that they are different position spaces. This also follows for pi, pj -->
 $$
 \begin{matrix}
-\comm{x_i}{x_j}=0\,, & \comm{\p{i}}{\p{j}}=0\,, & \comm{x_i}{\p{j}} = i\delta_{ij}\hbar\,.
+\comm{x_i}{x_j}=0\,, & \comm{\p_i}{\p_j}=0\,, & \comm{x_i}{\p_j} = i\delta_{ij}\hbar\,.
 \end{matrix}
 $$
 
-Given that $\p{x}$, $\p{y}$ and $\p{z}$ commute, they share a set of simultaneous eigenkets, and thus
+Given that $\p_x$, $\p_y$ and $\p_z$ commute, they share a set of simultaneous eigenkets, and thus
 $$
-\ket{\pp} = \ket{\p{x}',\p{y}',\p{z}'}
+\ket{\pp} = \ket{\p_x',\p_y',\p_z'}
 $$
 $$
 \begin{matrix}
-\p{x}\ket{\pp} = \p{x}'\ket{\pp}\,, &
-\p{y}\ket{\pp} = \p{y}'\ket{\pp}\,, &
-\p{z}\ket{\pp} = \p{z}'\ket{\pp}\,.
+\p_x\ket{\pp} = \p_x'\ket{\pp}\,, &
+\p_y\ket{\pp} = \p_y'\ket{\pp}\,, &
+\p_z\ket{\pp} = \p_z'\ket{\pp}\,.
 \end{matrix}
 $$
 

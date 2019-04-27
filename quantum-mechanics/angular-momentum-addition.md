@@ -3,7 +3,7 @@ $\gdef\J{\hat{J}}$
 Angular-Momentum Addition
 =========================
 
-Let us consider two angular-momentum operators $\vb{\J}_1$ and $\vb{\J}_2$ in *different subspaces*. The components of $\vb{\J}_1$ and $\vb{\J}_2$ satisfy the angular-momentum commutation relations
+Let us consider two angular-momentum operators $\vb{\J}_1$ and $\vb{\J}_2$ in *different subspaces*. The components of $\vb{\J}_1$ and $\vb{\J}_2$ satisfy the [angular-momentum commutation relations](infinitesimal-rotations.md#Infinitesimal-Rotations-in-Quantum-Mechanics)
 $$
 \tag{a}
 \comm{\J_{ni}}{\J_{nj}} = i\hbar\varepsilon_{ijk}\J_{nk}\,,
