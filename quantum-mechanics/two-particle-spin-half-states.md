@@ -87,7 +87,7 @@ where $k$ is typically taken to be $\frac{1}{\sqrt{2}}$ in order to normalise th
 
 <!-- W
 
-TODO why are the sim eigenstates of S^2 and Sz orthogonal (obviously its hermitian and we know they are orthogonal, but conceptually that is)...
+TODO why are the sim eigenstates of S^2 and Sz orthogonal (obviously its Hermitian and we know they are orthogonal, but conceptually that is)...
 TODO look at entangled states (though not relevant)
 -->
 

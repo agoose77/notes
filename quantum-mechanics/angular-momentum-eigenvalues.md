@@ -19,7 +19,7 @@ $$
 \end{aligned}
 $$
 
-Given that $\J_i$ are hermitian, it follows that $\J_\pm=\J_\mp^\dagger$, hence
+Given that $\J_i$ are Hermitian, it follows that $\J_\pm=\J_\mp^\dagger$, hence
 
 $$
 \J^2 - \J_z = \frac{1}{2}\left(\J_+\J_+^\dagger + \J_-\J_-^\dagger\right)\,.
@@ -38,11 +38,11 @@ $$
 From the positive definiteness $\braket{v}{v}\geq 0$ of the [inner product](../maths/linear-algebra/inner-product-space.md#The-Inner-Product) it follows that both inner products are non-negative, and thus $\expval{\J^2 - \J_z}\geq 0$. This expression implies
 
 $$
-\tag{d}
+\tag{a}
 a \geq b\,.
 $$
 
-A question therefore arises; what should happen at the top rung?[^1] One might suppose that $\J_+\ket{a,b_\text{max}}=\gamma\ket{a,b_\text{max}}$. If so, let us revisit **(c\)**
+A question therefore arises; what should happen at the top rung?[^1] One might suppose that $\J_+\ket{a,b_\text{max}}=\gamma\ket{a,b_\text{max}}$. If so, let us find the $z$ component of this state:
 
 $$
 \def\bm{b_\text{max}}
@@ -65,14 +65,14 @@ $$
 These two results agree only if $\gamma=0$, and thus
 
 $$
-\tag{e}
+\tag{b}
 \J_+\ket{a,b_\text{max}} = 0\,.
 $$
 
-Given **(e)** it follows that
+Given **(b)** it follows that
 
 $$
-\tag{f}
+\tag{c}
 \begin{aligned}
 \J_-\J_+\ket{a,b_\text{max}}
 &= 0\\
@@ -89,18 +89,18 @@ $$
 As $\ket{a,b_\text{max}}$ is not a null ket, it follows that
 
 $$
-\tag{g}
+\tag{d}
 \def\bm{b_\text{max}}
 a - \bm^2-\bm\hbar = 0 \implies a = \bm(\bm+\hbar)\,.
 $$
 
-From **(d)** there must also be some $b_\text{min}$ for which
+From **(a)** there must also be some $b_\text{min}$ for which
 
 $$
 \J_-\ket{a,b_\text{min}}=0\,.
 $$
 
-Using the same approach as **(f)**, we may write $\J_+\J_-$ as
+Using the same approach as **(c\)**, we may write $\J_+\J_-$ as
 
 $$
 \J_+\J_- = \J^2 -\J_z^2 + \hbar \J_z
@@ -109,18 +109,18 @@ $$
 to find
 
 $$
-\tag{h}
+\tag{e}
 \def\bm{b_\text{min}}
 a = \bm(\bm-\hbar).
 $$
 
-The expressions in **(g)** and **(h)** imply that $b_\text{min}=-b_\text{max}$. Given that an application of the ladder operators varies $b$ by $\pm\hbar$, it follows that
+The expressions in **(d)** and **(e)** imply that $b_\text{min}=-b_\text{max}$. Given that an application of the ladder operators varies $b$ by $\pm\hbar$, it follows that
 
 $$
 b = b_\text{min} + n\hbar \implies b_\text{max}=\frac{n\hbar}{2}\,.
 $$
 
-Letting $j=\frac{b_\text{max}}{\hbar}$, we may write **(g)** as
+Letting $j=\frac{b_\text{max}}{\hbar}$, we may write **(d)** as
 
 $$
 a = \hbar^2j(j+1)\,.
