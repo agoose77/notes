@@ -1,12 +1,19 @@
 Complete Set of Commuting Observables
 =====================================
-Given a Hermitian 
+For a particular quantum system denoted by the vector space $V_S$, there will be a basis in terms of which all states may be defined. The set of orthogonal eigenkets $\set{\ket{a^{(1)}_i}}$ of a Hermitian operator $A_1$ will span a subspace $V_1$ of $V_S$, expressed as
+$$
+V_1 \subseteq V_S\,.
+$$
+A complete set $M$ of commuting observables (CSCO) is a set of mutually commuting observable (Hermitian) operators whose eigenvalues *uniquely define* each basis state of the system, that is 
+$$
+\set{\ket{a^{(1)},a^{(2)},\dots,a^{(n)}}} = V_S\,.
+$$
 
-If a set of operators commute with each other and are complete in the sense that all common states are non-degenerate, we call such a set the complete set of commuting observables (CSCO).
-That is, there does not exist two eigenkets
+In other words, for a CSCO there do not exist two eigenkets
 $$
 \begin{matrix}
-\ket{\vb{p}}=\ket{p_1,p_2,\dots,p_n} & \ket{\vb{q}}=\ket{q_1,q_2,\dots,q_n}\,,
+\ket{\vb{p}}=\ket{a^{(1)}_p,a^{(2)}_p,\dots,a^{(n)}_p} & \ket{\vb{q}}=\ket{a^{(1)}_q,a^{(2)}_q,\dots,a^{(n)}_q}\,,
 \end{matrix}
 $$
-such that $\ket{\vb{p}} \neq \ket{\vb{q}}$ whilst $\vb{p}=\vb{q}$.
+such that $\ket{\vb{p}} \neq \ket{\vb{q}}$ whilst $\vb{p}=\vb{q}$, i.e. there are no degenerate eigenstates.
+<!-- TODO perhaps more to write here -->

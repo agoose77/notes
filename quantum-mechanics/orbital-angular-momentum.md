@@ -124,20 +124,43 @@ $$
 We can relate these equations to those given in **(e)**, **(f)**, and **(g)**:
 $$
 \begin{aligned}
+\tag{h}
 m_l\hbar\braket{\vb{x}'}{l,m_l} &= -i\hbar\pdv{}{\phi}\braket{\vb{x}'}{l,m_l}\\
 l(l+1)\hbar^2\braket{\vb{x}'}{l,m_l} &= -\hbar^2\left[\frac{1}{\sin^2\theta}\pdv{{}^2}{\phi^2}+\frac{1}{\sin\theta}\pdv{}{\theta}\left(\sin\theta\pdv{}{\theta}\right)\right]\braket{\vb{x}'}{l,m_l}\,.
 \end{aligned}
 $$
-It can be seen that the solutions to these equations are the spherical harmonics[^4]
+It can be seen that the solutions to these equations behave as the spherical harmonics[^4]
 $$
-\braket{\vb{x}'}{l,m_l} = Y_l^{m_l}\mleftright{(}{\theta,\phi}{)}\,.
+\braket{\vb{x}'}{l,m_l} = Y_l^{m_l}\mleftright{(}{\theta',\phi'}{)}\,.
+$$
+Using the identity
+$$
+1 = \sum_l\sum_{m_l} \ketbra{l,m_l}{l,m_l}\,,
+$$
+we can represent a position eigenstate in the orbital angular-momentum basis:
+$$
+\begin{aligned}
+\ket{r',\theta',\phi'} 
+&= \sum_l\sum_{m_l} \ket{l,m_l}\braket{l,m_l}{r',\theta',\phi'}\\
+&= \sum_l\sum_{m_l} \ket{l,m_l}\overline{Y_l^{m_l}\mleftright{(}{\theta',\phi'}{)}}\,.
+\end{aligned}
+$$
+In order to describe any state of the system, we must have a complete set of base kets, such as that given by a [complete set of commuting observables (CSCO)](complete-set-commuting-observables.md). It can be seen that this basis is *not complete*; $\ket{r',\theta',\phi'}$ has the same coefficients regardless of the value of $r'$. Hence, an additional observable which commutes with $\L^2$ and $\L_z$ is required, in order to remove this degeneracy. We shall label this operator $\hat{K}$, and denote its eigenvalues $k'$. Given that we have chosen a new basis for position kets, it follows that we should have the same (minimal) number of states required to span the space. Hence, if there are some $N$ position eigenkets, given that there are $2l+1$ substates for each $l$, the maximum value of $k$ must depend solely upon $l$ and $N$ (not $m_l$). Our identity now becomes
+$$
+1 = \sum_l\sum_{m_l}\sum_k \ketbra{l,m_l,k}{l,m_l,k}\,.
+$$
+<!-- TODO
+Show that raising and lowering operators don't act on R(r) (MP463.pdf) 
+Motivate statement below-->
+Our solutions to **(h)** should now exhibit a dependency upon $r$, which given **(h)** must be independent of $\theta$ and $\phi$. Hence, our final solutions are of form
+$$
+\braket{\vb{x}'}{l,m_l,k} = R_{l{m_l}k}(r)Y_l^{m_l}\mleftright{(}{\theta',\phi'}{)}\,.
+$$
+It is reasonable to ask whether $R(r)$ should depend upon $m_l$. Given that the lowering operators $\L_\pm$ vary $m_l$ for constant $l$, we can determine this. Note that
+$$
+\L_\pm\braket{\vb{x}'}{l,m_l,k} = R_{l{m_l}k}(r)Y_l^{m_l}\mleftright{(}{\theta',\phi'}{)}\,.
 $$
 
-<!-- TODO mention CSCO -->
-
-Any position eigenstate $\ket{\vb{x}'}$ can be 
-
-TODO handle r dependence (<x| vs <n|)
 
 [^1]: We extensively use the property that operators on different spaces commute _by definition_, e.g. $\hat{x}$ and $\hat{y}$, or $\hat{z}$ and $\hat{p}_y$.
 [^2]: See the infinitesimal rotation matrix $R_z(\epsilon)$ in [Infinitesimal Rotations](infinitesimal-rotations.md).

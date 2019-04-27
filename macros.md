@@ -1,5 +1,4 @@
 Load this document in the Markdown viewer to enable macros.
-
 $$
 \gdef\dd{\mathop{}\!\mathrm{d}}
 \gdef\em#1{\boldsymbol{#1}}
@@ -95,12 +94,10 @@ $$
 \gdef\matrixel#1#2#3{{\left\langle{ #1 }\right\vert{ #2 }\left\vert{#3}\right\rangle}}
 \gdef\mel#1#2#3{{\left\langle{ #1 }\right\vert{ #2 }\left\vert{#3}\right\rangle}}
 $$
-
 <!-- Custom Macros-->
-
 $$
 \gdef\mleftright#1#2#3{\mathopen{}\mathclose{\left#1#2\right#3}}
-\gdef\set#1{\{\,#1\,\}}
+\gdef\set#1{\left\{\,#1\,\right\}}
 \gdef\qed{\blacksquare}
 \gdef\atom#1#2{{}^{#1}\text{#2}}
 \gdef\nucleus#1#2#3{{}_{#1}^{#2}\text{#3}}
@@ -109,14 +106,12 @@ $$
 \gdef\keV{\operatorname{MeV}}
 \gdef\eV{\operatorname{eV}}
 $$
-
 <!-- QM -->
-
 $$
-\def\y{\hat{y}}
-\def\x{\hat{x}}
-\def\z{\hat{z}}
-\def\p{\hat{p}}
+\gdef\y{\hat{y}}
+\gdef\x{\hat{x}}
+\gdef\z{\hat{z}}
+\gdef\p{\hat{p}}
 \gdef\L{\hat{L}}
 \gdef\J{\hat{J}}
 \gdef\S{\hat{S}}
