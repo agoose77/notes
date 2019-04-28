@@ -131,3 +131,6 @@ This leaves only the $l=0$ and $l=2$ states from the above table.
 
 [^1]: Krane, p. 81.
 $$
+
+Magnetic Dipole Moment
+----------------------

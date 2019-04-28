@@ -1,0 +1,3 @@
+#!/bin/bash
+jupyter labextension install @jupyterlab/katex-extension
+jupyter labextension install @agoose77/jupyterlab-markup
