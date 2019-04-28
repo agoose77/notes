@@ -1,7 +1,3 @@
 #!/bin/bash
 jupyter labextension install @jupyterlab/katex-extension #@agoose77/jupyterlab-markup
 #echo "application/wasm      wasm" | sudo tee -a /etc/mime.types
-ws_path=$(python -c "import jupyterlab.commands as c; print(c.get_workspaces_dir())")
-echo "ws_path: $ws_path"
-mkdir -p "$ws_path"
-cp "labworkspacesmain-workspace-db39.jupyterlab-workspace" "$ws_path"
