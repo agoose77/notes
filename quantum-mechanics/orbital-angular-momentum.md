@@ -7,7 +7,7 @@ $$
 \vb{\L}=\vb{\hat{x}}\times\vb{\hat{p}}\,.
 $$
 
-Evidently, this operator satisfies the [angular-momentum commutation relations](infinitesimal-rotations.md#Infinitesimal-Rotations-in-Quantum-Mechanics), e.g[^1].
+Evidently, this operator satisfies the [angular-momentum commutation relations](infinitesimal-rotations.md#Infinitesimal-Rotations-in-Quantum-Mechanics), e.g.[^1]
 
 $$
 \begin{aligned}
@@ -96,6 +96,7 @@ Finding $\braket{\vb{x}'}{l,m_l}$
 Using the [ladder operators](angular-momentum-ladder-operators.md) $\L_\pm$, we can find $\bra{\vb{x}'}\L_\pm\ket{\alpha}$ from the inner products in **(e)**. Given that the inner product on the Hilbert space is antilinear in the second argument, and $\L_i$ are Hermitian, it follows that
 
 $$
+\tag{g}
 \begin{aligned}
 \bra{\vb{x}'}\L_\pm\ket{\alpha}
 &= \bra{\vb{x}'}\left(\L_x\pm i\L_y\right)\ket{\alpha}\\
@@ -111,7 +112,7 @@ $$
 $$
 which enables us to find $\bra{\vb{x}'}\L^2\ket{\alpha}$:
 $$
-\tag{g}
+\tag{h}
 \bra{\vb{x}'}\L^2\ket{\alpha} = -\hbar^2\left[\frac{1}{\sin^2\theta}\pdv{{}^2}{\phi^2}+\frac{1}{\sin\theta}\pdv{}{\theta}\left(\sin\theta\pdv{}{\theta}\right)\right]\braket{\vb{x}'}{\alpha}\,.
 $$
 If we take a simultaneous eigenket from the angular-momentum representation $\L^2$ and $\L_z$, we have the following inner products
@@ -121,10 +122,10 @@ $$
 \bra{\vb{x}'}\L^2\ket{l,m_l} &= l(l+1)\hbar^2\braket{\vb{x}'}{l,m_l}\,.
 \end{aligned}
 $$
-We can relate these equations to those given in **(e)**, **(f)**, and **(g)**:
+We can relate these equations to those given in **(e)** and **(h)**:
 $$
 \begin{aligned}
-\tag{h}
+\tag{i}
 m_l\hbar\braket{\vb{x}'}{l,m_l} &= -i\hbar\pdv{}{\phi}\braket{\vb{x}'}{l,m_l}\\
 l(l+1)\hbar^2\braket{\vb{x}'}{l,m_l} &= -\hbar^2\left[\frac{1}{\sin^2\theta}\pdv{{}^2}{\phi^2}+\frac{1}{\sin\theta}\pdv{}{\theta}\left(\sin\theta\pdv{}{\theta}\right)\right]\braket{\vb{x}'}{l,m_l}\,.
 \end{aligned}
@@ -133,11 +134,15 @@ It can be seen that the solutions to these equations behave as the spherical har
 $$
 \braket{\vb{x}'}{l,m_l} = Y_l^{m_l}\mleftright{(}{\theta',\phi'}{)}\,.
 $$
+
+Requiring a Complete Set of Commuting Observables
+-------------------------------------------------
+
 Using the identity
 $$
 1 = \sum_l\sum_{m_l} \ketbra{l,m_l}{l,m_l}\,,
 $$
-we can represent a position eigenstate in the orbital angular-momentum basis:
+we should expect to be able to represent a position eigenstate in the orbital angular-momentum basis:
 $$
 \begin{aligned}
 \ket{r',\theta',\phi'} 
@@ -145,20 +150,44 @@ $$
 &= \sum_l\sum_{m_l} \ket{l,m_l}\overline{Y_l^{m_l}\mleftright{(}{\theta',\phi'}{)}}\,.
 \end{aligned}
 $$
-In order to describe any state of the system, we must have a complete set of base kets, such as that given by a [complete set of commuting observables (CSCO)](complete-set-commuting-observables.md). It can be seen that this basis is *not complete*; $\ket{r',\theta',\phi'}$ has the same coefficients regardless of the value of $r'$. Hence, an additional observable which commutes with $\L^2$ and $\L_z$ is required, in order to remove this degeneracy. We shall label this operator $\hat{K}$, and denote its eigenvalues $k'$. Given that we have chosen a new basis for position kets, it follows that we should have the same (minimal) number of states required to span the space. Hence, if there are some $N$ position eigenkets, given that there are $2l+1$ substates for each $l$, the maximum value of $k$ must depend solely upon $l$ and $N$ (not $m_l$). Our identity now becomes
+It can be seen that the above basis is *not complete*; $\ket{r',\theta',\phi'}$ has the same coefficients regardless of the value of $r'$. In order to describe any state of the system, we must have a complete set of base kets, such as that given by a [complete set of commuting observables (CSCO)](complete-set-commuting-observables.md). Hence, an additional observable which commutes with $\L^2$ and $\L_z$ is required, in order to remove this degeneracy. We shall label this operator $\hat{K}$, and denote its eigenvalues $k'$. 
 $$
-1 = \sum_l\sum_{m_l}\sum_k \ketbra{l,m_l,k}{l,m_l,k}\,.
+\ket{l,m_l}\rightarrow\ket{k,l,m_l}
 $$
-<!-- TODO
-Show that raising and lowering operators don't act on R(r) (MP463.pdf) 
-Motivate statement below-->
-Our solutions to **(h)** should now exhibit a dependency upon $r$, which given **(h)** must be independent of $\theta$ and $\phi$. Hence, our final solutions are of form
+
+Given that we have chosen a new basis for position kets, it follows that we should have the same (minimal) number of states required to span the space. Hence, if there are some $N$ position eigenkets, given that there are $2l+1$ substates for each $l$, the maximum value of $k$ must depend solely upon $l$ and $N$ (not $m_l$).[^6] Our identity now becomes
 $$
-\braket{\vb{x}'}{l,m_l,k} = R_{l{m_l}k}(r)Y_l^{m_l}\mleftright{(}{\theta',\phi'}{)}\,.
+1 = \sum_l\sum_{m_l}^{2l+1}\sum_k^{N(l)} \ketbra{l,m_l,k}{l,m_l,k}\,.
 $$
-It is reasonable to ask whether $R(r)$ should depend upon $m_l$. Given that the lowering operators $\L_\pm$ vary $m_l$ for constant $l$, we can determine this. Note that
+The solutions to **(i)** should now exhibit a dependency upon $r$, which (given **(i)**) must be independent of $\theta$ and $\phi$. Hence, our final solutions are of form[^5]
 $$
-\L_\pm\braket{\vb{x}'}{l,m_l,k} = R_{l{m_l}k}(r)Y_l^{m_l}\mleftright{(}{\theta',\phi'}{)}\,.
+\braket{\vb{x}'}{l,m_l,k} = R_{l,{m_l},k}(r')Y_l^{m_l}\mleftright{(}{\theta',\phi'}{)}\,.
+$$
+It is reasonable to ask whether $R(r)$ should depend upon $m_l$. Given that the lowering operators $\L_\pm$ vary $m_l$ for constant $l$, we can determine this. From the definition of the ladder operators, we have
+$$
+\tag{10}
+\bra{{\vb{x}'}}\L_\pm\ket{l,m_l,k} = \hbar \sqrt{l(l+1)-m(m \pm 1)}\braket{\vb{x}'}{l,m_l\pm1,k}\,.
+$$
+Given that $R_{l,m_l,k}(r')$ has no angular dependence, it follows that the operator in **(g)** acts only upon the Spherical harmonic
+$$
+\tag{11}
+\begin{aligned}
+\bra{\vb{x}'}\L_\pm\ket{l,m_l,k} 
+&= R_{l,{m_l},k}(r')\L_\pm \mleftright{[}{Y_l^{m_l}\mleftright{(}{\theta',\phi'}{)}}{]}\\
+&= R_{l,{m_l},k}(r')\hbar \sqrt{l(l+1)-m(m \pm 1)}Y_l^{m_l\pm1}\mleftright{(}{\theta',\phi'}{)}\,.
+\end{aligned}
+$$
+Comparing **(10)** and **(11)**, it is clear that 
+$$
+R_{l,{m_l},k}(r') = R_{l,{m_l\pm 1},k}(r')\,,
+$$
+and hence $R$ is independent of $m$, and our final solution is
+$$
+\braket{\vb{x}'}{l,m_l,k} = R_{l,k}(r')Y_l^{m_l}\mleftright{(}{\theta',\phi'}{)}\,,
+$$
+and our change of basis
+$$
+\ket{r',\theta',\phi'} = \sum_l\sum_{m_l}^{2l+1}\sum_k^{N(l)} \ket{k,l,m_l}\overline{R_{l,k}(r')Y_l^{m_l}\mleftright{(}{\theta',\phi'}{)}}\,.
 $$
 
 
@@ -166,4 +195,6 @@ $$
 [^2]: See the infinitesimal rotation matrix $R_z(\epsilon)$ in [Infinitesimal Rotations](infinitesimal-rotations.md).
 [^3]: See [angular-momenum eigenvalues](angular-momentum-eigenvalues.md) for derivation.
 [^4]: https://en.wikipedia.org/wiki/Spherical_harmonics#Laplace's_spherical_harmonics
+[^5]: We label it all the eigenvalues of the state, as this is the *most general* form
+[^6]: http://www.thphys.nuim.ie/Notes/MP463/MP463_Ch1.pdf
 <!-- TODO derive these myself -->
