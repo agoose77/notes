@@ -58,7 +58,7 @@ $$
 $$
 From [addition of the two spins](../../quantum-mechanics/two-particle-spin-half-states.md), the total spin $S$ has a singlet state $\ket{s=0;m_s=0}$ and a triplet state $\ket{s=1;m_s=\pm 1,0}$
 In nature, the deuteron is observed to have $I=1$. We may determine which states couple to produce $I=1$, given that $S\in\set{0,\,1}$ and $L\geq 0$:
-| $L$ 	| $S$ 	| $\set{I}$         	|
+| $l$ 	| $s$ 	| $\set{I}$         	|
 |:---:	|:---:	|-------------------	|
 |  0  	|  0  	| $\set{0}$         	|
 |  0  	|  1  	| $\set{1}$         	|
@@ -66,7 +66,7 @@ In nature, the deuteron is observed to have $I=1$. We may determine which states
 | 1   	| 1   	| $\set{0,\,1,\,2}$ 	|
 | 2   	| 0   	| $\set{2}$         	|
 | 2   	| 1   	| $\set{1,\,2}$     	|
-Evidently, there are four ways to couple $L$ and $S$ to produce $I=1$. In order to identify states which the deuteron can occupy, it suffices to look at the parity of the deuteron wavefunction, which experimentally is found to be even. To determine the parity of these states, let us first consider how the parity of a state ket $\ket{\alpha}$ affects the wavefunction $\psi$. If 
+It can be seen that there are four ways to couple $L$ and $S$ to produce $I=1$. In order to identify states which the deuteron can occupy, it suffices to look at the parity of the deuteron wavefunction, which experimentally is found to be even. To determine the parity of these states, let us first consider how the parity of a state ket $\ket{\alpha}$ affects the wavefunction $\psi$. If 
 $$
 \psi(\vb{x}') = \braket{\vb{x}'}{\alpha}
 $$
@@ -104,10 +104,10 @@ An orbital angular momentum wavefunction has a parity defined by
 $$
 \pi \ket{k,l, m_l}=(-1)^{l} \ket{k,l,m_l}\,,
 $$
-which follows from the behaviour of the spherical harmonics under coordinate inversion. It is clear that $R_{l,k}$ is invariant under parity, as $r$ is unchanged.
+which follows from the behaviour of the spherical harmonics (given by $\bra{-\vb{x}'}\parity\ket{k,l,m_l}$) under coordinate inversion. It is clear that $R_{l,k}$ is invariant under parity, as $r$ is unchanged.
 Hence, for the parity of $\ket{\alpha_\vb{r}}$ to be even, i.e.
 $$
-\braket{\vb{x}}{\alpha} = \braket{-\vb{x}}{\alpha}\,.
+\braket{\vb{x}}{\alpha} = \braket{-\vb{x}}{\alpha}\,,
 $$
 we require that
 $$
@@ -126,17 +126,8 @@ $$
 l \in 2\mathbb{N}\,.
 $$
 
-I.e, the parity of $\psi_D$ is determined by the parity of $\psi_\vb{r}$.
+This leaves only the $l=0$ and $l=2$ states from the above table.
 
-1. Position in terms of sum over ang-mom states and radial component. Radial invariant under parity as r is scalar. 
-1. So parity of w.f. depends upon product of parities - to be even all ang-mom contributions need to be +ve, hence no odd l
-<!--
-TODO
-deuteron has +ve parity (assume of w.f., define this). Parity of orbital wf comes from (-1)^l. Need to understand parity vs exchange: https://www.physicsforums.com/threads/particle-exchange-and-parity.493128/post-3265145, https://physics.stackexchange.com/a/149015
-Maybe http://www.damtp.cam.ac.uk/user/tong/aqm/aqmfive.pdf
-If state is eigenket of parity then Ψ(-x)=±Ψ(x))
-Look at isospin - what governs composite system of fermionss?
--->
 
 [^1]: Krane, p. 81.
 $$
