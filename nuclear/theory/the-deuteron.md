@@ -58,6 +58,7 @@ $$
 $$
 From [addition of the two spins](../../quantum-mechanics/two-particle-spin-half-states.md), the total spin $S$ has a singlet state $\ket{s=0;m_s=0}$ and a triplet state $\ket{s=1;m_s=\pm 1,0}$
 In nature, the deuteron is observed to have $I=1$. We may determine which states couple to produce $I=1$, given that $S\in\set{0,\,1}$ and $L\geq 0$:
+
 | $l$ 	| $s$ 	| $\set{I}$         	|
 |:---:	|:---:	|-------------------	|
 |  0  	|  0  	| $\set{0}$         	|
@@ -66,6 +67,7 @@ In nature, the deuteron is observed to have $I=1$. We may determine which states
 | 1   	| 1   	| $\set{0,\,1,\,2}$ 	|
 | 2   	| 0   	| $\set{2}$         	|
 | 2   	| 1   	| $\set{1,\,2}$     	|
+
 It can be seen that there are four ways to couple $L$ and $S$ to produce $I=1$. In order to identify states which the deuteron can occupy, it suffices to look at the parity of the deuteron wavefunction, which experimentally is found to be even. To determine the parity of these states, let us first consider how the parity of a state ket $\ket{\alpha}$ affects the wavefunction $\psi$. If 
 $$
 \psi(\vb{x}') = \braket{\vb{x}'}{\alpha}
