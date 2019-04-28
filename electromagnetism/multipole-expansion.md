@@ -96,7 +96,7 @@ $$
 
 a simple sum of a series of multipole potentials.
 
-![Dipole, Quadrupole, and Octupole grpahic.](poles.png)
+![Dipole, Quadrupole, and Octupole graphic.](moments.jpg)
 
 The _monopole moment_ of the charge distribution $\rho(\vb{r})$ is given by the integral
 
