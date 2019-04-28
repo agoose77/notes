@@ -1,4 +1,5 @@
 # README
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/agoose77/notes/master)
 
 A collection of physics and mathematics notes written over the course of a PhD in Nuclear Physics.
 
