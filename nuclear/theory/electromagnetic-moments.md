@@ -1,12 +1,17 @@
 Electromagnetic Moments
 =======================
 Whilst it is the [strong force](strong-force.md) which establishes the motion and distribution of the nucleons within the nucleus, one can use the electromagnetic interaction to prove these properties. A far weaker force, the electromagnetic interaction can perform measurements of the nucleus without significantly distorting the object under measurement. Concerning the *distribution* of the nucleons within the nucleus, one can use multipole theory (analogous to that of [classical electromagnetic theory](../../electromagnetism/multipole-expansion.md)) to investigate the electromagnetic moments of the nucleus. The moments in the classical theory correspond to operators in the quantum mechanical reigime, whose expectation values yield the quantity of interest.
-<!-- Note Wigner-Eckart theorem -->
-<!-- http://bohr.physics.berkeley.edu/classes/221/1011/notes/wigeck.pdf -->
-<!-- https://www.hep.phy.cam.ac.uk/~chpotter/particleandnuclearphysics/Lecture_13_BasicNuclearProperties.pdf https://www.hep.phy.cam.ac.uk/~chpotter/particleandnuclearphysics/Lecture_14_StructureOfNuclei.pdf -->
 
 ![Multipole moments schematic.](images/moments.png)
 
+Rough Notes
+-----------
+
+<!-- TODO -->
+This will require further explanation on:
+* [Tensors and Wicker-Eckart Theorem](https://staff.fnwi.uva.nl/j.t.m.walraven/walraven/Publications_files/2017-Atomic-Physics.pdf)
+* [The Wicker-Eckart Theorem](http://bohr.physics.berkeley.edu/classes/221/1011/notes/wigeck.pdf).
+* [Operators associated with spherical harmonics](https://physics.stackexchange.com/questions/219657/operators-associated-to-spherical-harmonic-functions).
 * ~~Electric and magnetic multipole theory applies to nuclear reigime using QM~~
 * Each EM moment has an associated parity, given by behaviour of multipole operator under parity.
   * Parity of electric moment is $(-1)^l$

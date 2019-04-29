@@ -45,12 +45,12 @@ Spin and Parity
 $\gdef\S{\hat{S}}$
 The total angular momentum $I$ of the deuteron is given by the sum of the angular momenta of the nucleons, which add according to a set of [addition rules](../../quantum-mechanics/angular-momentum-addition.md). We can consider the total angular momentum $\hat{I}$ as
 $$
-\vb{\hat{I}} = \vb{\hat{L}}\_1 + \vb{\S}\_1 + \vb{\hat{L}}\_2 + \vb{\S}\_2\,.
+\vb{\hat{I}} = \vb{\hat{L}}_1 + \vb{\S}_1 + \vb{\hat{L}}_1 + \vb{\S}_1\,.
 $$
 It is conventional to consider the addition of the orbital angular momentum of the entire system and the individual spins:
 $$
 \tag{b}
-\vb{\hat{I}} = \vb{\hat{L}} + \vb{\S}\_1 + \vb{\S}\_2\,,
+\vb{\hat{I}} = \vb{\hat{L}} + \vb{\S}_1 + \vb{\S}_1\,,
 $$
 though one could also express $I$ in terms of the total orbital and spin operators
 $$

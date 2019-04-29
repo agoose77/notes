@@ -10,6 +10,8 @@ python = "^3.7"
 jupyter = "^1.0"
 jupyterlab = "^0.35.4"
 bqplot = "^0.11.5"
+nbdime = "^1.0"
+metakernel = "^0.20.14"
 
 [tool.poetry.dev-dependencies]
 
