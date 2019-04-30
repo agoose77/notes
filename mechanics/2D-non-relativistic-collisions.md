@@ -81,7 +81,7 @@ m_1{\hat{u}_1}^2\left(1+\frac{m_1}{m_2}\right) &= m_1{\hat{v}_1}^2\left(1+\frac{
 \end{aligned}
 $$
 
-i.e. the energies in the CoM frame are invariant. As a CoM frame, it holds that $\sum_i m_i\vec{\hat{v}_i} = \vec{0}$, and so the velocities $\vec{\hat{v}_i}$ remain _anti-aligned_. If we assume _isotropic scattering_ in the CoM frame, then $\vec{\hat{v}_i}$ are rotated about _some_ axis by angle $\theta$, with respect to their original directions $\vec{{\hat{u}}_i}$. This rotation may be represented as an orthogonal matrix $R(\theta)$, which _preserves the vector norm_,
+i.e. the energies in the CoM frame are invariant. As a CoM frame, it holds that $\sum_i m_i\vec{\hat{v}_i} = \vec{0}$, and so the velocities $\vec{\hat{v}_i}$ remain _anti-aligned_. If we assume _isotropic scattering_ in the CoM frame, then $\vec{\hat{v}_i}$ are rotated about _some_ axis by angle $\theta$, with respect to their original directions $\vec{{\hat{u}}_i}$. This rotation may be represented as an [orthogonal matrix](../maths/linear-algebra/square-matrices.md) $R(\theta)$, which _preserves the vector norm_,
 
 <!-- TODO: link to Orthogonal matrix properties -->
 

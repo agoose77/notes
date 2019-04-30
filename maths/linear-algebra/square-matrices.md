@@ -32,6 +32,7 @@ There are several classes of square matrix:
 - Preserves [inner product](inner-product-space.md)[^1]
 
   $$
+  \begin{aligned}
   \ip{U\vb{u}}{U\vb{v}} &= \vb{v}^\dagger U^\dagger HU\vb{u}\\
   \ip{\vb{u}}{\vb{v}} &= \vb{v}^\dagger H\vb{u}\\
   \ip{U\vb{u}}{U\vb{v}}=\ip{\vb{u}}{\vb{v}}
