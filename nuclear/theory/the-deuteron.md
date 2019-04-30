@@ -85,6 +85,7 @@ To have even parity, the state ket $\alpha$ must be an eigenket of $\parity$ (to
 $$
 \ket{\alpha} = \ket{\alpha_\vb{r}}\otimes\ket{\alpha_\vb{S}}\,.
 $$
+<!-- TODO why? http://www.pas.rochester.edu/~passage/resources/prelim/Quantum/UCB%20Notes/19%20parity.pdf -->
 Evidently, the parity of the wavefunction depends solely upon the position ket, as
 $$
 \parity = \parity_\vb{r}\otimes1_\vb{S}\,,
@@ -106,7 +107,16 @@ An orbital angular momentum wavefunction has a parity defined by
 $$
 \pi \ket{k,l, m_l}=(-1)^{l} \ket{k,l,m_l}\,,
 $$
-which follows from the behaviour of the spherical harmonics (given by $\bra{-\vb{x}'}\parity\ket{k,l,m_l}$) under coordinate inversion. It is clear that $R_{l,k}$ is invariant under parity, as $r$ is unchanged.
+which follows from the fact that behaviour of the spherical harmonics under parity
+$$
+\begin{aligned}
+\bra{\vb{x}'}\hat\pi\ket{k,l,m_l} 
+&= \braket{-\vb{x}'}{k,l,m_l}\\
+&= (-1)^l\braket{\vb{x}'}{k,l,m_l}\\
+&= \bra{\vb{x}'}(-1)^l\ket{k,l,m_l}\,.
+\end{aligned}
+$$
+It is clear that $R_{l,k}$ is invariant under parity, as $r$ is unchanged.
 Hence, for the parity of $\ket{\alpha_\vb{r}}$ to be even, i.e.
 $$
 \braket{\vb{x}}{\alpha} = \braket{-\vb{x}}{\alpha}\,,
