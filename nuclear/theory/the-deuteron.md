@@ -131,8 +131,29 @@ $$
 This leaves only the $l=0$ and $l=2$ states from the above table.
 
 
-[^1]: Krane, p. 81.
-$$
-
 Magnetic Dipole Moment
 ----------------------
+It [was observed](electromagnetic-moments.md) that there are both spin and orbital angular momentum contributions to the magnetic *dipole* moment of the nucleus, according to the values of $l$ and $s$. With $l=0$, there will be solely a spin contribution
+$$
+\def\mom{\vb{\mu}}
+\begin{aligned}
+\mom 
+&= \mom_n + \mom_p\\
+&= \frac{g_\text{sn}\mom_N}{\hbar}\vb{s}_n + \frac{g_\text{sp}\mom_N}{\hbar}\vb{s}_p\\
+\end{aligned}
+$$
+Taking the observed magnetic moment to be that when the spin $z$ projections $m_z\hbar$ have their maximum projection, it follows that
+$$
+\begin{aligned}
+\mu 
+&= \frac{1}{2}\mu_N\left(g_\text{sn}+g_\text{sp}\right)\\
+&= 0.879804\operatorname{\mu_N}\,.
+\end{aligned}
+$$
+Experimentally, the observed value is $0.7574376 \pm 4\times 10^{-7}\operatorname{\mu_N}$, which does not agree with this calculation. Though this discrepancy can be attributed to several factors including contributions from the mesons exchanged between the nucleons, it can be assumed that a contribution to $\mu$ from the *orbital angular momentum* is its primary origin. Let the deuteron have its positional ket defined by
+$$
+\alpha\ket{l=0,s_\alpha} + \beta\ket{l=1,s_\beta}
+$$
+
+
+[^1]: Krane, p. 81.

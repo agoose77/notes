@@ -17,7 +17,7 @@ This will require further explanation on:
   * Parity of electric moment is $(-1)^l$
   * Parity of magnetic moment is $(-1)^{l+1}$
 * When computing the expectation value of a moment, *odd parity moments* will hence vanish, so we have the electric mono + quadrupoles, magnetic dipole, etc...
-* In QM we _operationally define_ the observable magnetic moment greatest component of $\mu$ to the direction of the greatest component of $l$. ##
+* In QM we _operationally define_ the observable magnetic moment greatest component of $\mu$ to the direction of the greatest component of $l$. 
 * Monopole E just Ze
 * Dipole moment $\mu$ given by $\frac{e}{2m}\abs{l_i}$, where max $m$ is given by $m_l=l$, so $\abs{l_i}=l\hbar$. $\frac{e\hbar}{2m}$ is called a magneton. Using the electron mass gives you Bohr magneton. Using proton mass gives Nuclear Magneton. $\mu_N\ll \mu_B$, hence atomic effects greater than nuclear. $\mu=g_ll\mu_N$ is another form for $\mu$. $g_l$ is 0 for neutrons (uncharged) and $1$ for protons. This is just *orbital* angular momentum. A similar relation exists for spin $\mu=g_ss\mu_N$. For spin half, $g_s=2$ (according to dirac eqn). Experimentally, it's measured to be be 2.0023. For free nucleons, however, experiment and theory differ significantly. In particular, the uncharged neutron has a nonzero moment, which implies the existence of internal structure with charged particles in motion, whose currents give the observed moments. Interestingly the differences between expt and theory are equal in both cases. Adding the magnetic moments of the component quarks yields the experimental values directly.
 * The paired off nucleons thus have no total magnetic moment contribution, hence only valence electrons do.
