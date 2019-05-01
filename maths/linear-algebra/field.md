@@ -2,7 +2,8 @@
 
 A field is a [set](set.md) $F$ together with two operations of _addition_ and _multiplication_. An operation is a mapping which associates any pair of elements of the set to another element of the set. The operations of the field are required to satisfy the following set of _field axioms_:
 
-## Axioms
+Axioms
+------
 
 | Name                                           | Definition                                                                                      |
 | ---------------------------------------------- | ----------------------------------------------------------------------------------------------- |
@@ -19,3 +20,10 @@ These axioms may be summarised by stating:
 - $0$ is the additive identity, $1$ is the multiplicative identity.
 - It is an [abelian group](group.md/#Abelian-Groups) under addition, and its nonzero elements an abelian group under multiplication.
 - The multiplication is distributive over the addition.
+
+Difference with Vector Space 
+----------------------------
+> One of the field axioms says that any nonzero element c∈F has a multiplicative inverse, namely an element c−1∈F such that c×c−1=1=c−1×c. There is no corresponding property among the vector space axioms.
+[^1]
+
+[^1]: https://math.stackexchange.com/a/969737/354098
