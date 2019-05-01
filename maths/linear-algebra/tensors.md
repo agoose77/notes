@@ -70,7 +70,7 @@ This notation is *unambiguous*, for performing a tensor calculation, the indices
 Contravariant (Tangent) Vectors
 -------------------------------
 <!-- TODO link directional derivative -->
-Given a [manifold](https://en.wikipedia.org/wiki/Manifold) in $\mathbb{R}^N$, with a curve defined by $x^i = x^i(t)$. At every point $x^i$ there exists a [vector space](vector-space.md) (the [*tangent* space](https://en.wikipedia.org/wiki/Tangent_space)) in which an arbitrary vector may be represented. This tangent space varies from point to point. There are several definitions of the tangent space, including [the velocity of curves](https://en.wikipedia.org/wiki/Tangent_space#Definition_as_the_velocity_of_curves) and [derivatives](https://en.wikipedia.org/wiki/Tangent_space#Definition_via_derivations).
+Given a [manifold](https://en.wikipedia.org/wiki/Manifold) $M$ in $\mathbb{R}^N$, with a curve defined by $x^i = x^i(t)$. At every point $x^i$ there exists a [vector space](vector-space.md) (the [*tangent* space](https://en.wikipedia.org/wiki/Tangent_space)) in which an arbitrary vector may be represented. This tangent space varies from point to point. There are several definitions of the tangent space, including [the velocity of curves](https://en.wikipedia.org/wiki/Tangent_space#Definition_as_the_velocity_of_curves) and [derivatives](https://en.wikipedia.org/wiki/Tangent_space#Definition_via_derivations).
 
 Consider the directional derivative $\grad_vf(x^a)\colon M\rightarrow \mathbb{R}$ of a curve $f(x^a)$, where $x^a$ represent Cartesian coordinates on Euclidean space.[^2] Removing the function from the equation, we have in E.S.C[^3]
 $$
@@ -106,11 +106,47 @@ $$
 $$
 where $\dv{x^i}{t}$ is the tangent vector $v^i$ to the curve $x^i(t)$ by definition.
 
+Metric Generalises the Dot Product
+----------------------------------
+Recall that in order for distances and angles to be measured on a vector space, it must be an [inner product space](inner-product-space.md). In order to measure these quantities on a manifold, it follows that each tangent space must be equipped with an inner product, and this inner product *must vary smoothly* from point to point.[^5] The two classes of manifolds with this property are called [Riemannian manifolds](https://en.wikipedia.org/wiki/Riemannian_manifold) and [Hermitian manifolds](https://en.wikipedia.org/wiki/Hermitian_manifold), corresponding to real and complex manifolds respectively.
+
+### The Metric $g_{ij}$
+The inner product on Riemannian manifolds may be writen in terms of the *Riemannian metric* $g_{ij}$
+$$
+\tag{2}
+\ip{\vb{u}}{\vb{v}} = g_{ij}u^iv^j\,.
+$$
+The Riemannian metric is symmetric, i.e. $g_{ij} = g_{ji}$. There exists an *inverse* metric $g^{ij}$, such that
+$$
+g^{ik}g_{kj} = \delta^i_j\,.
+$$
+Evidently for Cartesian coordinates on Euclidean space, $\ip{\vb{u}}{\vb{v}}=\vb{u}\cdot\vb{v}$ and so $g_{ij} = \delta_{ij}$.
+
+We can write a vector $\vb{v}$ in terms of three linearly independent basis vectors $\set{\vb{e}_i}$ as
+$$
+\vb{v} = v^i\vb{e}_i\,,
+$$
+hence the inner product between any two vectors $\vb{u}$ and $\vb{v}$ is
+$$
+\tag{3}
+\begin{aligned}
+\ip{\vb{u}}{\vb{v}} 
+&= \ip{u^i\vb{e}_i}{\vb{v}}\\
+&= u_i\ip{\vb{e}_i}{v_i\vb{e}_j}\\
+&= u_iv_i\ip{\vb{e}_i}{\vb{e}_j}\\
+\end{aligned}\,.
+$$
+Comparing **(2)** with **(3)** it follows that $g_{ij} = \ip{\vb{e}_i}{\vb{e}_j}$.
+
+
+
+
+
 [^1]: https://web2.ph.utexas.edu/~jcfeng/notes/Tensors_Poor_Man.pdf
 [^2]: Note that often indices are implicit in the function arguments, that is $f(x)\equiv f(x^a)$.
 [^3]: In E.S.C the index $i$ in a partial derivative $\pdv{}{x^i}$ is treated as though it were a *lowered index*.
 [^4]: https://math.stackexchange.com/questions/1588854/use-of-partial-derivatives-as-basis-vector
-
+[^5]: https://en.wikipedia.org/wiki/Manifold#Riemannian_manifolds
 <!--
 
 A tangent vector can be defined as a *directional derivative*. To support this statement, let us note that
