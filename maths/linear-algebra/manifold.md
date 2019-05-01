@@ -1,0 +1,147 @@
+Manifold
+========
+<div style="padding:15px;margin-bottom:20px;border:1px solidtransparent;border-radius:4px;color:#31708f;background-color:#d9edf7;border-color:#bce8f1;">
+
+### Note
+[Tensor index notation](tensors.md) will be used in this document.
+    
+</div>
+
+
+A manifold captures the notion of a space which may have a complicated global topology, but locally resembles euclidean space $\mathbb{R}^n$.
+
+<div style="padding:15px;margin-bottom:20px;border:1px solidtransparent;border-radius:4px;color:#31708f;background-color:#d9edf7;border-color:#bce8f1;">
+    
+Some Definitions
+----------------
+Map $\phi\colon M\rightarrow N$
+ ~ A relationship which assigns for $\forall\,m\in M$ *at least* one element $n\in N$. (Hence, in some definitions a function is a map which assigns to *only* one element in $N$).
+
+Composition $\psi\circ\phi\colon M\rightarrow W$
+ ~ The operation defined by $(\psi\circ\phi)a = \psi(\phi(a))$ for $\psi\colon N\rightarrow W$.
+ 
+Injective
+ ~ A one-to-one mapping such that $\forall\, n\in N$ there is *at most* one element of $M$ mapped onto $n$.  
+ E.g. $y=x^3-x$ is not injective, as $y(1) = y(-1)$.
+ 
+Surjective
+ ~ A one-to-one mapping such that $\forall\, n\in N$ there is *at least* one element of $M$ mapped onto $n$.  
+ E.g. $y=e^x$ is not surjective, as $\nexists n\in N:y(n)=-1$.
+
+Bijective
+ ~ A map which is both injective and surjective. Also known as *invertible*, i.e. there exists an *inverse map* $\phi^{-1}\colon N\rightarrow M$ such that $(\phi^{-1}\circ\phi)(a) = a$.
+
+Continuity
+~ A map $\mathbb{R}^m\rightarrow\mathbb{R}^n\colon$ is $C^p$ if each of its component functions are $C^p$. I.e. if the image of $\phi$ is given by $y^i = \phi^i(x^1,x^2,\dots,x^m)$, then each $y^i$ is continuous and at least $p$ times differentiable (where the $p$ derivatives themselves are continuous). $C^\infty$ maps are referred to as *smooth*. 
+
+Diffeomorphic
+ ~ Two sets $M$ and $N$ are *diffeomorphic* if there exists a $C^\infty$ map $\phi\colon M \rightarrow N$ with a $C^\infty$ inverse $\phi^{-1}\colon N \rightarrow M$. The map $\phi$ is then called a *diffeomorphism*.
+  
+Homeomorphic
+ ~ Two sets $M$ and $N$ are *homeomorphic* if there exists a $C^0$ map $\phi\colon M \rightarrow N$ with a $C^0$ inverse $\phi^{-1}\colon N \rightarrow M$. The map $\phi$ is then called a *homeomorphism*. 
+  
+$n$-Sphere
+ ~  The generalization of the ordinary sphere to spaces of arbitrary dimension $n+1$. E.g. the ordinary sphere is a 2-sphere embedded in 3 dimensional Euclidean space.
+
+Open Ball
+ ~ The set of all points contained within the *interior* of an $n$-Sphere centered at $\vb{y}$, i.e. $\set{x}:x \in \mathbb{R}^n,\,\abs{\vb{x}-\vb{y}}<r$ for some $\vb{y}\in \mathbb{R}^n$ and $r\in \mathbb{R}$, where $\abs{\vb{x}-\vb{y}}=\sqrt{\sum_I(x^i-y^i)^2}$. 
+    
+Open Set
+ ~ An open set in $\mathbb{R}^n$ is a set constructed from an arbitrary union of open balls. That is, for if $V \subset \mathbb{R}^n$ is open, for any $y \in V$ there exists an open ball centered at $y$ which is completely inside $V$. It is the *interior* of some (n-1) dimensional closed surface, or the union of several such interiors.
+    
+Chart
+ ~ A chart or *coordinate system* consists of a subset $U\subset M$, along with an injective map $\phi\colon U\rightarrow \mathbb{R}^n$ such that *the image $\phi(U)$ is open in $\mathbb{R}^n$*. It can then be said that $U$ is an *open set in $M$*.
+    
+$C^p$ atlas
+ ~ An indexed collection of charts $\set{(U_\alpha,\phi_\alpha)}$, with the index denoted by $\alpha$, which satisfies the following conditions
+ 1. The union of $\set{U_\alpha}$ is equal to $M$; $U_\alpha$ cover $M$.
+ 1. The charts are smoothly sewn together; if two charts $U_\alpha$ and $U_\beta$ overlap, i.e. $U_\alpha \cap U_\beta \neq \emptyset$, then the map $\phi_\alpha \circ \phi_\beta^{-1}$ takes points in $\phi_\beta(U_\alpha\cap U_\beta)\subset \mathbb{R}^n$ onto $\phi_\alpha(U_\alpha\cap U_\beta)\subset \mathbb{R}^n$,[^8] and all of these maps must be $C^p$ where they are defined.
+ ![C-infinity atlas](atlas.jpg)[^9]
+$C^p$ $n$-dimensional manifold ($n$-manifold)
+A set $M$ along with a "maximal atlas" (one that contains every possible compatible chart).
+
+    
+</div>
+Contravariant (Tangent) Vectors
+-------------------------------
+<!-- TODO link directional derivative -->
+Given a [manifold](https://en.wikipedia.org/wiki/Manifold) $M$ in $\mathbb{R}^N$, with a curve defined by $x^i = x^i(t)$. At every point $x^i$ there exists a [vector space](vector-space.md) (the [*tangent* space](https://en.wikipedia.org/wiki/Tangent_space)) in which an arbitrary vector may be represented. This tangent space varies from point to point. There are several definitions of the tangent space, including [the velocity of curves](https://en.wikipedia.org/wiki/Tangent_space#Definition_as_the_velocity_of_curves) and [derivatives](https://en.wikipedia.org/wiki/Tangent_space#Definition_via_derivations).
+
+Consider the directional derivative $\grad_vf(x^a)\colon M\rightarrow \mathbb{R}$ of a curve $f(x^a)$, where $x^a$ represent Cartesian coordinates on Euclidean space.[^2] Removing the function from the equation, we have in E.S.C[^3]
+$$
+\tag{1}
+\begin{aligned}
+    \grad_v = \vu{v}\cdot\grad 
+    &= v^i\pdv{}{x^i}\\
+    &= v^1\pdv{}{x^1} + v^2\pdv{}{x^2} + v^3\pdv{}{x^3}\,.
+\end{aligned}    
+$$
+If we define $\grad_u$ such that
+* $(\grad_u+\grad_v)(f)=\grad_u(f)+\grad_v(f)$
+* $(\lambda \grad_u)f = \lambda \grad_u(f)$,
+
+then $\grad_u$ form a vector space according to the axioms. 
+Note that earlier we demonstrated that derivatives of scalar functions are *covectors*, rather than classical vectors. Hence, the members of the tangent space are *covectors*.
+
+Evidently, given **(1)**, we can find a basis in this vector space at any point $x'$ as $\pdv{}{x^i}\Big|_{x'}$. If we let 
+$$
+    v(\cdot) = \vu{v}\cdot\grad\,,
+$$
+then it follows that[^7]
+$$
+    v(x^i) = \vu{v}\cdot\grad x^i = v^i\,.
+$$
+A final remark is that the derivative of a scalar function $\phi(x^a(t))$[^6] with respect to $t$ is a vector in this space:
+$$
+\begin{aligned}
+\dv{\phi(x^a(t))}{t} 
+&= \dv{x^i}{t}\pdv{\phi}{x^i}\\
+&= v^i\pdv{\phi}{x^i}\,,
+\end{aligned}
+$$
+where $\dv{x^i}{t}$ is the tangent vector $v^i$ to the curve $x^i(t)$ by definition.
+
+Metric Generalises the Dot Product
+----------------------------------
+Recall that in order for distances and angles to be measured on a vector space, it must be an [inner product space](inner-product-space.md). In order to measure these quantities on a manifold, it follows that each tangent space must be equipped with an inner product, and this inner product *must vary smoothly* from point to point.[^5] The two classes of manifolds with this property are called [Riemannian manifolds](https://en.wikipedia.org/wiki/Riemannian_manifold) and [Hermitian manifolds](https://en.wikipedia.org/wiki/Hermitian_manifold), corresponding to real and complex manifolds respectively.
+
+### The Metric $g_{ij}$
+The inner product on Riemannian manifolds may be writen in terms of the *Riemannian metric* $g_{ij}$
+$$
+\tag{2}
+\ip{\vb{u}}{\vb{v}} = g_{ij}u^iv^j\,.
+$$
+The Riemannian metric is symmetric, i.e. $g_{ij} = g_{ji}$. There exists an *inverse* metric $g^{ij}$, such that
+$$
+g^{ik}g_{kj} = \delta^i_j\,.
+$$
+Evidently for Cartesian coordinates on Euclidean space, $\ip{\vb{u}}{\vb{v}}=\vb{u}\cdot\vb{v}$ and so $g_{ij} = \delta_{ij}$.
+
+We can write a vector $\vb{v}$ in terms of three linearly independent basis vectors $\set{\vb{e}_i}$ as
+$$
+\vb{v} = v^i\vb{e}_i\,,
+$$
+hence the inner product between any two vectors $\vb{u}$ and $\vb{v}$ is
+$$
+\tag{3}
+\begin{aligned}
+\ip{\vb{u}}{\vb{v}} 
+&= \ip{u^i\vb{e}_i}{\vb{v}}\\
+&= u_i\ip{\vb{e}_i}{v_i\vb{e}_j}\\
+&= u_iv_i\ip{\vb{e}_i}{\vb{e}_j}\\
+\end{aligned}\,.
+$$
+Comparing **(2)** with **(3)** it follows that $g_{ij} = \ip{\vb{e}_i}{\vb{e}_j}$.
+
+
+Given the linear functional on the tangent space $\phi_\vb{u}(\vb{v})=\ip{\vb{u}}{\vb{v}}$, 
+
+
+[^2]: Note that often indices are implicit in the function arguments, that is $f(x)\equiv f(x^a)$.
+[^3]: In E.S.C the index $i$ in a partial derivative $\pdv{}{x^i}$ is treated as though it were a *lowered index*.
+[^4]: https://math.stackexchange.com/questions/1588854/use-of-partial-derivatives-as-basis-vector
+[^5]: https://en.wikipedia.org/wiki/Manifold#Riemannian_manifolds
+[^6]: The notation $f(x^a)$ represents $f(x^l,x^m,\dots,x^w)$ for some $l,m,\dots,w$
+[^7]: This defines any vector $\vec{v}$ (in the tangent space) as a *functional* on the tangent space.
+[^8]: That is, if two subsets of $M$ intersect, the map $\phi_\alpha\circ\phi_\beta^{-1}$ takes points from one ($\alpha$) Euclidean space of their intersection to the other ($\beta$).
+[^9]: https://ned.ipac.caltech.edu/level5/March01/Carroll3/Carroll2.html
