@@ -3,7 +3,7 @@
 From the [fundamental theorem of calculus](fundamental-theorem-of-calculus.md#First-Fundamental-Theorem-of-Calculus),
 
 $$
-\dv{x}\ln(x)=\dv{x}\int_1^x\frac{1}{t}\dd t=\frac{1}{x}\,.
+\dv{}{x}\ln(x)=\dv{x}\int_1^x\frac{1}{t}\dd t=\frac{1}{x}\,.
 $$
 
 Now, let $x\in\mathbb{R}$ be some fixed constant, and
@@ -38,7 +38,7 @@ $$
 \begin{aligned}
     \ln{y} &=\lim_{h\rightarrow 0}\frac{x\ln(1+h)}{h}\\
            &=x\lim_{h\rightarrow 0}\frac{\ln(1+h)-\ln 1}{h}\\
-           &=x\dv{t}\Big[\ln{t}\Big]_{t=1}\\
+           &=x\dv{}{t}\Big[\ln{t}\Big]_{t=1}\\
            &=x\,.
 \end{aligned}
 $$
