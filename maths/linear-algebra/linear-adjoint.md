@@ -1,6 +1,6 @@
 # Linear Adjoint
 
-Let $V$ and $W$ be finite-dimensional [inner product spaces](inner-product-space.md) over the same [field](../field.md) $F$, and let $T$ be a linear map i.e. $T\in\mathcal{L}(V,W)$, where $\mathcal{L}(V,W)$ is the [vector space](vector-space.md) of all [linear maps](linear-mapping.md) from $V$ to $W$. A function $T^*\colon W\rightarrow V$ is called an _adjoint_ of $T$ if
+Let $V$ and $W$ be finite-dimensional [inner product spaces](inner-product-space.md) over the same [field](field.md) $F$, and let $T$ be a linear map i.e. $T\in\mathcal{L}(V,W)$, where $\mathcal{L}(V,W)$ is the [vector space](vector-space.md) of all [linear maps](linear-mapping.md) from $V$ to $W$. A function $T^*\colon W\rightarrow V$ is called an _adjoint_ of $T$ if
 
 $$
 \ip{T(\vb{v})}{\vb{w}} = \ip{\vb{v}}{T^*(\vb{w})}\,\forall\,\vb{v}\in V,\vb{w}\in W\,.

@@ -1,6 +1,6 @@
 # Linear Mapping
 
-A linear mapping is a mapping $V\rightarrow W$ between two [vector spaces](vector-space.md) $V$, $W$ over the same [field](../field.md) $\bm{K}$, that preserves the operations of addition and _scalar_ multiplication. In the special case that $V=W$, the map is called a linear operator.
+A linear mapping is a mapping $V\rightarrow W$ between two [vector spaces](vector-space.md) $V$, $W$ over the same [field](field.md) $\bm{K}$, that preserves the operations of addition and _scalar_ multiplication. In the special case that $V=W$, the map is called a linear operator.
 
 ## Axioms
 
