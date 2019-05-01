@@ -116,6 +116,10 @@ $$
 \gdef\J{\hat{J}}
 \gdef\S{\hat{S}}
 $$
+<!-- algebra -->
+$$
+\gdef\comp#1#2{#1\circ#2}
+$$
 
 <!-- Style notes
 \colon should be used for linear maps

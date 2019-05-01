@@ -8,8 +8,11 @@ Manifold
 </div>
 
 
-A manifold captures the notion of a space which may have a complicated global topology, but locally resembles euclidean space $\mathbb{R}^n$.
+A manifold captures the notion of a space which may have a complicated global topology, but locally resembles euclidean space $\mathbb{R}^n$. 
 
+<!-- Wow, these resources: https://ned.ipac.caltech.edu/level5/March01/Carroll3/Carroll2.html 
+http://bjlkeng.github.io/posts/manifolds/
+-->
 <div style="padding:15px;margin-bottom:20px;border:1px solidtransparent;border-radius:4px;color:#31708f;background-color:#d9edf7;border-color:#bce8f1;">
     
 Some Definitions
@@ -53,15 +56,31 @@ Chart
  ~ A chart or *coordinate system* consists of a subset $U\subset M$, along with an injective map $\phi\colon U\rightarrow \mathbb{R}^n$ such that *the image $\phi(U)$ is open in $\mathbb{R}^n$*. It can then be said that $U$ is an *open set in $M$*.
     
 $C^p$ atlas
- ~ An indexed collection of charts $\set{(U_\alpha,\phi_\alpha)}$, with the index denoted by $\alpha$, which satisfies the following conditions
- 1. The union of $\set{U_\alpha}$ is equal to $M$; $U_\alpha$ cover $M$.
- 1. The charts are smoothly sewn together; if two charts $U_\alpha$ and $U_\beta$ overlap, i.e. $U_\alpha \cap U_\beta \neq \emptyset$, then the map $\phi_\alpha \circ \phi_\beta^{-1}$ takes points in $\phi_\beta(U_\alpha\cap U_\beta)\subset \mathbb{R}^n$ onto $\phi_\alpha(U_\alpha\cap U_\beta)\subset \mathbb{R}^n$,[^8] and all of these maps must be $C^p$ where they are defined.
+ ~ An indexed collection of charts $\set{(U_\alpha,\phi_\alpha)}$, with the index denoted by $\alpha$, which satisfies the following conditions:
+  1. The union of $\set{U_\alpha}$ is equal to $M$; $U_\alpha$ cover $M$.
+  1. The charts are smoothly sewn together; if two charts $U_\alpha$ and $U_\beta$ overlap, i.e. $U_\alpha \cap U_\beta \neq \emptyset$, then the transition map $\phi_\alpha \circ \phi_\beta^{-1}$ takes points in $\phi_\beta(U_\alpha\cap U_\beta)\subset \mathbb{R}^n$ onto $\phi_\alpha(U_\alpha\cap U_\beta)\subset \mathbb{R}^n$,[^8] and all of these maps must be $C^p$ where they are defined.
  ![C-infinity atlas](atlas.jpg)[^9]
-$C^p$ $n$-dimensional manifold ($n$-manifold)
-A set $M$ along with a "maximal atlas" (one that contains every possible compatible chart).
-
     
+$C^p$ $n$-dimensional manifold ($n$-manifold)
+ ~ A set $M$ along with a "maximal atlas" (one that contains every possible compatible chart).
+
 </div>
+
+Example $2$-Sphere
+-------------------
+One might imagine that the $2$-sphere (conventional sphere) might need only two charts to form an atlas, by splitting it along the plane $z=0$. This is not the case, because each chart requires an open set, which in turn is defined for unions of open balls. These open balls require $d(\vb{x},\vb{y})<r$, not $d(\vb{x},\vb{y})\leq r$, and thus in splitting the sphere along $z=0$ there is a locus of points ($x^2+z^2=r^2$, $z=0$) from which maps neither chart. Similarly, defining additional charts by splitting along the plane $x=0$, leaves the equatorial points with $x=0$ and $z=0$ unmapped. It is for this reason that the 2-Sphere requires $6$ charts to form an atlas.
+
+https://math.stackexchange.com/questions/54643/why-not-just-2-charts-to-make-atlas-for-sphere
+
+For an $n$-manifold $M$, let $\gamma\colon R\rightarrow M$ be a curve, $\phi\colon M\rightarrow \mathbb{R}^n$ a coordinate chart, and $f\colon M\rightarrow R$ a scalar function.
+$$
+\begin{aligned}
+\dv{f}{\lambda} 
+&= \pdv{}{\lambda}(\comp{f}{\gamma})\\
+&= \pdv{}{\lambda}\comp{(\comp{f}{\phi^{-1}})}{(\comp{\phi}{\gamma})}\\
+\end{aligned}
+$$
+
 Contravariant (Tangent) Vectors
 -------------------------------
 <!-- TODO link directional derivative -->
