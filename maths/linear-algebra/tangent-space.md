@@ -8,6 +8,8 @@ and a smooth map can be approximated by the differential of the map[^lu]
 vector bundle; it is then called the tangent bundle of the manifold. Intuitively, a
 vector bundle over a manifold is a locally trivial family of vector spaces parametrized by points of the manifold.[^lu]
 
+<!-- TODO p.77 Lee mentions germs. We use them here without necessarily being rigorous about them (wherever Lee and Lu notes mix)-->
+
 
 Chain Rule of Composed Functions on $\mathbb{R}^m$
 --------------------------------------------------
@@ -157,6 +159,7 @@ The set $\TpM$ of all derivations of $\CpM$ is a vector space called the *tangen
 
 Pushforwards
 ------------
+<!-- TLDR pushforwards are just LHS syntax for the RHS-->
 $$
 \gdef\TpN{T_\vb{p}N}
 \gdef\TFpM{T_{F(\vb{p})}M}
@@ -167,9 +170,15 @@ F_*\colon \TpN\rightarrow \TFpM\,.
 $$
 If $X_\vb{p} \in \TpN$, then $F_*(X_\vb{p})$ is the tangent vector in $\TFpM$ defined by
 $$
+\tag{3}
 (F_*(X_\vb{p}))f = X_\vb{p}(\comp{f}{F}) \in \mathbb{R}\,,
 $$
 for $f\in C_{F(\vb{p})}^\infty(M)$. 
+
+<div style="color:#856404;background-color:#fff3cd;border-color:#ffeeba;position:relative;padding:.75rem 1.25rem;margin-bottom:1rem;border:1px solid transparent;border-radius:.25rem;">
+    
+Note that *it is solely the RHS of **(3)*** which defines a push forward, i.e. it depends solely upon the nature (domain, codomain) of $f$, $X_\vb{p}$, and $F$.
+</div>
 
 ![Pushforward between manifolds.](pushforward.png)
 
@@ -195,16 +204,38 @@ which behaves as the Leibniz rule **(1)** requires. In general, pushforwards hav
 
 Mapping the Basis Vectors from $T_{\phi(\vb{p})}\mathbb{R}^n$ to $\TpM$
 --------------------------------------------------
-Let $(U,\phi)$ be a smooth coordinate chart on $M$. As $\phi$ is diffeomorphism, the above property gives the result that $\phi_*$ is an isomorphism. <!-- TODO back this up more -->
-As discussed earlier, $\DpRn_{\phi(\vb{p})}\cong T_{\phi(\vb{p})}\mathbb{R}^n$ has a basis $\set{\pdv{}{x^i}\big|_{\phi(\vb{p})}}$. We can find these basis vectors in the manifold tangent space through the use of pushforwards. Given a pushforward 
+$\gdef\TppRn{T_{\phi(\vb{p})}\mathbb{R}^n}$
+Let $(U,\phi)$ be a smooth coordinate chart on $M$. As $\phi$ is diffeomorphism[^lu.89], the above property gives the result that $\phi_*$ is an isomorphism. <!-- TODO back this up more -->
+As discussed earlier, $\DpRn_{\phi(\vb{p})}\cong \TppRn$ has a basis $\set{\pdv{}{x^i}\big|_{\phi(\vb{p})}}$. We can find these basis vectors in the manifold tangent space through the use of pushforwards. Given a pushforward 
 $$
-(\phi^{-1})_*\colon T_{\phi(\vb{p})}\mathbb{R}^n\rightarrow\TpM\,,
+(\phi^{-1})_*\colon \TppRn\rightarrow\TpM\,,
 $$
-we can *define* the basis vectors in $\TpM$ in terms of those in 
+we can *define* the basis vectors in $\TpM$ as
 $$
-\pdv{}{x^i}\bigg|_\vb{p}f=(\phi^{-1})_*\pdv{}{x^i}\bigg|_{\phi(\vb{p})} 
+\tag{4}
+\pdv{}{x^i}\bigg|_\vb{p}=(\phi^{-1})_*\pdv{}{x^i}\bigg|_{\phi(\vb{p})} \,.
+$$
+Using **(3)** to apply these basis vectors to a smooth function $f\colon U\rightarrow \mathbb{R}$, we have
+$$
+\pdv{}{x^i}\bigg|_\vb{p}f=\pdv{}{x^i}\bigg|_{\phi(\vb{p})}(\comp{f}{\phi}^{-1})=\pdv{\hat{f}}{x^i}(\hat{p})\,,
+$$
+where $\hat{f}=\comp{f}{\phi^{-1}}$ and $\hat{p}=\phi(p)$. One can therefore express a tangent vector $X_\vb{p}\in\TpM$ as a linear combination of these basis vectors. In order to determine the components, let us consider the differential of an arbitrary vector acting on some coordinate function $x^j$ on $:U$
+$$
+X(x^j) = \left(X^i\pdv{}{x^i}\bigg|_p\right)(x^j) = X^j\,.
 $$
 
+Tangent Vectors to Curves
+-------------------------
+In Euclidean space there is naturally the concept of the tangent vector to a smooth curve, whose components are given by the derivatives of the component functions of the curve. The same notion may be extended to curves in manifolds. If $M$ is a manifold, a curve in $M$ is defined to be a continuous map $\gamma\colon J\rightarrow M$, where $J\subset \mathbb{R}$ is an interval.
+
+As with the basis vector derivations, we define 
+$$
+\gamma^\prime(t_0) = \gamma_*\left(\dv{}{t}\bigg|_{t_0}\right)\in T_{\gamma(t_0)}M\,,
+$$
+where $\gamma_*$ is the map from $T_{t_0}\mathbb{R}$ to $T_{t_0}\mathbb{M}$. It follows that acting on some $f\in\CpM$, we have
+$$
+\gamma^\prime(t_0)f = \gamma_*\left(\dv{}{t}\bigg|_{t_0}\right)f = \dv{}{t}\bigg|_{t_0}(\comp{f}{\gamma}) = \dv{(\comp{f}{\gamma})}{t}(t_0)\,.
+$$
 
 <!-- Property 2: this makes sense: If we have a complete basis in one manifold then we can find the representation of some direction in the other, using a change of basis (which is effectively F)-->
 
@@ -223,4 +254,6 @@ p. 86-93 tangent vectors also on abstract(?)
 
 [^lee]: J.M.. Lee, Introduction to Smooth Manifolds.
 [^lu]: L.W. Tu, An Introduction to Manifolds.
+[^lu.89]: L.W. Tu, An Introduction to Manifolds., p. 89.
+[^amitabha]: http://bose.res.in/~amitabha/diffgeom/chap7.pdf
 [^shankar]: https://physicspages.com/pdf/Shankar/MIT%208.05x%2003.04.01%20Null%20space%20range%20injectivity%20surjectivity.pd
