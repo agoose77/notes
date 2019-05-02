@@ -102,8 +102,10 @@ $$
 &= u_iv_i\ip{\vb{e}_i}{\vb{e}_j}\\
 \end{aligned}\,.
 $$
-Comparing **(2)** with **(3)** it follows that $g_{ij} = \ip{\vb{e}_i}{\vb{e}_j}$.
-
+Comparing **(2)** with **(3)** it follows that $g_{ij} = \ip{\vb{e}_i}{\vb{e}_j}$. The metric can then be used to construct the *line element*
+$$
+{\dd s}^2 = \ip{\dd x}{\dd x} = g_{ij}\dd x^i \dd x^j\,.
+$$
 
 Given the linear functional on the tangent space $\phi_\vb{u}(\vb{v})=\ip{\vb{u}}{\vb{v}}$, 
 
