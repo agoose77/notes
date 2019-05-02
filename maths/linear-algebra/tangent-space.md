@@ -112,10 +112,9 @@ Let us suppose that $D_\vb{v}=0$ for $\vb{v}\in\TpRn$. Applying $D_\vb{v}$ to th
 $$
 0 = D_\vb{v}(x^j) = \sum_iv^i\pdv{x_j}{x^i}\bigg|_\vb{p}=v^j\,.
 $$
-From our definition of injectivity, it follows that $\Omega$ is injective. To prove surjectivity, let $D\in\DpRn$ be arbitrary. We can define the real numbers $v^i=D(x^i)$, to show that $D=D_\vb{v}$, where $\vb{v}=v^i\vb{\hat{e}}^i$ for the standard basis $\vb{\hat{e}}$ on $\TpRn$.
-
-Let $(f,V)$ be representative of a germ in $C_p^\infty$. Making $V$ smaller if required such that $V$ is an open ball
-By Taylor’s theorem with remainder[^lu], there are functions $g_i(\vb{x}) \in C^\infty$ in the neighbourhood of $\vb{p}$ such that 
+From our definition of *injectivity*, it follows that $\Omega$ is injective. 
+    
+To prove surjectivity, let $D\in\DpRn$ be arbitrary. Let $(f,V)$ be representative of a germ in $C_p^\infty$. Making $V$ smaller if required such that it is an open ball, by Taylor’s theorem with remainder[^lu], there are functions $g_i(\vb{x}) \in C^\infty$ in the neighbourhood of $\vb{p}$ such that 
 $$
 \begin{matrix}
 f(\vb{x}) = f\vb{p}) + \sum_i(x^i-p^i)g_i(\vb{x})\,, &
@@ -127,11 +126,10 @@ $$
 \begin{aligned}
 Df(\vb{x}) &= \sum_i(Dx^i)g_i(\vb{p})+\sum_i(p^i-p^i)Dg_i(\vb{x})\\
 &=\sum_i(Dx^i)\pdv{f}{x^i}(\vb{p})\\
-&=\sum_iv^i\pdv{f}{x^i}(\vb{p})=D_\vb{v}f(\vb{x})\,.
+&=\sum_iv^i\pdv{f}{x^i}(\vb{p})=D_\vb{v}f(\vb{x})\,,
 \end{aligned}
 $$
-   
-It follows that we have a vector space of functionals $\DpRn$ that is *isomorphic* to the geometrical space of tangent vectors $\TpRn$, i.e. $\TpRn\cong\DpRn$.
+for some vector $v^i=Dx^i$. In other words, $D$ can be represented as a directional derivative. It follows that we have a vector space of functionals $\DpRn$ that is *isomorphic* to the geometrical space of tangent vectors $\TpRn$, i.e. $\TpRn\cong\DpRn$.
 </div>
 
 
