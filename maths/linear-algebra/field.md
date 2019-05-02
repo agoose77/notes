@@ -1,7 +1,9 @@
 Field
 =====
 
-A field is a [set](set.md) $F$ together with two operations of _addition_ and _multiplication_. An operation is a mapping which associates any pair of elements of the set to another element of the set. The operations of the field are required to satisfy the following set of _field axioms_:
+A field is a [set](set.md) $F$ together with two operations of _addition_ and _multiplication_. An operation is a mapping which associates any pair of elements of the set to another element of the set. Concisely, it is a [ring](../ring.md) with the additional property that all the elements besides the additive identity $0$ form an [abelian group](../group.md#Abelian-Groups) under multiplication.
+
+The operations of the field are required to satisfy the following set of _field axioms_:
 
 Axioms
 ------

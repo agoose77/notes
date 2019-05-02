@@ -8,11 +8,12 @@ Manifold
 </div>
 
 
-A manifold captures the notion of a space which may have a complicated global topology, but locally resembles euclidean space $\mathbb{R}^n$. 
+A manifold captures the notion of a space which may have a complicated global topology, but locally resembles Euclidean space $\mathbb{R}^n$. 
 
 <!-- Wow, these resources: https://ned.ipac.caltech.edu/level5/March01/Carroll3/Carroll2.html 
 http://bjlkeng.github.io/posts/manifolds/
 -->
+<!--
 <div style="padding:15px;margin-bottom:20px;border:1px solidtransparent;border-radius:4px;color:#31708f;background-color:#d9edf7;border-color:#bce8f1;">
     
 Some Definitions
@@ -68,27 +69,127 @@ $C^p$ $n$-dimensional manifold ($n$-manifold)
 
 Example $2$-Sphere
 -------------------
-One might imagine that the $2$-sphere (conventional sphere) might need only two charts to form an atlas, by splitting it along the plane $z=0$. This is not the case, because each chart requires an open set, which in turn is defined for unions of open balls. These open balls require $d(\vb{x},\vb{y})<r$, not $d(\vb{x},\vb{y})\leq r$, and thus in splitting the sphere along $z=0$ there is a locus of points ($x^2+z^2=r^2$, $z=0$) from which maps neither chart. Similarly, defining additional charts by splitting along the plane $x=0$, leaves the equatorial points with $x=0$ and $z=0$ unmapped. It is for this reason that the 2-Sphere requires $6$ charts to form an atlas.
+One might imagine that the $2$-sphere (conventional sphere) might need only two charts to form an atlas, by splitting it along the plane $z=0$. This is not the case[^10], because each chart requires an open set, which in turn is defined for unions of open balls. These open balls require $d(\vb{x},\vb{y})<r$, not $d(\vb{x},\vb{y})\leq r$, and thus in splitting the sphere along $z=0$ there is a locus of points ($x^2+z^2=r^2$, $z=0$) from which maps neither chart. Similarly, defining additional charts by splitting along the plane $x=0$, leaves the equatorial points with $x=0$ and $z=0$ unmapped. It is for this reason that the 2-Sphere requires $6$ charts to form an atlas.
+-->
 
-https://math.stackexchange.com/questions/54643/why-not-just-2-charts-to-make-atlas-for-sphere
+Contravariant (Tangent) Vectors
+-------------------------------
+### Chain Rule of Composed Functions
+Consider the maps $f\colon \mathbb{R}^m\rightarrow\mathbb{R}^n$, and $g\colon \mathbb{R}^n\rightarrow\mathbb{R}^l$ such that $\comp{g}{f}\colon\mathbb{R}^m\rightarrow\mathbb{R}^l$. Let us define the points in each space in terms of the components $x^a$ on $\mathbb{R}^m$, $y^b$ on $\mathbb{R}^n$, and $z^c$ on $\mathbb{R}^l$.
+The chain rule for function composition is then given by
+$$
+\begin{aligned}
+\pdv{}{x^a}(\comp{g}{f})^c=\sum_b \pdv{f^b}{x^a}\pdv{g^c}{y^b}\,,
+\end{aligned}
+$$
+which is abbreviated to 
+$$
+\pdv{}{x^a} = \sum_b\pdv{y^b}{x^a}\pdv{}{y^b}\,.
+$$
+Note that when $m=n$, $\pdv{y^b}{x^a}$ are elements of the Jacobian matrix of $\comp{g}{f}$. 
+<!-- TODO why does the NONZERO Jacobian make g(f(x)) invertible? -->
 
-For an $n$-manifold $M$, let $\gamma\colon R\rightarrow M$ be a curve, $\phi\colon M\rightarrow \mathbb{R}^n$ a coordinate chart, and $f\colon M\rightarrow R$ a scalar function.
+### Differential Operators as Vectors
+For an $n$-manifold $M$, let $\gamma(\lambda)\colon R\rightarrow M$ be a curve which passes through point $\vb{p}$, $\phi\colon M\rightarrow \mathbb{R}^n$ a coordinate chart, and $f\colon M\rightarrow R$ a scalar function. The derivative of $f$ with respect to $\lambda$ is
 $$
 \begin{aligned}
 \dv{f}{\lambda} 
 &= \pdv{}{\lambda}(\comp{f}{\gamma})\\
-&= \pdv{}{\lambda}\comp{(\comp{f}{\phi^{-1}})}{(\comp{\phi}{\gamma})}\\
+&= \pdv{}{\lambda}\comp{(\comp{f}{\phi^{-1}})}{(\comp{\phi}{\gamma})}\,.
 \end{aligned}
 $$
+From the chain rule,
+$$
+\begin{aligned}
+\dv{f}{\lambda} 
+&= \pdv{\left(\comp{\phi}{\gamma}\right)^\mu}{\lambda}\pdv{(\comp{f}{\phi^{-1}})}{x^\mu}\\
+&= \dv{x^\mu}{\lambda}\partial_\mu f\,,
+\end{aligned}
+$$
+where 
+$$
+\tag{1}
+\left(\comp{\phi}{\gamma}\right)^\mu=x^\mu
+$$ and[^11] $$\pdv{(\comp{f}{\phi^{-1}})}{x^\mu}=\partial_\mu f\,.$$ From this derivation for arbitrary $f$, it follow that we have
+$$
+\pdv{}{\lambda} = \dv{x^\mu}{\lambda}\partial_\mu\,.
+$$
+Hence, it can be seen that $\partial_\mu$ form a basis for the directional derivatives of *all* curves through $\vb{p}$ (with the coordinates $\dv{x^\mu}{\lambda}$ particular to a given curve $\gamma(\lambda)$). This vector space is called the [*tangent space*](https://en.wikipedia.org/wiki/Tangent_space#Definition_via_derivations) of the manifold at the point $\vb{p}\in M$, written as $T_pM$. 
 
-Contravariant (Tangent) Vectors
--------------------------------
+It should be noted that $\pdv{}{\lambda}$ is defined as the natural directional derivative for some curve $\gamma(\lambda)$. It is a member of the more general class of directional derivatives on $D_vf(\vb{p})\in T^*_pM$, where $$T^*_pM\colon T_pM\rightarrow \mathbb{R}$$ is the dual of $T_pM$. 
+
+For some $\vec{v}\in M$, we may then define 
+$$
+    D_\vb{v} = \pdv{\left(\comp{\phi}{\gamma_v}\right)^\mu}{\lambda}\partial_u\,,
+$$
+for some $\gamma_\vb{v}$ such that 
+$$\begin{matrix}\gamma_\vb{v}(0) = \vb{p} & \gamma_\vb{v}\end{matrix}$$
+[^12].
+
+* If we define directional derivative as limit then it requires euclidean ambient space?
+* Seems that ambient space $\equiv$ embedding. 
+* If $M\subset \mathbb{R}^n$ then it's not an abstract manifold.
+
+---
+DiffGeo.pdf:
+* p.36 tangent space euclidean
+* p.48: 
+  >Starting with topological manifolds, which
+are Hausdorff, second countable, locally Euclidean spaces, we introduce the concept
+of a maximal C ∞ atlas, which makes a topological manifold into a smooth manifold.
+* p.80: Define "The Intrinsic Definition of a Manifold"
+* p.87: Defines $\dot{\gamma}$ in terms of $\phi_\alpha$.
+  * Seems to equate $\dot{\gamma}\in T_pM$ with $\left[\alpha,\dv{}{t}\Big|_{t=0}\phi_a(\gamma(t))\right]$, and then establishes equivalence class within $\phi_\alpha$ space. I.e., $\dot{\gamma}$ is the vector $\in T_pM$ which corresonds to $\left[\alpha,\dv{}{t}\Big|_{t=0}\phi_a(\gamma(t))\right]$
+  * Need to think about 2.8.18 more carefully.
+* p.104: 
+  >The Whitney Embedding Theorem asserts that every second count-able Hausdorff m-manifold M admits an embedding f : M → R 2m .
+
+l-Tu:
+* > Topological Manifolds are Hausdorff, second countable, locally Euclidean spaces
+* p.86 The Tangent Space (Seems to be abstract manifolds).
+
+Lee:
+* p.62 tangent vectors outside of $R^n$ 
+  > The problem with this definition, however, is that it gives us no clue as
+to how we might set about defining tangent vectors on an arbitrary smooth
+manifold, where there is no ambient Euclidean space.
+
+[Wikipedia](https://en.wikipedia.org/wiki/Topological_manifold) :
+* > Manifolds are also commonly required to be second-countable. This is precisely the condition required to ensure that the manifold embeds in some finite-dimensional Euclidean space.
+
+[Mathworld](http://mathworld.wolfram.com/TopologicalManifold.html):
+* Every smooth manifold is a topological manifold,
+
+An equivalence class is the set of all $x \in S$ which satisfy $x \sim a$, that is
+$$
+\set{x \in S : x \sim a}\,,
+$$
+where $x\sim a$ is defined as the equivalence relation. The equivalence relation satisfies the following three properties
+|     Name     	|                                  Definition                                  	|
+|:------------:	|:----------------------------------------------------------------------------:	|
+|  Reflexivity 	|                         $\forall\, a \in X,\,a\sim a$                        	|
+|   Symmetry   	|                    $\forall\,a,b\in X,a\sim b\iff b\sim a$                   	|
+| Transitivity 	| $\forall\, a,b,c\in X,\text{ if }a\sim b \land b\sim c \text{ then }a\sim c$ 	|
+
+Let us define two curves $\gamma_0$ and $\gamma_1$, where $\gamma_0(0)=\gamma_1(0)$, to be $p$-equivalent if $\forall\,\alpha\in A$,
+$$
+\dv{}{t}\bigg|_{t=0}\phi\mleftright{(}{\gamma_0(t)}{)} = \dv{}{t}\bigg|_{t=0}\phi\mleftright{(}{\gamma_1(t)}{)} \,.
+$$
+We can denote the equivalence class of a smooth curve $\gamma\colon \mathbb{R}\rightarrow M$ with $\gamma(0)=\vb{p}$ as $[\gamma]_\vb{p}=\set{\gamma_i:\gamma_0\overset{p}{\sim} \gamma_i}$.
+
+https://people.math.ethz.ch/~salamon/PREPRINTS/diffgeo.pdf
+
+---
+
+### Other Notes
+
 <!-- TODO link directional derivative -->
-Given a [manifold](https://en.wikipedia.org/wiki/Manifold) $M$ in $\mathbb{R}^N$, with a curve defined by $x^i = x^i(t)$. At every point $x^i$ there exists a [vector space](vector-space.md) (the [*tangent* space](https://en.wikipedia.org/wiki/Tangent_space)) in which an arbitrary vector may be represented. This tangent space varies from point to point. There are several definitions of the tangent space, including [the velocity of curves](https://en.wikipedia.org/wiki/Tangent_space#Definition_as_the_velocity_of_curves) and [derivatives](https://en.wikipedia.org/wiki/Tangent_space#Definition_via_derivations).
+
+Given a manifold $M$ in $\mathbb{R}^N$, with a curve defined by $x^i = x^i(t)$. At every point $x^i$ there exists a [vector space](vector-space.md) (the [*tangent* space](https://en.wikipedia.org/wiki/Tangent_space)) in which an arbitrary vector may be represented. This tangent space varies from point to point. There are several definitions of the tangent space, including [the velocity of curves](https://en.wikipedia.org/wiki/Tangent_space#Definition_as_the_velocity_of_curves) and [derivatives](https://en.wikipedia.org/wiki/Tangent_space#Definition_via_derivations).
 
 Consider the directional derivative $\grad_vf(x^a)\colon M\rightarrow \mathbb{R}$ of a curve $f(x^a)$, where $x^a$ represent Cartesian coordinates on Euclidean space.[^2] Removing the function from the equation, we have in E.S.C[^3]
 $$
-\tag{1}
+\tag{2}
 \begin{aligned}
     \grad_v = \vu{v}\cdot\grad 
     &= v^i\pdv{}{x^i}\\
@@ -102,7 +203,7 @@ If we define $\grad_u$ such that
 then $\grad_u$ form a vector space according to the axioms. 
 Note that earlier we demonstrated that derivatives of scalar functions are *covectors*, rather than classical vectors. Hence, the members of the tangent space are *covectors*.
 
-Evidently, given **(1)**, we can find a basis in this vector space at any point $x'$ as $\pdv{}{x^i}\Big|_{x'}$. If we let 
+Evidently, given **(2)**, we can find a basis in this vector space at any point $x'$ as $\pdv{}{x^i}\Big|_{x'}$. If we let 
 $$
     v(\cdot) = \vu{v}\cdot\grad\,,
 $$
@@ -164,3 +265,6 @@ Given the linear functional on the tangent space $\phi_\vb{u}(\vb{v})=\ip{\vb{u}
 [^7]: This defines any vector $\vec{v}$ (in the tangent space) as a *functional* on the tangent space.
 [^8]: That is, if two subsets of $M$ intersect, the map $\phi_\alpha\circ\phi_\beta^{-1}$ takes points from one ($\alpha$) Euclidean space of their intersection to the other ($\beta$).
 [^9]: https://ned.ipac.caltech.edu/level5/March01/Carroll3/Carroll2.html
+[^10]: https://math.stackexchange.com/questions/54643/why-not-just-2-charts-to-make-atlas-for-sphere
+[^11]: This shorthand (informal) notation is unambiguous and thus allowed: $x^\mu$ belongs to $\mathbb{R}^n$, and thus implies $f=\comp{f}{\phi^{-1}}$.
+[^12]: An Introduction to Manifolds, p.95

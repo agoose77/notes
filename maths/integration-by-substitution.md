@@ -74,8 +74,8 @@ Let us define a small rectangle $L$ in a region of $S$, with vertices $\vec{o},\
 |  Vertex   |    Coordinate    |                  Transformation                  |
 | :-------: | :--------------: | :----------------------------------------------: |
 | $\vec{o}$ |     $(u,v)$      |            $\big(g(u,v),h(u,v)\big)$             |
-| $\vec{p}$ |  $(u+\Delta u)$  | \$\left(g(u,v)+\frac{\partial g}{\partial u}\Big | \_{u,v}\Delta u,h(u,v)+\frac{\partial h}{\partial u}\Big | \_{u,v}\Delta u\right)\$ |
-| $\vec{q}$ | $(u,v+\Delta v)$ | \$\left(g(u,v)+\frac{\partial g}{\partial v}\Big | \_{u,v}\Delta v,h(u,v)+\frac{\partial h}{\partial v}\Big | \_{u,v}\Delta v\right)\$ |
+| $\vec{p}$ |  $(u+\Delta u)$  | $\left(g(u,v)+\frac{\partial g}{\partial u}\Big | _{u,v}\Delta u,h(u,v)+\frac{\partial h}{\partial u}\Big | _{u,v}\Delta u\right)$ |
+| $\vec{q}$ | $(u,v+\Delta v)$ | $\left(g(u,v)+\frac{\partial g}{\partial v}\Big | _{u,v}\Delta v,h(u,v)+\frac{\partial h}{\partial v}\Big | _{u,v}\Delta v\right)$ |
 
 If we assume that $T$ is linear, then the image of $L$ under $T$ is a parallelogram with sides $\vec{p}-\vec{o}$, and $\vec{q}-\vec{o}$. We can find its area by calculating the cross product:
 
