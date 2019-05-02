@@ -69,22 +69,70 @@ with the axioms of distributivity and identity left implied. The basis vectors o
 $$
 \vb{e}_i = \pdv{}{x^i}\,.
 $$
-It follows that we have a vector space of functionals $\set{D_\vb{v}}$ that is *isomorphic* to the geometrical space of tangent vectors $T_p(\mathbb{R}^n)$.
+
 
 Derivations at a Point
 ----------------------
 $\gdef\DpRn{\mathcal{D}_\vb{p}(\mathbb{R}^n)}$
 Any linear map $D\colon C_\vb{p}^\infty\rightarrow \mathbb{R}$ which satisfies the Leibniz rule
 $$
+\tag{1}
 D(fg) = (Df)g(\vb{p}) + f(\vb{p})(Dg)
 $$
-is called a *derivation at $\vb{p}$*, or equally a *point derivation of $C^\infty$*. Let us define the set of all derivations $D$ at $\vb{p}$ as $\DpRn$. Evidently, $D_\vb{v} \in \DpRn$, as the partial derivatives satisfy the Liebniz rule.
+is called a *[derivation](https://en.wikipedia.org/wiki/Derivation_(differential_algebra)) at $\vb{p}$*, or equally a *point derivation of $C^\infty$*. Let us define the set of all derivations $D$ at $\vb{p}$ as $\DpRn$. Evidently, $D_\vb{v} \in \DpRn$, as the partial derivatives satisfy the Liebniz rule.
 
 We can define a map $\Omega\colon \TpRn\rightarrow\DpRn$ from the geometric tangent space to the derivation space
 $$
 \Omega(\vb{v})\colon \vb{v}\mapsto D_\vb{v}\,,
 $$
 which is clearly linear, as $D_\vb{v}$ is linear in $\vb{v}$. At this point, it is not yet determined whether *every* derivation at $\vb{p}$ is a directional derivative.
+We have some properties that can be inferred from **(1)**:
+
+<div style="padding:15px;margin-bottom:20px;border:1px solidtransparent;border-radius:4px;color:#31708f;background-color:#d9edf7;border-color:#bce8f1;">
+
+### If $D \in \DpRn$, then $D(c)=0$ for any constant function $c$.
+From the Leibniz rule, given that derivations have $\mathbb{R}$-linearity and thus $D(c)=cD(1)$,
+$$
+D(1) = D(1\cdot 1) = D(1)\cdot 1 + 1\cdot D(1) = 2D(1)\,,
+$$
+it follows that $D(1) = D(c) = 0$.
+</div>
+
+<div style="padding:15px;margin-bottom:20px;border:1px solidtransparent;border-radius:4px;color:#31708f;background-color:#d9edf7;border-color:#bce8f1;">
+
+### The linear map $\Omega\colon \TpRn\rightarrow \DpRn$ is an isomorphism of vector spaces.
+Isomorphism
+~ A linear transformation $T$ from a vector space $V$ to a vector space $W$ is called an isomorphism of vector spaces if $T$ is both *injective* and *surjective*.
+
+Injectivity[^shankar]
+~ A linear operator $T$ is injective iff. $\operatorname{null} T = \set{0}$, where $\operatorname{null}T=\set{v \in V : T v=0}$.
+That is, if the only vector mapped to $0$ is $0$ itself, then $T$ is one-to-one.
+    
+Let us suppose that $D_\vb{v}=0$ for $\vb{v}\in\TpRn$. Applying $D_\vb{v}$ to the coordinate function $x^j$ gives
+$$
+0 = D_\vb{v}(x^j) = \sum_iv^i\pdv{x_j}{x^i}\bigg|_\vb{p}=v^j\,.
+$$
+From our definition of injectivity, it follows that $\Omega$ is injective. To prove surjectivity, let $D\in\DpRn$ be arbitrary. We can define the real numbers $v^i=D(x^i)$, to show that $D=D_\vb{v}$, where $\vb{v}=v^i\vb{\hat{e}}^i$ for the standard basis $\vb{\hat{e}}$ on $\TpRn$.
+
+Let $(f,V)$ be representative of a germ in $C_p^\infty$. Making $V$ smaller if required such that $V$ is an open ball
+By Taylor’s theorem with remainder[^lu], there are functions $g_i(\vb{x}) \in C^\infty$ in the neighbourhood of $\vb{p}$ such that 
+$$
+\begin{matrix}
+f(\vb{x}) = f\vb{p}) + \sum_i(x^i-p^i)g_i(\vb{x})\,, &
+g_i(\vb{x}) = \pdv{f}{x^i}(\vb{p})\,.
+\end{matrix}
+$$
+Applying $D$ to both sides, noting that $D(c)=0$, **(1)** gives
+$$
+\begin{aligned}
+Df(\vb{x}) &= \sum_i(Dx^i)g_i(\vb{p})+\sum_i(p^i-p^i)Dg_i(\vb{x})\\
+&=\sum_i(Dx^i)\pdv{f}{x^i}(\vb{p})\\
+&=\sum_iv^i\pdv{f}{x^i}(\vb{p})=D_\vb{v}f(\vb{x})\,.
+\end{aligned}
+$$
+   
+It follows that we have a vector space of functionals $\DpRn$ that is *isomorphic* to the geometrical space of tangent vectors $\TpRn$, i.e. $\TpRn\cong\DpRn$.
+</div>
 
 
 ## The Tangent Space at a Point
@@ -112,3 +160,4 @@ p. 86-93 tangent vectors also on abstract(?)
 
 [^lee]: J.M.. Lee, Introduction to Smooth Manifolds.
 [^lu]: L.W. Tu, An Introduction to Manifolds.
+[^shankar]: https://physicspages.com/pdf/Shankar/MIT%208.05x%2003.04.01%20Null%20space%20range%20injectivity%20surjectivity.pdf

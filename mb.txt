@@ -1,0 +1,21 @@
+For an $n$-manifold $M$, let $\gamma\colon R\rightarrow M$ be a curve, $\phi\colon M\rightarrow \mathbb{R}^n$ a coordinate chart, and $f\colon M\rightarrow R$ a scalar function.
+$$
+\begin{aligned}
+\dv{f}{\lambda} 
+&= \pdv{}{\lambda}(\comp{f}{\gamma})\\
+&= \pdv{}{\lambda}\comp{(\comp{f}{\phi^{-1}})}{(\comp{\phi}{\gamma})}\\
+\end{aligned}
+$$
+Consider the maps $f\colon \mathbb{R}^m\rightarrow\mathbb{R}^n$, and $g\colon \mathbb{R}^n\rightarrow\mathbb{R}^l$ such that $\comp{g}{f}\colon\mathbb{R}^m\rightarrow\mathbb{R}^l$. Let us define the points in each space in terms of the components $x^a$ on $\mathbb{R}^m$, $y^b$ on $\mathbb{R}^n$, and $z^c$ on $\mathbb{R}^l$.
+The chain rule for function composition is then given by
+$$`
+\begin{aligned}
+\pdv{}{x^a}(\comp{g}{f})^c=\sum_b \pdv{f^b}{x^a}\pdv{g^c}{y^b}\,,
+\end{aligned}
+$$
+which is abbreviated to 
+$$
+\pdv{}{x^a} = \sum_b\pdv{y^b}{x^a}\pdv{}{y^b}\,.
+$$
+Note that when $m=n$, $\pdv{y^b}{x^a}$ are elements of the Jacobian matrix of $\comp{g}{f}$. 
+<!-- TODO why does the NONZERO Jacobian make g(f(x)) invertible?
