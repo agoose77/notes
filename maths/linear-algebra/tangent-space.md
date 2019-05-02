@@ -34,7 +34,7 @@ At a given point $\vb{p}$ on a surface in $\mathbb{R}^n$, there exists a vector 
 
 In order to generalise this space to abstract manifolds (those not embedded in a (Euclidean) space), one can use the notion of the directional derivative which isomorphic to the geometric tangent space defined above. It can then be shown that these derivations generalise to abstract manifolds.
 
-$\gdef\TpRn{T_\vb{p}(\mathbb{R}^n)}$
+$\gdef\TpRn{T_\vb{p}\mathbb{R}^n}$
 
 Let us define the [set](../set.md) of curves $\set{\vb{v}_i}$ at a point $\vb{p}$ as the tangent space $\TpRn$ of $\vb{p}$. The *directional derivative* is defined for some $f\colon \mathbb{R}^n\rightarrow\mathbb{R}$ in $C^\infty_\vb{p}$ on this space as
 $$
@@ -71,9 +71,9 @@ $$
 $$
 
 
-Derivations at a Point
-----------------------
-$\gdef\DpRn{\mathcal{D}_\vb{p}(\mathbb{R}^n)}$
+Derivations at a Point in $\mathbb{R}^n$
+----------------------------------------
+$\gdef\DpRn{\mathcal{D}_\vb{p}\mathbb{R}^n}$
 Any linear map $D\colon C_\vb{p}^\infty\rightarrow \mathbb{R}$ which satisfies the Leibniz rule
 $$
 \tag{1}
@@ -103,18 +103,28 @@ it follows that $D(1) = D(c) = 0$.
 ### The linear map $\Omega\colon \TpRn\rightarrow \DpRn$ is an isomorphism of vector spaces.
 Isomorphism
 ~ A linear transformation $T$ from a vector space $V$ to a vector space $W$ is called an isomorphism of vector spaces if $T$ is both *injective* and *surjective*.
+    
+Let us suppose that $D_\vb{v}=0$ for $\vb{v}\in\TpRn$. Applying $D_\vb{v}$ to the coordinate function $x^j$ gives
+$$
+0 = D_\vb{v}(x^j) = \sum_iv^i\pdv{x_j}{x^i}\bigg|_\vb{p}=v^j\,.
+$$    
 
 Injectivity[^shankar]
 ~ A linear operator $T$ is injective iff. $\operatorname{null} T = \set{0}$, where $\operatorname{null}T=\set{v \in V : T v=0}$.
 That is, if the only vector mapped to $0$ is $0$ itself, then $T$ is one-to-one.
     
-Let us suppose that $D_\vb{v}=0$ for $\vb{v}\in\TpRn$. Applying $D_\vb{v}$ to the coordinate function $x^j$ gives
-$$
-0 = D_\vb{v}(x^j) = \sum_iv^i\pdv{x_j}{x^i}\bigg|_\vb{p}=v^j\,.
-$$
-From our definition of *injectivity*, it follows that $\Omega$ is injective. 
+From this definition of *injectivity*, it follows that $\Omega$ is injective. 
+$\gdef\CpRn{C_p^\infty(\mathbb{R}^n)}$ 
+To prove surjectivity, let $D\in\DpRn$ be arbitrary. Let $(f,V)$ be representative of a germ in $\CpRn$.     
     
-To prove surjectivity, let $D\in\DpRn$ be arbitrary. Let $(f,V)$ be representative of a germ in $C_p^\infty$. Making $V$ smaller if required such that it is an open ball, by Taylor’s theorem with remainder[^lu], there are functions $g_i(\vb{x}) \in C^\infty$ in the neighbourhood of $\vb{p}$ such that 
+[Germ](https://en.wikipedia.org/wiki/Germ_(mathematics))
+ ~ An [equivalence class](../equivalence-class.md) of an object on a topological space and others of the same kind which captures their shared local properties.   
+
+$\CpRn$
+~ We define the *germ* of a $C^\infty$ function at $\vb{p}\in \mathbb{R}^n$ as an *equivalence class* of $C^\infty$ functions defined in a neighbourhood of $\vb{p}\in \mathbb{R}^n$. Two functions are equivalent *if they agree on some possibly smaller neighbourhood of $\vb{p}$*. The set of germs of $C^\infty$ real-valued functions at $\vb{p}\in \mathbb{R}^n$ (i.e. the [*quotient set*](../equivalence-class.md)) is denoted by $\CpRn$. The addition and multiplication of functions make $\CpRn$ a [ring](../ring.md). With scalar multiplication by $x\in\mathbb{R}$, it [becomes an algebra](https://en.wikipedia.org/wiki/Associative_algebra#Definition).
+    
+    
+Making $V$ smaller if required such that it is an open ball, by Taylor’s theorem with remainder[^lu], there are functions $g_i(\vb{x}) \in C^\infty$ in the neighbourhood of $\vb{p}$ such that 
 $$
 \begin{matrix}
 f(\vb{x}) = f\vb{p}) + \sum_i(x^i-p^i)g_i(\vb{x})\,, &
@@ -129,24 +139,79 @@ Df(\vb{x}) &= \sum_i(Dx^i)g_i(\vb{p})+\sum_i(p^i-p^i)Dg_i(\vb{x})\\
 &=\sum_iv^i\pdv{f}{x^i}(\vb{p})=D_\vb{v}f(\vb{x})\,,
 \end{aligned}
 $$
-for some vector $v^i=Dx^i$. In other words, $D$ can be represented as a directional derivative. It follows that we have a vector space of functionals $\DpRn$ that is *isomorphic* to the geometrical space of tangent vectors $\TpRn$, i.e. $\TpRn\cong\DpRn$.
+for some vector $v^i=Dx^i$. In other words, $D$ can be represented as a directional derivative. It follows that we have a vector space of functionals $\DpRn$ that is *isomorphic* to the geometrical space of tangent vectors $\TpRn$, i.e. $\TpRn\cong\DpRn$. Under this isomorphism, $\TpRn$ has a basis $\set{\pdv{}{x^i}\big|_p}$.
 </div>
 
 
-## The Tangent Space at a Point
-[Germ](https://en.wikipedia.org/wiki/Germ_(mathematics))
- ~ An [equivalence class](../equivalence-class.md) of an object on a topological space and others of the same kind which captures their shared local properties.
+The Tangent Space at a Point
+----------------------------
+$\gdef\CpM{C^\infty_\vb{p}(M)}$
 
-$\gdef\cpm{C^\infty_\vb{p}(M)}$
-
-We define a *germ* of a $C^\infty$ function at $\vb{p}\in M$ to be an equivalence class of $C^\infty$ functions defined in a neighbourhood of $\vb{p}\in M$, where two functions are equivalent *if they agree on some possibly smaller neighbourhood of $\vb{p}$*. The set of germs of $C^\infty$ real-valued functions at $\vb{p}\in M$ (i.e. the [*quotient set*](../equivalence-class.md) of $C^\infty$ functions at $\vb{p}\in M$) is denoted by $\cpm$. The addition and multiplication of functions make $\cpm$ a [ring](../ring.md). With scalar multiplication by $x\in\mathbb{R}$, it [becomes an algebra](https://en.wikipedia.org/wiki/Associative_algebra#Definition).
-
-We may define a *derivation at a point* in the manifold $M$, a *point-derivation*, of some function $f\in \cpm$ to be a linear map $D\colon \cpm\rightarrow \mathbb{R}$ such that
+As with $\mathbb{R}^n$, we define a *germ* of a $C^\infty$ function at $\vb{p}\in M$ to be $\CpM$. Generalising the point derivation in $\mathbb{R}^n$, we may define a *point-derivation* of some function $f\in \CpM$ to be a linear map $D\colon \cpm\rightarrow \mathbb{R}$ such that
 $$
+\tag{2}
 D(fg) = (Df)g(\vb{p}) + f(\vb{p})Dg\,.
 $$
-The set of all derivations of $\cpm$ is a vector space called the *tangent space* at $\vb{p}$, denoted by $T_\vb{p}M$.
-<!-- 
+$\gdef\TpM{T_\vb{p}M}$
+The set $\TpM$ of all derivations of $\CpM$ is a vector space called the *tangent space* at $\vb{p}$. Here, we *define* a derivation as a tangent vector in the abstract sense. Note that, if we have an open set $U\subset M$, then the algebra $C_p^\infty(U)$ is *the same* as $\CpM$[^lu]. 
+
+Pushforwards
+------------
+$$
+\gdef\TpN{T_\vb{p}N}
+\gdef\TFpM{T_{F(\vb{p})}M}
+$$
+Let $F\colon N\rightarrow M$ be a $C^\infty$ map between two manifolds.  At each point $\vb{p}\in N$, the map $F$ induces a linear map of tangent spaces called its *differential* or *pushforward* at $\vb{p}$,
+$$
+F_*\colon \TpN\rightarrow \TFpM\,.
+$$
+If $X_\vb{p} \in \TpN$, then $F_*(X_\vb{p})$ is the tangent vector in $\TFpM$ defined by
+$$
+(F_*(X_\vb{p}))f = X_\vb{p}(\comp{f}{F}) \in \mathbb{R}\,,
+$$
+for $f\in C_{F(\vb{p})}^\infty(M)$. 
+
+![Pushforward between manifolds.](pushforward.png)
+
+Clearly $F_*X_\vb{p}$ is a derivation at $F(\vb{p})$ because
+<!-- Here, let u=fg, then u `comp` F is trivial -->
+$$
+\begin{aligned}
+F_*X_\vb{p}(fg) 
+&= X_\vb{p}(\comp{(fg)}{F})\\
+&= X_\vb{p}((\comp{f}{F})(\comp{g}{F}))\\
+&= \comp{f}{F(\vb{p})}X_\vb{p}(\comp{g}{F})+\comp{g}{F(\vb{p})}X_\vb{p}(\comp{f}{F})\\
+&= f\mleftright{(}{F(\vb{p})}{)}(F_*X_\vb{p})(g)+g\mleftright{(}{F(\vb{p})}{)}(F_*X_\vb{p})(f)\,,
+\end{aligned}
+$$
+which behaves as the Leibniz rule **(1)** requires. In general, pushforwards have the following properties. Let $F$ as before:
+
+|                                                                         Property                                                                         	|                                                                                                                                                                  Proof                                                                                                                                                                  	|
+|:--------------------------------------------------------------------------------------------------------------------------------------------------------:	|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:	|
+|                                                       $F_*\colon \TpN \rightarrow \TFpM$ is linear                                                       	|                                       Let $Z_\vb{p} = X_\vb{p} + Y_\vb{p}$.   $$   \begin{aligned}   F_*Z_\vb{p}f    &= Z_\vb{p}(\comp{f}{F})\\   &= X_\vb{p}(\comp{f}{F}) + Y_\vb{p}(\comp{f}{F})\\   &= F_*X_\vb{p}f + F_*Y_\vb{p}f\\   F_*(aX_\vb{p})f &= aF_*X_\vb{p}f\,.   \end{aligned}   $$                                      	|
+| Given $G\colon M\rightarrow P$,                                   $$(\comp{G}{F})_*=\comp{G_*}{F_*}\colon\TpN\rightarrow T_{\comp{G}{F(\vb{p})}}P$$                                     	|                                                                              $$(\comp{G}{F})_*X_\vb{p}f=X_\vb{p}(\comp{f}{\comp{G}{F}})$$   $$(\comp{G_*}{F_*})X_\vb{p}f=G_*(F_*X_\vb{p})f = (F_*X_\vb{p})(\comp{f}{G})= X_\vb{p}(\comp{\comp{f}{F}}{G})$$                                                                              	|
+| $(1_M)_*=1_{\TpM}$ at any point $p\in M$, given      $$\mathbb{1}_{\TpM}\colon\TpM\rightarrow \TpM$$ 	|                                                                                                               For any $X_\vb{p}\in\TpM$ and $f\in\CpM$,   $$   ((1_M)_*X_\vb{p})f = X_\vb{p}(\comp{f}{1_M})=X_\vb{p}f   $$                                                                                                              	|
+| If $F$ is a diffeomorphism, then $F_*\colon \TpN\rightarrow \TFpM$ is an isomorphism.                                                                    	| To be diffeomorphic requires the existence of a $C^\infty$ inverse $G\colon M\rightarrow  N$ such that $$\begin{matrix}\comp{G}{F}=\mathbb{1}_N\,,&\comp{F}{G}=\mathbb{1}_M\end{matrix}\,.$$ From the other properties, $$(\comp{G}{F})_*=\comp{G_*}{F_*}=(\mathbb{1}_N)=\mathbb{1}_{\TpN}$$ Similarly,$$(\comp{G}{F})_*=\comp{F_*}{G_*}=(\mathbb{1}_M)=\mathbb{1}_{\TFpM}$$  	|
+
+Mapping the Basis Vectors from $T_{\phi(\vb{p})}\mathbb{R}^n$ to $\TpM$
+--------------------------------------------------
+Let $(U,\phi)$ be a smooth coordinate chart on $M$. As $\phi$ is diffeomorphism, the above property gives the result that $\phi_*$ is an isomorphism. <!-- TODO back this up more -->
+As discussed earlier, $\DpRn_{\phi(\vb{p})}\cong T_{\phi(\vb{p})}\mathbb{R}^n$ has a basis $\set{\pdv{}{x^i}\big|_{\phi(\vb{p})}}$. We can find these basis vectors in the manifold tangent space through the use of pushforwards. Given a pushforward 
+$$
+(\phi^{-1})_*\colon T_{\phi(\vb{p})}\mathbb{R}^n\rightarrow\TpM\,,
+$$
+we can *define* the basis vectors in $\TpM$ in terms of those in 
+$$
+\pdv{}{x^i}\bigg|_\vb{p}f=(\phi^{-1})_*\pdv{}{x^i}\bigg|_{\phi(\vb{p})} 
+$$
+
+
+<!-- Property 2: this makes sense: If we have a complete basis in one manifold then we can find the representation of some direction in the other, using a change of basis (which is effectively F)-->
+
+<!-- Property 4: The latter subscript TF(p)M follows from the definition of M-->
+
+<!-- 86
+
 Lee notes:
 p.61 - 72 tangent vectors on abstract spaces
 Relate tangent vectors ON MANIFOLD to those on tangent space using pushforward function $F^*$
@@ -158,4 +223,4 @@ p. 86-93 tangent vectors also on abstract(?)
 
 [^lee]: J.M.. Lee, Introduction to Smooth Manifolds.
 [^lu]: L.W. Tu, An Introduction to Manifolds.
-[^shankar]: https://physicspages.com/pdf/Shankar/MIT%208.05x%2003.04.01%20Null%20space%20range%20injectivity%20surjectivity.pdf
+[^shankar]: https://physicspages.com/pdf/Shankar/MIT%208.05x%2003.04.01%20Null%20space%20range%20injectivity%20surjectivity.pd

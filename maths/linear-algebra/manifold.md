@@ -54,7 +54,7 @@ Open Set
  ~ An open set in $\mathbb{R}^n$ is a set constructed from an arbitrary union of open balls. That is, for if $V \subset \mathbb{R}^n$ is open, for any $y \in V$ there exists an open ball centered at $y$ which is completely inside $V$. It is the *interior* of some (n-1) dimensional closed surface, or the union of several such interiors.
     
 Chart
- ~ A chart or *coordinate system* consists of a subset $U\subset M$, along with an injective map $\phi\colon U\rightarrow \mathbb{R}^n$ such that *the image $\phi(U)$ is open in $\mathbb{R}^n$*. It can then be said that $U$ is an *open set in $M$*.
+ ~ A chart or *coordinate system* consists of a subset $U\subset M$, along with a homeomorphic map $\phi\colon U\rightarrow \mathbb{R}^n$ such that *the image $\phi(U)$ is open in $\mathbb{R}^n$*. It can then be said that $U$ is an *open set in $M$*. $\phi$ is a diffeomorphism, which follows from the fact that it is homeomorphic, and both $\phi$ and $\phi^{-1}$ are smooth.[^lu]
     
 $C^p$ atlas
  ~ An indexed collection of charts $\set{(U_\alpha,\phi_\alpha)}$, with the index denoted by $\alpha$, which satisfies the following conditions:
