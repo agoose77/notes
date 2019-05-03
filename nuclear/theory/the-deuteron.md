@@ -85,7 +85,7 @@ To have even parity, the state ket $\alpha$ must be an eigenket of $\parity$ (to
 $$
 \ket{\alpha} = \ket{\alpha_\vb{r}}\otimes\ket{\alpha_\vb{S}}\,.
 $$
-<!-- TODO why? http://www.pas.rochester.edu/~passage/resources/prelim/Quantum/UCB%20Notes/19%20parity.pdf -->
+<!-- TODO: is this definition of parity (i.e. only acts on position space) valid? : http://www.pas.rochester.edu/~passage/resources/prelim/Quantum/UCB%20Notes/19%20parity.pdf -->
 Evidently, the parity of the wavefunction depends solely upon the position ket, as
 $$
 \parity = \parity_\vb{r}\otimes1_\vb{S}\,,
