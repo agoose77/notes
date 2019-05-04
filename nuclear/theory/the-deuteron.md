@@ -4,7 +4,7 @@ A deuteron $\atom{2}{H}$ is the simplest bound state of nucleons, consisting of 
 
 ## Binding Energy
 
-The [binding energy](binding-energy.md#Binding-Energy) of the deuteron is precisely known, using techniques such as [the mass doublet method](binding-energy.md#Mass-Doublet-Method), which gives[^1]
+The [binding energy](binding-energy.md#Binding-Energy) of the deuteron is precisely known, using techniques such as [the mass doublet method](binding-energy.md#Mass-Doublet-Method), which gives[^krane]
 
 $$
 \tag{a}
@@ -160,10 +160,23 @@ $$
 &= 0.879804\operatorname{\mu_N}\,.
 \end{aligned}
 $$
-Experimentally, the observed value is $0.7574376 \pm 4\times 10^{-7}\operatorname{\mu_N}$, which does not agree with this calculation. Though this discrepancy can be attributed to several factors including contributions from the mesons exchanged between the nucleons, it can be assumed that a contribution to $\mu$ from the *orbital angular momentum* is its primary origin. Let the deuteron have its positional ket defined by
+Experimentally, the observed value is $0.7574376 \pm 4\times 10^{-7}\operatorname{\mu_N}$, which does not agree with this calculation. Though this discrepancy can be attributed to several factors including contributions from the mesons exchanged between the nucleons, it can be assumed that a contribution to $\mu$ from the *orbital angular momentum* is its primary origin. Let the deuteron have its state ket defined by
 $$
-\alpha\ket{l=0,s_\alpha} + \beta\ket{l=1,s_\beta}
+\alpha\ket{l=0}\otimes\ket{s=1} + \beta\ket{l=2}\otimes\ket{s=1}
 $$
-
-
-[^1]: Krane, p. 81.
+<!-- TODO analysis of this mixture must come from form of dipole moment of nucleus. 
+https://en.wikipedia.org/wiki/Nuclear_magnetic_moment
+Samuel Wong: p.6
+-->
+<!-- TODO discuss the fact that l=0 predicts vanishing quadrupole moment (see electromagnetic-moments.md), yet we observe nonzero positive Q=0.00288 \pm 0.00002\barn which implies l=0 + l=2. Therefore the deuteron is non-spherical. This means that the n-p potential is non central-is a tensor. dV/d0 =/= 0, so there is a force -> torque -> L not conserved
+-->
+<!-- TODO 
+The
+orbital angular momentum is, therefore, not a good quantum number and the nucleon-
+nucleon interaction potential does not, commute with the operator L^2 [(why?)]:
+...
+The fact that the deuteron ground state is a linear combination of these two
+basis states implies that the off-diagonal matrix elements are not zero
+-->
+[^wong.62]: Samuel S. M. Wong, Introductory Nuclear Physics, 2. ed. ed. (Wiley, New York [u.a.], 1998), p. 64.
+[^krane]: Kenneth S. Krane, Introductory nuclear physics, (Wiley, New York u.a, 1987), p. 81.
