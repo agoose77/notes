@@ -15,7 +15,7 @@ $$
 Often, one does not measure $\sigma$ directly, but instead the *differential* cross section $\dd\sigma$ through a differential region $\dd\Omega$.
 It follows from **(1)** that the probability density function with respect to solid angle for scattering through some angle $(\theta, \phi)$ is given by
 $$
-P(\theta,\phi) = \dv{\sigma}{\Omega}nT\,.
+P(\theta,\phi) = \dv{\sigma}{\Omega}n_tT\,.
 $$
 The *total cross section* $\sigma$ is simply the integral over the the unit sphere
 $$
