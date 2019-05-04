@@ -9,7 +9,7 @@ $$
 m_Nc^2 = m_Ac^2+\sum_{i=1}^ZB_i-Zm_ec^2\,.
 $$
 
-Conventionally, we neglect the contribution from the electronic binding energies, as they are on the order of $\sim10\operatorname{-}100\keV$ vs $ A\times1000\MeV$
+Conventionally, we neglect the contribution from the electronic binding energies, as they are on the order of $\sim10\operatorname{-}100\unit{\keV}$ vs $ A\times1000\unit{\MeV}$
 
 The _binding energy_ $B$ of the nucleus is the difference in mass energy between the nucleus and its constituent protons and neutrons,
 
@@ -33,7 +33,7 @@ $$
 
 This value is _not_ directly a measure of binding energy, as the mass given by the atomic number is _relative_ to the mass of ${}^{12}\text{C}$.
 
-The binding energy of a nucleus tends to increase linearly with the number of nucleons $A$. The average binding energy per nucleon is approximately $8\MeV$. In the figure below, there are two visible regions $A<60$ and $A>60$, in which the specific binding energy increases and decreases respectively.
+The binding energy of a nucleus tends to increase linearly with the number of nucleons $A$. The average binding energy per nucleon is approximately $8\unit{\MeV}$. In the figure below, there are two visible regions $A<60$ and $A>60$, in which the specific binding energy increases and decreases respectively.
 ![Binding energy per nucleon.](https://upload.wikimedia.org/wikipedia/commons/5/53/Binding_energy_curve_-_common_isotopes.svg)
 
 ## Mass Doublet Method
@@ -56,7 +56,7 @@ $$
 m = \frac{qrB^2}{E}\,.
 $$
 
-Given that the precision of the mass measurement depends upon $B$ and $E$, these values must be known precisely, which in practice proves difficult. One could calibrate to a particular mass, and subsequently determine other masses by relative measurement. To measure a large range of masses however, $E$ and $B$ would need to be varied considerably, and the calibration may not remain valid to one part in $10^{-6}$ over such a range. Rather than use an absolute calibration, one can instead measure the smaller difference between two nearly equal masses, such as those given by selected molecules. Once accelerated, these molecules lose their electrons, and the molecular binding energy is of the order $10^{-9}\amu$, thus we effectively measure only the mass of the nucleus.  
+Given that the precision of the mass measurement depends upon $B$ and $E$, these values must be known precisely, which in practice proves difficult. One could calibrate to a particular mass, and subsequently determine other masses by relative measurement. To measure a large range of masses however, $E$ and $B$ would need to be varied considerably, and the calibration may not remain valid to one part in $10^{-6}$ over such a range. Rather than use an absolute calibration, one can instead measure the smaller difference between two nearly equal masses, such as those given by selected molecules. Once accelerated, these molecules lose their electrons, and the molecular binding energy is of the order $10^{-9}\unit{\amu}$, thus we effectively measure only the mass of the nucleus.  
 For example, one might configure the apparatus for mass $128$, and measure the difference between $\text{C}_9\text{H}_{20}$ and $\text{C}_{10}\text{H}_8$, which gives
 
 $$
@@ -85,7 +85,7 @@ If the binding energy increases with removal of a nucleon, it is an energeticall
 
 ### Volume Term
 
-The variation of the binding energy with $A$ of a nucleus can be predicted from the _semi-empirical mass formula_. To the lowest order, $B\propto A$ (given that $\frac{B}{A}\approx 8\MeV$), hence we can establish a _volume_ term (as $V\propto A$),
+The variation of the binding energy with $A$ of a nucleus can be predicted from the _semi-empirical mass formula_. To the lowest order, $B\propto A$ (given that $\frac{B}{A}\approx 8\unit{\MeV}$), hence we can establish a _volume_ term (as $V\propto A$),
 
 $$
     \tag{a}a_vA\,.

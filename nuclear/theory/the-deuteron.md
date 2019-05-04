@@ -8,12 +8,12 @@ The [binding energy](binding-energy.md#Binding-Energy) of the deuteron is precis
 
 $$
 \tag{a}
-m(\text{C}_6\text{H}_{12})- m(\text{C}_6\text{D}_{6}) = (9.289710 \pm 0.000024)\times 10^{-3}\amu\,.
+m(\text{C}_6\text{H}_{12})- m(\text{C}_6\text{D}_{6}) = (9.289710 \pm 0.000024)\times 10^{-3}\unit{\amu}\,.
 $$
 
-From **(a)**, it follows that $m(\atom{2}{D}) = 2.014101789 \pm 0.000000021\amu$. The binding energy is then 
+From **(a)**, it follows that $m(\atom{2}{D}) = 2.014101789 \pm 0.000000021\unit{\amu}$. The binding energy is then 
 $$
-B = \left[m(\atom{1}{H}) + m(n)-m(\atom{2}{H})\right]c^2 = 2.22463\pm 0.0004 \MeV\,.
+B = \left[m(\atom{1}{H}) + m(n)-m(\atom{2}{H})\right]c^2 = 2.22463\pm 0.0004 \unit{\MeV}\,.
 $$
 One can also determine the binding energy by bringing together an unbound proton and neutron together to form $\atom{2}{H}$, and measuring the energy of the photon emitted (plus a recoil correction):
 $$
@@ -21,7 +21,7 @@ $$
 $$
 This reaction can be performed in reverse; determining the minimum photon energy required to produce deuterium (less the recoil energy).
 
-Given that the average binding energy per nucleon [is about $8\MeV$](binding-energy.md#Binding-Energy), it follows that the deuteron is very weakly bound in comparison to typical nuclei.
+Given that the average binding energy per nucleon [is about $8\unit{\MeV}$](binding-energy.md#Binding-Energy), it follows that the deuteron is very weakly bound in comparison to typical nuclei.
 <!--
 TODO only if we write up spherical potential to justify \psi=u(r)/r
 We might model the nucleon-nucleon potential of the deuteron as a simple three-dimensional square well:
