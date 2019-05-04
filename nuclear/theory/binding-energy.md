@@ -39,6 +39,8 @@ The binding energy of a nucleus tends to increase linearly with the number of nu
 
 $\alpha$ Clustering
 -------------------
+<!-- TODO define valley of stability -->
+<!-- TODO justify this behaviour -->
 The sharp increase in $\BpA$ for small $A$ derives from the increasing number of nucleon pairs.[^wong.10-11] Visible in the above figure are a number of discrete jumps for $A=4n:n\in \mathbb{N}$ nuclei. In the low mass region, the valley of stability corresponds to $N=Z$, so these $4n$ nuclei can be considered as composed of $\alpha$ particles. Given that $\BpA(4n\pm 1) < \overline{B}_A(4n)$, it follows that there might exist $\alpha$-particle clusters which preferentially form in light nuclei. By taking the difference
 $$
 \tag{4}
