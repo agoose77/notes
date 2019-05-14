@@ -41,7 +41,8 @@ $$
 
 which also satisfies the angular-momentum commutation relations due to **(a)** and **(b)**, and hence $\vb{\J}$ is an angular momentum. Consequently, the previous understanding of the eigenvalue spectrum of $\vb{\J}^2$ and $\J_z$ also applies to the total $\vb{\J}$.
 
-## Clebsch Gordan Coefficients
+Clebsch Gordan Coefficients
+---------------------------
 
 For the total system, we must choose a set of base kets. There are two possible options:
 
@@ -73,7 +74,7 @@ $$
       \comm{\vb{\J}^2}{\J^{(1)}_{z}} = 0\,,
 $$
 
-it is _not the case_ that the $z$ components of $\vb{\J}_1$ and $\vb{\J}_2$ commute with $\vb{\J}^2$; the two choices for basis kets are not mutually compatible. On the ket space of a given $j_1$ and $j_2$, the identity to reconstruct any state (for a given $j_1,j_2$) is
+it is _not the case_ that the $z$ components of $\vb{\J}_1$ and $\vb{\J}_2$ commute with $\vb{\J}^2$; the two choices for basis kets are not mutually compatible. On the ket space of a given $j_1$ and $j_2$, the identity is
 
 $$
 1 = \sum_{m_1m_2}\ket{m_1m_2}\bra{m_1m_2}\,.
@@ -86,9 +87,10 @@ $$
 \,.
 $$
 
-Thus it follows
+Thus it follows for a given $j_1,j_2$ (which are implied for any state $\ket{jm}$) we have
 
 $$
+\tag{4}
 \begin{aligned}
   \J_z\ket{jm}-(\J^{(1)}_{z}+\J^{(2)}_{z})\ket{jm} &= 0\\
   &= m\hbar\ket{jm}-\sum_{m_1}\sum_{m_2}(\J^{(1)}_{z}+\J^{(2)}_{z})\ket{m_1m_2}\braket{m_1m_2}{jm}\\
@@ -107,7 +109,13 @@ $$
 $$
 
 where $\braket{j_1j_2;m_1m_2}{j_1j_2;jm}$ are the Clebsch-Gordan coefficients. From this result it may be deduced that for non-zero coefficients, $$\tag{d}m = m_1 + m_2\,.$$
+Consequently, the relation between the two bases is given by **(4)** as 
+$$
+\ket{jm} = \sum_{m_1}\sum_{m_2}\ket{m_1m_2}\braket{m_1m_2}{jm}\,.
+$$
 
+Finding the Relation Between Bases
+----------------------------------
 Given that the set of base kets $\{\,\ket{jm}\,\}$ is simply a choice of basis, it follows that the dimensionality of the space [should equal](../maths/linear-algebra/vector-space-basis-properties.md#Bases-Have-Same-Dimension) that of the direct product representation. As was demonstrated through the use of ladder operators, there is a top "rung" $m_\text{max}$ given by
 
 $$

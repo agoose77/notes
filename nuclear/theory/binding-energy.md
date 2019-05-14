@@ -18,14 +18,13 @@ $$
 B = \left(Zm_p + Nm_n - \left[m(\atom{A}{X})-Zm_e\right]\right)c^2\,.
 $$
 
-This expression may be rewritten to use the atomic mass of $\atom{1}{H}$ (which includes the mass of the electrons, but does not reproduce the correct binding energy contribution):
+This expression may be rewritten to use the atomic mass of $\atom{1}{H}$.
 
 $$
 \tag{b}
 B = \left(Zm(\atom{1}{H}) + Nm_n - m(\atom{A}{X})\right)c^2\,.
 $$
-
-In order to determine the _atomic_ masses, some tables give the _mass excess_
+Although the electron binding energy contribution is not reproduced correctly, this is negligible. In order to determine the _atomic_ masses, some tables give the _mass excess_
 
 $$
 \tag{c}

@@ -1,6 +1,5 @@
 Excited States
 ==============
-
 Excited states are produced by adding _vibrational_ or _rotational_ energy to the nucleus. This energy may be sufficient to break a nucleon pair, thereby adding two valence neutrons. They are measured relative to the reference *ground state*.
 
 Density of States
@@ -16,6 +15,6 @@ $$
 \tag{2}
 \rho_A(E)=\frac{1}{12a^\frac{1}{4}(E-\Delta)^\frac{5}{4}}e^{2\sqrt{a(E-\Delta)}}\,.
 $$
-**(2)** is called the *backshifted* Ferm gas model.
+**(2)** is called the *backshifted* Fermi gas model.
 
 <!-- TODO flesh this out -->
