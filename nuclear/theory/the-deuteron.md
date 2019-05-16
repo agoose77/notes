@@ -86,6 +86,8 @@ $$
 &= \braket{-\vb{x}'}{\xi}\,.
 \end{aligned}
 $$
+<!-- TODO discuss true w.f. is (<r|⊗<S|) |a>, so we have spin w.f. <S|a_S> and position w.f. <r|a_r>
+-->
 For **(3)** to hold, the state ket $\ket{\xi}$ must be an eigenket of $\parity$ (to have definite parity) with an eigenvalue of $+1$. We can express a state ket as
 $$
 \ket{\xi} = \ket{\xi_\vb{r}}\otimes\ket{\xi_\vb{S}}\,.
@@ -165,7 +167,13 @@ Experimentally, the observed value in the ground state is $\mu=0.7574376 \pm 4\t
 $$
 \ket{\xi} = \Big(\alpha\ket{l=0} + \beta\ket{l=2}\Big)\otimes\ket{s=1}\,.
 $$
-With a maximal projection, $m_j=j$, and so it follows that $m_s+m_l=1$. Furthermore, from the [addition of the two spins](../../quantum-mechanics/two-particle-spin-half-states.md) it can be seen that $m_j$ and $m_l$ are 
+With a maximal projection, $m_j=j$, and so it follows that $m_s+m_l=1$, which permute as follows:
+| $m_s$ 	| $m_l$ 	| Spins                                   	|
+|-------	|-------	|-----------------------------------------	|
+| $0$   	| $1$   	| $\alpha\uparrow\downarrow+\beta\downarrow\uparrow$ 	|
+| $1$   	| $0$   	| $\uparrow\uparrow$                      	|
+| $-1$  	| $2$   	| $\downarrow\downarrow$                  	|
+
 <!-- TODO analysis of this mixture must come from form of dipole moment of nucleus. 
 https://en.wikipedia.org/wiki/Nuclear_magnetic_moment
 Samuel Wong: p.6
