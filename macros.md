@@ -107,6 +107,7 @@ $$
 \gdef\MeV{\operatorname{MeV}}
 \gdef\keV{\operatorname{MeV}}
 \gdef\eV{\operatorname{eV}}
+\gdef\m{\operatorname{m}}
 $$
 <!-- QM -->
 $$
