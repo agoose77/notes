@@ -1,53 +1,8 @@
-# Nuclear Electronics
+Nuclear Electronics
+===================
 
-## Analogue and digital pulses
-
-Analogue pulses are described by an instantaneous voltage amplitude
-$V(t)$, and the corresponding profile drawn by $V(t)$ over a given time
-interval $t_0\rightarrow t_1$.
-
-Although analogue signals apprear continuous, there are a number of
-physical constraints which determine the upper bound of the resolution
-of a signal, such as the presence of interference and the physical
-quantisation of charge.
-
-Digital pulses may carry the same amount of information, but encode the
-amplitude of a signal as an nbit number, conventionally in base 2.
-
-### Example
-
-Let us encode an analogue signal in the range
-$0\operatorname{V}\rightarrow 10\operatorname{V}$ into an integer of 16 bits.
-First, we divide the amplitude range into ($2^{16}$) bins of equal
-magnitude, and find the correspond bin for the input amplitude.
-
-Let us assume an input amplitude of 5 V. This would be quantised by the
-above algorithm into the $32768^{th}$ bin. This can be encoded into 16
-bits as _0b1000000000000000_.
-
-## Logic
-
-There are three major conventions used to represent logic values over
-analogue interfaces:
-
-1.  Transistor-TransistorLogic (TTL)
-
-2.  Nuclear Instrument Module (NIM)
-
-3.  Emitter Coupled Logic (ECL/CLM)
-
-The TTL convention defines a logical true value as a potential
-difference of +5 V with respect to ground, and a false value as 0 V p.d.
-with respect to ground.
-
-The NIM convention, on the other hand, defines a true value as -0.5 V
-w.r.t ground, and a false value as 0 V p.d. w.r.t ground.
-
-Finally, the ECL convention requires that two lines are used to carry a
-signal, each of an amplitude between -1.75 V and -0.75 V (true, false
-for A, & false, true for B)
-
-## Charge Collection
+Charge Collection
+-----------------
 
 For a silicon detector, the work function for a valence electron is
 $\sim 3.3\operatorname{eV}$, so for an incident $\alpha$ particle of 5 MeV, $\sim3\times10^4$ electrons are produced,
@@ -68,7 +23,8 @@ counter differ, the current at the anode and cathode will differ
 accordingly. Therefore, one must take the integral of the current over a
 counter from each branch.
 
-## Charge Sensitive Amplifier
+Charge Sensitive Amplifier
+--------------------------
 
 Typical amplifiers quantify the deposited energy of incident radiation
 as liberated charge. Consequently, it is desirable to measure the
@@ -76,23 +32,26 @@ charge, and not the amplitude, yielded by the detector. For this, one
 requires a "charge senstive amplifier".
 
 To develop a CSP (charge sensitive preamplifier), one can replace the
-second resistor $R_2$ in the previous configuration for a capacitor.
+second resistor $R_2$ of an [op-amp in the inverting configuration](operational-amplifiers.md) for a capacitor.
 
 The current through a capacitor is given by the relationship
 
 $$
+\begin{aligned}
 Q_c(t) &= CV_c(t) \\
-\frac{\mathrm{d}c}{\mathrm{d}t} = I_c(t) &= C\frac{\mathrm{d}c}{\mathrm{d}t}\,.\end{aligned}$$
+\frac{\mathrm{d}c}{\mathrm{d}t} = I_c(t) &= C\frac{\mathrm{d}c}{\mathrm{d}t}\,.
+\end{aligned}
+$$
 
+<!-- TODO define virtual earth -->
 Given that the virtual earth condition gives $V_-=0$, $V_c=-V_\text{out}$.
 The current across the capacitor is equal to the current through $R$, as the opamp has infinite resistance, and therefore we deduce the following relation
 $$
-
 \begin{aligned}
-I*c(t) &= -C\frac{\mathrm{d}V*\text{out}}{\mathrm{d}t}\\
-\int*0^t{I*\text{in} \,\mathrm{d} t} = Q*\text{tot}^{0\rightarrow t} &= -C\int_0^V{\,\mathrm{d} V*\text{out}} = CV*\text{out}(t) \\
-V*\text{out}(t) = -\frac{Q\_\text{tot}^{0\rightarrow t}}{C}\,.\end{aligned}
-
+I_c(t) &= -C\frac{\mathrm{d}V_\text{out}}{\mathrm{d}t}\\
+\int_0^t{I_\text{in} \,\mathrm{d} t} = Q_\text{tot}^{0\rightarrow t} &= -C\int_0^V{\,\mathrm{d} V_\text{out}} = CV_\text{out}(t) \\
+V_\text{out}(t) = -\frac{Q_\text{tot}^{0\rightarrow t}}{C}\,.
+\end{aligned}
 $$
 Hence, in this configuration, the output voltage is the integral of the
 current from the detector.
@@ -100,9 +59,20 @@ current from the detector.
 Finally, a resistor can be added in parallel with the capacitor to
 prevent saturation of the output (by discharging the capacitor)
 
-Filters
--------
+<!-- TODO impedence matching between low Z detector and high Z amplifier -->
 
+Amplifier
+---------
+For a preamplifier signal with a long decay time and short rise time
+(e.g $\tau_d=50\tau_r$), it can be first approximated to a step function.
+
+The first derivative of a step function _using a CR filter_ gives a step
+with an exponential tail.
+
+Integrating that signal with an RC filter yields a unipolar pulse, which
+can then be differentiated to give a bipolar pulse.
+
+#### Filters
 Basic highpass and lowpass filtering can be performed with [CR and RC
 circuits](rc-circuits.md), removing high and low frequencies respectively.
 
@@ -113,29 +83,18 @@ A [CR circuit](rc-circuits.md#CR-Mode), on the other hand, is a differentiator. 
 
 The use of both a high and low pass filter compresses the signal within
 a particular frequency range, which consequently maximises the signal to
-noise ratio.
+noise ratio. A CR and RC circuit can be combined to form an RC shaping amplifier,
+with the use of an x1 Buffer amplifier to decouple the two circuits (it
+has a very high input impedance). 
 
 Typically the RC/CR time constants $\tau$ are set equal to one another,
 and in the range for silicon detectors. It is important to choose a
 sensible value for $\tau$, as it defines both the bandwidth and the
 integration period of the amplifier. Where $\tau$ is less than the
 charge collection time of the detector, a phenomenon known as *ballistic
-deficit* is observed.
-
-Amplifier Pulse Shape
----------------------
-
-For a preamplifier signal with a long decay time and short rise time
-(e.g 50, 1), it can be first approximated to a step function.
-
-The first derivative of a step function *using a CR filter* gives a step
-with an exponential tail.
-
-Integrating that signal with an RC filter yields a unipolar pulse, which
-can then be differentiated to give a bipolar pulse.
+deficit* is observed (ballistic refers to the parabolic time dependence of the amplitude)
 
 ### The Undershoot Problem
-
 In reality, however, preamplifier pulses have the form of a step rise
 and exponential tail. When using a differentiation network where the
 time constant $\tau_d < \tau_p$ (time constants of differentiation
@@ -146,15 +105,18 @@ resolution.
 
 This can be solved with the addition of an extra resistor in parallel
 with the capacitor in the differentiation network, which modifiers the
-response to regain the exponential decay as follows
+response to regain the exponential decay (a process called pole-zero cancellation) as follows
 $$
+\tau'=\tau\frac{R_l}{R_l+R_{pz}}\,,
+$$
+where $R_l$ is the leakage resistor of the capacitor.
 
 With too much compensation, $\tau_d$ is modified such that it is greater
 than $\tau_p$, which leads to a deformed exponential tail, rather than a
 symmetrical unipolar pulse.
 
-## Pile Up
 
+### Pile Up
 At high count rates, subsequent pulses can form on the tail of an
 initial pulse, which leads to increasing pulse amplitudes. This
 phenomenon, known as _pile up_, depends upon the event rate and pulse
@@ -162,14 +124,10 @@ length, and gives rise to high energy tails on peaks in energy spectra.
 
 Pile up can be rejected, if a _pile up rejection_ pulse is generated
 when the incident pulse crosses a threshold in the positive direction.
-Where two rejection pulses appear in coincidence, the event is rejected
+Where two rejection pulses appear in coincidence, the event is rejected.
+<!-- TODO explain how pile up is resolved by RC shaping amp -->
 
-A CR and RC circuit can be combined to form an RC shaping amplifier,
-with the use of an x1 Buffer amplifier to decouple the two circuits (it
-has a very high input impedance)
-
-## Baseline shift
-
+### Baseline shift
 Because capacitors cannot conduct direct current, the _average_ dc
 voltage at any point behind the capacitor in an RC/CR circuit must be
 zero.
@@ -195,7 +153,8 @@ baseline shift by using bipolar pulses, whch have equal areas above and
 below the baseline. Another solution is to use a baseline restoration
 circuit, which resets the dc level to zero after each pulse
 
-## Discriminators
+Discriminators
+--------------
 
 ### First Level Discriminators
 

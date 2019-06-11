@@ -1,0 +1,19 @@
+DETECTOR
+Bias resistance to block current flow to HV
+Pull down resistance to block current flow to gnd
+Capacitance leads to noise accumulation - cable capacitance from double-wire config
+Pre-Aamp close to detector to reduce noise degredation on signal
+Amp further away on line signal
+PREAMP:
+Input resistor in inverting is chosen for impedence matching.
+Rise time 10ns-100ns for silicon
+Voltage of output signal kept small to prevent crosstalk.
+
+SHAPING:
+Smooths peak to reduce time variance sensitivity of sharp peak.
+
+SUCC-APPROX:
+SAMPLE & HOLD - mirror signal until peak (where we hold)
+Find peak via zero crossing of derivative
+Typically ADCs have 10V dynamic rane.
+~3us
