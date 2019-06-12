@@ -8,7 +8,7 @@ The experimental setup involves a thick target volume (usually a gas), where _th
 
 The beam energy spans a continuous range, with the maximum defined at the point following the entry window, and the minimum limited only by the scattering process. In order to reach the detectors, the detected particles must have a lower stopping power than the beam nuclei.
 
-The term _inverse kinematics_ refers to a beam with heavier nuclei than those of the target. In this configuration, the scattered light particles are confined to a cone of forward angles in the laboratory frame (for elastic scattering, see [the deflection angle in 2D scattering](../../mechanics/2D-non-relativistic-collisions.md#Deflection-Angle), which approaches zero as the beam to mass ratio increases), permitting the detectors to be placed solely at forward angles. Additionally, the cross section for Rutherford scattering (of the _target_ nuclei) is at a minimum along the beam (corresponding to $180\degree$ backscattering in the CoM frame).
+The term _inverse kinematics_ refers to a beam with heavier nuclei than those of the target. In this configuration, the scattered light particles are confined to a cone of forward angles in the laboratory frame (for elastic scattering, see [the deflection angle in 2D scattering](../../mechanics/2D-non-relativistic-collisions.ipynb#Deflection-Angle), which approaches zero as the beam to mass ratio increases), permitting the detectors to be placed solely at forward angles. Additionally, the cross section for Rutherford scattering (of the _target_ nuclei) is at a minimum along the beam (corresponding to $180\degree$ backscattering in the CoM frame).
 
 ## Time of Flight Discrimination
 
