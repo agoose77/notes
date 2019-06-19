@@ -120,7 +120,7 @@ $$
     G(x)=F(x)+C\,,
 $$
 
-such that $G$ and $F$ differ only by a constant. But using **(c)**,
+such that $G$ and $F$ differ only by a constant. But using **(c\)**,
 
 $$
 \begin{aligned}

@@ -69,26 +69,26 @@ Consider a transformation $T:\mathbb{R}^2\rightarrow\mathbb{R}$ which maps from 
 
 If $S\subseteq \mathbb{R}^2$ is a region in the $uv$ plane, on which $T$ is a one-to-one function, and $R=T(S)$, we might look to find an expression which relates an integral using $xy$ coordinates on $R$ to one using $uv$ coordinates on $S$.
 
-Let us define a small rectangle $L$ in a region of $S$, with vertices $\vec{o},\vec{p},\vec{q}$. Under $T$, the image of $L$ may be approximated (by Taylor expansion to first order) as:
+Let us define a small rectangle $L$ in a region of $S$, with vertices $\vb{o},\vb{p},\vb{q}$. Under $T$, the image of $L$ may be approximated (by Taylor expansion to first order) as:
 
 |  Vertex   |    Coordinate    |                  Transformation                  |
 | :-------: | :--------------: | :----------------------------------------------: |
-| $\vec{o}$ |     $(u,v)$      |            $\big(g(u,v),h(u,v)\big)$             |
-| $\vec{p}$ |  $(u+\Delta u)$  | $\left(g(u,v)+\frac{\partial g}{\partial u}\Big | _{u,v}\Delta u,h(u,v)+\frac{\partial h}{\partial u}\Big | _{u,v}\Delta u\right)$ |
-| $\vec{q}$ | $(u,v+\Delta v)$ | $\left(g(u,v)+\frac{\partial g}{\partial v}\Big | _{u,v}\Delta v,h(u,v)+\frac{\partial h}{\partial v}\Big | _{u,v}\Delta v\right)$ |
+| $\vb{o}$ |     $(u,v)$      |            $\big(g(u,v),h(u,v)\big)$             |
+| $\vb{p}$ |  $(u+\Delta u)$  | $\left(g(u,v)+\frac{\partial g}{\partial u}\Big | _{u,v}\Delta u,h(u,v)+\frac{\partial h}{\partial u}\Big | _{u,v}\Delta u\right)$ |
+| $\vb{q}$ | $(u,v+\Delta v)$ | $\left(g(u,v)+\frac{\partial g}{\partial v}\Big | _{u,v}\Delta v,h(u,v)+\frac{\partial h}{\partial v}\Big | _{u,v}\Delta v\right)$ |
 
-If we assume that $T$ is linear, then the image of $L$ under $T$ is a parallelogram with sides $\vec{p}-\vec{o}$, and $\vec{q}-\vec{o}$. We can find its area by calculating the cross product:
+If we assume that $T$ is linear, then the image of $L$ under $T$ is a parallelogram with sides $\vb{p}-\vb{o}$, and $\vb{q}-\vb{o}$. We can find its area by calculating the cross product:
 
 $$
 \begin{vmatrix}
-\vec{i} & \vec{j} & \vec{k}\\
+\vu{i} & \vu{j} & \vu{k}\\
 \frac{\partial g}{\partial u}(u,v)\Delta u & \frac{\partial h}{\partial u}(u,v)\Delta u & 0\\
 \frac{\partial g}{\partial v}(u,v)\Delta v & \frac{\partial h}{\partial v}(u,v)\Delta v & 0\\
 \end{vmatrix} =
-\left(\frac{\partial g}{\partial u}(u,v)\frac{\partial h}{\partial v}(u,v)- \frac{\partial h}{\partial u}(u,v)\frac{\partial g}{\partial v}(u,v)\right)\Delta u \Delta v \vec{k}\,,
+\left(\frac{\partial g}{\partial u}(u,v)\frac{\partial h}{\partial v}(u,v)- \frac{\partial h}{\partial u}(u,v)\frac{\partial g}{\partial v}(u,v)\right)\Delta u \Delta v \vu{k}\,,
 $$
 
-whose $\vec{k}$ component is the determinant of the _Jacobian matrix_ $J_T(u,v)$ of $T$, which is defined as
+whose $\vb{k}$ component is the determinant of the _Jacobian matrix_ $J_T(u,v)$ of $T$, which is defined as
 
 $$
 J_T(u_1, \dots, u_n)=
