@@ -49,20 +49,6 @@ There are several types of discontinuity which do not satisfy these conditions:
 
 ![Types of discontinuity](https://schoolbag.info/mathematics/ap_calculus/ap_calculus.files/image262.jpg)
 
-The limit form of the derivative
-$$
-\pdv{f}{x}\bigg|_{a} = \lim_{x\rightarrow a}\frac{f(x)-f(a)}{x-a}
-$$
-by definition *implies continuity* (using the product rule):
-$$
-\begin{aligned}
-\lim_{x\rightarrow a}\left(f(x)-f(a)\right) 
-&= \lim_{x\rightarrow a}\left(x-a\right) \frac{f(x)-f(x)}{x-a}\\
-&= \lim_{x\rightarrow a}\left(x-a\right)\cdot\lim_{x\rightarrow a}\frac{f(x)-f(x)}{x-a}\\
-&= 0\cdot\lim_{x\rightarrow a}\frac{f(x)-f(x)}{x-a}\\
-&= 0\;\qed
-\end{aligned}
-$$
 
 Properties
 ----------
