@@ -1,5 +1,17 @@
+Nuclear Masses
+==============
+
+Mass Excess
+-----------
+The mass excess is the difference between the true mass and atomic number.
+ $$
+ \Delta = \operatorname M(\atom{A}{X}) - A\,.
+ $$
+ It is not directly a measure of binding energy as the masses of the nucleons differ, and we do not include an electron binding contribution.
+
+
 Mass Doublet Method
-===================
+-------------------
 
 Nuclear masses can be measured to precisions of $10^{-6}$ using a mass spectroscope. Mass spectroscopes begin with an ion source, followed by a _velocity selector_ uses the Lorentz force (with perpendicular $E$ and $B$ fields) to select for a particular ion velocity given by
 

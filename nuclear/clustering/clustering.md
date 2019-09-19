@@ -1,28 +1,25 @@
-# Clustering
+Clustering
+==========
 
-In 1988, Ikeda proposed the following definition of a cluster:
+<!-- notes-->
+<!--
+Initially (Brink, Pauling) proposed geometric clustering configurations. Ikeda followed with 
+high BE of alpha means easy formation
+high first ex means remains unpeturbed[bailey]
+-->
+<!-- end notes -->
+Early Understanding
+-------------------
+In the early days of nuclear physics, it was proposed that nuclei could cluster in $\alpha$-conjugate particle structures, based upon the notion of $\alpha$-preformation in $\alpha$-decay. 
+  <div style="color: #004085;background-color: #cce5ff;border-color: #b8daff;position: relative;padding: .75rem 1.25rem;margin-bottom: 1rem;border: 1px solid transparent;border-radius: .25rem;">
 
-> [A] spatially localized substructure composed of strongly correlated nucleons[...] characterised by internally strong and externally weak interactions[... in which] α clustering is the most prominent.
+  #### $\alpha$ Conjugate Nuclei
 
-There are several concepts of a cluster which are consistent with this definition:
+  $\alpha$ conjugate nuclei have an equal and even number of protons and neutrons, such that they are effectively composed of $n\in Z$ $\alpha$ particles (in concept only).
 
-- Microscopic clusters (in which _all nucleons are described_ and the Pauli antisymmetrization is performed).
-- Clusters as structureless component particles.
-- Clusters as emitted nuclei.
-
-## Microscopic Clusters
-
-Introduced by Wheeler, microscopic clusters involve a molecular picture where
-
-> the constituent neutrons and protons are divided into various
-> groups (such as alpha-particles)
-
-These groups are the nuclear clusters. Wheeler also introduced an antismmetrized wave function, based upon α clusters, known as the [_resonating-group wave function_][1]).
-
----
-
-- $\alpha$ particles are more tightly bound than the average nucleus (per nucleon), so $\alpha$s can move throughout the nucleus relatively unpeturbed.
-- As the nuclear density falls to $\frac{1}{3}$ nominal, $\alpha$ clusters form from condensing nucleons. Associated with this condensation is a _preformation probability_.
+  </div>
+  
+  Associated with this condensation is a _preformation probability_.
 
   <div style="color: #004085;background-color: #cce5ff;border-color: #b8daff;position: relative;padding: .75rem 1.25rem;margin-bottom: 1rem;border: 1px solid transparent;border-radius: .25rem;">
 
@@ -32,37 +29,79 @@ These groups are the nuclear clusters. Wheeler also introduced an antismmetrized
 
   $S_\alpha$ is the probability that an $\alpha$ particle will form from four nucleons on the surface of the nucleus.
 
-    </div>
+</div>
+From this revelation several geometric configurations were proposed by Brink and Pauling.
 
-- Full shells maximise binding energy, so they have <span style="color:red">large associated jumps</span> in energy levels, e.g., $^{16}\text{O}$, $^{12}\text{C}$, which are _alpha conjugate_ nuclei.
 
-  <div style="color: #004085;background-color: #cce5ff;border-color: #b8daff;position: relative;padding: .75rem 1.25rem;margin-bottom: 1rem;border: 1px solid transparent;border-radius: .25rem;">
+In 1988, Ikeda then proposed the following definition of a cluster:
 
-  #### $\alpha$ Conjugate Nuclei
+> [A] spatially localized substructure composed of strongly correlated nucleons[...] characterised by internally strong and externally weak interactions[... in which] α clustering is the most prominent.
 
-  $\alpha$ conjugate nuclei have an equal and even number of protons and neutrons, such that they are effectively composed of $n\in Z$ $\alpha$ particles (in concept only).
+He suggested that a new cluster degree of freedom arises as a cluster decay threshold is approached or crossed:  
+![](ikeda.png)
 
-  </div>
-  Despite having considerable binding energies (implying stability within the mean field), $^{16}\text{O}$ and $^{12}\text{C}$ have relatively low energy first excited states and decay thresholds,
+There are several concepts of a cluster which are consistent with this definition:
+- Microscopic clusters (in which _all nucleons are described_ and the Pauli antisymmetrization is performed).
+- Clusters as structureless component particles.
+- Clusters as emitted nuclei.
 
-  > which results in their limited resistance against the destabilizing influence of other dynamics within the nucleus.
+$\alpha$+core structure
+-----------------------
+As the nuclear density falls to $\frac{1}{3}$ nominal, $\alpha$ clusters form from condensing nucleons.[^fulton.p4] This is predicted by theory, and suggests $\alpha$'s form on surface where density falls to zero over a skin-layer. This lead to the development of the $\alpha$+core model, which can be modelled by an effective two-body interaction.[^fulton.p4]  
+This effective potential describes the interaction between
+the $\alpha$ particle and the core as an average over
+the interactions between the individual nucleons.
 
-- In general, clustering arises in order to maximise the interactions (and hence binding) between nucleons. This can be seen with ab-initio (from first principles) Alpha Cluster Models (ACM) which constrain nucleons to a 2D plane:
-  <img alt="Alpha Cluster Model for 2D structures in a range of light nuclei." src="acm.png" width="500px" style="display: block;  margin-left: auto;  margin-right: auto;">
-  This can also be seen with Greens function Monte Carlo (GFMC) modelling of $^8\text{Be}$, which model the nucleon-nucleon interaction in terms of all two and three body components. As such, this is not an _effective interaction_ (which ignores local degrees of freedom), hence the ground state observed in $^8\text{Be}$ (see figure) may well actually be $\alpha$-$\alpha$ clustered.
+![Alpha core schematic, Fulton.](alpha-core-schematic.png)
 
-  <img alt="8Be ground state GFMC calculations." src="be.png" width="500px" style="display: block;  margin-left: auto;  margin-right: auto;">
-  Both AMC and GFMC are approaches to solving ab-initio calculations of the structure of light nuclei.
+Solving the two-body Schrödinger equation allows for excitations of the nucleus to be modelled as higher angular momentum and principle quantum number states. Further work has been to permit the core to be excited, rather than in its ground state. Longer term, efforts to develop a uniform effective interaction which describes many $\alpha$-core nuclei are underway.
+ 
+![Alpha core level scheme, Fulton.](alpha-core.png)  
 
-- $\alpha$ conjugate nuclei show a linear trend of binding energy per nucleon vs the number of $\alpha$-$\alpha$ bonds, which might imply that $\alpha$ particle exists in the ground state, and that there exists a _constant_ $\alpha$-$\alpha$ interaction (such that a linear trend is observed). In the current understanding, it is actually believed that the cluster structure is eroded in most ground states. From this work, however, a geometrical approach to clustering was postulated.
-- Later (1960s) it was realised that the cluster structure is not manifest in the ground state, but emerges as internal energy of the nucleus increases (there is an energy _barrier_ to clustering).
-  <img alt="Energy barrier due to mass difference of cluster." src="mass-difference.jpg" width="300px" style="display: block;  margin-left: auto;  margin-right: auto;">
-  Hence, when the components are brought together, a similar energy $\Delta m = m_c-m_0 - E_i$ (where $E_i$ is the _interaction energy_) is required to cluster. Similarly, as $\Delta m$ is the energy barrier to _separation_, the cluster will become unstable when the energy exceeds $\Delta m$. This establishes a small window $E_d \lt E \lt E_f$ between the decay and formation energies in which a cluster is stable. This result is summarised in the Ikeda diagram, which illustrates that each new cluster degree of freedom arises as a cluster decay threshold is approached or crossed:
-  <img alt="Ikeda picture illustrating how the cluster d.o.f. evolves as the excitation energy increases." src="ikeda.png" width="500px" style="display: block;  margin-left: auto;  margin-right: auto;">
-  At higher energies, greater numbers of cluster bonds leads to a greater number of degrees of freedom.
-- As well as energy driving clustering, there is also symmetries, which act to guide the formation of the clusteres themselves.
+> [...] if we were to take the wave function
+describing the nucleus and project out the density, it would
+appear that the matter was distributed as expected for the
+core and orbiting particle. Of course we can never `freeze’
+the system and what we see is a time average of the particle motion, making it harder to see the cluster features.
+However, to all intents and purposes the nucleus can behave as if it were comprised of the core and orbiting alpha particle and the way in which it responds to the input of energy and angular momentum reflects this picture[^fulton.p7]
 
-[1]: https://iopscience.iop.org/article/10.1088/1742-6596/569/1/012092/pdf
-[2]: https://arxiv.org/abs/1705.06192
 
-<!-- All images credit to original author unless otherwise stated -->
+<!-- TODO mention other types of cluster particles -->
+
+Nuclear Molecules
+-----------------
+
+In the low energy scattering of light $4n$ nuclei, instead of a smooth curve, one with resonances is observed.
+
+![Resonances of scattering of 12C on 12C.](resonances.png)
+
+If these peaks are explained by the formation of intermediate states, then it follows that we can estimate their lifetimes from $\Delta E\Delta t\approx\frac{\hbar}{2}$, which yields values far exceeding the time taken for the two nuclei to pass one another. This strongly implies the creation of a "molecular state", i.e. the formation of a compound nucleus formed of the two nucleons in the beam and target. This picture resembles that of the $\alpha$+core model, but for far larger clusters. To confirm the existence of such clusters, one can characterise the energy of excited states by an excitation function based upon that of an atomic molecule, with vibrational and rotational modes. One such function is the Morse potential, 
+$$\tag{1}
+    E(v,L) = aL(L+1)+b\left(v+\frac{1}{2}\right)+c\left(v+\frac{1}{2}\right)^2+d\,,
+$$
+where $a,b,c,d$ are constants, and $L$ the rotational and $v$ the vibrational quantum numbers of the molecule. The first term characterises the rotational excitement and the second two terms the vibrational excitation of the molecule. States with known $L$ can be agree with the model for $\atom{12}{C}$, and those whose spins are not known can be inferred from the missing members of the rotational and vibrational bands of the model.
+
+![Vibrational and rotational bands for 12C + 12C](vibrational.png)
+
+Convincing evidence of this molecular structure (versus alternate theories) could be provided in the observation of $\gamma$ transitions between adjacent rotational states (bands), whose lifetimes could be measured and compared with theory.
+
+One can perform other experiments to observe this molecular structure. Inelastic scattering between a projectile and target leaves the projectile in an excited state. The subsequent breakup reaction of this projecile can be reconstructed to determine the yield as a function of molecular energy and angle $N\mleftright{(}{E_x,\theta}{)}$.
+From the variation of $N$ with $\theta$ we can determine the spin of the state.
+
+![Projectile nuclear reconstruction.](nuclear-collision.png)
+
+Indeed observing that 
+$$
+E_x\propto \frac{h^{2} J(J+1)}{2 \mathcal{J}}\,,
+$$
+where $\mathcal{J}$ is the moment of inertia,
+one could determine $J$ from $E_x$.
+
+### Theoretical Models
+The Nilsson-Strutinsky model uses a mixture of shell model and liquid drop model to calculate the energy of the deformed molecular nucleus. It sums over the shell model energies of the nucleons, and adds to this a surface energy term. Deformations to the nucleus modify both the shell model potential and the surface energy. Varying the deformation leads to an understanding of how the nucleus energy changes with shape. This is plotted on a potential energy surface, where the angle $\gamma$ denotes prolate or oblate symmetry, and $\beta$ quantifies the degree of deformation.
+
+![Nilsson-Strutinsky surface for 24Mg (12C+12C).](nilsson.png)
+
+In the above figure there are evidently minima which represent preferred shapes $(\beta, \gamma)$ for the nucleus. Besides the slightly prolate *undeformed* minimum corresponding to the ground state of $\atom{24}{Mg}$, there is a secondary minimum which is consistent with a $\atom{12}{C} + \atom{12}{C}$ structure.
+
+<!-- alpha chains with Brink's model agreeing with the Nilsson Strutinsky model -->

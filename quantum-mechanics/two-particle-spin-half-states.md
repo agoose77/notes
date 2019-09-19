@@ -36,7 +36,7 @@ The triplet states can be found in the direct product basis by repeatedly applyi
 | $\ket{1,\ 0}$ | $\frac{1}{\sqrt{2}}\left(\ket{+}_1\otimes\ket{-}_2+\ket{-}_1\otimes\ket{+}_2\right)$ |
 | $\ket{1,-1}$ | $\ket{-}_1\otimes\ket{-}_2$ |
 
-As we must have the same number of states in either basis, the remaining state is the _singlet_ state $\ket{0,0}$. Like $\ket{1,0}$, it will be a superposition of states (Bell states[^4]) in order for $\S_z=0$ and $\S^2\ket{0,0}=0$.
+Note that all of these states are *symmetric* under particle exchange. As we must have the same number of states in either basis, the remaining state is the _singlet_ state $\ket{0,0}$. Like $\ket{1,0}$, it will be a superposition of states (Bell states[^4]) in order for $\S_z=0$ and $\S^2\ket{0,0}=0$. 
 
 ### Finding the Singlet State in the Direct Product Basis
 
@@ -83,7 +83,7 @@ $$
 \ket{0,0} = k\left(\ket{+}_1\otimes\ket{-}_2 - \ket{-}_1\otimes\ket{+}_2 \right)\,,
 $$
 
-where $k$ is typically taken to be $\frac{1}{\sqrt{2}}$ in order to normalise the state. This result can also be found from the symmetry requirement of the state.[^2][^3]
+where $k$ is typically taken to be $\frac{1}{\sqrt{2}}$ in order to normalise the state. This result can also be found from the symmetry requirement of the state.[^2][^3] The singlet state is evidently *anti-symmetric* under particle exchange.
 
 <!-- W
 

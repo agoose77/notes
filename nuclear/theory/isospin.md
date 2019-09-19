@@ -1,0 +1,5 @@
+Isospin
+=======
+Nucleon interactions with surroundings *rarely* depend upon the value of the spin axis projection, but rather its multiplicity (e.g. multiplicity 2 for spin-$\frac{1}{2}$). One exception to this is observed in the Stern-Gerlach experiment which employs a magnetic field to split a beam of atoms with an unpaired spin-$\frac{1}{2}$ electron into two distinct beams.
+
+In a similar manner, due to the charge independence of the nuclear force we rarely need to discern between a neutron and a proton, *considering only the multiplicity*, and can group them together as nucleons. Analogously to spin, this independence disappears in the presence of an electric field. This two-fold nucleon degeneracy lends itself to a spin-$\frac{1}{2}$ formalism, where this **isospin** $T$ may be denoted by two linearly independent vectors $T_\uparrow$ and $T_\downarrow$. 

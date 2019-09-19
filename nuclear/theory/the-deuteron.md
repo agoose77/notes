@@ -4,7 +4,7 @@ A deuteron $\atom{2}{H}$ is the simplest bound state of nucleons, consisting of 
 
 ## Binding Energy
 
-The [binding energy](binding-energy.md#Binding-Energy) of the deuteron is precisely known, using techniques such as [the mass doublet method](binding-energy.md#Mass-Doublet-Method), which gives[^krane]
+The [binding energy](binding-energy.md#Binding-Energy) of the deuteron is precisely known, using techniques such as [the mass doublet method](binding-energy.md#Mass-Doublet-Method), which gives[^krane.81]
 
 $$
 \tag{1}
@@ -56,7 +56,7 @@ though one could also express $I$ in terms of the total orbital and spin operato
 $$
 \vb{\hat{I}} = \vb{\hat{L}} + \vb{\S}\,.
 $$
-From [addition of the two spins](../../quantum-mechanics/two-particle-spin-half-states.md), the total spin $S$ has a singlet state $\ket{s=0;m_s=0}$ and a triplet state $\ket{s=1;m_s=\pm 1,0}$
+From [addition of the two spins](../../quantum-mechanics/two-particle-spin-half-states.md), the total spin $S$ has a singlet state $\ket{s=0;m_s=0}$ and a triplet state $\ket{s=1;m_s=\pm 1,0}$.
 In nature, the deuteron is observed to have $I=1$. We may determine which states couple to produce $I=1$, given that $S\in\set{0,\,1}$ and $L\geq 0$:
 
 | $l$ 	| $s$ 	| $\set{I}$         	|
@@ -68,7 +68,9 @@ In nature, the deuteron is observed to have $I=1$. We may determine which states
 | 2   	| 0   	| $\set{2}$         	|
 | 2   	| 1   	| $\set{\mathbf{1},\,2}$     	|
 
-It can be seen that there are four ways to couple $L$ and $S$ to produce $I=1$. 
+It can be seen that there are four ways to couple $L$ and $S$ to produce $I=1$.
+
+NB Because an $s=0$ state is not observed (as the Deuteron is $J^\pi=1^+$), it follows that the nuclear force must be spin dependent to forbid the singlet state.[^krane.100]
 
 Parity
 ------
@@ -93,6 +95,7 @@ $$
 \ket{\xi} = \ket{\xi_\vb{r}}\otimes\ket{\xi_\vb{S}}\,.
 $$
 <!-- TODO: is this definition of parity (i.e. only acts on position space) valid? : http://www.pas.rochester.edu/~passage/resources/prelim/Quantum/UCB%20Notes/19%20parity.pdf -->
+<a style="color:red">TODO this isn't correct - parity is defined for spin ang-mom space. Add notes on even/odd-ness under parity transformation (pi^dagger X pi = f(X)<a>
 NB the parity of the wavefunction depends solely upon the position ket, as
 $$
 \parity = \parity_\vb{r}\otimes1_\vb{S}\,,
@@ -195,4 +198,5 @@ Hamiltonian
 * If the ground state is angular momentum eigenket, then $\comm{H}{L^2}=0$, hence in the angular momentum eigenbasis, $H$ would be diagonal.
 
 [^wong.62]: Samuel S. M. Wong, Introductory Nuclear Physics, 2. ed. ed. (Wiley, New York [u.a.], 1998), p. 64.
-[^krane]: Kenneth S. Krane, Introductory nuclear physics, (Wiley, New York u.a, 1987), p. 81.
+[^krane.81]: Kenneth S. Krane, Introductory nuclear physics, (Wiley, New York u.a, 1987), p. 81.
+[^krane.100]: Kenneth S. Krane, Introductory nuclear physics, (Wiley, New York u.a, 1987), p. 100.

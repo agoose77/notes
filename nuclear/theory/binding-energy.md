@@ -24,14 +24,9 @@ $$
 \tag{b}
 B = \left(Zm(\atom{1}{H}) + Nm_n - m(\atom{A}{X})\right)c^2\,.
 $$
-Although the electron binding energy contribution is not reproduced correctly, this is negligible. In order to determine the _atomic_ masses, some tables give the _mass excess_
+Although the electron binding energy contribution is not reproduced correctly, this is negligible. In order to determine the _atomic_ masses, some tables give the [mass excess](nuclear-masses.md#Mass-Excess).
 
-$$
-\tag{c}
-\Delta = m(\atom{A}{X}) - A\,.
-$$
 
-This value is _not_ directly a measure of binding energy, as the mass given by the atomic number is _relative_ to the mass of ${}^{12}\text{C}$.
 $\gdef\BpA{\overline{B_A}}$
 The binding energy of a nucleus tends to increase linearly with the number of nucleons $A$. The average binding energy per nucleon $\BpA$ is approximately $8\unit{\MeV}$. In the figure below of the specific binding energy for the most stable member of each [isobar](basic-concepts.md), there are two visible regions $A<60$ and $A>60$, in which the binding energy increases and decreases respectively.
 ![Binding energy per nucleon.](https://upload.wikimedia.org/wikipedia/commons/5/53/Binding_energy_curve_-_common_isotopes.svg)
