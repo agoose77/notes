@@ -14,7 +14,7 @@ I_\text{max} &= m_\text{max}\,.
 \end{aligned}
 $$
 
-Furthermore, it is observed that all even-$Z$ even-$N$ nuclei have spin-$0$ ground states. This provides evidence for the nuclear pairing force term in the [semi empirical mass formula](binding-energy.md#Parity), as the nucleons couple in pairs to spin $J=0$. This coupling occurs such that they occupy time-reversed spin-antialigned orbits[^1], leaving the nuclear angular momentum $I=0$. In addition, odd-$A$ nuclei therefore must behave $I$ equal to the $j$ of the odd proton or neutron.
+Furthermore, it is observed that all even-$Z$ even-$N$ nuclei have spin-$0$ ground states. This provides evidence for the nuclear pairing force term in the [semi empirical mass formula](binding-energy.md#Parity), as the nucleons couple in pairs to spin $J=0$. This coupling occurs such that they occupy time-reversed spin-antialigned orbits[^1], leaving the nuclear angular momentum $I=0$. It is this pairing energy ($\tilde1\MeV$) that leads to the first excited states of even-even nuclei being at least $1\MeV$ above the ground state. It follows that odd-$A$ nuclei therefore must behave $I$ equal to the $j$ of the odd proton or neutron. 
 In addition to nuclear spin, the [parity](../../quantum-mechanics/parity.md) is also used to label nuclear states, in the form $I^\pi$ e.g. $I^-$ or $I^+$.
 
 
