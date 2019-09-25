@@ -21,7 +21,7 @@ Bottom: schematic overlaps of these distributions.*
 
 In the above figure, it is evident that the overlap of nucleons in substates of different $\abs{m_l}$ is very small. Only if the nucleons have the same $\abs{m}$ does a strong interaction between both take place.[^moshe.203]
 
-The pairing energy *increases* with orbital angular momentum.[^cam.13]
+The pairing energy *increases* with orbital angular momentum $l$ of the shell.[^cam.13]
 
 Staggering - results from different nucleons not requiring antisymmetry 
 
