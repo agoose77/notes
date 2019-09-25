@@ -21,13 +21,15 @@ Bottom: schematic overlaps of these distributions.*
 
 In the above figure, it is evident that the overlap of nucleons in substates of different $\abs{m_l}$ is very small. Only if the nucleons have the same $\abs{m}$ does a strong interaction between both take place.[^moshe.203]
 
+The pairing energy *increases* with orbital angular momentum.[^cam.13]
+
 Staggering - results from different nucleons not requiring antisymmetry 
 
 Deformations
 ------------
 Closed (singly & doubly) shell nuclei resemble spherical structures (from their $Q$). However, open shell nuclei often have deformed structures. 
 
-Nuclei which are deformed no longer possess good rotational symmetry. Deformation is implied by a nonzero quadrupole moment of $J \geq 1$, which indicates an non-spherical charge distribution. Below $J=1$ quantum fluctuations average the $Q$ to zero and hence even-even nuclei have $Q=0$ *regardless of their true shape*.[^fonm.39]
+Nuclei which are deformed no longer possess good rotational symmetry. Deformation is implied by a nonzero quadrupole moment of $J \geq 1$, which indicates an non-spherical charge distribution. Below $J=1$ quantum fluctuations average thehttps://www.hep.phy.cam.ac.uk/~chpotter/particleandnuclearphysics/Lecture_14_StructureOfNuclei.pdf $Q$ to zero and hence even-even nuclei have $Q=0$ *regardless of their true shape*.[^fonm.39]
 
 Rotation of nuclei with large quadrupole moments leads to the emission of electric quadrupole (E2) radiation, and hence $E(2)$ transition rates will increase with deformation. It follows that $B(E2)$ and $Q(2^+)$ are indicators of deformation.
 
@@ -59,3 +61,4 @@ Spherical Shell Model
 [^fonm.39]: David J. Rowe and John L. Wood, Fundamentals of nuclear models, (World Scientific Publ, Singapore u.a, 2010), p. 39.
 [^fonm.44]: David J. Rowe and John L. Wood, Fundamentals of nuclear models, (World Scientific Publ, Singapore u.a, 2010), p. 44.
 [^krane.74]: Kenneth S. Krane, Introductory nuclear physics, (Wiley, New York u.a, 1987), p. 74.
+[^cam.13]: https://www.hep.phy.cam.ac.uk/~chpotter/particleandnuclearphysics/Lecture_14_StructureOfNuclei.pdf, p. 13.
