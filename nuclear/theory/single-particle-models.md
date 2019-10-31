@@ -29,7 +29,7 @@ Deformations
 ------------
 Closed (singly & doubly) shell nuclei resemble spherical structures (from their $Q$). However, open shell nuclei often have deformed structures. 
 
-Nuclei which are deformed no longer possess good rotational symmetry. Deformation is implied by a nonzero quadrupole moment of $J \geq 1$, which indicates an non-spherical charge distribution. Below $J=1$ quantum fluctuations average thehttps://www.hep.phy.cam.ac.uk/~chpotter/particleandnuclearphysics/Lecture_14_StructureOfNuclei.pdf $Q$ to zero and hence even-even nuclei have $Q=0$ *regardless of their true shape*.[^fonm.39]
+Nuclei which are deformed no longer possess good rotational symmetry. Deformation is implied by a nonzero quadrupole moment of $J \geq 1$, which indicates an non-spherical charge distribution. Below $J=1$ quantum fluctuations average the $Q$ to zero and hence even-even nuclei have $Q=0$ *regardless of their true shape*.[^fonm.39]
 
 Rotation of nuclei with large quadrupole moments leads to the emission of electric quadrupole (E2) radiation, and hence $E(2)$ transition rates will increase with deformation. It follows that $B(E2)$ and $Q(2^+)$ are indicators of deformation.
 
