@@ -3,7 +3,7 @@
 From the [fundamental theorem of calculus](calculus/fundamental-theorem-of-calculus.md#First-Fundamental-Theorem-of-Calculus),
 
 $$
-\dv{}{x}\ln(x)=\dv{x}\int_1^x\frac{1}{t}\dd t=\frac{1}{x}\,.
+\dv{}{x}\ln(x)=\dv{}{x}\int_1^x\frac{1}{t}\dd t=\frac{1}{x}\,.
 $$
 
 Now, let $x\in\mathbb{R}$ be some fixed constant, and
