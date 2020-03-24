@@ -2,29 +2,26 @@ Binding Energy
 ==============
 
 The mass energy $m_Nc^2$ of a nuclide is given in terms of the nuclide's _atomic_ mass energy $m_Ac^2$, the mass energy of its electrons, and their respective binding energies $B_i$:
-
 <!-- Here the mass of the atom excludes the binding energy, so we restore it first before subtracting the isolated electron masses -->
-
 $$
-\tag{a}
 m_Nc^2 = m_Ac^2+\sum_{i=1}^ZB_i-Zm_ec^2\,.
 $$
-
 Conventionally, we neglect the contribution from the electronic binding energies, as they are on the order of $\sim10\operatorname{-}100\unit{\keV}$ vs $ A\times1000\unit{\MeV}$
 
 The _binding energy_ $B$ of the nucleus is the difference in mass energy between the nucleus and its constituent protons and neutrons,
-
 $$
+\tag{a}
 B = \left(Zm_p + Nm_n - \left[m(\atom{A}{X})-Zm_e\right]\right)c^2\,.
 $$
-
-This expression may be rewritten to use the atomic mass of $\atom{1}{H}$.
-
+**\(a\)** may be rewritten to use the atomic mass of $\atom{1}{H}$:
 $$
-\tag{b}
 B = \left(Zm(\atom{1}{H}) + Nm_n - m(\atom{A}{X})\right)c^2\,.
 $$
 Although the electron binding energy contribution is not reproduced correctly, this is negligible. In order to determine the _atomic_ masses, some tables give the [mass excess](nuclear-masses.md#Mass-Excess).
+Binding energy may also be given in terms of the *mass deficit*
+$$
+M_d = -\frac{B}{c^2}\,.
+$$
 
 
 $\gdef\BpA{\overline{B_A}}$
@@ -63,4 +60,4 @@ If the binding energy increases with removal of a nucleon, it is an energeticall
 
 
 [^wong.10-11]: Samuel S. M. Wong, Introductory Nuclear Physics, 2. ed. ed. (Wiley, New York [u.a.], 1998), pp. 10-11.
-[^pairs]: $n(n-1)$ gives the number of unique pairs $(\alpha_i, \alpha_J)\neq (\alpha_j,\alpha_i)$, hence we divide by a factor of two to eliminate this double counting.
+[^pairs]: $n(n-1)$ gives the number of unique pairs $(\alpha_i, \alpha_j)\neq (\alpha_j,\alpha_i)$, hence we divide by a factor of two to eliminate this double counting.

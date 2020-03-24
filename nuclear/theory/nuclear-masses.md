@@ -5,9 +5,9 @@ Mass Excess
 -----------
 The mass excess is the difference between the true mass and atomic number.
  $$
- \Delta = \operatorname M(\atom{A}{X}) - A\,.
+ \Delta = \operatorname M(\atom{A}{X}) - Am_u\,.
  $$
- It is not directly a measure of binding energy as the masses of the nucleons differ, and we do not include an electron binding contribution.
+ It is not directly a measure of binding energy as the masses of the nucleons differ (whilst we use $\m_u$ as an average), and we do not include an electron binding contribution. $\Delta$ is *frequently used in reaction equations* where (under conservation of nucleons) the second terms ultimately sum to zero.
 
 
 Mass Doublet Method

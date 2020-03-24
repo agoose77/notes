@@ -1,0 +1,3 @@
+[submodule "katex-macros"]
+	path = katex-macros
+	url = https://github.com/agoose77/katex-macros.git
