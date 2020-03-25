@@ -3,16 +3,14 @@ Reactions
 
 Nuclear reactions are typically written in the form $X(a,b)Y$, which is effectively shorthand for $a+X\rightarrow Y+b$, where $a$ is the projectile, $X$ the target, and $b,Y$ the products.
 
-N.b. let $m_X$ be the _rest mass_ of $X$.
-
 Q Value
 -------
 In any reaction, the total energy is conserved, i.e.
 $$
 \tag{a}
-T_a + m_ac^2 + T_X + m_Xc^2 = T_b + m_bc^2 + T_Y + m_Yc^2\,.
+T_a + m_ac^2 + T_X + m_Xc^2 = T_b + m_bc^2 + T_Y + m_Yc^2\,,
 $$
-The Q value of the reaction is simply the change in mass energy
+where $m_X$ is the _rest mass_ of $X$. The *Q value* of the reaction is simply the change in mass energy
 $$
 \begin{aligned}
 \tag{b}
