@@ -38,16 +38,6 @@ The null space has several properties:
   - If $\vb{v_1},\vb{v_2}\in V$, then $L(\vb{v_1}+\vb{v_2})=L(\vb{v_1})+L(\vb{v_2})=\vb{0}_W\in W$.
   - If $c\in \mathbb{R}$, then $L(c\vb{v_1})=cL(\vb{v_1})=\vb{0}_W$.
 
-### Image
-
-The image of a linear mapping is the subset of the mapping's codomain to which maps its domain:
-
-$$
-L[V] = \set{w\in W : w=L(v) \,\forall\, v \in V}\,.
-$$
-
-$L[V]$ is a subspace of $W$.
-
 ---
 
 ## Linear Functional

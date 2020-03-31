@@ -15,14 +15,21 @@ The group property under the binary operation of matrix multiplication $(\cdot\t
 * There exists an inverse (by definition) for all invertible matrices (*inverse element*)
 </div>
 
-A matrix series $\mathbf{A_m}$ is said to converge to some matrix $\mathbf{A}$ if each element $kl$ of $\mathbf{A_m}$ converges to the corresponding element of $\mathbf{A}$, i.e. $(A_m)_{kl}\rightarrow A_{kl} \forall\,kl$.
+<div style="padding:15px;margin-bottom:20px;border:1px solid transparent;border-radius:4px;color:#31708f;background-color:#d9edf7
+;border-color:#bce8f1;">
 
+### Convergence
+A matrix series $\mathbf{A_m}$ is said to converge to some matrix $\mathbf{A}$ if each element $kl$ of $\mathbf{A_m}$ converges to the corresponding element of $\mathbf{A}$, i.e. $(A_m)_{kl}\rightarrow A_{kl} \forall\,kl$.
+</div>
+    
 <div style="padding:15px;margin-bottom:20px;border:1px solid transparent;border-radius:4px;color:#31708f;background-color:#d9edf7
 ;border-color:#bce8f1;">
     
 ### Matrix Lie Group
 <!-- Here the semicolon distinguishes variables but is semantically identical to a comma -->
-A matrix Lie group is any subgroup G of $\operatorname{GL}(n;\mathbb{C})$ 
+A matrix Lie group is any subgroup G of $\operatorname{GL}(n;\mathbb{C})$ which satisfies the following:
+    
+> If $A_m$ is a sequence of matrices in $G$ and $A_m$ converges to some matrix $A$ then either $A\in G$ or $A$ is not invertible.[^hall]
 </div>
 
 * The geometric link between a Lie group and its Lie algebra is the fact that the Lie algebra can be viewed as the tangent space to the Lie group at the identity.[^geom]
