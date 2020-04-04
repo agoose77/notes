@@ -37,6 +37,9 @@ Where $\land$ is logical AND.
 | Symmetric Difference | $A\bigtriangleup B$ |  $(A\setminus B)\cup (B\setminus A)$  |
 |     Cardinality      |  $\lvert A\rvert $  |        Number of elements in A        |
 
+## Partition
+The partition of a set $S$ is the decomposition of $S$ into non-empty, non-intersecting subsets, i.e. $S = P_1 \cup P_2 \cup \dots \cup P_N$, where $P_i \cap P_j = \emptyset$ for $i \neq j$.
+
 ## Reserved Symbols
 
 |    Symbol    |                 Name                 |

@@ -93,6 +93,16 @@ $$
     V_4 = \braket{v,h}{v\circ v=e,h\circ h=e, v\circ h = h\circ v}
 $$
 
+
+Coset
+-----
+Given a subgroup $H\subset G$, the *left*-coset $gH$ for each element $g\in G$ is defined as
+$$
+g\circ H = \set{g\circ h : h \in H}\,.
+$$
+Analogously, one can also define the *right*-coset.
+<!-- It seems that frequently people choose additive or multiplicative notation instead of the explicit `\circ` notation, but I prefer the explicit form. -->
+
 Examples
 ---------
 
