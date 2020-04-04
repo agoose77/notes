@@ -1,7 +1,7 @@
 Group Coset Partition Theorem
 =============================
 
-Given a group $G$ and subgroup $H\subseteq G$, it can be shown that each coset of $H$ contains the same number of members as $H$ and the collection of (distinct) cosets of $H$ partition $G$.
+Given a group $G$ and subgroup $H\subseteq G$, it can be shown that each coset of $H$ contains the same number of members as $H$ and the collection of (distinct) cosets of $H$ partition $G$.[^partition]
 
 <!-- TODO: prove stmt 1. -->
 
@@ -33,3 +33,5 @@ $$
 Given **(b)** and **(c\)**, it follows that $a \in a \circ H$ and $a \in b \circ H$ iff. $a=b$. In other words, each element of $a\in G$ is a member of only the coset formed by $a\circ H$, and thus the cosets $a\circ H \forall\, a \in G$ partition $G$. 
 
 <!-- TODO what about auxillary elements? -->
+
+[^partition]: http://ksuweb.kennesaw.edu/~sellerme//sfehtml/classes/math4361/chapter5section1outline.pdf
