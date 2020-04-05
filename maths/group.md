@@ -96,11 +96,13 @@ $$
 
 Coset
 -----
-Given a subgroup $H\subset G$, the *left*-coset $gH$ for each element $g\in G$ is defined as
+Given a subgroup $H\subseteq G$, the *left*-coset $gH$ for each element $g\in G$ is defined as
 $$
 g\circ H = \set{g\circ h : h \in H}\,.
 $$
 Analogously, one can also define the *right*-coset.
+
+[It can be shown](group-coset-partition-theorem.md) that the cosets of $H$ [partition](set.md#Partition) the group $G$.
 <!-- It seems that frequently people choose additive or multiplicative notation instead of the explicit `\circ` notation, but I prefer the explicit form. -->
 
 Examples
