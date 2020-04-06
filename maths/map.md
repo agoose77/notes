@@ -18,7 +18,7 @@ Relations
 There are several terms used to describe the relations between the domain $X$ and codomain $Y$:
 
 Injective *(one-to-one)*
- ~ A one-to-one mapping such that $\forall\, x\in X$ there is *at most* one element of $Y$ mapped onto $x$.  
+ ~ A one-to-one mapping such that $\forall\, x\in X$ there is *at most* one element of $Y$ mapped onto by $x$.  
  E.g. $\phi(x)=x^3-x$ is not injective, as $\phi(1) = \phi(-1)$.  
  ![](https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Injection.svg/200px-Injection.svg.png)
  
@@ -28,5 +28,7 @@ Surjective *(onto)*
  ![](https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Surjection.svg/200px-Surjection.svg.png)
 
 Bijective *(one-to-one and onto)*
- ~ A map which is both injective and surjective. Also known as *invertible*, i.e. there exists an *inverse map* $\phi^{-1}\colon X\rightarrow Y$ such that $\phi^{-1}(\phi(a)) = a$.  
+ ~ A map which is both injective and surjective. Also known as *invertible*, i.e. there exists an *inverse map* $\phi^{-1}\colon X\rightarrow Y$ such that $\phi^{-1}(\phi(a)) = a$. A map is invertible iff. it is a bijection.[^invertible.iff]
  ![](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Bijection.svg/200px-Bijection.svg.png)
+ 
+[^invertible.iff]: https://en.wikipedia.org/wiki/Bijection#Inverses

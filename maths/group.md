@@ -124,6 +124,31 @@ $$
 \abs{G} = \abs{g_1\circ H} + \abs{g_2\circ H} + \dots + \abs{g_n\circ H}\,.
 $$
 [It can be shown](group-coset-partition-theorem.md) that $\abs{g_i H} = \abs{H}$, and therefore$\abs{G} = n\abs{H}$.
+<!-- TODO: Group action -->
+
+Action
+------
+The action of a group $G$ is a map of the group on a set $X$ compatible with the group structure, i.e. let $\phi\colon G\times X \rightarrow X$, where we shall write $\phi(g, x)\rightarrow g\rhd x$ for $g\in G\,, x\in X$.
+
+$\phi$ is the group action iff.[^wiki.action]
+1. Identity  
+$e\rhd x = x$
+2. Compatibility  
+$\pqty{g_1 \circ g_2}\rhd x = g_1 \rhd \pqty{g_2\rhd x}$ for $g_1, \,g_2 \in G$.
+
+Examples of the group action include the *trivial action* $g\rhd x = x$, or $G$ acting upon itself ($X=G$) by multiplication ($g\rhd x = g\circ x$) or conjugation $g\rhd x = g\circ x \circ g^{-1}$.[^soq]
+
+The group action is a *homomorphism*. Let $\phi_g(x) = g\rhd x$ . If $Q(X)$ is the set of all functions which are [bijections](group-action-is-bijective.md) of $X$ onto itself, then $\phi_g \in Q(X)$. Now, we consider whether the group action respects the group structure. To ease subsequent expressions, we may define the map $\mu(g) = \phi_g$. Given $x \in X$, we have
+$$
+\begin{aligned}
+    \mu(g_1\circ g_2)(x) 
+        &= \phi_{g_1\circ g_2}(x)\\
+        &= g_1\rhd g_2 \rhd x\\
+        &= g_1 \rhd \phi_{g_2}(x)\\
+        &= \phi_{g_1}(\phi_{g_2}(x))\,,
+\end{aligned}
+$$ 
+for $g_1, \,g_2 \in G$. If we define the group operation on $Q$ to be the function composition operator $\pqty{f \circ g}(x) = f(g(x))$, then finally $$\mu(g_1\circ g_2) = \mu(g_1)\circ \mu(g_2)\,.$$
 
 Examples
 ---------
@@ -133,10 +158,15 @@ Examples
 An Abelian Group (or commutative group) is a group in which the result of applying the group operation does not depend upon the order of the elements upon which it operates, e.g. $$a\circ b=b\circ a$$
 
 An example of Abelian groups is the integers under addition $(\mathcal{Z},\circ +)$ as
-$$1+2 = 2+1\,.$$
+$$
+    1+2 = 2+1\,.
+$$
 
 
 
 [^group-theory]: https://www2.ph.ed.ac.uk/~rzwicky2/SoQM/romanSoQM_2015.pdf
 [^group-calculator]: http://www.math.clemson.edu/~macaule/classes/m19_math4120/slides/math4120_lecture-1-04_h.pdf
 [^presentation]: https://www.youtube.com/watch?v=bjytiO5kRjw
+[^lie]: https://homepage.univie.ac.at/harold.steinacker/Liegroups2010-part1.pdf
+[^soq]: https://www2.ph.ed.ac.uk/~rzwicky2/SoQM/romanSoQM_2015.pdf
+[^wiki.action]: https://en.wikipedia.org/wiki/Group_action#Definition
