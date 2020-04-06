@@ -107,11 +107,11 @@ Analogously, one can also define the *right*-coset.
 
 [It can be shown](group-coset-partition-theorem.md) that the cosets of $H$ [partition](../set.md#Partition) the group $G$. Additionally, the left/right cosets form an [equivalence class](../equivalence-class.md) on $G$. Let us define the equivalence relation as $x \sim y \iff x^{-1} \circ y \in H$ for $x,\,y \in G$. 
 1. Reflexivity  
-$x \sim x = x^{-1}\circ x = e \in H$.
+$$x \sim x = x^{-1}\circ x = e \in H$$
 2. Symmetry  
 If $x \sim y$ then $x^{-1}\circ y \in H$. As $H$ is a subgroup, it follows that $\pqty{x^{-1}\circ y}^{-1} \in H$, i.e. $y \sim x$.
 3. Transitivity  
-If $x \sim y$ and $y \sim z$ then $x^{-1}\circ y \in H$ and $y^{-1}\circ z \in H$. From closure of $H$, $\pqty{x^{-1}\circ y } \circ \pqty{y^{-1}\circ z}\in H$, which under associativity gives $x \sim y$.
+If $x \sim y$ and $y \sim z$ then $x^{-1}\circ y \in H$ and $y^{-1}\circ z \in H$. From closure of $H$, $\pqty{x^{-1}\circ y } \circ \pqty{y^{-1}\circ z}\in H$, which under associativity gives $x \sim z$.
 
 The equivalence relation is equivalent to $x \sim y \iff y \in x H$. It follows that
 $$
@@ -128,17 +128,26 @@ $$
 
 Action
 ------
-The action of a group $G$ is a map of the group on a set $X$ compatible with the group structure, i.e. let $\phi\colon G\times X \rightarrow X$, where we shall write $\phi(g, x)\rightarrow g\rhd x$ for $g\in G\,, x\in X$.
+The action of a group $G$ on a set $X$ describes a map $\phi\colon G\times X \rightarrow X$, where we shall write $\phi(g, x)\rightarrow g\rhd x$ for $g\in G\,, x\in X$.
 
-$\phi$ is the group action iff.[^wiki.action]
+$\phi$ is the group action iff $\forall\,x$.[^wiki.action]
+
 1. Identity  
-$e\rhd x = x$
+$$
+    e\rhd x = x
+$$
 2. Compatibility  
-$\pqty{g_1 \circ g_2}\rhd x = g_1 \rhd \pqty{g_2\rhd x}$ for $g_1, \,g_2 \in G$.
+$$
+    \pqty{g_1 \circ g_2}\rhd x = g_1 \rhd \pqty{g_2\rhd x}\; \text{for}\; g_1, \,g_2 \in G\,.
+$$
 
 Examples of the group action include the *trivial action* $g\rhd x = x$, or $G$ acting upon itself ($X=G$) by multiplication ($g\rhd x = g\circ x$) or conjugation $g\rhd x = g\circ x \circ g^{-1}$.[^soq]
 
-The group action is a *homomorphism*. Let $\phi_g(x) = g\rhd x$ . If $S(X)$ is the set of all functions which are [bijections](group-action-is-bijective.md) of $X$ onto itself, then $\phi_g \in S(X)$. Now, we consider whether the group action respects the group structure. To ease subsequent expressions, we may define the map $\mu(g) = \phi_g$. Given $x \in X$, we have
+<!-- It should be clear that there are many possible forms for the action. It is the compatability criterion which imparts this action on the set X -->
+
+### Permutation Representation
+<!-- Here nothing related to permutations is implicitly or explicitly leveraged. We simply require that there exists a group over the bijections onto themselves, with a composition group operator -->
+Let $\phi_g(x) = g\rhd x$ . If $S(X)$ is the set of all functions which are [bijections](group-action-is-bijective.md) of $X$ onto itself, then $\phi_g \in S(X)$. Now, we consider whether the group action respects the group structure. To ease subsequent expressions, we may define the map $\mu(g) = \phi_g$. Given $x \in X$, we have
 $$
 \begin{aligned}
     \mu(g_1\circ g_2)(x) 
@@ -148,29 +157,47 @@ $$
         &= \phi_{g_1}(\phi_{g_2}(x))\,,
 \end{aligned}
 $$ 
-for $g_1, \,g_2 \in G$. If we define the group operation on $S$ to be the function composition operator $\pqty{f \circ g}(x) = f(g(x))$, then $S$ is the *[symmetric group](https://en.wikipedia.org/wiki/Symmetric_group)* and finally $$\mu(g_1\circ g_2) = \mu(g_1)\circ \mu(g_2)\,.$$
+for $g_1, \,g_2 \in G$. If we define the group operation on $S$ to be the function composition operator $\pqty{f \circ g}(x) = f(g(x))$, then $S$ is the *[symmetric group](https://en.wikipedia.org/wiki/Symmetric_group)* and finally we have
+$$
+    \mu(g_1\circ g_2) = \mu(g_1)\circ \mu(g_2)\,.
+$$
+The map $\mu(g) = \phi_g$ is a homomorphism from $G$ to $S(X)$, i.e. the action of $G$ on $X$ is *tautologically equivalent* to a homomorphism $G \rightarrow S(X)$[^kesmith.rep]
 
-Representation
---------------
-The representation $R$ of a group $G$ is the map which associates each element $g \in G$ with a linear transformation acting on a particular (real or complex) vector space $V$:
+### Linear Representation
+The (real/complex) representation $\phi$ of a group $G$ is a *linear* group action on $V$ which preserves the linear structure of $V$.[^teleman.rep-theory] In addition to the action axioms, linearity imposes the [following axioms](../linear-algebra/linear-mapping.md)
+1. Vector addition
 $$
-R\colon G \rightarrow GL(V)\,,
+    \phi(g, \vb{v_1} + \vb{v_2}) = \phi(g, \vb{v_1}) + \phi(g, \vb{v_2}) \,,\forall\,\vb{v_{1,2}}\in V
 $$
-where $\operatorname {GL}(V)$ is the general linear group over $V$.[^porto.lie-groups]<!-- TODO: mention matrix-lie-groups.md notes -->
+2. Scalar multiplication  
+$$
+    \phi(g, k\vb{v}) = k\phi(g, \vb{v})\,,\forall\,\vb{v}\in V,k\in \mathbb{C}
+$$
+
+<!--TODO flesh this out -->
+<!-- TODO: mention matrix-lie-groups.md notes / GL notes -->
+Any linear transformation on $\mathbb{C}^n$ may uniquely be represented by a matrix.[^teleman.rep-theory]
+The general linear group $\operatorname{GL}(n, \mathbb{C})$ of degree $n$ over the complex numbers is the set of $n\times n$ _invertible matrices_ together with the binary operation of matrix multiplication (operator composition).<!-- TODO link to lie groups -->  
+<!-- TODO we need invertible because the action must be bijective -->
+It follows from the earlier proof that the representation of $G$ on $V$ is equivalently a homomorphism from $G$ to $\operatorname{GL}(V)$. A vector space $V$ on which a group $G$ has an action is called a $G$-module.[^bobh.replec]
+
+
+<!-- TODO: mention matrix-lie-groups.md notes -->
 <!-- TODO: mention irreducible representations -->
+
+<!-- A vector space V on which a group G has an action is called a G-module -->
 
 Examples
 ---------
 
 ### Abelian Groups
 
-An Abelian Group (or commutative group) is a group in which the result of applying the group operation does not depend upon the order of the elements upon which it operates, e.g. $$a\circ b=b\circ a$$
+An Abelian group (or commutative group) is a group in which the result of applying the group operation does not depend upon the order of the elements upon which it operates, e.g. $$a\circ b=b\circ a$$
 
 An example of Abelian groups is the integers under addition $(\mathcal{Z},\circ +)$ as
 $$
     1+2 = 2+1\,.
 $$
-
 
 
 [^group-theory]: https://www2.ph.ed.ac.uk/~rzwicky2/SoQM/romanSoQM_2015.pdf
@@ -180,3 +207,6 @@ $$
 [^soq]: https://www2.ph.ed.ac.uk/~rzwicky2/SoQM/romanSoQM_2015.pdf
 [^wiki.action]: https://en.wikipedia.org/wiki/Group_action#Definition
 [^porto.lie-groups]: http://gravitation.web.ua.pt/sites/default/files/migrated2016/LieGroups.pdf
+[^kesmith.rep]: http://www.math.lsa.umich.edu/~kesmith/rep.pdf
+[^teleman.rep-theory]: https://math.berkeley.edu/~teleman/math/RepThry.pdf
+[^bobh.replec]: http://www.maths.usyd.edu.au/u/bobh/UoS/replec3.pdf

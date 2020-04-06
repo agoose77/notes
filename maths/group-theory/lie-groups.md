@@ -30,12 +30,16 @@ A matrix series $\mathbf{A_m}$ is said to converge to some matrix $\mathbf{A}$ i
 A matrix Lie group is any subgroup G of $\operatorname{GL}(n;\mathbb{C})$ which satisfies the following:
     
 > If $A_m$ is a sequence of matrices in $G$ and $A_m$ converges to some matrix $A$ then either $A\in G$ or $A$ is not invertible.[^hall]
+    
+In simpler it is a Lie group whose elements are matrices.[^lloyd]
 </div>
 
 A Lie Group is a continuous group, i.e. one in which all elements $g \in G$ depend continuously upon a continuous set of parameters
 $$
-g = g(\alpha)\,,\; \alpha = \set{\alpha_i:i=1 .. N}\,.
+g = g(\alpha)\,,\; \alpha = \set{\alpha_i:i=1 \to N}\,.
 $$
+
+<!-- Note interesting isomorphism between SO(2) ≈ SU(1).[^lloyd]`` -->
 
 * The geometric link between a Lie group and its Lie algebra is the fact that the Lie algebra can be viewed as the tangent space to the Lie group at the identity.[^geom]
 * There is a map from the tangent space to the Lie group, called the exponential map:
@@ -45,5 +49,6 @@ $$
 $$\mathfrak{so}(n, \mathbb{R})$$
 
 [^geom]: https://www.cis.upenn.edu/~cis610/geombchap14.pdf
-[^loyd]: https://www.whitman.edu/documents/Academics/Mathematics/2015/Final%20Project%20-%20Lloyd.pdf
+[^lloyd]: https://www.whitman.edu/documents/Academics/Mathematics/2015/Final%20Project%20-%20Lloyd.pdf
 [^hall]: Brian С Hall Lie Groups, Lie Algebras, and Representations An Elementary Introduction
+[^wien.lie-groups]: https://homepage.univie.ac.at/harold.steinacker/LieVl-2015.pdf
