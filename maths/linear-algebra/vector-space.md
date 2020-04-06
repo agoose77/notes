@@ -25,7 +25,7 @@ N.B. $F\times V$ denotes the [cartesian product](../set.md#Operations) of $F$ an
 | Distributivity of scalar multiplication w.r.t vector addition    | $a(u + v) = au + av$                                  |
 | Distributivity of scalar multiplication w.r.t field addition     | $(a + b)v = av + bv$                                  |
 
-This first four of these axioms are equivalent to defining vectors as _an [abelian group](group.md/#Abelian-Groups) under addition_.
+This first four of these axioms are equivalent to defining vectors as _an [abelian group](group-theory/group.md/#Abelian-Groups) under addition_.
 
 Note that a field is a vector space _over itself_.
 

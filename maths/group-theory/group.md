@@ -1,7 +1,7 @@
 Group
 =====
 
-A group $(G,\circ)$ is a [set](set.md) $G$ combined with a binary operation $(\circ)$ which combines two elements of the set to produce a third element, whilst satisfying the four [group axioms](#Group-Axioms). 
+A group $(G,\circ)$ is a [set](../set.md) $G$ combined with a binary operation $(\circ)$ which combines two elements of the set to produce a third element, whilst satisfying the four [group axioms](#Group-Axioms). 
 The group may sometimes be referred to by its _underlying set_ directly, e.g. $G$. 
 
 A group $H$ is called a *subgroup* of $G$ (denoted $H\subseteq G$) iff. $H$ is a group and its elements are a subset of the elements of $G$.
@@ -30,7 +30,7 @@ Homomorphism
   where $\circ$ is the binary operation of the respective group.
   
 Isomorphism
-  ~ A [bijective](map.md#Relations) group homomorphism, represented by $G_1\cong G_2$. 
+  ~ A [bijective](../map.md#Relations) group homomorphism, represented by $G_1\cong G_2$. 
 
 
 Generators
@@ -43,7 +43,7 @@ $$
 
 Conjugacy
 ---------
-Two elements $a,b\in G$ are conjugate if there exists an element $g\in G$ such that $g\circ a\circ g^{-1} = b$.[^group-theory] In this manner, $a$ and $b$ are conjugate of one another. This forms an [equivalence class](equivalence-class.md) of $a$ given by
+Two elements $a,b\in G$ are conjugate if there exists an element $g\in G$ such that $g\circ a\circ g^{-1} = b$.[^group-theory] In this manner, $a$ and $b$ are conjugate of one another. This forms an [equivalence class](../equivalence-class.md) of $a$ given by
 $$
 \bqty{a} = \set{g\circ a\circ g^{-1} : g \in G}\,.
 $$
@@ -105,7 +105,7 @@ $$
 Analogously, one can also define the *right*-coset.
 <!-- It seems that frequently people choose additive or multiplicative notation instead of the explicit `\circ` notation, but I prefer the explicit form. -->
 
-[It can be shown](group-coset-partition-theorem.md) that the cosets of $H$ [partition](set.md#Partition) the group $G$. Additionally, the left/right cosets form an [equivalence class](equivalence-class.md) on $G$. Let us define the equivalence relation as $x \sim y \iff x^{-1} \circ y \in H$ for $x,\,y \in G$. 
+[It can be shown](group-coset-partition-theorem.md) that the cosets of $H$ [partition](../set.md#Partition) the group $G$. Additionally, the left/right cosets form an [equivalence class](../equivalence-class.md) on $G$. Let us define the equivalence relation as $x \sim y \iff x^{-1} \circ y \in H$ for $x,\,y \in G$. 
 1. Reflexivity  
 $x \sim x = x^{-1}\circ x = e \in H$.
 2. Symmetry  
@@ -138,7 +138,7 @@ $\pqty{g_1 \circ g_2}\rhd x = g_1 \rhd \pqty{g_2\rhd x}$ for $g_1, \,g_2 \in G$.
 
 Examples of the group action include the *trivial action* $g\rhd x = x$, or $G$ acting upon itself ($X=G$) by multiplication ($g\rhd x = g\circ x$) or conjugation $g\rhd x = g\circ x \circ g^{-1}$.[^soq]
 
-The group action is a *homomorphism*. Let $\phi_g(x) = g\rhd x$ . If $Q(X)$ is the set of all functions which are [bijections](group-action-is-bijective.md) of $X$ onto itself, then $\phi_g \in Q(X)$. Now, we consider whether the group action respects the group structure. To ease subsequent expressions, we may define the map $\mu(g) = \phi_g$. Given $x \in X$, we have
+The group action is a *homomorphism*. Let $\phi_g(x) = g\rhd x$ . If $S(X)$ is the set of all functions which are [bijections](group-action-is-bijective.md) of $X$ onto itself, then $\phi_g \in S(X)$. Now, we consider whether the group action respects the group structure. To ease subsequent expressions, we may define the map $\mu(g) = \phi_g$. Given $x \in X$, we have
 $$
 \begin{aligned}
     \mu(g_1\circ g_2)(x) 
@@ -148,7 +148,16 @@ $$
         &= \phi_{g_1}(\phi_{g_2}(x))\,,
 \end{aligned}
 $$ 
-for $g_1, \,g_2 \in G$. If we define the group operation on $Q$ to be the function composition operator $\pqty{f \circ g}(x) = f(g(x))$, then finally $$\mu(g_1\circ g_2) = \mu(g_1)\circ \mu(g_2)\,.$$
+for $g_1, \,g_2 \in G$. If we define the group operation on $S$ to be the function composition operator $\pqty{f \circ g}(x) = f(g(x))$, then $S$ is the *[symmetric group](https://en.wikipedia.org/wiki/Symmetric_group)* and finally $$\mu(g_1\circ g_2) = \mu(g_1)\circ \mu(g_2)\,.$$
+
+Representation
+--------------
+The representation $R$ of a group $G$ is the map which associates each element $g \in G$ with a linear transformation acting on a particular (real or complex) vector space $V$:
+$$
+R\colon G \rightarrow GL(V)\,,
+$$
+where $\operatorname {GL}(V)$ is the general linear group over $V$.[^porto.lie-groups]<!-- TODO: mention matrix-lie-groups.md notes -->
+<!-- TODO: mention irreducible representations -->
 
 Examples
 ---------
@@ -170,3 +179,4 @@ $$
 [^lie]: https://homepage.univie.ac.at/harold.steinacker/Liegroups2010-part1.pdf
 [^soq]: https://www2.ph.ed.ac.uk/~rzwicky2/SoQM/romanSoQM_2015.pdf
 [^wiki.action]: https://en.wikipedia.org/wiki/Group_action#Definition
+[^porto.lie-groups]: http://gravitation.web.ua.pt/sites/default/files/migrated2016/LieGroups.pdf

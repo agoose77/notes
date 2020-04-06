@@ -1,5 +1,5 @@
-Matrix Lie Groups
-=================
+Lie Groups
+==========
 
 <div style="padding:15px;margin-bottom:20px;border:1px solid transparent;border-radius:4px;color:#31708f;background-color:#d9edf7
 ;border-color:#bce8f1;">
@@ -31,6 +31,11 @@ A matrix Lie group is any subgroup G of $\operatorname{GL}(n;\mathbb{C})$ which 
     
 > If $A_m$ is a sequence of matrices in $G$ and $A_m$ converges to some matrix $A$ then either $A\in G$ or $A$ is not invertible.[^hall]
 </div>
+
+A Lie Group is a continuous group, i.e. one in which all elements $g \in G$ depend continuously upon a continuous set of parameters
+$$
+g = g(\alpha)\,,\; \alpha = \set{\alpha_i:i=1 .. N}\,.
+$$
 
 * The geometric link between a Lie group and its Lie algebra is the fact that the Lie algebra can be viewed as the tangent space to the Lie group at the identity.[^geom]
 * There is a map from the tangent space to the Lie group, called the exponential map:
