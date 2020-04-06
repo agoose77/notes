@@ -147,6 +147,7 @@ Examples of the group action include the *trivial action* $g\rhd x = x$, or $G$ 
 
 ### Permutation Representation
 <!-- Here nothing related to permutations is implicitly or explicitly leveraged. We simply require that there exists a group over the bijections onto themselves, with a composition group operator -->
+
 Let $\phi_g(x) = g\rhd x$ . If $S(X)$ is the set of all functions which are [bijections](group-action-is-bijective.md) of $X$ onto itself, then $\phi_g \in S(X)$. Now, we consider whether the group action respects the group structure. To ease subsequent expressions, we may define the map $\mu(g) = \phi_g$. Given $x \in X$, we have
 $$
 \begin{aligned}
@@ -186,6 +187,13 @@ It follows from the earlier proof that the representation of $G$ on $V$ is equiv
 <!-- TODO: mention irreducible representations -->
 
 <!-- A vector space V on which a group G has an action is called a G-module -->
+
+Representation
+--------------
+The representation $R$ of a group $G$ is the map which associates each element $g \in G$ with a linear transformation acting on a particular (real or complex) vector space $V$:
+$$
+R\colon G \rightarrow GL(V)
+$$
 
 Examples
 ---------
