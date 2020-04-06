@@ -6,9 +6,9 @@ Matrix Lie Groups
     
 ### General Linear Groups
 <!-- Here the semicolon distinguishes variables but is semantically identical to a comma -->
-The *general linear group* over the reals $\operatorname{GL}(n;\mathbb{R})$ is the [group](../group.md) of all $n\times n$ invertible matrices with real entries. There is similarly the linear operator $\operatorname{GL}(n;\mathbb{C})$ defined over the complex numbers. 
+The *general linear group* over the reals $\operatorname{GL}(n;\mathbb{R})$ is the [group](../group-theory/group.md) of all $n\times n$ invertible matrices with real entries. There is similarly the linear operator $\operatorname{GL}(n;\mathbb{C})$ defined over the complex numbers. 
     
-The group property under the binary operation of matrix multiplication $(\cdot\times\cdot)$ follows from the [group axioms](../group.md#Group-Axioms):
+The group property under the binary operation of matrix multiplication $(\cdot\times\cdot)$ follows from the [group axioms](../group-theory/group.md#Group-Axioms):
 * Matrix multiplication is associative (*associativity*)
 * The product $(\mathbf{A}\times \mathbf{B})$ of two invertible matrices $\mathbf{A},\mathbf{B}$ is itself invertible (*closure*)
 * There exists an identity matrix $\mathbf{\mathbb{I}}$ (*identity element*)
