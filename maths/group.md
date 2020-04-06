@@ -39,14 +39,16 @@ The generators of a group are a set of elements from which all other elements ca
 $$
 G = \set{(u\circ v):u,v\in \tilde{G}}\,.
 $$
+ The minimal number of elements which generate $G$ (i.e. the order of the minimal $\tilde{G}$) is called the *rank* of $G$.
 
 Conjugacy
 ---------
-Two elements $a,b\in G$ are conjugate if there exists an element $g\in G$ such that $gag^{-1} = b$.[^group-theory] In this manner, $a$ and $b$ are conjugate of one another. This forms an [equivalence class](equivalence-class.md) of $a$ given by
+Two elements $a,b\in G$ are conjugate if there exists an element $g\in G$ such that $g\circ a\circ g^{-1} = b$.[^group-theory] In this manner, $a$ and $b$ are conjugate of one another. This forms an [equivalence class](equivalence-class.md) of $a$ given by
 $$
-\bqty{a} = \set{gag^{-1} : g \in G}\,.
+\bqty{a} = \set{g\circ a\circ g^{-1} : g \in G}\,.
 $$
-The number of distinct conjugacy classes of the group $G$ is called the *class number of $G$*. The minimal number of elements which generate $G$ (i.e. the order of the minimal $\tilde{G}$) is called the *rank* of $G$.
+<!-- TODO prove this -->
+The number of distinct conjugacy classes of the group $G$ is called the *class number of $G$*.
 
 Centre
 --------
@@ -101,9 +103,20 @@ $$
 g\circ H = \set{g\circ h : h \in H}\,.
 $$
 Analogously, one can also define the *right*-coset.
-
-[It can be shown](group-coset-partition-theorem.md) that the cosets of $H$ [partition](set.md#Partition) the group $G$.
 <!-- It seems that frequently people choose additive or multiplicative notation instead of the explicit `\circ` notation, but I prefer the explicit form. -->
+
+[It can be shown](group-coset-partition-theorem.md) that the cosets of $H$ [partition](set.md#Partition) the group $G$. Additionally, the left/right cosets form an [equivalence class](equivalence-class.md) on $G$:
+
+Let us define the equivalence relation as $x \sim y \iff x^{-1} \circ y \in H$ for $x,\,y \in G$.
+1. Reflexivity  
+$x \sim x = x^{-1}\circ x = e \in H$.
+2. Symmetry  
+If $x \sim y$ then $x^{-1}\circ y \in H$. As $H$ is a subgroup, it follows that $\pqty{x^{-1}\circ y}^{-1} \in H$, i.e. $y \sim x$.
+3. Transitivity  
+If $x \sim y$ and $y \sim z$ then $x^{-1}\circ y \in H$ and $y^{-1}\circ z \in H$. From closure of $H$, $\pqty{x^{-1}\circ y } \circ \pqty{y^{-1}\circ z}\in H$, which under associativity gives $x \sim y$.
+
+### Lagrange's Theorem
+Lagrange's Theorem states that for any subgroup $H$ of $G$, the order of $H$ divides the order of $G$. 
 
 Examples
 ---------
