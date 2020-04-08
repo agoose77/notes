@@ -23,19 +23,13 @@ In a similar manner, due to the charge-independence of the nuclear force we rare
 This two-fold nucleon degeneracy lends itself to a spin-$\frac{1}{2}$ formalism, where this **isospin** $T$ may be denoted by two linearly independent vectors $T_\uparrow$ and $T_\downarrow$. 
 In the context of nuclear isospin, *charge symmetry* is equivalent to requiring that the Hamiltonian remain invariant under rotations of $\pi$ radians in isospin space:
 $$
-     \comm{\hat{H}}{\exp(i\pi \hat{T}_2)} = 0\,.
+     \comm{\hat{H}}{\exp(i\pi \hat{T}_3)} = 0\,.
 $$
-<!-- NOTE: Here a rotation about the T2 axis is given to flip -->
+<!-- NOTE: Here a rotation about the T3 axis is used as a flip -->
 *Charge independence* is a stronger statement, requiring that the Hamiltonian is invariant under*any* rotation in isospin space, and thus:
 $$
     \comm{\hat{H}}{\vb{\hat{T}}} = 0\,.
 $$
-
-LIE:
-https://www.cis.upenn.edu/~cis610/geombchap14.pdf
-http://personal.maths.surrey.ac.uk/st/A.Torrielli/files/JamesNotes.pdf
-
-WHAT IS SU(2) symmetry?
 
 
 [^quarks]: https://www.hep.phy.cam.ac.uk/~thomson/lectures/partIIIparticles/Handout7_2009.pdf

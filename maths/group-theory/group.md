@@ -162,7 +162,7 @@ for $g_1, \,g_2 \in G$. If we define the group operation on $S$ to be the functi
 $$
     \mu(g_1\circ g_2) = \mu(g_1)\circ \mu(g_2)\,.
 $$
-The map $\mu(g) = \phi_g$ is a homomorphism from $G$ to $S(X)$, i.e. the action of $G$ on $X$ is *tautologically equivalent* to a homomorphism $G \rightarrow S(X)$[^kesmith.rep]
+The map $\mu(g) = \phi_g$ is consequently a homomorphism from $G$ to $S(X)$, i.e. the action of $G$ on $X$ is *tautologically equivalent* to a homomorphism $G \rightarrow S(X)$[^kesmith.rep]
 
 ### Linear Representation
 The (real/complex) representation $\phi$ of a group $G$ is a *linear* group action on $V$ which preserves the linear structure of $V$.[^teleman.rep-theory] In addition to the action axioms, linearity imposes the [following axioms](../linear-algebra/linear-mapping.md)
@@ -178,12 +178,14 @@ $$
 <!--TODO flesh this out -->
 <!-- TODO: mention matrix-lie-groups.md notes / GL notes -->
 Any linear transformation on $\mathbb{C}^n$ may uniquely be represented by a matrix.[^teleman.rep-theory]
-The general linear group $\operatorname{GL}(n, \mathbb{C})$ of degree $n$ over the complex numbers is the set of $n\times n$ _invertible matrices_ together with the binary operation of matrix multiplication (operator composition).<!-- TODO link to lie groups -->  
+The general linear group $\operatorname{GL}(n, \mathbb{C})$ of degree $n$ over the complex numbers is the set of $n\times n$ _invertible matrices_ together with the binary operation of matrix multiplication (operator composition).
+<!-- TODO link to lie groups -->  
 <!-- TODO we need invertible because the action must be bijective -->
+<!-- TODO is the group action an *isomorphism* as well as homomorphism --> 
+<!-- TODO better connect the bijective functions with matrices - do we need a basis? -->
 It follows from the earlier proof that the representation of $G$ on $V$ is equivalently a homomorphism from $G$ to $\operatorname{GL}(V)$. A vector space $V$ on which a group $G$ has an action is called a $G$-module.[^bobh.replec]
 
 
-<!-- TODO: mention matrix-lie-groups.md notes -->
 <!-- TODO: mention irreducible representations -->
 
 <!-- A vector space V on which a group G has an action is called a G-module -->
