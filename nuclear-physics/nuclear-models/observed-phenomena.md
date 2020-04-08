@@ -1,6 +1,8 @@
 Single Particle Models
 ======================
 
+<!-- TODO see Casten, Nuclear structure p.68 on effects of symmetry of closed shells -->
+
 Core Polarisation
 -----------------
 $\atom{16}{O}$ has $Q=0$, so one would expect $\atom{17}{O}$ to also have $Q=0$, as neutrons are uncharged. We actually observe a small non-zero $Q$, which suggests that the neutron *polarises* the core, inducing a small oblate deformation. This results from correlations induced by the residual interaction $V$.
