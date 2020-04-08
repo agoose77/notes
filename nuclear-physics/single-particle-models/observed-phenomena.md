@@ -47,12 +47,6 @@ TODO rotor model p.46 fonm
 centrifugal stretching of rotor model p.65
 Odd nuclei: more complex phenomena
 
-Spherical Shell Model
----------------------
-
-### Woods-Saxon Mean Field
-#### Spin-Orbit Potential
-
 ### Failures
 
 [^moshe.203]: Judah M. Eisenberg and Walter Greiner, Nuclear models, (North-Holland Publ. Co, Amsterdam u.a, 1970), p. 203.
