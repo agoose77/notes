@@ -4,7 +4,7 @@ A deuteron $\atom{2}{H}$ is the simplest bound state of nucleons, consisting of 
 
 ## Binding Energy
 
-The [binding energy](binding-energy.md#Binding-Energy) of the deuteron is precisely known, using techniques such as [the mass doublet method](binding-energy.md#Mass-Doublet-Method), which gives[^krane.81]
+The [binding energy](binding-energy.md#Binding-Energy) of the deuteron is precisely known, using techniques such as [the mass doublet method](nuclear-masses.md#Mass-Doublet-Method), which gives[^krane.81]
 
 $$
 \tag{1}

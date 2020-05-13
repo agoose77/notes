@@ -15,39 +15,46 @@ $$
 \end{matrix}
 $$
 
-From the [addition rules](angular-momentum-addition.md), in the basis given by the eigenkets of the total operators $\vb{\S}_z$ and $\S$, the $z$ spin projection $m_s$ is given by $m_s=m_s^{(1)} + m_s^{(2)}$. The total spin $s$ is given by the equality $\abs{s_1-s_2}\leq s\leq s_1+s_2$, which for a spin half system gives $s=0,\,1$. Alongside the [ladder operators](angular-momentum-ladder-operators.md#Ladder-Operators), these relations can be used to find the spin states of our system in each basis.
+From the [addition rules](angular-momentum-addition.md), in the basis given by the eigenkets of the total operators $\vb{\S}_z$ and $\S$, the $z$ spin projection $m_s$ is given by 
+$$
+\tag{a}
+    m_s=m_s^{(1)} + m_s^{(2)}\,.
+$$ 
+The total spin $s$ is given by the equality $\abs{s_1-s_2}\leq s\leq s_1+s_2$, which for a spin half system gives $s=0,\,1$. Alongside the [ladder operators](angular-momentum-ladder-operators.md#Ladder-Operators), these relations can be used to find the spin states of our system in each basis.
 
-For $m_s^{(1)}=m_s^{(2)}=\frac{1}{2}$, $m_s$ is maximised and thus equal to $s$. Therefore, $\ket{+}_1\otimes\ket{+}_2$ corresponds to $\ket{s=1,m_s=1}$ in the new basis. Given that
+The Triplet State
+-----------------
+Given **(a)**, the value of $m_s$ is maximal for the real the direct product state $\ket{+}_1\otimes\ket{+}_2$, where $m_s^{(1)}=m_s^{(2)}=\frac{1}{2}$. The [addition rules](angular-momentum-addition.md) state that the total spin $s$ is equal to the maximal value of $m_s$. It follows that this direct product state corresponds to $\ket{s=1,m_s=1}$ in the new basis. Given that
 
 $$
 m_s=-s,\dots,\,s\,,
 $$
 
-it follows that this is a _triplet_ state with
+this state is a _triplet_ state with
 
 $$
 m_s=-1,\,\dots 0,\,1\,.
 $$
 
-The triplet states can be found in the direct product basis by repeatedly applying the lowering operator to $\ket{1,1}$:
+The remaining triplet states can be found in the direct product basis by repeatedly applying the lowering operator to the maximal state $\ket{1,1}$:
 | Total State | Direct Product State |
 |:----------------: |:----------------------------------------------------------------------------: |
 | $\ket{1,\ 1}$ | $\ket{+}_1\otimes\ket{+}_2$ |
 | $\ket{1,\ 0}$ | $\frac{1}{\sqrt{2}}\left(\ket{+}_1\otimes\ket{-}_2+\ket{-}_1\otimes\ket{+}_2\right)$ |
 | $\ket{1,-1}$ | $\ket{-}_1\otimes\ket{-}_2$ |
 
-Note that all of these states are *symmetric* under particle exchange. As we must have the same number of states in either basis, the remaining state is the _singlet_ state $\ket{0,0}$. Like $\ket{1,0}$, it will be a superposition of states (Bell states[^4]) in order for $\S_z=0$ and $\S^2\ket{0,0}=0$. 
+Note that all of these states are *symmetric* under particle exchange. 
 
-### Finding the Singlet State in the Direct Product Basis
+The Singlet State
+-----------------
 
-One can find the singlet state by requiring that the state in the direct product basis
+As we must have the same number of states in either basis, the remaining state is the _singlet_ state $\ket{0,0}$. Like $\ket{1,0}$, it will be a superposition of states (Bell states[^4]) in order for $\S_z=0$ and $\S^2\ket{0,0}=0$. 
+One can find the singlet state in the direct product basis by taking the most general state
 
 $$
 \ket{0,0} = a\ket{+}_1\otimes\ket{+}_2 + b\ket{+}_1\otimes\ket{-}_2 + c\ket{-}_1\otimes\ket{+}_2 + d\ket{-}_1\otimes\ket{-}_2
 $$
-
-satisfy $\S^2\ket{0,0}=0$[^1], e.g. The operator $\S^2$ is given by
-
+and requiring that it satisfy $\S^2\ket{0,0}=0$[^1]. The operator $\S^2$ is given by
 $$
 \begin{aligned}
 \left(\vb{\S^{(1)}} + \vb{\S^{(2)}}\right)\cdot\left(\vb{\S^{(1)}} + \vb{\S^{(2)}}\right)
@@ -70,11 +77,10 @@ $$
 which simplifies to
 
 $$
-\hbar^2\left(
 2a\ket{+}_1\otimes\ket{+}_2 +
 (b+c)\ket{+}_1\otimes\ket{-}_2 +
 (c+b)\ket{-}_1\otimes\ket{+}_2 +
-2d\ket{-}_1\otimes\ket{-}_2\right)\,.
+2d\ket{-}_1\otimes\ket{-}_2\,.
 $$
 
 This requires $a=d=0$, and $b+c=0$, i.e.
