@@ -1,11 +1,5 @@
 #!/usr/bin/env bash
-declare -a extensions=(
-  "@jupyter-widgets/jupyterlab-manager"
-  "@agoose77/jupyterlab-markup"
-  "@jupyterlab/katex-extension"
-  bqplot
-)
+set -eu
 
-jupyter labextension install "${extensions[@]}"
 
-grep "application/wasm" /etc/mime.types || echo "application/wasm      wasm" | sudo tee -a /etc/mime.types
+jupyter labextension install @jupyterlab/katex-extension
