@@ -6,3 +6,5 @@ A collection of physics and mathematics notes written over the course of a PhD i
 This repository requires the `markdown-it-diagrams` renderer extension to properly render graphics, which is provided for JupyterLab with `jupyterlab-markup`.
 
 Load `macros.md` to define global macros for use in documents.
+
+There are some images that may not be properly referenced. I do not give permission to share or distribute these figures.
